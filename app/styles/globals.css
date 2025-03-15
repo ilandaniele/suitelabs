@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./variables.css";
+
+body {
+  font-family: var(--font-geist-sans);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0; /* Asegura que no haya márgenes predeterminados */
+  padding: 0; /* Asegura que no haya padding predeterminado */
+}

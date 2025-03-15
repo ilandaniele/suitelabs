@@ -1,0 +1,82 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Padding vertical, el horizontal lo maneja el contenedor global */
+    background-color: #1A2A3A; /* Color de fondo del header */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 30px; /* Espacio entre elementos como en la imagen */
+    align-items: center;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #ffffff; /* Color del texto en el nav */
+    font-size: 16px;
+    padding: 8px 12px;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  
+  .nav a:hover {
+    color: #FCC453; /* Color del texto al hacer hover */
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdownContent {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1A2A3A; /* Color de fondo del dropdown */
+    border: 1px solid #333; /* Borde del dropdown */
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .dropdownContent a {
+    display: block;
+    padding: 10px 20px;
+    color: #ffffff; /* Color del texto en el dropdown */
+    text-decoration: none;
+  }
+  
+  .dropdownContent a:hover {
+    background-color: #333; /* Color de fondo al hacer hover en el dropdown */
+  }
+  
+  .dropdown:hover .dropdownContent {
+    display: block;
+  }
+  
+  .contactButton {
+    background-color: #FCC453; /* Color de fondo del botón "Contact Us" */
+    color: #1A2A3A; /* Color del texto del botón "Contact Us" */
+    border-radius: 100px; /* Bordes completamente redondeados */
+    padding: 20px 40px; /* Padding específico */
+    font-weight: 700;
+    font-size: 16px; /* Tamaño de la letra */
+    transition: background-color 0.3s, color 0.3s;
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+  }
+  
+  .contactButton:hover {
+    background-color: #ffffff; /* Color de fondo al hacer hover */
+    color: #1A2A3A; /* Color del texto al hacer hover */
+  }
