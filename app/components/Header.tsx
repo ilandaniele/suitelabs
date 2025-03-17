@@ -35,7 +35,7 @@ export default function Header() {
           </div>
         </div>
         <Link href="/blog">Blog</Link>
-        <Link href="/contact" className={`${styles.primaryButton} ${styles.bold}`}>
+        <Link href="/contact" className="primaryButton bold">
           Contact Us
         </Link>
       </nav>

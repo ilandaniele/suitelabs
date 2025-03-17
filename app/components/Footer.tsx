@@ -46,7 +46,7 @@ export default function Footer() {
         {/* Columna de GET IN TOUCH */}
         <div className={styles.getInTouch}>
           <h3>GET IN TOUCH</h3>
-          <button onClick={handleContactClick} className={styles.primaryButton}>
+          <button onClick={handleContactClick} className="primaryButton">
             Contact Us
           </button>
         </div>
