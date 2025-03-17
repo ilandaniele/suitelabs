@@ -4,12 +4,6 @@
   align-items: center;
   justify-items: center;
   min-height: 100svh;
-  padding: 180px;
-  gap: 64px;
-}
-
-.main {
-  margin-top: 80px; /* Ajusta este valor según la altura del header */
 }
 
 .about {

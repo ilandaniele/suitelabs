@@ -1,0 +1,80 @@
+@import "./globals.css";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 130px 214px;
+  background-color: #1A2A3A; /* Color de fondo del footer */
+  color: #ffffff; /* Color del texto */
+  width: 100%; /* Ocupa el 100% del ancho de la pantalla */
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+/* Contenedor de las tres columnas */
+.footerColumns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Limita el ancho máximo del contenido */
+  margin-bottom: 20px; /* Espacio antes del copyright */
+}
+
+/* Columna del logo y texto */
+.logoSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea el logo y el texto a la izquierda */
+}
+
+.logo {
+  margin-bottom: 10px; /* Espacio entre el logo y el texto */
+}
+
+.logoText {
+  font-size: 16px; /* Texto más grande */
+  color: #fff; /* Color del texto debajo del logo */
+  max-width: 300px; /* Ancho máximo del texto */
+}
+
+/* Columnas de MENU y GET IN TOUCH */
+.menu, .getInTouch {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea el contenido a la izquierda */
+}
+
+.menu h3, .getInTouch h3 {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #7A7A7A;
+}
+
+.menu button, .menu a, .getInTouch a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 5px 0;
+  transition: color 0.3s;
+  background: none; /* Elimina el fondo del botón */
+  border: none; /* Elimina el borde del botón */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  padding: 0; /* Elimina el padding del botón */
+}
+
+.menu button:hover, .menu a:hover, .getInTouch a:hover {
+  color: #FCC453; /* Color del texto al hacer hover */
+}
+
+/* Línea separadora y copyright */
+.copyright {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #cccccc; /* Color del texto de copyright */
+  text-align: center; /* Centra el texto de copyright */
+  width: 100%; /* Ocupa todo el ancho */
+  border-top: 1px solid #333; /* Línea separadora */
+  padding-top: 20px; /* Espacio entre la línea y el texto */
+}

@@ -11,3 +11,33 @@ body {
   margin: 0; /* Asegura que no haya márgenes predeterminados */
   padding: 0; /* Asegura que no haya padding predeterminado */
 }
+
+.primaryButton {
+    background-color: #FCC453; /* Color de fondo del botón "Contact Us" */
+    color: #1A2A3A !important; /* Color del texto del botón "Contact Us" */
+    border-radius: 100px; /* Bordes completamente redondeados */
+    padding: 15px 35px !important; /* Padding específico */
+    font-weight: 600;
+    font-size: 16px; /* Tamaño de la letra */
+    transition: background-color 0.3s, color 0.3s;
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.bold {
+  font-weight:700;
+}
+
+.primaryButton:hover {
+  background-color: #ffffff; /* Color de fondo al hacer hover */
+  color: #1A2A3A; /* Color del texto al hacer hover */
+}
+
+.primaryButtonInverted {
+  padding: 10px 20px !important;
+  font-weight: 500;
+}
+.primaryButtonInverted:hover {
+  background-color: #1A2A3A; /* Color de fondo al hacer hover */
+  color: #FCC453 !important; /* Color del texto al hacer hover */
+}
