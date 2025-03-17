@@ -2,9 +2,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 20px 40px; /* Padding vertical, el horizontal lo maneja el contenedor global */
+    padding: 20px 0px; /* Padding vertical, el horizontal lo maneja el contenedor global */
     background: linear-gradient(to bottom, #161D2A, #0A121A); /* linear-gradient(to bottom, #0A121A, #1A2A3A); */
-    position: fixed;
+    
     top: 0;
     width: 100%;
     z-index: 1000;
