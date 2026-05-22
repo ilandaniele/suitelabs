@@ -1,0 +1,47 @@
+{
+	"name": "CategoriesCustomSort",
+	"fantasyName": "Categories Custom Sort",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "Customizes sorting of category pages. SuiteLabs v2.1.0 refers to the SCA upgrade to 23.2, it also includes some refactoring",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/CategoriesCustomSort/Configuration/CategoriesCustomSort.json"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/CategoriesCustomSort/JavaScript/CategoriesCustomSort.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/CategoriesCustomSort/JavaScript/CategoriesCustomSort.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/CategoriesCustomSort@2.1.0",
+	"activation_id": "11",
+	"extension_id": "16701"
+}

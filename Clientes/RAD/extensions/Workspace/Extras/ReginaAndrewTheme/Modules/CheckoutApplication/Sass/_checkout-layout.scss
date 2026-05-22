@@ -1,0 +1,89 @@
+.checkout-layout {
+	@extend %sc-layout;
+}
+
+.checkout-layout-content, .checkout-layout-notifications{
+	@extend .container;
+}
+
+.checkout-layout-footer {
+	@extend %sc-footer !optional;
+}
+
+
+
+.checkout-layout-no-javascript-msg {
+	@extend .message-warning;
+	width: 100%;
+}
+
+//awalabs
+.checkout-layout-header {
+	margin-bottom: 0 !important;
+	min-height: 50px;
+}
+
+.wizard-content .module-rendered h2,
+.wizard-content .order-wizard-step-header h2 {
+	padding-bottom: 15px;
+	border-bottom: 1px solid $sc-color-theme-border;
+	margin: 0;
+}
+.checkout-layout-content{
+	.order-wizard-address-module-address-container .order-wizard-address-row{
+		height: 0;
+	}
+}
+#main-container{
+	transition: all 0.3s;
+	padding-top: 220px;
+	&.less-padding{
+		padding-top: 115px;
+	}
+	@media (max-width: $screen-md) {
+		padding-top: 235px;
+		&.less-padding{
+			padding-top: 80px;
+		}
+	}
+}
+
+
+
+.checkout-layout-header {
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+	background: white;
+	top: 0;
+	left: 0;
+	transition: all 0.25s;
+	border-bottom-color: #f1ede7;
+	&.sticky-header {
+		height: auto;
+		@media (min-width: $screen-md) {
+			transform: translateY(-34px);
+		}
+		@media (max-width: $screen-md) {
+			border-bottom: 1px solid #f1ede7;
+		}
+		.header-logo {
+			max-width: 180px;
+		}
+		.header-content{
+			padding-bottom: 0;
+		}
+	}
+}
+#checkout{
+	margin-top: -110px;
+}
+.header-sidebar-opened{
+	.checkout-layout-header {
+		position: initial;
+	}
+	#main-container{
+		transition: all 0s;
+		padding-top:20px;
+	}
+}

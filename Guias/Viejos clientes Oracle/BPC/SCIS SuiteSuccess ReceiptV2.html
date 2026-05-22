@@ -1,0 +1,618 @@
+<?xml version="1.0"?>
+<!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdf>
+	<head>
+	<#if .locale == "ru_RU">
+	    <link name="verdana" type="font" subtype="opentype" src="${nsfont.verdana}" src-bold="${nsfont.verdana_bold}" bytes="2" />
+	</#if>
+	    <style type="text/css">
+	    	.receipt-preview { font-family: "Helvetica"}
+			@media print{
+				body { margin: 0; width: 100%; }
+
+				.receipt-print-ticket {
+					overflow: hidden; background-color: white; font-size: 10px; border:none; padding: 0; word-break: normal; word-wrap: normal; display: block; font-family: Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+				.receipt-print-ticket img { width: 300px; display: block; margin: auto; }
+
+				.receipt-print-reverse {
+					background-color: #000000 !important; color: #FFFFFF !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+				.receipt-print-ticket-epson-tm-t88v { padding: 0; margin-left: 0px; margin-top: 5px; width: 300px; }
+
+				.receipt-print-ticket-epson-tm-t88v td,span { font-size: 10px; }
+				.receipt-print-ticket-epson-tm-t88v img.logo { width: auto; margin: auto; max-width: 300px; max-height: 100px; }
+				.receipt-print-ticket-epson-tm-t88v img.item-image { width: 50px; margin: 0.2em; }
+				.receipt-print-ticket-epson-tm-t88v .containerBarcode img { margin: 0 auto; width: 230px; }
+				.receipt-print-ticket-epson-tm-t88v td.containerTotal { position: relative; padding: 0.1em; border: 1px solid; border-right-width: initial; font-size: 26px; font-weight: bold; background: #eeeeee; }
+				.receipt-print-ticket-epson-tm-t88v td.containerTotal span.total { font-size: 32px; vertical-align:middle; }
+
+				/*Epson Native Printing*/
+				.receipt-print-ticket-tm-t88v { padding: 0; margin-left: 0px; width: 300px; }
+
+				.receipt-print-ticket-tm-t88v td,span { font-size: 25px; }
+				.receipt-print-ticket-tm-t88v img.logo { width: auto; margin: auto; max-width: 400px; max-height: 100px; }
+				.receipt-print-ticket-tm-t88v img.item-image { width: 120px; margin: 0.2em; }
+				.receipt-print-ticket-tm-t88v .containerBarcode img { margin: 0 auto; width: 500px; }
+				.receipt-print-ticket-tm-t88v td.containerTotal { position: relative; padding: 0.1em; border: 1px solid; border-right-width: initial; font-size: 50px; font-weight: bold; background: #eeeeee; }
+				.receipt-print-ticket-tm-t88v td.containerTotal span.total { font-size: 30px; vertical-align:middle; }
+				/*End Epson Native Printing*/
+
+				.receipt-print-ticket-tsp650 { margin-left: 0in; }
+				.receipt-print-ticket-tsp650 td,span { font-size: 30px; }
+				.receipt-print-ticket-tsp650 img.logo { width: auto; margin: auto; max-width: 900px; max-height: 300px; }
+				.receipt-print-ticket-tsp650 img.item-image { width: 175px; margin: 0.2em; }
+				.receipt-print-ticket-tsp650 .containerBarcode img { margin: 0 auto; width: 500px; }
+				.receipt-print-ticket-tsp650 td.containerTotal { position: relative; padding: 0.1em; border: 1px solid; font-size: 80px; font-weight: bold; background: #eeeeee; }
+				.receipt-print-ticket-tsp650 td.containerTotal span.total { font-size: 42px; vertical-align:middle; }
+
+				.receipt-print-ticket-tsp650-oprint td,span { font-size: 28px; }
+				.receipt-print-ticket-tsp650-oprint { -ms-transform: scale(1,0.4); -webkit-transform: scale(1,0.4); transform: scale(1,0.4); transform-origin(top); -webkit-transform-origin: top; -webkit-transform-origin: top; -ms-transform-origin: top;}
+                .receipt-print-ticket-tsp650-oprint .containerBarcode img { margin: 0 auto; width: 500px; }
+                .receipt-print-ticket-tsp650-oprint td.containerTotal { position: relative; padding: 0.1em; border: 1px solid; font-size: 80px; font-weight: bold; background: #eeeeee; }
+
+				.receipt-print-ticket-epson-tm-t88v-oprint {
+					width: 900px; -ms-transform: scale(1,0.4); -webkit-transform: scale(1,0.4); transform: scale(1,0.4); -webkit-transform-origin: top; -webkit-transform-origin: top; -ms-transform-origin: top; }
+
+				.receipt-print-ticket-epson-tm-t88v-oprint td,span { font-size: 30px; }
+				.receipt-print-ticket-epson-tm-t88v-oprint img.logo { width: auto; margin: auto; width: 500px; min-height: 150px; max-height: 300px; }
+				.receipt-print-ticket-epson-tm-t88v-oprint img.item-image { width: 175px; margin: 0.2em; }
+				.receipt-print-ticket-epson-tm-t88v-oprint td.containerTotal { position: relative; padding: 0.1em; border: 1px solid; border-right-width: initial; font-size: 60px; font-weight: bold; background: #eeeeee; }
+              	.receipt-print-ticket-epson-tm-t88v-oprint .containerBarcode img { margin: 0 auto; width: 500px; }
+				.receipt-print-ticket-epson-tm-t88v-oprint td.containerTotal img span.total { font-size: 60px; vertical-align:middle; }
+
+				.receipt-print-ticket-rj-400 { font-size: 16px; width: 450px; line-height: 20px; margin-left: 0.2in; }
+				.receipt-print-ticket-rj-400 img { width: 500px; margin-left: -30px; }
+			}
+
+			/*Specific Windows Desktop styles: Internet Explorer 11+*/
+			@media print and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+				.receipt-print-ticket-tsp650 .containerBarcode img { width: 300px; }
+				.receipt-print-ticket-tsp650 td,span { font-size: 20px; }
+				.receipt-print-ticket-tsp650 td.containerTotal { font-size: 60px; }
+				.receipt-print-ticket-tsp650 td.containerTotal span.total { font-size: 22px; }
+				.receipt-print-ticket-tsp650 img.logo { width: 80% !important; }
+			}
+			@page { size: auto; margin: 5px; }
+		</style>
+	</head>
+
+	<body padding="0.5in 0.5in 0.5in 0.5in" size="Letter">
+		<#if JSON?has_content>
+			<table border="0" width="100%"  data-role="printer-receipt">
+				<tr style="display:none;">
+					<th width="20%">&#160;</th>
+					<th>&#160;</th>
+					<th>&#160;</th>
+				</tr>
+
+				<!-- COMPANY INFORMATION-->
+				<tr>
+					<td align="center" colspan="3"><img class="logo" style="width: 80%" src="${JSON.urlLogo?html}" /></td>
+				</tr>
+
+				<#if JSON.location?has_content && JSON.location.address?has_content>
+					<tr>
+						<td style="padding: 1em 0;" align="center" colspan="3">${JSON.location.address?html?replace("\n", "<br />")}</td>
+					</tr>
+				</#if>
+
+				<#if JSON.location?has_content && JSON.location.phone?has_content>
+					<tr>
+						<td style="padding: 1em 0;" align="center" colspan="3">${JSON.location.phone?html}</td>
+					</tr>
+				</#if>
+
+	          	<#if JSON.subsidiary?has_content && JSON.subsidiary.tin?has_content>
+	              <tr>
+	                <td style="padding: 1em 0;" align="center" colspan="3">${JSON.labels.tin?html}: ${JSON.subsidiary.tin?html}</td>
+	              </tr>
+				</#if>
+
+				<tr style="border-top: 0.05em solid gray; padding: 1px 0;">
+					<td align="center" colspan="3"></td>
+				</tr>
+
+				<!-- GENERAL ORDER INFORMATION-->
+				<tr>
+					<td colspan="3" style="padding-bottom: 1.5em;">
+						<table width="100%">
+
+				 		<#if JSON.summary?has_content && JSON.summary.tranid?has_content && !(JSON.creditmemo.summary.tranid?has_content)>
+				 			<tr>
+								<td class="receipttranid" align="left" width="50%">${JSON.labels.order?html} #: ${JSON.summary.tranid?html}</td>
+								<td align="right" width="50%">${JSON.createddate?html}</td>
+							</tr>
+						</#if>
+				 		<#if JSON.creditmemo?has_content && JSON.creditmemo.summary?has_content && JSON.creditmemo.summary.tranid?has_content>
+				 			<tr>
+								<td class="receipttranid" align="left" width="50%">${JSON.labels.creditMemo?html} #: ${JSON.creditmemo.summary.tranid?html}</td>
+								<td align="right" width="50%">${JSON.createddate?html}</td>
+							</tr>
+				 		</#if>
+
+						</table>
+					</td>
+				</tr>
+
+				<#if JSON.operation?has_content>
+					<tr>
+						<td>${JSON.labels.operation?html}:</td>
+						<td colspan="2">${JSON.operation?html}</td>
+					</tr>
+				</#if>
+
+				<!-- SALES ASSOCIATE-->
+				<#if JSON.salesassoc?has_content && JSON.salesassoc.name?has_content>
+					<#assign y = JSON.salesassoc.name?index_of(" ")>
+					<#assign assoc = JSON.salesassoc.name?string>
+					<tr>
+						<td>${JSON.labels.salesAssoc?html}:</td>
+						<td colspan="2">${assoc[0..y]}</td>
+					</tr>
+				<#elseif JSON.creditmemo?has_content && JSON.creditmemo.salesassoc?has_content && JSON.creditmemo.salesassoc.name?has_content>
+					<#assign y = JSON.salesassoc.name?index_of(" ")>
+					<#assign assoc = JSON.salesassoc.name?string>
+					<tr>
+						<td>${JSON.labels.salesAssoc?html}:</td>
+						<td colspan="2">${assoc[0..y]}</td>
+					</tr>
+				</#if>
+
+				<!-- SALES REP-->
+				<#if JSON.salesrep?has_content && JSON.salesrep.name?has_content>
+					<#assign x = JSON.salesrep.name?index_of(" ")>
+					<#assign rep = JSON.salesrep.name?string>
+					<tr>
+						<td>${JSON.labels.salesRep?html}:</td>
+						<td colspan="2">${rep[0..x]}</td>
+					</tr>
+				<#elseif JSON.creditmemo?has_content && JSON.creditmemo.salesrep?has_content && JSON.creditmemo.salesrep.name?has_content>
+					<#assign x = JSON.salesrep.name?index_of(" ")>
+					<#assign rep = JSON.salesrep.name?string>
+					<tr>
+						<td>${JSON.labels.salesRep?html}:</td>
+						<td colspan="2">${rep[0..x]}</td>
+					</tr>
+				</#if>
+
+				<!-- CUSTOMER-->
+				<#if JSON.customer?has_content && JSON.customer.isdefault == "false">
+
+					<#if JSON.customer.name?has_content>
+					<tr>
+						<td>${JSON.labels.customer.customer?html}:</td>
+						<td colspan="2">${JSON.customer.name?html}</td>
+					</tr>
+					</#if>
+				<#elseif JSON.creditmemo?has_content && JSON.creditmemo.customer?has_content && JSON.creditmemo.customer.isdefault == "false">
+
+					<#if JSON.creditmemo.customer.name?has_content>
+					<tr>
+						<td>${JSON.labels.customer.customer?html}:</td>
+						<td colspan="2">${JSON.creditmemo.customer.name?html}</td>
+					</tr>
+					</#if>
+				</#if>
+			
+				<tr style="border-top: 0.05em solid gray; padding: 1px 0;">
+					<td align="center" colspan="3"></td>
+				</tr>
+			</table>
+			
+			<table border="0" width="100%"  data-role="printer-receipt">
+				<!-- LINES RETURNED ORDER-->
+				<#if JSON.creditmemo?has_content && JSON.creditmemo.lines?has_content>
+					<tr style="border-top: 0.05em solid gray; padding: 1px 0;">
+						<td align="center" colspan="3"></td>
+					</tr>
+				</#if>
+
+				<#list JSON.creditmemo.lines as lineCM>
+					<#if lineCM.item.itemType != "Payment">
+						<#if lineCM.item.itemType != "Discount">
+							<tr>
+								<#if lineCM_index == 0>
+									<td style="padding-left: 0em; padding-top: 1em; padding-bottom: 0em" colspan="3">
+								<#else>
+									<td style="padding-left: 0em; padding-top: 1em; padding-bottom: 0em" colspan="3">
+								</#if>
+								<#if lineCM.customExtraFields.custcolcustcol_blush_collection?has_content>
+                                  ${lineCM.customExtraFields.custcolcustcol_blush_collection?html} ${lineCM.item.displayname?html}<br /> ${lineCM.customExtraFields.custcol_scis_itemid?html}<br /> ${lineCM.customExtraFields.custcol_scis_upc_receipt}
+								<#else>
+									${lineCM.item.displayname?html}
+								</#if>
+								</td>
+							</tr>
+							<tr>
+								<td style="padding-left: 0em; padding-top: 0em; padding-bottom: 0em; width: 80%" colspan="2">-${lineCM.quantity?html} @ ${lineCM.customExtraFields.rate?html}</td>
+								<td style="padding-top: 0em; padding-bottom: 0em; width: 20%" align="right">${lineCM.amount?html}</td>
+							</tr>
+								<#if lineCM.note?has_content>
+								<tr>
+									<td style="padding-left: 0em; padding-top: 0em; padding-bottom: 0em" colspan="3">
+									**<span style="font-style: italic;">${lineCM.note?html}</span>
+									</td>
+								</tr>
+							</#if>
+						<#else>
+							<tr>
+								<td style="padding-left: 0em; padding-top: 0em; padding-bottom: 0em; width: 80%;" colspan="2">
+									**${lineCM.item.displayname?html}
+								</td>
+								<td style="padding-top: 0em; padding-bottom: 0em; width: 20%;" align="right">${lineCM.amount?html}</td>
+							</tr>
+						</#if>
+					</#if>
+				</#list>
+
+                <!-- FULFILLMENT LINES -->
+				<#if JSON.fulfillment?has_content>
+                  <#list JSON.fulfillment.lines as line>
+                  	<#if line.quantityrejected == "0">
+                      <tr style="background-color:#eeeeee;">
+                          <td><img class="item-image" src="${line.item.thumbnail?html}" /></td>
+                          <td style="padding-left: 1em;">
+                              (${line.quantity?html}x) ${line.item.displayname?html}
+                          </td>
+                          <td style="padding-left:.5em;color:rgba(0,0,0,.6);" align="right">${line.amount?html}</td>
+                      </tr>
+                  	</#if>
+                  </#list>
+
+                  <tr style="border-bottom: 0.05em solid gray;padding: 1px 0;background-color:#eee;color:rgba(0,0,0,.6);">
+                    <td align="right" colspan="3" style="padding-right:8%;">Paid online in ${JSON.fulfillment.createdfrom.name}</td>
+                  </tr>
+                </#if>
+
+				<!-- ORDER LINES-->
+				<#list JSON.lines as line>
+					<#if line.item.voidqty == "0" && line.item.itemType != "Payment">
+						<#if line.item.itemType != "Discount">
+						<tr>
+							<td style="padding-left: 0em; padding-top: 1em; padding-bottom: 0em;" colspan="3">
+							<#if line.item.itemType == "GiftCert">
+								${line.item.displayname?html}
+								<br />
+								**Code: ${line.giftcertnumber?html}	
+							<#else>
+								<#if line.customExtraFields.custcolcustcol_blush_collection?has_content>
+									${line.customExtraFields.custcolcustcol_blush_collection?html} ${line.item.displayname?html}<br /> ${line.customExtraFields.custcol_scis_itemid?html}<br />${line.customExtraFields.custcol_scis_upc_receipt}
+								<#else>
+									${line.item.displayname?html}
+								</#if>
+							</#if>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-left: 0em; padding-top: 0em; padding-bottom: 0em; width: 80%;" colspan="2">${line.quantity?html} @ $${line.customExtraFields.rate?html}</td>
+							<td style="padding-top: 0em; padding-bottom: 0em; width: 20%;" align="right">$${line.amount}</td>
+						</tr>
+							<#if line.note?has_content>
+							<tr>
+								<td style="padding-left: 0em; padding-top: 0em; padding-bottom: 0em;" colspan="3">
+								**<span style="font-style: italic; ">${line.note?html}</span>
+								</td>
+							</tr>
+							</#if>
+						<#else>
+							<#if line.amount != " 0.00">
+							<tr>
+								<td style="padding-left: 0em; padding-top: 0em; padding-bottom: 0em; width: 80%;" colspan="2">
+									**${line.item.displayname?html}
+								</td>
+								<td style="padding-top: 0em; padding-bottom: 0em; width: 20%;" align="right">
+									$${line.amount?html}
+								</td>
+							</tr>
+							</#if>
+						</#if>
+					</#if>
+         
+				</#list>
+				<tr>
+					<td align="center" colspan="3" style="padding-bottom:0.5em;"></td>
+				</tr>
+				
+			<!-- CREDITMEMO SUMMMARY (RETURN) GROUP-->
+				<#if JSON.creditmemo?has_content && JSON.creditmemo.summary?has_content>
+					<tr style="border-top: 0.05em solid gray; padding: 1px 0;">
+						<td align="center" colspan="3"></td>
+					</tr>
+
+					<tr>
+						<td align="right" colspan="2" >${JSON.labels.returnSubtotal?html} </td>
+						<td align="right" >${JSON.creditmemo.summary.subtotal?html}</td>
+					</tr>
+
+					<#if JSON.creditmemo.summary.discounttotal != " 0.00">
+						<tr>
+							<td align="right" colspan="2" >${JSON.labels.returnDiscount?html} </td>
+							<td align="right" >${JSON.creditmemo.summary.discounttotal?html}</td>
+						</tr>
+					</#if>
+
+					<#if JSON.creditmemo.summary.taxtotal != " 0.00">
+						<tr>
+							<td align="right" colspan="2" >${JSON.labels.returnTax1?html} </td>
+							<td align="right" >${JSON.creditmemo.summary.taxtotal?html}</td>
+						</tr>
+					</#if>
+					
+					<#if JSON.creditmemo.summary.tax2total != " 0.00">
+						<tr>
+							<td align="right" colspan="2" >${JSON.labels.returnTax2?html} </td>
+							<td align="right" >${JSON.creditmemo.summary.tax2total?html}</td>
+						</tr>	
+					</#if>	
+
+					<#if JSON.creditmemo.summary.total?has_content>
+						<tr>
+							<td align="right" colspan="2" >${JSON.labels.returnTotal?html} </td>
+							<td align="right" >${JSON.creditmemo.summary.total?html}</td>
+						</tr>	
+					</#if>
+				</#if>
+
+				<!-- NOTES -->
+				<#if JSON.notes?has_content>
+					<tr>
+						<td colspan="3">
+							Notes:
+						</td>
+					</tr>
+					<#list JSON.notes as note>
+						<tr>
+							<td colspan="3" style="font-style: italic;">
+								**${note.title}<#if note.note?has_content>: ${note.note?html}</#if>
+							</td>
+						</tr>
+					</#list>
+				</#if>
+
+				<!-- SUMMMARY GROUP-->
+				<#if JSON.summary?has_content>
+					<tr style="border-top: 0.05em solid gray; padding: 1px 0;">
+						<td align="center" colspan="3"></td>
+					</tr>
+
+					<!-- ROUNDING GROUP-->
+					<#if JSON.roundingLine?has_content>
+						<tr>
+							<td align="right" colspan="2" > ${JSON.labels.rounding?html} </td>
+							<td align="right" >$${JSON.roundingLine.amount?html}</td>
+						</tr>
+					</#if>
+					
+					<#if JSON.summary.subtotal != " 0.00">
+					<tr>
+						<td align="right" colspan="2" >${JSON.labels.subtotal?html} </td>
+						<td align="right" >$${JSON.summary.subtotal?html}</td>
+					</tr>
+					</#if>
+
+					<#if JSON.summary.discounttotal != " 0.00">
+						<tr>
+							<td align="right" colspan="2" >${JSON.labels.discount?html} </td>
+							<td align="right" >$${JSON.summary.discounttotal?html}</td>
+						</tr>
+					</#if>	
+
+					<#if JSON.summary.taxtotal != " 0.00">
+						<tr>
+							<td align="right" colspan="2" >${JSON.labels.tax1?html} </td>
+							<td align="right" >$${JSON.summary.taxtotal?html}</td>
+						</tr>
+					</#if>				
+					
+					<#if JSON.summary.tax2total != " 0.00">
+						<tr>
+							<td align="right" colspan="2" >${JSON.labels.tax2?html} </td>
+							<td align="right" >$${JSON.summary.tax2total?html}</td>
+						</tr>	
+					</#if>	
+
+					<#if JSON.summary.handlingcost != " 0.00">
+						<tr>
+							<td align="right" colspan="2" >${JSON.labels.handlingCost?html} </td>
+							<td align="right" >${JSON.summary.handlingcost?html}</td>
+						</tr>	
+					</#if>
+
+					<#if JSON.summary.shippingcost != " 0.00">
+						<tr>
+							<td align="right" colspan="2" >${JSON.labels.shippingCost?html} </td>
+							<td align="right" >${JSON.summary.shippingcost?html}</td>
+						</tr>	
+					</#if>
+				</#if>
+
+					<#if JSON.customExtraFields.custbody_scis_trantotal?has_content>
+					<tr>
+						<td align="right" colspan="2" ><b>${JSON.labels.totalLow?html}</b></td>
+						<td align="right" ><b>$${JSON.customExtraFields.custbody_scis_trantotal}</b></td>
+					</tr>
+					<#else>
+					<tr>
+						<td align="right" colspan="2" ><b>${JSON.labels.totalLow?html}</b></td>
+						<td align="right" ><b>$${JSON.summary.totalValue?html}</b></td>
+					</tr>
+					</#if>
+				
+				<tr style="border-bottom: 0.05em solid gray; padding: 1px 0;">
+					<td align="center" colspan="3"> </td>
+				</tr>
+				<tr style="padding: 1px 0;">
+					<td align="center" colspan="3"> </td>
+				</tr>				
+				
+				<!-- PAYMENTS GROUP-->
+				<#list JSON.payments as payment>
+					<tr>
+						<#if payment.paymentmethodname?contains("EMV")>
+						<td style="${(payment_index == 0)?string('', 'padding-top: 1em;')}" align="right" colspan="2">Credit Card </td>
+						<#else>
+						<td style="${(payment_index == 0)?string('', 'padding-top: 1em;')}" align="right" colspan="2">${payment.paymentmethodname?html} </td>
+						</#if>
+						<td style="${(payment_index == 0)?string('', 'padding-top: 1em;')}" align="right">$${payment.totalTendered?html}</td>
+					</tr>
+
+					<#if payment.checknum?has_content>
+						<tr>
+							<td align="right" colspan="2">**${JSON.labels.payments.checknum?html}: </td>
+							<td class="checknumber" align="right">${payment.checknum?html}</td>
+					</tr>
+					</#if>
+
+					<#if payment.ccnumber?has_content>
+						<tr>
+							<td align="right" colspan="2">**${JSON.labels.payments.ccnumber?html}: </td>
+							<td align="right">${payment.ccnumber?html}</td>
+						</tr>	
+					</#if>
+
+					<#if payment.ccexpiredate?has_content>
+						<tr>
+							<td align="right" colspan="2">**${JSON.labels.payments.ccexpiredate?html}: </td>
+							<td align="right">${payment.ccexpiredate?html}</td>
+						</tr>
+					</#if>
+
+					<#if payment.authcode?has_content>
+						<tr>
+							<td align="right" colspan="2">**Authorization Code: </td>
+							<td align="right">${payment.authcode?html}</td>
+						</tr>	
+					</#if>
+                    
+                    <#if payment.shopperprintblock?has_content>
+                        <#list payment.shopperprintblock?split("\\n") as item>
+                            <#if item?starts_with("Card=*")>
+                                <tr>
+                                    <td align="right" colspan="2">Card Number:</td>
+                                <#list item?split("=") as card>
+                                    <#if card?starts_with("Card")?then(false,true)>
+                                        <td align="right">${card}</td>
+                                    </#if>
+                                </#list>
+                                </tr>
+                            </#if>
+                            
+                            <#if item?starts_with("Card type=")>
+                                <tr>
+                                    <td align="right" colspan="2">Card Type:</td>
+                                <#list item?split("=") as type>
+                                    <#if type?starts_with("Card type")?then(false,true)>
+                                        <td align="right">${type}</td>
+                                    </#if>
+                                </#list>
+                                </tr>
+                            </#if>
+                        </#list>
+                        <!-- 
+                        <td>${payment.shopperprintblock?html}</td>
+                        <td>${payment.shopperprintblock?html?substring(73, 86)}</td> 
+                        <td>${payment.shopperprintblock?html?index_of("Card=*")}</td> 
+                        <td>${payment.shopperprintblock?html?index_of("Card type=")}</td>
+                        -->
+					</#if>
+
+					<#if payment.ccname?has_content>
+						<tr>
+							<td align="right" colspan="2">**${JSON.labels.payments.ccname?html}: </td>
+							<td align="right">${payment.ccname?html}</td>
+						</tr>	
+					</#if>
+				</#list>
+
+				<!-- GIFTCERTIFICATES GROUP-->
+				<#list JSON.giftcertificates as gift>
+				<tr>
+					<td align="right" colspan="2" style="padding-top: 1em;">${JSON.labels.giftcards.giftcard?html} </td>
+					<td align="right" style="padding-top: 1em;">${gift.applied?html}</td>
+				</tr>
+				<#if gift.giftcertnumber?has_content>
+				<tr>
+					<td align="right" colspan="2">Gift Card Number: </td>
+					<td align="right">${gift.giftcertnumber?html}</td>
+				</tr>
+				</#if>
+				</#list>
+				
+
+				<!-- REFUNDMETHOD GROUP-->
+				<#list JSON.creditmemo.refunds as refund>
+					<tr>
+						<td align="right" colspan="2"> ${refund.paymentmethodname?html} ${JSON.labels.refunds.refund?html} </td>
+						<td align="right">$${refund.total?html}</td>
+					</tr>
+
+					<#if refund.checknum?has_content>
+						<tr>
+							<td align="right" colspan="2">**${JSON.labels.refunds.checknum?html}: </td>
+							<td class="checknumber" align="right">${refund.checknum?html}</td>
+						</tr>	
+					</#if>
+				</#list>
+
+				<!-- CHANGE-->
+				<#if JSON.summary?has_content && JSON.summary.changedue?has_content>
+					<tr>
+						<td style="padding-top: 1em;" align="right" colspan="2">${JSON.labels.change?html} </td>
+						<td style="padding-top: 1em;" align="right">${JSON.summary.changedue?html}</td>
+					</tr>
+				</#if>
+				
+
+				<!--FOOTER MESSAGE & BARCODE-->
+				<tr>
+					<td style="padding: 5px;" align="center" colspan="3"></td>
+				</tr>
+
+				<tr>
+				    <td style="padding-top: 2em; padding-bottom: 0.5em" colspan="3"></td>
+			  	</tr>
+			  	<tr>
+					<td colspan="3"                    
+						style="padding-top: 2em; padding-bottom: 1em; text-align: center;">Thank you! All purchases are final sale.<br /> Merci! Tous les achats s'agissent d'une vene finale.<br />
+					</td>
+				</tr>
+			  	
+				<#list JSON.payments as payment>
+					
+				</#list>
+
+	            <#list JSON.refunds as refund>
+					<#if refund.shopperprintblock?has_content>
+					<tr>
+						<!--<td>${refund.shopperprintblock?html}</td>-->
+					</tr>
+					</#if>
+				</#list>
+
+	            <#list JSON.creditmemo.refunds as refund>
+					<#if refund.shopperprintblock?has_content>
+					<tr>
+						<!--<td>${refund.shopperprintblock?html}</td>-->
+					</tr>
+					</#if>
+				</#list>
+
+			 	<#if JSON.summary?has_content && JSON.summary.tranid?has_content>
+			 			<tr class="containerBarcode">
+			 				<td align="center" colspan="3"><barcode codetype="code128" showtext="false" height="30" value="${JSON.summary.tranid?html}" /></td>
+			 			</tr>
+			 	<#elseif JSON.creditmemo?has_content && JSON.creditmemo.summary?has_content && json.creditmemo.summary.tranid?has_content>
+			 			<tr class="containerBarcode">
+			 			 	<td align="center" colspan="3"><barcode codetype="code128" showtext="false" height="30" value="${JSON.creditmemo.summary.tranid?html}" /></td>
+			 			</tr>
+			 	</#if>
+			 	
+			 	<tr>
+				    <td style="padding-top: 2em; padding-bottom: 0.5em" colspan="3"></td>
+			  	</tr>
+		    </table>
+			<br />
+		</#if>
+	</body>
+</pdf>

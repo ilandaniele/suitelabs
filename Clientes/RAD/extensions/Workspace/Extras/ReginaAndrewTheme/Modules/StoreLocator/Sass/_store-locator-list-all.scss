@@ -1,0 +1,20 @@
+.store-locator-list-all-main {
+	@extend .container;
+
+	h3 {
+		padding-bottom:$sc-padding-lv3;
+		padding-top:$sc-padding-lv3;
+		border-bottom:1px solid $sc-color-theme-border-light;
+		margin-bottom:$sc-margin-lv3;
+	}
+
+	.global-views-pagination {
+		margin-bottom:$sc-margin-lv4;
+	}
+}
+
+.store-locator-list-all-container {
+	margin-bottom: 20px;
+	display: flex;
+	flex-flow: wrap;
+}

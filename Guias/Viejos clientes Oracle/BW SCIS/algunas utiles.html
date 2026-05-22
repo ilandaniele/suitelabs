@@ -1,0 +1,17 @@
+ <tr>
+                    <td class="addressheader" colspan="6" style="width: 225px;"><b>${JSON.labels.customer.billaddresstext?html}</b></td>
+                    <td class="addressheader" style="width: 255px;"><strong>Ship To</strong></td>
+                </tr>
+                
+                <tr>
+                    <td class="address" colspan="6" rowspan="2" style="width: 225px;">${JSON.customer?html}</td>
+                    <#if JSON.lines?has_content>
+                        <#list JSON.lines as line>
+                            <#if line.shipaddresstext?has_content && line.item.linenumber == 1>
+                                <td class="address" rowspan="2" style="width: 255px;">${line.shipaddresstext?html}</td>
+                            </#if>
+                        </#list>
+                    </#if>
+                    <td class="address" rowspan="2" style="width: 255px;">${JSON.customer.shipaddresstext?html}</td>
+                    
+                </tr>

@@ -1,0 +1,85 @@
+{
+	"name": "LoginRegisterTrade",
+	"fantasyName": "Login Register Trade",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "Login Register Trade. SuiteLabs v2.1.0, fixed redirection after registering through the trade form",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": [
+				"services/LoginRegisterTrade.Service.ss",
+				"services/LoginRegisterTrade.Form.Service.ss"
+			]
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/LoginRegisterTrade/Configuration/Configuration.json"
+		]
+	},
+	"templates": {
+		"application": {
+			"checkout": {
+				"files": [
+					"Modules/LoginRegisterTrade/Templates/loginregister_trade.tpl",
+					"Modules/LoginRegisterTrade/Templates/loginregister_retail.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"checkout": "Modules/LoginRegisterTrade/Sass/_loginregister.scss"
+		},
+		"files": [
+			"Modules/LoginRegisterTrade/Sass/_loginregister.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"checkout": "Modules/LoginRegisterTrade/JavaScript/AwaLabs.LoginRegisterTrade.js"
+		},
+		"application": {
+			"checkout": {
+				"files": [
+					"Modules/LoginRegisterTrade/JavaScript/AwaLabs.LoginRegisterTrade.js",
+					"Modules/LoginRegisterTrade/JavaScript/LoginRegisterTrade.Model.js",
+					"Modules/LoginRegisterTrade/JavaScript/LoginRegisterTrade.Retail.View.js",
+					"Modules/LoginRegisterTrade/JavaScript/LoginRegisterTrade.Trade.View.js",
+					"Modules/LoginRegisterTrade/JavaScript/LoginRegisterTrade.Account.Register.Model.js",
+					"Modules/LoginRegisterTrade/JavaScript/LoginRegisterTrade.LoginRegister.Register.View.js",
+					"Modules/LoginRegisterTrade/JavaScript/LoginRegisterTrade.LoginRegister.Login.View.js",
+					"Modules/LoginRegisterTrade/JavaScript/LoginRegisterTrade.Form.Model.js"
+				]
+			}
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/LoginRegisterTrade/SuiteScript/AwaLabs.LoginRegisterTrade.js",
+		"files": [
+			"Modules/LoginRegisterTrade/SuiteScript/LoginRegisterTrade.ServiceController.js",
+			"Modules/LoginRegisterTrade/SuiteScript/AwaLabs.LoginRegisterTrade.js",
+			"Modules/LoginRegisterTrade/SuiteScript/LoginRegisterTrade.Model.js",
+			"Modules/LoginRegisterTrade/SuiteScript/LoginRegisterTrade.Account.Model.js",
+			"Modules/LoginRegisterTrade/SuiteScript/LoginRegisterTrade.Form.ServiceController.js"
+		]
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/LoginRegisterTrade@2.1.0",
+	"activation_id": "11",
+	"extension_id": "16913"
+}

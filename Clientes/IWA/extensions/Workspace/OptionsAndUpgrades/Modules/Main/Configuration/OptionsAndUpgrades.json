@@ -1,0 +1,68 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "optionsAndUpgrades",
+        "title": "Options And Upgrades",
+        "description": "Options And Upgrades Extension Configuration",
+        "group": "extensions"
+    },
+    "properties": {
+        "optionsAndUpgrades.itemFieldId": {
+            "group": "extensions",
+            "subtab": "optionsAndUpgrades",
+            "type": "string",
+            "title": "Options And Upgrades Item Field Id",
+            "description": "Internal id of the Item Record checkbox field that flags an item to display, or not, the new 'options and upgrades' section (in replacement of 'you may also like')."
+        },
+        "optionsAndUpgrades.relatedItemsTitle": {
+            "group": "extensions",
+            "subtab": "optionsAndUpgrades",
+            "type": "string",
+            "title": "Options And Upgrades Section Title",
+            "description": "Manually sets the title for the Options And Upgrades section on the website.",
+            "default": "Add Options & Upgrades"
+        },
+        "optionsAndUpgrades.relatedItemsPlaceholder": {
+            "group": "extensions",
+            "subtab": "optionsAndUpgrades",
+            "type": "string",
+            "title": "Options And Upgrades Placeholder",
+            "description": "Placeholder (data-view or data-cms-area) for the Options And Upgrades section on the PDP.",
+            "enum": ["item_details_banner", "Product.Information", "product_details_full_cms_area_6", "ProductReviews.Center", "product_details_full_cms_area_8", "Related.Items", "Correlated.Items", "item_details_banner_bottom"],
+            "default": "Related.Items"
+        },
+        "optionsAndUpgrades.relatedItemsPosition": {
+            "group": "extensions",
+            "subtab": "optionsAndUpgrades",
+            "type": "string",
+            "title": "Options And Upgrades Position",
+            "description": "Position for the Options And Upgrades section inside the previous placeholder.",
+            "enum": ["first", "last"],
+            "default": "first"
+        },
+        "optionsAndUpgrades.addToCartText": {
+            "group": "extensions",
+            "subtab": "optionsAndUpgrades",
+            "type": "string",
+            "title": "Add To Cart Button Label",
+            "description": "Text to be shown as the Add To Cart button for each Option And Upgrades item.",
+            "default": "Add To Cart"
+        },
+        "optionsAndUpgrades.hideProductImage": {
+            "group": "extensions",
+            "subtab": "optionsAndUpgrades",
+            "type": "boolean",
+            "title": "Hide Product Image",
+            "description": "Hides the product image for Option And Upgrades items on the website.",
+            "default": true
+        },
+        "optionsAndUpgrades.enableRelatedItemsScrollToLink": {
+            "group": "extensions",
+            "subtab": "optionsAndUpgrades",
+            "type": "boolean",
+            "title": "Enable Option And Upgrades Scroll To Link",
+            "description": "Enables the scroll to link for Option And Upgrades on the website",
+            "default": false
+        }
+    }
+}

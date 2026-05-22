@@ -1,0 +1,7 @@
+define('footer_copyright.tpl', ['Handlebars','Handlebars.CompilerNameLookup'], function (Handlebars, compilerNameLookup){ var t = {"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, helper;
+
+  return "<div class=\"footer-content-copyright\">\n    <small>"
+    + ((stack1 = ((helper = (helper = compilerNameLookup(helpers,"copyrightText") || (depth0 != null ? compilerNameLookup(depth0,"copyrightText") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"copyrightText","hash":{},"data":data,"loc":{"start":{"line":2,"column":11},"end":{"line":2,"column":30}}}) : helper))) != null ? stack1 : "")
+    + "</small>\n</div>";
+},"useData":true}; var main = t.main; t.main = function(){ arguments[1] = arguments[1] || {}; var ctx = arguments[1]; ctx._extension_path = 'http://localhost:7777/tmp/extensions/AwaLabs/FooterCopyright/2.1.0/'; ctx._theme_path = 'http://localhost:7777/tmp/extensions/AwaLabs/ReginaAndrewTheme/23.2.2/'; return main.apply(this, arguments); }; var template = Handlebars.template(t); template.Name = 'footer_copyright'; return template;});

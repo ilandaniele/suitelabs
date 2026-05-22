@@ -1,0 +1,12 @@
+services:
+  sc-environment:
+    build:
+      context: .
+      args:
+        SCA_VERSION: ${SCA_VERSION:-2024.1}
+    image: sca-tools:${SCA_VERSION:-latest}
+    environment:
+      - SCA_VERSION=${SCA_VERSION:-2024.1}
+    working_dir: /app
+    stdin_open: true
+    tty: true

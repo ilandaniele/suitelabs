@@ -1,0 +1,55 @@
+/*
+	Sass Application Entry Point
+	Link all your sass dependencies in the right order
+
+	Example:
+	@import "other-sass-file.scss";
+	@import "../../<other module>/Sass/other-sass-file.scss";
+*/
+
+.my-downloads-list-header {
+    @extend .product-list-lists-header !optional;
+}
+
+.my-downloads-list-recordviews-actionable-table {
+    @extend .order-history-list-recordviews-actionable-table !optional;
+}
+
+.my-downloads-list-recordviews-actionable-header {
+    @extend .order-history-list-recordviews-actionable-header !optional;
+}
+
+.my-downloads-list-recordviews-actionable-text-header, .my-downloads-list-recordviews-actionable-long-header {
+    @extend .order-history-list-recordviews-actionable-title-header !optional;
+    @extend .recordviews-actionable-title !optional;
+}
+
+.my-downloads-list {
+    @extend .order-history-list !optional;
+}
+
+.my-downloads-recordviews-actionable {
+    @extend .recordviews-actionable !optional;
+}
+
+.my-downloads-recordviews-actionable-text, .my-downloads-recordviews-actionable-long {
+    @extend .recordviews-actionable-value !optional;
+}
+
+.my-downloads-recordviews-actionable-text a, .my-downloads-recordviews-actionable-long a {
+    @extend .recordviews-actionable-title !optional;
+    text-decoration: underline;
+}
+
+.my-downloads-list-recordviews-actionable-text-header, .my-downloads-recordviews-actionable-text {
+    width: 20%;
+    overflow-wrap: anywhere;
+}
+
+.my-downloads-list-recordviews-actionable-long-header, .my-downloads-recordviews-actionable-long {
+    width: 40%;
+}
+
+.my-downloads-list-empty-section {
+    @extend .order-history-list-empty-section !optional;
+}

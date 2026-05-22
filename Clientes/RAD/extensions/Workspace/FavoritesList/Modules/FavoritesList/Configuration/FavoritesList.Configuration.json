@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "favoritesList",
+        "title": "Favorites/Projects",
+        "description": "Favorites List",
+        "group": "shoppingApplication"
+    },
+    "properties": {
+        "favoritesList.template": {
+            "group": "shoppingApplication",
+            "subtab": "favoritesList",
+            "type": "integer",
+            "title": "Template Id",
+            "description": "Template Id",
+            "default": "41"
+        },
+        "favoritesList.imageBaseUrl": {
+            "group": "shoppingApplication",
+            "subtab": "favoritesList",
+            "type": "string",
+            "title": "Image Base URL",
+            "default": "https://www.reginaandrew.com/store/assets/img/"
+        }
+    }
+}

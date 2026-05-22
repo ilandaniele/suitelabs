@@ -1,0 +1,1 @@
+<div class="item-views-option-hidden" data-id="{{itemOptionId}}" data-type="option" data-cart-option-id="{{cartOptionId}}"></div>

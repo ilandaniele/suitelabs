@@ -1,0 +1,32 @@
+{
+	"type": "object",
+    "subtab": {
+        "id": "recentlySearched",
+        "title": "Recently Searched",
+        "description": "Manage Recent Searched Keyword Appearance",
+        "group": "sctypeahead"
+    }
+,	"properties": {
+        "sctypeahead.recentlySearched.enableRecentlySearchedKeyword":{
+            "type": "boolean",
+            "default": true,
+            "title": "Enable Recently Searched Keyword feature",
+            "subtab": "recentlySearched",
+            "group": "sctypeahead"
+        },
+        "sctypeahead.recentlySearched.numberOfRecentlySearchedKeyword":{
+            "type": "integer",
+            "default": 10,
+            "title": "Set Number of Recently Searched Keyword to be shown",
+            "subtab": "recentlySearched",
+            "group": "sctypeahead"
+        },
+        "sctypeahead.recentlySearched.expiryOfRecentlySearchedKeywordCookie":{
+            "type": "integer",
+            "default": 365,
+            "title": "Set Expiry of Recently Searched Keyword cookie in days",
+            "subtab": "recentlySearched",
+            "group": "sctypeahead"
+        }
+	}
+}

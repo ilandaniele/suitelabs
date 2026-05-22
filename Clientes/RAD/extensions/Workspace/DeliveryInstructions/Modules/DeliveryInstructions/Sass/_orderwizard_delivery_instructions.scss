@@ -1,0 +1,106 @@
+.order-wizard-deliveryinstructions-module{
+  @extend .box-column;
+}
+.order-wizard-deliveryinstructions-module-title{
+  margin-bottom: $sc-margin-lv4;
+}
+.order-wizard-deliveryinstructions-module{
+  padding-top: 0;
+  h4{
+    text-align: center;
+  }
+    .label_custbody_awa_white_glove {
+      display: block;
+      cursor: pointer;
+    }
+    .white_glove_section {
+      font-weight: 300;
+      background: $sc-color-theme-border;
+      line-height: 1.5;
+      @extend .order-wizard-shipmethod-module-option;
+      @extend .clearfix;
+      cursor: default;
+      .label_custbody_awa_white_glove {
+        display: block;
+      }
+      .label_custbody_awa_white_glove.disabled {
+        cursor: default;
+      }
+
+      input{
+        float: left;
+        margin-right: 15px;
+        border: 1px solid #b7b7b7;
+      }
+
+
+      span{
+        display: block;
+        margin-top: -3px;
+        font-weight: 300;
+      }
+
+      .wg-message {
+        display: inline-block;
+        font-weight: 300;
+        padding-left: 0;
+      }
+      .wg-edit-fields {
+        @extend .address-edit-fields;
+        display: block;
+        font-weight: 400;
+      }
+      .wg-fields-group {
+        @extend .address-edit-fields-group !optional;
+        margin-bottom: .25em;
+      }
+      .wg-fields-group-label {
+        @extend .address-edit-fields-group-label !optional;
+        font-weight: 300;
+        @media (min-width: 768px) {
+          width: 35%;
+        }
+        @media (min-width: 850px) {
+          width: 30%;
+        }
+        @media (min-width: 937px) {
+          width: 35%;
+        }
+        @media (min-width: 1200px) {
+          width: 25%;
+        }
+      }
+      .wg-fields-group-label-required {
+         @extend .address-edit-fields-group-label-required !optional;
+          padding: 0;
+          display: inline-block;
+      }
+      .wg-fields-group-form-controls {
+        @extend .address-edit-fields-group-form-controls !optional;
+        width: 75%;
+        @media (min-width: 768px) {
+          width: 65%;
+        }
+        @media (min-width: 830px) {
+          width: 68%;
+        }
+        @media (min-width: 937px) {
+          width: 65%;
+        }
+        @media (min-width: 1200px) {
+          width: 75%;
+        }
+      }
+      .wg-customer-information {
+        font-weight: 600;
+        padding-left: 0;
+        display: inline-block;
+        margin: 1em 0 0.7em;
+      }
+    }
+
+}
+#wizard-step-content .order-wizard-shipmethod-module{
+  margin-bottom: 0;
+}
+

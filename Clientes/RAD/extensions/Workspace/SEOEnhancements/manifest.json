@@ -1,0 +1,52 @@
+{
+	"name": "SEOEnhancements",
+	"fantasyName": "SEO Enhancements",
+	"vendor": "SuiteLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "1.0.4",
+	"description": "This extension contains enhancements and fixes to optimize SEO performance",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/Main/Sass/_seo-enhancements.scss"
+		},
+		"files": [
+			"Modules/Main/Sass/_seo-enhancements.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/Main/JavaScript/SuiteLabs.SEOEnhancements.Main.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Main/JavaScript/SuiteLabs.SEOEnhancements.Main.js",
+					"Modules/Main/JavaScript/Facets.Browse.View.FixMetaDescription.js",
+					"Modules/Main/JavaScript/CMSadapter.Impl.Enhanced.OpenGraph.Fix.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/SuiteLabs/SEOEnhancements@1.0.4",
+	"activation_id": "11",
+	"extension_id": "15801"
+}

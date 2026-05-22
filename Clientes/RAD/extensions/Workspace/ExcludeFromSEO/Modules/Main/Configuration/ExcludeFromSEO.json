@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "modifications": [{
+        "target": "$.properties[facets].items.properties",
+        "action": "add",
+        "value": {
+            "seoExclude": {
+                "type": "boolean",
+                "title": "Exclude From SEO"
+            }
+        }
+    }]
+}

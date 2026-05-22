@@ -1,0 +1,50 @@
+try: 
+   MC.Alert("entered")
+   item = MC.GetProperty("Transaction.LineItem.Selected")
+   lineAssociated = item.AI_LN_ITM //sets whatever line item we have right now, to line number for it, we need to set that the ewr line that we created
+   MC.Alert(item)
+   if item.ExtendedProperties.ContainsKey("custitem_ewr_fee_item"):
+      print "here"
+      ewrFee = item.ExtendedProperties["custitem_ewr_fee_item"]
+      if not string.IsNullOrEmpty(ewrFee):
+         print "Add ewrFee Item"
+         qty = item.Quantity
+         //Add item
+         itemAdd = "NIS"+ewrFee
+         print itemAdd
+         
+         if item.ToString().Trim().Equals("NetSuite.Retail.POS.Business.SaleReturnLineItem"):
+             using item = NetSuite.Retail.POS.Business.SaleReturn("ID:"+itemAdd):
+                item.Run()
+             if qty.Equals("1.00"):
+                print "Do Nothing"
+             else:
+                //Change the price
+                item = MC.GetProperty("Transaction.LineItem.Selected")
+                itemPrice = item.MO_PRC_ACT
+                newPrice = itemPrice * qty
+                item.Changing()
+                item.ActualUnitPrice = item.RegularUnitPrice = newPrice
+                item.Update()
+                item.ApplyChanges()
+
+         elif item.ToString().Trim().Equals("NetSuite.Retail.POS.Business.ReturnSaleLineItem"): // adds case to check for return sale
+            using ditem = NetSuite.Retail.POS.Business.ReturnSaleNonValidatedLine("ID:${itemAdd} noreason nocustomer"):
+                ditem.Run()
+             if qty.Equals("1.00"):
+                print "Do Nothing"
+             else:
+                //Change the price
+                item = MC.GetProperty("Transaction.LineItem.Selected")
+                itemPrice = item.MO_PRC_ACT
+                newPrice = itemPrice * qty //check price, needs to be negative
+                item.Changing()
+                item.ActualUnitPrice = item.RegularUnitPrice = newPrice
+                item.Update()
+                item.ApplyChanges()
+         else:
+            return //if it's a comment it returns, it can be a comment that's why we add this line here
+      else:
+         print "No EWR Fee"
+except:
+   return

@@ -1,0 +1,67 @@
+// Exposed variables
+$sc-blog-post-card-horizontal-background: #FFFFFF; // editable({"type": "color", "label": "Card Background"})
+$sc-blog-post-card-horizontal-border-color: transparent; // editable({"type": "color", "label": "Border Color"})
+$sc-blog-post-card-horizontal-border-width: 0; // editable({"type": "string", "label": "Border Width"})
+$sc-blog-post-card-horizontal-border-radius: 3px; // editable({"type": "string", "label": "Border Radius"})
+$sc-blog-post-card-horizontal-shadow-color: #CACACA; // editable({"type": "color", "label": "Shadow Color"})
+$sc-blog-post-card-horizontal-text-highlight-color: #D9E6F7; // editable({"type": "color", "label": "Text Highlight Color"})
+$sc-blog-post-card-horizontal-title-font-family: $sc-blog-regular-font-family; // editable({"type": "string", "label": "Title Text Font Family"})
+$sc-blog-post-card-horizontal-title-text-color: $sc-color-copy-dark; // editable({"type": "color", "label": "Title Text Color"})
+$sc-blog-post-card-horizontal-excerpt-font-family: $sc-blog-regular-font-family; // editable({"type": "string", "label": "Excerpt Text Font Family"})
+$sc-blog-post-card-horizontal-excerpt-text-color: $sc-color-copy;// editable({"type": "color", "label": "Excerpt Text Color"})
+$sc-blog-post-card-horizontal-link-font-family: $sc-blog-regular-font-family; // editable({"type": "string", "label": "Link Text Font Family"})
+$sc-blog-post-card-horizontal-link-text-color: $sc-color-link;// editable({"type": "color", "label": "Link Text Color"})
+
+// Card
+$sc-blog-post-card-h-background: $sc-blog-post-card-horizontal-background;
+$sc-blog-post-card-h-border-radius: $sc-blog-post-card-horizontal-border-radius;
+$sc-blog-post-card-h-border-width: $sc-blog-post-card-horizontal-border-width;
+$sc-blog-post-card-h-border-style: solid;
+$sc-blog-post-card-h-border-color: $sc-blog-post-card-horizontal-border-color;
+$sc-blog-post-card-h-box-shadow-h-offset: 0;
+$sc-blog-post-card-h-box-shadow-v-offset: 1px;
+$sc-blog-post-card-h-box-shadow-blur: 5px;
+$sc-blog-post-card-h-box-shadow-spread: 0;
+$sc-blog-post-card-h-box-shadow-color: $sc-blog-post-card-horizontal-shadow-color;
+$sc-blog-post-card-h-highlighting-color: $sc-blog-post-card-horizontal-text-highlight-color;
+$sc-blog-post-card-h-animation: box-shadow 0.3s ease;
+
+// Category
+$sc-blog-post-card-h-category-font-size: 11px;
+$sc-blog-post-card-h-category-font-weight: 600;
+$sc-blog-post-card-h-category-letter-spacing: 1px;
+$sc-blog-post-card-h-category-line-height: 15px;
+
+// Title
+$sc-blog-post-card-h-heading-color: $sc-blog-post-card-horizontal-title-text-color;
+$sc-blog-post-card-h-heading-font-family: $sc-blog-post-card-horizontal-title-font-family;
+
+// Excerpt
+
+$sc-blog-post-card-h-excerpt-color: $sc-blog-post-card-horizontal-excerpt-text-color;
+$sc-blog-post-card-h-excerpt-font-family: $sc-blog-post-card-horizontal-excerpt-font-family;
+$sc-blog-post-card-h-excerpt-font-size-desktop: 15px;
+$sc-blog-post-card-h-excerpt-line-height-desktop: 20px;
+$sc-blog-post-card-h-excerpt-font-size-mobile: 12px;
+$sc-blog-post-card-h-excerpt-line-height-mobile: 18px;
+
+// Link
+$sc-blog-post-card-h-link-font-color: $sc-blog-post-card-horizontal-link-text-color;
+$sc-blog-post-card-h-link-font-family: $sc-blog-post-card-horizontal-link-font-family;
+
+// Hover styles
+$sc-blog-post-card-h-hover-background: $sc-blog-post-card-horizontal-background;
+$sc-blog-post-card-h-hover-border-width: 0;
+$sc-blog-post-card-h-hover-border-style: none;
+$sc-blog-post-card-h-hover-border-color: transparent;
+$sc-blog-post-card-h-hover-box-shadow-h-offset: 0;
+$sc-blog-post-card-h-hover-box-shadow-v-offset: 5px;
+$sc-blog-post-card-h-hover-box-shadow-blur: 15px;
+$sc-blog-post-card-h-hover-box-shadow-spread: 0;
+$sc-blog-post-card-h-hover-box-shadow-color: #CACACA;
+
+// Mocks
+$sc-blog-post-card-h-mock-height-xs: 15px;
+$sc-blog-post-card-h-mock-height-s: 20px;
+
+

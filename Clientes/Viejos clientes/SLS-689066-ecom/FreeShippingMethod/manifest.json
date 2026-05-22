@@ -1,0 +1,62 @@
+{
+  "fantasyName": "Free Shipping Method",
+  "name": "FreeShippingMethod",
+  "version": "1.0.0",
+  "vendor": "NSeComm",
+  "type": "extension",
+  "target": "SCS,SCA",
+  "description": "Adds a free shipping method for certain items on the 48 continental states",
+  "assets": {
+    "img": {
+      "files": []
+    },
+    "fonts": {
+      "files": []
+    },
+    "services": {
+      "files": []
+    }
+  },
+  "suitescript2": {
+    "files": []
+  },
+  "target_version": {
+    "SCS": "",
+    "SCA": ""
+  },
+  "javascript": {
+    "entry_points": {
+      "checkout": "Modules/Main/JavaScript/NSeComm.FreeShippingMethod.Main.js"
+    },
+    "application": {
+      "checkout": {
+        "files": [
+          "Modules/Main/JavaScript/NSeComm.FreeShippingMethod.Main.js",
+          "Modules/Main/JavaScript/Main.View.js"
+        ]
+      }
+    }
+  },
+  "templates": {
+    "application": {
+      "checkout": {
+        "files": [
+          "Modules/Main/Templates/nsecomm_freeshippingmethod_main.tpl"
+        ]
+      }
+    }
+  },
+  "sass": {
+    "entry_points": {
+      "checkout": "Modules/Main/Sass/_freeshippingmethod-main.scss"
+    },
+    "files": [
+      "Modules/Main/Sass/_freeshippingmethod-main.scss"
+    ]
+  },
+  "configuration": {
+    "files": [
+      "Modules/Main/Configuration/Main.json"
+    ]
+  }
+}

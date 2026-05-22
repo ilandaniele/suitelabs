@@ -1,0 +1,53 @@
+{
+	"type": "object",
+    "subtab": {
+        "id": "topsearchedcategories",
+        "title": "Top-Searched Categories",
+        "description": "Top-Searched Categories",
+        "group": "sctypeahead"
+    }
+,	"properties": {
+        "sctypeahead.topsearchedcategories.splitKeywordForSearching": {
+            "group": "sctypeahead",
+            "subtab": "topsearchedcategories",
+            "type": "boolean",
+            "title": "Split keyword for searching",
+            "description":"if true then keyword would be split by spaces before searching. i.e. complete pistol => complete pistol + complete + pistol all 3 would be used for searching ",
+            "default": true
+        },
+
+        "sctypeahead.topsearchedcategories.maxCategoriesToBeShown":{
+            "type": "integer",
+            "default": 25,
+            "title": "Maximum Categories allowed to be shown on Desktop",
+            "subtab": "topsearchedcategories",
+            "group": "sctypeahead"
+        },
+
+        "sctypeahead.topsearchedcategories.maxCategoriesToBeShownMobile":{
+            "type": "integer",
+            "default": 6,
+            "title": "Maximum Categories allowed to be shown on Mobile",
+            "subtab": "topsearchedcategories",
+            "group": "sctypeahead"
+        },
+
+        "sctypeahead.topsearchedcategories.filterCategoriesByWeightage":{
+            "type": "boolean",
+            "default": false,
+            "title": "Filter Categories Suggestion By Weightage",
+            "description": "Enable this if you want to remove irrelevent results from categories suggestion.",
+            "subtab": "topsearchedcategories",
+            "group": "sctypeahead"
+        },
+
+        "sctypeahead.topsearchedcategories.minimumWeightage":{
+            "type": "integer",
+            "default": 30,
+            "title": "Minimum weightage required for a category to be displayed",
+            "description": "Minimum weightage required for a category to be displayed. will only work when enabled categories filtering is enabled. should be in range of 0 to 100. where 100 mean highest accuracy and 0 mean least accuracy",
+            "subtab": "topsearchedcategories",
+            "group": "sctypeahead"
+        }
+	}
+}

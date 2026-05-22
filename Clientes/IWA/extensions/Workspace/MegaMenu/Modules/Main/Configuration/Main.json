@@ -1,0 +1,27 @@
+{
+	"type": "object",
+    "modifications": [
+        {
+            "target": "$.properties.navigationData.items.properties",
+            "action": "add",
+            "value": {
+                "thumbnail": {
+                    "type": "string",
+                    "title": "Thumbnail",
+                    "description": "Parent entries can have thumbnail to display on mega menu"
+                },
+                "thumbnailCaption": {
+                    "type": "string",
+                    "title": "Caption",
+                    "description": "Caption of the thumbnail"
+                },
+                "thumbnailLink": {
+                    "type": "string",
+                    "title": "Find out More",
+                    "description": "Find out More Link"
+                }
+            }
+
+        }
+    ]
+}

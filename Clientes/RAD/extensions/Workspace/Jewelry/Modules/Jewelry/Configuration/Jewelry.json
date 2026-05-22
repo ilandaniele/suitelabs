@@ -1,0 +1,83 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "jewlery",
+        "title": "Jewlery",
+        "description": "Jwelery configuration",
+        "group": "extensions"
+    },
+    "properties": {
+        "jewelry.serviceitemid": {
+            "group": "extensions",
+            "subtab": "jewlery",
+            "type": "string",
+            "title": "Jewelry Service Item",
+            "description": "Jewelry Service Item Internalid",
+            "default": "16240"
+        },
+        "jewelry.defaultShipmethod": {
+            "group": "extensions",
+            "subtab": "jewlery",
+            "type": "string",
+            "title": "Jewelry Shipping Item",
+            "description": "Jewelry Shipping Item Internalid",
+            "default": "17936"
+        },
+        "jewelry.defaultShipmethodNoChargeMessage": {
+            "group": "extensions",
+            "subtab": "jewlery",
+            "type": "string",
+            "title": "Default Shipmethod No Carge Message",
+            "description": "Default Shipmethod No Carge Message",
+            "default": "No Charge"
+        },
+        "jewelry.markupitemid": {
+            "group": "extensions",
+            "subtab": "jewlery",
+            "type": "string",
+            "title": "Jewelry Markup Item",
+            "description": "Jewelry Markup Item Internalid",
+            "default": "16118"
+        },
+        "jewelry.productTypeFieldId": {
+            "group": "extensions",
+            "subtab": "jewlery",
+            "type": "string",
+            "title": "Product Type Field Id",
+            "description": "Product Type Field Id",
+            "default": "custitem89"
+        },
+        "jewelry.productTypeFieldValue": {
+            "group": "extensions",
+            "subtab": "jewlery",
+            "type": "string",
+            "title": "Product Type Field Value",
+            "description": "Product Type Field Value",
+            "default": "Jewelry"
+        },
+        "jewelry.handlingassummaryline": {
+            "group": "extensions",
+            "subtab": "jewlery",
+            "type": "boolean",
+            "title": "Handling As Summary Line",
+            "description": "Handling As Summary Line",
+            "default": true
+        },
+        "jewelry.linetext": {
+            "group": "extensions",
+            "subtab": "jewlery",
+            "type": "string",
+            "title": "Line Text",
+            "description": "Line Text",
+            "default": "unlimited shipping and handling charge for jewelry"
+        },
+        "jewelry.shippingWarning": {
+            "group": "extensions",
+            "subtab": "jewlery",
+            "type": "string",
+            "title": "Jewelry Shipping Warning",
+            "description": "Jewelry Shipping Warning",
+            "default": "All Jewelry ships separately and is subject to a one time unlimited shipping and handling charge."
+        }
+    }
+}

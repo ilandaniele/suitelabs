@@ -1,0 +1,69 @@
+{
+    "name": "MyAccountAdditionalFields",
+    "fantasyName": "My Account Additional Fields",
+    "vendor": "NSeComm",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "version": "1.0.0",
+    "description": "Adds a new section on my account to allow leads to fill up certain fields before they become customers, once that is done this section disappears.",
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/MyAccountAdditionalFields.json"
+        ]
+    },
+    "templates": {
+        "application": {
+            "myaccount": {
+                "files": [
+                    "Modules/Main/Templates/additional_fields_base.tpl",
+                    "Modules/Main/Templates/additional_fields_form.tpl"
+                ]
+            }
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "myaccount": "Modules/Main/Sass/_myaccountadditionalfields-main.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_myaccountadditionalfields-main.scss"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "myaccount": "Modules/Main/JavaScript/NSeComm.MyAccountAdditionalFields.js"
+        },
+        "application": {
+            "myaccount": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.MyAccountAdditionalFields.js",
+                    "Modules/Main/JavaScript/MyAccountAdditionalFields.Base.View.js",
+                    "Modules/Main/JavaScript/MyAccountAdditionalFields.Form.View.js",
+                    "Modules/Main/JavaScript/MyAccountAdditionalFields.Model.js",
+                    "Modules/Main/SuiteScript2/MyAccountAdditionalFields.Model.js"
+                ]
+            }
+        }
+    },
+    "suitescript2": {
+        "files": [
+            "Modules/Main/SuiteScript2/MyAccountAdditionalFields.Service.ss",
+            "Modules/Main/SuiteScript2/MyAccountAdditionalFields.Model.js"
+        ]
+    }
+}

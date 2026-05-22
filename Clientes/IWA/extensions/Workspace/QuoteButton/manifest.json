@@ -1,0 +1,58 @@
+{
+    "name": "QuoteButton",
+    "fantasyName": "Add To Quote Button Text",
+    "vendor": "ACS",
+    "version": "1.0.1",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Adds second line to quote button. SuiteLabs v1.0.1 added a new message for guest users only",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/QuoteButton/Sass/quotebutton.scss"
+        },
+        "files": [
+            "Modules/QuoteButton/Sass/quotebutton.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/QuoteButton/Templates/acs_product_detail_to_quote.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/QuoteButton/JavaScript/ProductDetailToQuote.View.Extend.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/QuoteButton/JavaScript/ProductDetailToQuote.View.Extend.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\QuoteButton",
+    "suitescript2": {
+        "files": []
+    }
+}

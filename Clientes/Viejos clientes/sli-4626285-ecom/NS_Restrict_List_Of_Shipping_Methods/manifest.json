@@ -1,0 +1,76 @@
+{
+    "name": "NS_Restrict_List_Of_Shipping_Methods",
+    "fantasyName": "NS - Restrict List Of Shipping Methods",
+    "vendor": "NetSuite - PS",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": ">=20.1.0",
+        "SCS": ">=20.1.0"
+    },
+    "description": "This extension restricts the list of shipping methods offered to the logged user, according to the user type.",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": [
+                "services/RestrictListOfShippingMethods.Service.ss"
+            ]
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/RestrictListOfShippingMethods/Configuration/NS.RestrictListOfShippingMethods.json"
+        ]
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/RestrictListOfShippingMethods/Sass/_ns-restrictlistofshipping.scss"
+        },
+        "files": [
+            "Modules/RestrictListOfShippingMethods/Sass/_ns-restrictlistofshipping.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "checkout": {
+                "files": [
+                    "Modules/RestrictListOfShippingMethods/Templates/order_wizard_shipmethod_module_ext.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/RestrictListOfShippingMethods/JavaScript/NS.RestrictListOfShippingMethods.Shopping.js",
+            "checkout": "Modules/RestrictListOfShippingMethods/JavaScript/NS.RestrictListOfShippingMethods.Checkout.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/RestrictListOfShippingMethods/JavaScript/NS.RestrictListOfShippingMethods.Shopping.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/RestrictListOfShippingMethods/JavaScript/NS.RestrictListOfShippingMethods.Checkout.js"
+                ]
+            }
+        }
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/RestrictListOfShippingMethods/SuiteScript/NS.RestrictListOfShippingMethods.js",
+        "files": [
+            "Modules/RestrictListOfShippingMethods/SuiteScript/NS.RestrictListOfShippingMethods.js",
+            "Modules/RestrictListOfShippingMethods/SuiteScript/NS.RestrictListOfShippingMethods.ServiceController.js",
+            "Modules/RestrictListOfShippingMethods/SuiteScript/NS.RestrictListOfShippingMethods.ShippingLogic.js"
+        ]
+    },
+    "local_folder": "Workspace\\NS_Restrict_List_Of_Shipping_Methods"
+}

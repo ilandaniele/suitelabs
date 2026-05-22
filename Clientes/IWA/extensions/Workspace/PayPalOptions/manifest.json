@@ -1,0 +1,79 @@
+{
+    "name": "PayPalOptions",
+    "fantasyName": "PayPal Options",
+    "vendor": "SuiteLabs",
+    "version": "1.0.1",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "This extension adds some friendly messaging to notify users about the option of paying in multiple payments",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": [
+                "img/Blue-Button_PP-Pay-Later-500.png",
+                "img/Yellow-Button_PP-Pay-Later-500.png",
+                "img/Blue-Button_PP-Checkout-500.png",
+                "img/Yellow-Button_PP-Checkout-500.png",
+                "img/Blue-Button_PP-Pay-Later-300.png",
+                "img/Blue-Button_PP-Pay-Later350.png",
+                "img/Yellow-Button_PP-Checkout-300.png",
+                "img/Yellow-Button_PP-Checkout-350.png",
+                "img/Yellow-Button_PP-Single-300.png",
+                "img/Yellow-Split-Button-300.png"
+            ]
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/PayPalOptions.json"
+        ]
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_paypal_options.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_paypal_options.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/paypal_options.tpl",
+                    "Modules/Main/Templates/paypal_options_cart_summary.tpl",
+                    "Modules/Main/Templates/paypal_options_pdp.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/SuiteLabs.PayPalOptions.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.PayPalOptions.Main.js",
+                    "Modules/Main/JavaScript/PayPalOptions.View.js",
+                    "Modules/Main/JavaScript/PayPalOptions.Cart.Summary.View.js",
+                    "Modules/Main/JavaScript/PayPalOptions.PDP.View.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\PayPalOptions",
+    "suitescript2": {
+        "files": []
+    }
+}

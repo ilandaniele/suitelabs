@@ -1,0 +1,56 @@
+{
+	"name": "SEOImprovements",
+	"fantasyName": "SEO Improvements",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"version": "2.0.0",
+	"description": "SEO Improvements",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/SEOImprovements/Configuration/SEOImprovements.json"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/SEOImprovements/JavaScript/AwaLabs.SEOImprovements.Shopping.js",
+			"myaccount": "Modules/SEOImprovements/JavaScript/AwaLabs.SEOImprovements.js",
+			"checkout": "Modules/SEOImprovements/JavaScript/AwaLabs.SEOImprovements.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/SEOImprovements/JavaScript/AwaLabs.SEOImprovements.Shopping.js",
+					"Modules/SEOImprovements/JavaScript/SEOImprovements.Home.View.js",
+					"Modules/SEOImprovements/JavaScript/SEOImprovements.PLP.View.js",
+					"Modules/SEOImprovements/JavaScript/SEOImprovements.PDP.View.js",
+					"Modules/SEOImprovements/JavaScript/SEOImprovements.FacetDisplay.View.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/SEOImprovements/JavaScript/AwaLabs.SEOImprovements.js"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/SEOImprovements/JavaScript/AwaLabs.SEOImprovements.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/SEOImprovements@2.0.0",
+	"activation_id": "11",
+	"extension_id": "10756"
+}

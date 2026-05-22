@@ -1,0 +1,68 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "displayPriceLevels",
+        "group": "extensions",
+        "title": "Price Levels",
+        "description": "Section with the price levels mapping for PDP text."
+    },
+    "properties": {
+        "priceLevels.textMapping": {
+            "group": "extensions",
+            "subtab": "displayPriceLevels",
+            "type": "array",
+            "title": "Price Levels Mapping",
+            "description": "Mapping table for price levels text.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "title": "Price Level Id",
+                        "description": "The id of the price level.",
+                        "mandatory": true
+                    },
+                    "displayName": {
+                        "type": "string",
+                        "title": "Name to display",
+                        "description": "The name of the price level that is going to be displayed on the website.",
+                        "translate": true
+                    },
+                    "enabled": {
+                        "type": "boolean",
+                        "title": "Display in website",
+                        "description": "Indicates if the name should be displayed on the website or not."
+                    }
+                }
+            },
+
+            "default":[
+                {
+                    "id": "7",
+                    "displayName": "Contractor Price:",
+                    "enabled": true
+                },
+                {
+                    "id": "2",
+                    "displayName": "Dealer Price:",
+                    "enabled": true
+                },
+                {
+                    "id": "11",
+                    "displayName": "Wholesale Price:",
+                    "enabled": true
+                },
+                {
+                    "id": "16",
+                    "displayName": "Distributor Price:",
+                    "enabled": true
+                },
+                {
+                    "id": "12",
+                    "displayName": "Parts Only (CP) Price:",
+                    "enabled": true
+                }
+            ]
+        }
+    }
+}

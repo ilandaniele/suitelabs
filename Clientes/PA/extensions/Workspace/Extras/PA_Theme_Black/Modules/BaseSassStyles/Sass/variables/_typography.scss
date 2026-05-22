@@ -1,0 +1,96 @@
+// Font size variables
+//
+// A scale of sizes has been defined for its use along the different elements of the theme.
+// As it happens with many other sizing scales variables go from XS to XXXL
+// Every size is relative to a base font size that may be modified. In that case all the other sizes will change in relationship to this new base size.
+// With the exception of this base font size expressed in pixels, font sizes are expressed in rem units.
+//
+// $sc-font-size-xxs - Double extra small font size
+// $sc-font-size-xs - Extra small font size
+// $sc-font-size-s - Small font size
+// $sc-font-size-m - Medium font size
+// $sc-font-size-l - Large font size
+// $sc-font-size-xl - Extra large font size
+// $sc-font-size-xxl - Double extra large font size
+// $sc-font-size-xxxl - Triple extra large font size
+// $sc-font-weight-light - Light font weight
+// $sc-font-weight-normal - Normal font weight
+// $sc-font-weight-semibold - Semibold font weight
+// $sc-font-weight-bold - Bold font weight
+//
+// Styleguide 1.2
+$fa-font-path-poppins: '';
+$fa-font-path-open-sans: '';
+$sc-font-size-base: 1rem;
+$sc-font-size-xxs: 0.75rem;
+$sc-font-size-xs: 0.87rem;
+$sc-font-size-s: 0.93rem;
+$sc-font-size-m: 1rem;
+$sc-font-size-l: 1.067rem;
+$sc-font-size-xl: 1.2rem;
+$sc-font-size-xxl: 1.47rem;
+$sc-font-size-xxxl: 1.73rem;
+/*
+$sc-font-size-xxs: 9px;
+$sc-font-size-xs: 10px;
+$sc-font-size-s: 11px;
+$sc-font-size-m: 13px;
+$sc-font-size-l: 15px;
+$sc-font-size-xl: 18px;
+$sc-font-size-xxl: 21px;
+$sc-font-size-xxxl: 24px;*/
+
+
+// Font family
+$sc-font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+//$sc-font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+//$sc-font-family: "Poppins","Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Font Size
+$sc-base-font-size: 15px;
+$sc-smallest-font-size: 11px;
+$sc-small-font-size: 13px;
+
+$sc-h1-font-size: 26px;
+$sc-h1-font-size-mobile: 22px;
+$sc-h2-font-size: 22px;
+$sc-h2-font-size-mobile: 18px;
+$sc-h3-font-size: 22px;
+$sc-h3-font-size-mobile: 18px;
+$sc-h4-font-size: 18px;
+$sc-h4-font-size-mobile: 15px;
+$sc-h5-font-size: $sc-base-font-size;
+
+$sc-button-large-font-size: $sc-base-font-size * 1.067;
+$sc-button-medium-font-size: $sc-base-font-size;
+$sc-button-small-font-size: $sc-small-font-size;
+
+
+// Font weight
+$sc-font-weight-light: 300;
+$sc-font-weight-normal: 400;
+$sc-font-weight-semibold: 600;
+$sc-font-weight-bold: 700;
+
+$sc-navigation-icon-size: 25px;
+
+$sc-image-large-size:150px;
+$sc-image-medium-size:100px;
+$sc-image-small-size:60px;
+
+/* product details page font-size */
+$product-title: 20px;
+$product-title-line-height: 24px;
+$pdp-base-line-height: 20px;
+$pdp-base-font-size: 14px;
+$pdp-review-section-title: 18px;
+$pdp-review-section-count-line-height: 16px;
+$pdp-manu-icon: 36px;
+$pdp-review-instruction-font-size: 17px;
+$pdp-related-item-title-line-height: 22px;
+
+/*review template font size and line-height*/
+$pa-review-view-detail-button-font-size: 12px;
+$pa-review-view-detail-button-line-height: 17px;
+$pa-review-form-actions-button-back-font-size: 16.005px;
+$pa-review-title-font-size: 26px;

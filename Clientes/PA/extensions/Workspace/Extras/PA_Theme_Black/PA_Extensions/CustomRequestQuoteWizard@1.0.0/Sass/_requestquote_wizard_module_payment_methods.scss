@@ -1,0 +1,186 @@
+.requestquote-wizard-module-payment-method-box {
+    overflow: hidden;
+    .list-header-view-accordion-body-select {
+        margin-top: 0;
+        line-height: normal;
+        height: 44px;
+        border-color: #D6D6D6;
+        color: #1f2223;
+    }
+    .list-header-view-accordion-body-select[multiple] {
+        min-height: 86px;
+        padding: 10px 0px;
+        background-image: none;
+        option {
+            padding: 0px 30px 0px 10px;
+        }
+    }
+    .requestquote-wizard-checkbox-field-wrap {
+        height: auto;
+        display: block;
+    }
+}
+a.menu-tree-node-item-anchor[data-id="requestaquote"] {
+    @media (min-width: $screen-sm-min) {
+        display: none;
+    }
+}
+.requestquote-wizard-half-box-read-field {
+    width: calc(50% - 15px);
+    @media (max-width: $screen-sm-min) {
+        width: 100%;
+    }
+    &.requestquote-wizard-purpose-of-request {
+        padding: 10px;
+        p {
+            margin: 0px;
+        }
+    }
+}
+.requestquote-wizard-half-box-write-field {
+    width: 50%;
+    @media (max-width: $screen-sm-min) {
+        width: 100%;
+    }
+}
+input[type="checkbox"].requestquote-wizard-checkbox-field {
+    margin: 0px 10px 0px 0px;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    float: left;
+}
+.requestquote-wizard-module-comments-box-message.requestquote-wizard-half-box-write-field {
+    padding-top: 10px;
+    p {
+        margin: 0px;
+    }
+}
+.acknowledged-message-wrap {
+    margin-bottom: 20px;
+}
+.shipping-message-wrap {
+    padding-top: 20px;
+    ol {
+        padding-left: 20px;
+        li {
+            list-style: decimal;
+        }
+    }
+}
+.mobile-request-type {
+    @media (max-width: 768px) {
+        width: calc(100% - 50px);
+    }
+}
+.type-of-request-information-tooltip {
+    .order-wizard-promocodeform-tooltip {
+        @extend .icon-info;
+        color: $sc-color-theme-700;
+        font-size: $sc-font-size-xl;
+    }
+    @media (max-width: 768px) {
+        padding: 10px;
+        display: block;
+        float: left;
+    }
+}
+.type-of-request-information-tooltip {
+    [role="tooltip"] {
+        @media (max-width: 768px) {
+            right: 10px;
+            left: auto !important;
+        }
+    }
+    .tooltip-inner {
+        max-width: 400px;
+        @media (max-width: 440px) {
+            width: 300px;
+        }
+    }
+    ul {
+        padding-left: 20px;
+        li {
+            list-style-type: disc;
+            padding: 5px 0px;
+        }
+    }
+}
+.tooltip-content {
+    display: none;
+}
+span.type-of-request-information-tooltip:hover .tooltip-content {
+    display: block;
+}
+.requestquote-wizard-module-type-of-request-box {
+    overflow: visible;
+    width: 100%;
+    float: left;
+    .tooltip.top {
+        display: none;
+    }
+    .type-of-request-information-tooltip {
+        position: relative;
+        &:hover {
+            .type-of-request-tooltip-content {
+                display: block;
+            }
+        }
+    }
+    .tooltip-arrow {
+        left: 50%;
+        border-top-color: #d6d6d6;
+        border-width: 5px 5px 0;
+        bottom: 20px;
+    }
+    .tooltip-inner {
+        background-color: #D6D6D6;
+        padding: 10px;
+        color: #242424;
+        border: 1px solid #D6D6D6;
+        font-size: 0.93rem;
+        text-align: left;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        min-height: 200px;
+        max-height: 250px;
+        overflow-y: auto;
+    }
+    .type-of-request-tooltip-content {
+        position: absolute;
+        width: 400px;
+        bottom: 0px;
+        left: 3px;
+        margin-left: -200px;
+        margin-top: -3px;
+        padding: 0px 0px 25px;
+        font-size: 12px;
+        text-align: left;
+        background: transparent;
+        display: none;
+    }
+    @media (max-width: $screen-lg-min) {
+        overflow: hidden;
+        float: none;
+        width: auto;
+        .tooltip.top {
+            display: block;
+        }
+        .type-of-request-information-tooltip {
+            position: static;
+            &:hover {
+                .type-of-request-tooltip-content {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.requestquote-wizard-step-content-wrapper {
+    .case-new-form-required {
+        position: relative;
+        top: -6px;
+        &.hide {
+            display: inline !important;
+        }
+    }
+}

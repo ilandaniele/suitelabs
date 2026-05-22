@@ -1,0 +1,90 @@
+{
+	"name": "CartToQuote",
+	"fantasyName": "Cart To Quote",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "Cart To Quote. SuiteLabs v2.1.0 refers to the SCA upgrade to 23.2, also removed dependency to the Favorites List feature",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": [
+				"services/CartToQuote.Service.ss"
+			]
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/CartToQuote/Configuration/Configuration.json"
+		]
+	},
+	"templates": {
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/CartToQuote/Templates/_carttoquote.tpl",
+					"Modules/CartToQuote/Templates/_carttoquote_market_wizard_view.tpl"
+				]
+			}
+		}
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/CartToQuote/JavaScript/AwaLabs.CartToQuote.Shopping.js",
+			"myaccount": "Modules/CartToQuote/JavaScript/AwaLabs.Quotes.MyAccount.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/CartToQuote/JavaScript/AwaLabs.CartToQuote.Shopping.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.Model.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.View.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.Utils.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.RequestQuoteWizard.Module.Items.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.RequestQuoteWizard.Module.Items.Line.Action.View.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.RequestQuoteWizard.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.ProductList.DetailsLater.View.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.MarketWizard.View.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.ProductList.Item.Model.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.RequestQuoteWizard.View.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.ProductDetailToQuote.View.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.Module.Items.Line.Quantity.View.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/CartToQuote/JavaScript/AwaLabs.Quotes.MyAccount.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.RequestQuoteWizard.Module.Items.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.RequestQuoteWizard.Module.Items.Line.Action.View.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.RequestQuoteWizard.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.Transaction.Line.Views.Cell.Actionable.Expanded.View.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.MarketWizard.View.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.ProductList.Item.Model.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.RequestQuoteWizard.View.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.ProductDetailToQuote.View.js",
+					"Modules/CartToQuote/JavaScript/CartToQuote.Module.Items.Line.Quantity.View.js"
+				]
+			}
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/CartToQuote/SuiteScript/AwaLabs.CartToQuote.js",
+		"files": [
+			"Modules/CartToQuote/SuiteScript/CartToQuote.ServiceController.js",
+			"Modules/CartToQuote/SuiteScript/AwaLabs.CartToQuote.js"
+		]
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/CartToQuote@2.1.0",
+	"activation_id": "11",
+	"extension_id": "16605"
+}

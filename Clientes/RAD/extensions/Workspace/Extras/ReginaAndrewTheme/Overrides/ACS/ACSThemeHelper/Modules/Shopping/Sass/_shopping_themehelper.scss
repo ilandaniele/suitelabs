@@ -1,0 +1,27 @@
+.sc-blog-home-default-layout-page-title {
+    h1 {
+        text-align:center;
+
+        a {
+            text-align: center !important;
+            font-family: meno-banner, serif !important;
+            font-style: normal !important;
+            font-size: 1.25em !important;
+            color: #5a5959 !important;
+            letter-spacing: .075em !important;
+            font-weight: 500 !important;
+            line-height: 1em !important;
+            text-transform: uppercase !important;
+        }   
+    }
+}
+
+.sc-blog-latest-posts-slide-wrapper-content-body-title h4 {
+      box-shadow: none !important;
+      font-family: meno-banner, serif !important;
+      letter-spacing: .04em !important;
+}
+    
+.sc-blog-latest-posts-slide-wrapper-content-body-excerpt p {
+      font-weight: 100 !important;
+}

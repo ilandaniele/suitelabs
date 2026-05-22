@@ -1,0 +1,57 @@
+{
+	"name": "DynamicMerchandisingZones",
+	"fantasyName": "Dynamic Merchandising Zones",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=20.1.0",
+		"SCS": ">=20.1.0"
+	},
+	"version": "2.0.0",
+	"description": "Custom Dynamic Merchandising Zones",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"templates": {
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/DynamicMerchandisingZone/Templates/awalabs_dynamicmerchandisingzones.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/DynamicMerchandisingZone/Sass/_dynamicmerchandisingzone.scss"
+		},
+		"files": [
+			"Modules/DynamicMerchandisingZone/Sass/_dynamicmerchandisingzone.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/DynamicMerchandisingZone/JavaScript/AwaLabs.DynamicMerchandisingZones.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/DynamicMerchandisingZone/JavaScript/MerchandisingZoneSliders.js",
+					"Modules/DynamicMerchandisingZone/JavaScript/AwaLabs.DynamicMerchandisingZones.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/DynamicMerchandisingZones@2.0.0",
+	"activation_id": "11",
+	"extension_id": "1818"
+}

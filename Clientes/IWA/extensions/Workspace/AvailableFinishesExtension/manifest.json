@@ -1,0 +1,72 @@
+{
+    "name": "AvailableFinishesExtension",
+    "fantasyName": "AvailableFinishesExtension",
+    "vendor": "SSD",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Adds Available Finishes to PDP",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": [
+                "services/Finishes.Service.ss"
+            ]
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/AvailableFinishesExtension/Sass/available_finishes.scss"
+        },
+        "files": [
+            "Modules/AvailableFinishesExtension/Sass/available_finishes.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/AvailableFinishesExtension/Templates/item_relations_finishes_related.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/AvailableFinishesExtension/JavaScript/AvailableFinishesExtension.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/AvailableFinishesExtension/JavaScript/AvailableFinishesExtension.js",
+                    "Modules/AvailableFinishesExtension/JavaScript/ItemRelations.Finishes.Collection.js",
+                    "Modules/AvailableFinishesExtension/JavaScript/ItemRelations.Finishes.View.js",
+                    "Modules/AvailableFinishesExtension/JavaScript/ItemRelations.Related.Finishes.Collection.js",
+                    "Modules/AvailableFinishesExtension/JavaScript/ProductDetails.View.Site.js"
+                ]
+            }
+        }
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/AvailableFinishesExtension/SuiteScript/AvailableFinishes.js",
+        "files": [
+            "Modules/AvailableFinishesExtension/SuiteScript/AvailableFinishes.js",
+            "Modules/AvailableFinishesExtension/SuiteScript/Finish.Model.js",
+            "Modules/AvailableFinishesExtension/SuiteScript/Finish.ServiceController.js"
+        ]
+    },
+    "local_folder": "Workspace\\AvailableFinishesExtension",
+    "suitescript2": {
+        "files": []
+    }
+}

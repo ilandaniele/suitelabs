@@ -1,0 +1,60 @@
+{
+	"type": "object",
+    "subtab": {
+        "id": "trendingSearches",
+        "title": "Trending Searches",
+        "description": "Trending Searches",
+        "group": "sctypeahead"
+    }
+,	"properties": {
+
+
+        "sctypeahead.trendingSearches.categories.enableTrendingCategories":{
+            "type": "boolean",
+            "default": false,
+            "title": "Show Trending Categories",
+            "subtab": "trendingSearches",
+            "group": "sctypeahead"
+        },
+
+        "sctypeahead.trendingSearches.categories.maxCategoriesToBeShown":{
+            "type": "integer",
+            "default": 10,
+            "title": "Max trending categories to be shown",
+            "subtab": "trendingSearches",
+            "group": "sctypeahead"
+        },
+
+        "sctypeahead.trendingSearches.categories.allowUpdateCategories":{
+            "type": "boolean",
+            "default": false,
+            "title": "Allow updating categories from frontend?",
+            "subtab": "trendingSearches",
+            "group": "sctypeahead"
+        },
+
+        "sctypeahead.trendingSearches.products.enableTrendingProducts":{
+            "type": "boolean",
+            "default": false,
+            "title": "Show Trending products",
+            "subtab": "trendingSearches",
+            "group": "sctypeahead"
+        },
+
+        "sctypeahead.trendingSearches.products.maxProductsToBeShown":{
+            "type": "integer",
+            "default": 5,
+            "title": "Max trending products to be shown",
+            "subtab": "trendingSearches",
+            "group": "sctypeahead"
+        },
+
+        "sctypeahead.trendingSearches.products.allowUpdateProducts":{
+            "type": "boolean",
+            "default": false,
+            "title": "Allow updating products from frontend?",
+            "subtab": "trendingSearches",
+            "group": "sctypeahead"
+        }
+	}
+}

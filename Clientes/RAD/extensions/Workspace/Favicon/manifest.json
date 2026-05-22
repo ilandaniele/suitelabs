@@ -1,0 +1,40 @@
+{
+	"name": "Favicon",
+	"fantasyName": "Favicon fantasy",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=20.1.0",
+		"SCS": ">=20.1.0"
+	},
+	"version": "2.0.0",
+	"description": " ",
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/Favicon/JavaScript/AwaLabs.Favicon.js",
+			"myaccount": "Modules/Favicon/JavaScript/AwaLabs.Favicon.js",
+			"checkout": "Modules/Favicon/JavaScript/AwaLabs.Favicon.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Favicon/JavaScript/AwaLabs.Favicon.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/Favicon/JavaScript/AwaLabs.Favicon.js"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/Favicon/JavaScript/AwaLabs.Favicon.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/Favicon@2.0.0",
+	"activation_id": "11",
+	"extension_id": "1821"
+}

@@ -1,0 +1,99 @@
+{
+    "name": "WebsiteCustomizations",
+    "fantasyName": "Website Customizations",
+    "vendor": "NSeComm",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "version": "1.0.0",
+    "description": "",
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": [
+                "services/Main.Service.ss"
+            ]
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/Main.json"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/nsecomm_websitecustomizations_main.tpl"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Main/Templates/nsecomm_websitecustomizations_main.tpl"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/Templates/nsecomm_websitecustomizations_main.tpl"
+                ]
+            }
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_websitecustomizations-main.scss",
+            "myaccount": "Modules/Main/Sass/_websitecustomizations-main.scss",
+            "checkout": "Modules/Main/Sass/_websitecustomizations-main.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_websitecustomizations-main.scss"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/NSeComm.WebsiteCustomizations.Main.js",
+            "myaccount": "Modules/Main/JavaScript/NSeComm.WebsiteCustomizations.Main.js",
+            "checkout": "Modules/Main/JavaScript/NSeComm.WebsiteCustomizations.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.WebsiteCustomizations.Main.js",
+                    "Modules/Main/JavaScript/NSeComm.WebsiteCustomizations.Main.View.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.WebsiteCustomizations.Main.js",
+                    "Modules/Main/JavaScript/NSeComm.WebsiteCustomizations.Main.View.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.WebsiteCustomizations.Main.js",
+                    "Modules/Main/JavaScript/NSeComm.WebsiteCustomizations.Main.View.js"
+                ]
+            }
+        }
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/Main/SuiteScript/NSeComm.WebsiteCustomizations.Main.js",
+        "files": [
+            "Modules/Main/SuiteScript/NSeComm.WebsiteCustomizations.Main.js",
+            "Modules/Main/SuiteScript/Main.ServiceController.js"
+        ]
+    },
+    "suitescript2": {
+        "files": [
+            "Modules/Main/SuiteScript2/Main.Service.ss"
+        ]
+    }
+}

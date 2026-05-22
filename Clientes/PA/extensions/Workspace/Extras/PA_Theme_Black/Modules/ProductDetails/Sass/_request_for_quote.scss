@@ -1,0 +1,25 @@
+.agency_request_for_quote{
+    margin-bottom: 15px;
+    margin-top: 10px;
+    @media (max-width: $screen-xs-max) {
+        margin-top: 15px;
+    }
+    button{
+        background: #00ac6d;
+        border-radius: 10px;
+        color: #fff;
+        padding: 10px 12px;
+        @media (max-width: $screen-xs-max) {
+            width: 100%;
+        }
+    }
+}
+
+.requestForQuoteModalFrame{
+    width: 100%;
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
+
+    height:80vh;
+}

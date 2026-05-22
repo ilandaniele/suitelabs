@@ -1,0 +1,110 @@
+{
+	"name": "StoreLocator",
+	"fantasyName": "StoreLocator",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "2.0.0",
+	"description": "StoreLocator",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": [
+				"services/StoreLocator.StoreLocator.Service.ss"
+			]
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/StoreLocator/Configuration/StoreLocator.json"
+		]
+	},
+	"templates": {
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/StoreLocator/Templates/_store_locator_location_route.tpl",
+					"Modules/StoreLocator/Templates/_store_locator_location_info.tpl",
+					"Modules/StoreLocator/Templates/_store_locator_location_steps.tpl"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/StoreLocator/Templates/_store_locator_location_route.tpl",
+					"Modules/StoreLocator/Templates/_store_locator_location_info.tpl",
+					"Modules/StoreLocator/Templates/_store_locator_location_steps.tpl"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/StoreLocator/Templates/_store_locator_location_route.tpl",
+					"Modules/StoreLocator/Templates/_store_locator_location_info.tpl",
+					"Modules/StoreLocator/Templates/_store_locator_location_steps.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/StoreLocator/Sass/_store_locator_steps.scss"
+		},
+		"files": [
+			"Modules/StoreLocator/Sass/_store_locator_steps.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/StoreLocator/JavaScript/AwaLabs.StoreLocator.js",
+			"checkout": "Modules/StoreLocator/JavaScript/AwaLabs.StoreLocator.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/StoreLocator/JavaScript/AwaLabs.StoreLocator.js",
+					"Modules/StoreLocator/JavaScript/StoreLocator.LocationInfo.View.js",
+					"Modules/StoreLocator/JavaScript/StoreLocator.LocationRoute.Model.js",
+					"Modules/StoreLocator/JavaScript/StoreLocator.LocationRoute.View.js",
+					"Modules/StoreLocator/JavaScript/StoreLocator.LocationSteps.View.js",
+					"Modules/StoreLocator/JavaScript/StoreLocator.StoreLocator.List.All.Store.View.js",
+					"Modules/StoreLocator/JavaScript/StoreLocator.StoreLocator.Details.View.js",
+					"Modules/StoreLocator/JavaScript/StoreLocator.Search.View.BoundsFix.js"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/StoreLocator/JavaScript/AwaLabs.StoreLocator.js",
+					"Modules/StoreLocator/JavaScript/StoreLocator.LocationInfo.View.js",
+					"Modules/StoreLocator/JavaScript/StoreLocator.LocationRoute.Model.js",
+					"Modules/StoreLocator/JavaScript/StoreLocator.LocationRoute.View.js",
+					"Modules/StoreLocator/JavaScript/StoreLocator.LocationSteps.View.js",
+					"Modules/StoreLocator/JavaScript/StoreLocator.StoreLocator.List.All.Store.View.js",
+					"Modules/StoreLocator/JavaScript/StoreLocator.StoreLocator.Details.View.js",
+					"Modules/StoreLocator/JavaScript/StoreLocator.Search.View.BoundsFix.js"
+				]
+			}
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/StoreLocator/SuiteScript/AwaLabs.StoreLocator.js",
+		"files": [
+			"Modules/StoreLocator/SuiteScript/AwaLabs.StoreLocator.js",
+			"Modules/StoreLocator/SuiteScript/StoreLocator.StoreLocator.Model.js",
+			"Modules/StoreLocator/SuiteScript/StoreLocator.StoreLocator.ServiceController.js"
+		]
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/StoreLocator@2.0.0",
+	"activation_id": "11",
+	"extension_id": "10760"
+}

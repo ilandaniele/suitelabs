@@ -1,0 +1,19 @@
+{
+	"type": "object",
+	"subtab": {
+		"id": "producDetailInfo",
+		"title": "PDP Info",
+		"description": "Configurable information for PDP pages",
+		"group": "layout"
+	},
+	"properties": {
+		"productDetail.websiteDisplayName": {
+			"group": "layout",
+			"subtab": "producDetailInfo",
+			"type": "string",
+			"title": "Website Display Name",
+			"description": "Name to be displayed in the Page Title along the product name.",
+			"default": "CellarPro"
+		}
+	}
+} 

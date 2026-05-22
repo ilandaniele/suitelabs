@@ -1,0 +1,17 @@
+.travel-arrangement-request-form-header-wrapper{
+	text-align: center;
+}
+.travel-arrangement-request-form-header-logo{
+	width: 200px;
+}
+.travel-arrangement-request-form-header{
+	@extend .product-list-lists-title;
+	float: none;
+	text-align: center;
+	margin-bottom: 0;
+	
+	@media (min-width: $screen-sm-min){
+		height: 25px;
+		line-height: 1;
+	}
+}

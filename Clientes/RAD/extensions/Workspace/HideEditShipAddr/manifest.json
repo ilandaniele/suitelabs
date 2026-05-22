@@ -1,0 +1,31 @@
+{
+	"name": "HideEditShipAddr",
+	"fantasyName": "Hide Edit Shipping Address",
+	"vendor": "ACS",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=20.2.1",
+		"SCS": ">=20.2.1"
+	},
+	"version": "1.0.0",
+	"description": "Hide the Edit option on Shipping Address at checkout",
+	"javascript": {
+		"entry_points": {
+			"checkout": "Modules/HideEditShipAddr/JavaScript/HideEditShippingAddress.js"
+		},
+		"application": {
+			"checkout": {
+				"files": [
+					"Modules/HideEditShipAddr/JavaScript/HideEditShippingAddress.js",
+					"Modules/HideEditShipAddr/JavaScript/Address.AddExtraContext.Hack.js",
+					"Modules/HideEditShipAddr/JavaScript/Address.Details.View.HideEdit.js",
+					"Modules/HideEditShipAddr/JavaScript/OrderWizard.Module.ShowShipments.HideEdit.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/ACS/HideEditShipAddr@1.0.0",
+	"activation_id": "11",
+	"extension_id": "6201"
+}

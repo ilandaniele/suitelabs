@@ -1,0 +1,39 @@
+{
+	"name": "CategoriesFacetsDisplayFeature",
+	"fantasyName": "Categories Facets Display Feature",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "1.1.0",
+	"description": "Display the category facet open if there is a category option selected. SuiteLabs v1.1.0 refers to the SCA upgrade to 23.2",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/CategoriesFacetsDisplayFeature/JavaScript/AwaLabs.CategoriesFacetsDisplayFeature.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/CategoriesFacetsDisplayFeature/JavaScript/AwaLabs.CategoriesFacetsDisplayFeature.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/CategoriesFacetsDisplayFeature@1.1.0",
+	"activation_id": "11",
+	"extension_id": "16702"
+}

@@ -1,0 +1,43 @@
+{
+	"name": "CaseCustom",
+	"fantasyName": "Case Custom",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "SuiteLabs v2.1.0 removed unneeded dependencies",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"javascript": {
+		"entry_points": {
+			"myaccount": "Modules/CaseCustom/JavaScript/AwaLabs.CaseCustom.js"
+		},
+		"application": {
+			"myaccount": {
+				"files": [
+					"Modules/CaseCustom/JavaScript/AwaLabs.CaseCustom.js",
+					"Modules/CaseCustom/JavaScript/CaseCustom.Case.List.View.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/CaseCustom@2.1.0",
+	"activation_id": "11",
+	"extension_id": "16606"
+}

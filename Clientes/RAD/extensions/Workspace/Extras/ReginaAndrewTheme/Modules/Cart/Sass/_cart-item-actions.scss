@@ -1,0 +1,28 @@
+.cart-item-actions-links {
+	display: inline-block;
+	width: auto;
+	a {
+		height: 42px;
+		line-height: 42px;
+		padding: 0 15px;
+		border-right: none;
+	}
+}
+
+.cart-item-actions-item-list-actionable-edit-button-edit {
+	margin-right: $sc-margin-lv2;
+}
+.cart-item-actions-item-list-actionable-edit-button{
+	button{
+		i{
+			@extend .icon-angle-down;
+			font-size: 16px;
+		}
+	}
+}
+.cart-toggle-button{
+	float: right;
+	height: 42px;
+	line-height: 42px;
+	padding: 0 15px;
+}

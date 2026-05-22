@@ -1,0 +1,67 @@
+{
+	"name": "BackInStockNotification",
+	"fantasyName": "Back In Stock Notification",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.0.1",
+	"description": "Back In Stock Notification. Modify native behavior to change the In Stock condition",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		}
+	},
+	"templates": {
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/BackInStockNotification/Templates/suitecommerce_stocknotifications_pdp.tpl",
+					"Modules/BackInStockNotification/Templates/suitecommerce_stocknotifications_subscription_create.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/BackInStockNotification/Sass/_subscription-create.scss"
+		},
+		"files": [
+			"Modules/BackInStockNotification/Sass/_subscription-create.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/BackInStockNotification/JavaScript/AwaLabs.BackInStockNotification.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/BackInStockNotification/JavaScript/AwaLabs.BackInStockNotification.js",
+					"Modules/BackInStockNotification/JavaScript/BackInStockNotification.PDP.View.js",
+					"Modules/BackInStockNotification/JavaScript/InventoryDisplay.PDP.View.js",
+					"Modules/BackInStockNotification/JavaScript/BackInStockNotification.StockNotifications.Subscription.Create.View.js"
+				]
+			}
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/BackInStockNotification/SuiteScript/AwaLabs.BackInStockNotification.js",
+		"files": [
+			"Modules/BackInStockNotification/SuiteScript/AwaLabs.BackInStockNotification.js",
+			"Modules/BackInStockNotification/SuiteScript/BackInStockNotification.LiveOrder.Model.js"
+		]
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/BackInStockNotification@2.0.1",
+	"activation_id": "11",
+	"extension_id": "17101"
+}

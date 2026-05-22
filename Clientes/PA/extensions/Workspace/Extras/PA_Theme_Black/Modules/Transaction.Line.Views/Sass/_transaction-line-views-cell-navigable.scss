@@ -1,0 +1,216 @@
+
+.transaction-line-views-cell-navigable{
+	@extend .table-flex-item-navigable;
+	margin:$sc-margin-lv2 0;
+}
+
+.transaction-line-views-cell-navigable-item-image{
+	@extend .table-flex-tdfirst;
+	@extend .column-type-image;
+	text-align: left;
+	position: relative;
+	img{
+		width:100%;
+	}
+}
+
+.transaction-line-views-cell-navigable-details {
+	@extend .table-flex-middle-first;
+	@extend .table-flex-middle-data;
+}
+
+.transaction-line-views-cell-navigable-amount {
+	@extend .table-flex-middle-last;
+	@extend .table-flex-middle-data;
+
+	@media (min-width: $screen-md-min){
+		text-align: right;
+}
+}
+
+.transaction-line-views-cell-navigable-value{
+	@extend .sc-value;
+}
+.transaction-line-views-cell-navigable-sku{
+	margin-top: $sc-margin-lv2;
+}
+.transaction-line-views-cell-navigable-sku-label {
+	@extend .sc-sku-label;
+}
+.transaction-line-views-cell-navigable-sku-value{
+	@extend .sc-sku-value;
+}
+.transaction-line-views-cell-navigable-product-price-label {
+	@extend .sc-label;
+}
+.transaction-line-views-cell-navigable-product-price-value {
+	@extend .sc-value;
+}
+.transaction-line-views-cell-navigable-item-unit-price {
+	@extend .table-flex-middle-data;
+	@extend .column-type-amount;
+
+	@media (min-width: $screen-md-min){
+		text-align: right;
+	}
+}
+
+.transaction-line-views-cell-navigable-item-unit-price-value {
+	@extend .sc-value;
+}
+
+.transaction-line-views-cell-navigable-item-unit-price-label {
+	@extend .sc-label;
+}
+
+.transaction-line-views-cell-navigable-item-reason-label {
+	@extend .sc-label;
+}
+
+.transaction-line-views-cell-navigable-item-quantity-label {
+	@extend .sc-label;
+}
+
+.transaction-line-views-cell-navigable-item-quantity{
+	@extend .sc-value;
+	@extend .table-flex-middle-data;
+
+	@media (min-width: $screen-md-min){
+		text-align: right;
+	}
+}
+
+.transaction-line-views-cell-navigable-item-totalprice-label{
+	@extend .sc-label;
+}
+
+.transaction-line-views-cell-navigable-item-amount-label{
+	@extend .sc-label;
+}
+
+.transaction-line-views-cell-navigable-item-amount-value{
+	@extend .middle-price;
+}
+
+.transaction-line-views-cell-navigable-item-old-price{
+	@extend .old-price;
+}
+
+.transaction-line-views-cell-navigable-product-title{
+	@extend .medium-title;
+}
+
+.transaction-line-views-cell-navigable-product-title-anchor{
+	@extend .medium-title-navigable;
+}
+
+.transaction-line-views-cell-navigable-amount{
+	@extend .column-type-amount;
+	@extend .table-flex-middle-data;
+	@extend .table-flex-middle-last;
+	padding-bottom: $sc-padding-lv3;
+}
+
+.transaction-line-views-cell-navigable-item-quantity-label,
+.transaction-line-views-cell-navigable-item-unit-price-label,
+.transaction-line-views-cell-navigable-item-amount-label{
+	@media (min-width: $screen-md-min){
+		display: none;
+	}
+}
+
+.transaction-line-views-cell-navigable-header-col-amount {
+	@extend .column-type-amount;
+	display:block;
+}
+
+
+
+.transaction-line-views-cell-navigable-item-quantity-value{
+	@extend .column-type-quantity;
+
+	@media (min-width: $screen-md-min){
+		display:block;
+	}
+}
+
+
+
+.transaction-line-views-cell-navigable-free-badge {
+	@extend .free-badge;
+	display: inline-block;
+	font-size: $sc-font-size-xxs;
+    line-height: 1;
+    margin: $sc-margin-base 0;
+}
+
+.item-restricted-indicator {
+	display:inline-block;
+	background: $pa-danger;
+	color: $pa-danger-text;
+	font-size: 18px;
+	position: absolute;
+	top: 0;
+	right: 15px;
+	z-index: 1;
+	border: 1px solid $pa-danger-border;
+	padding: 10px 20px 10px 20px;
+}
+.item-restricted-indicator-checkout {
+	@extend .item-restricted-indicator;
+	position: relative;
+	font-size: 12px;
+	right: auto;
+	padding: 8px 16px 8px 16px;
+	margin: 10px 0 0;
+}
+.promotion-info{
+	padding: 0;
+	color: #333;
+	font-size: 13px;
+	span{
+		letter-spacing: 0.5px;
+	}
+	&.qualifying{
+		/*background: #eef7e4;*/
+		color: #4a7f35;
+		b,strong{
+			color: #4a7f35;
+		}
+	}
+	&.semi-qualifying{
+		color: #8e7728;
+		/*color: #e20014;*/
+		/*background: #f9f5cd;*/
+		b,strong{
+			color: #8e7728;
+		/*color: #e20014;*/
+		}
+	}
+	&.non-qualifying{
+		color: #C33C48;
+		/*color: #C33C48;*/
+		/*background: #FFE9F1;*/
+		b,strong{
+			color: #C33C48;
+			/*color: #C33C48;*/
+		}
+	}
+}
+
+.transaction-line-views-cell-navigable-stock .product-line-stock>p{
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.pb-2{
+	padding-top: 2px;
+}
+.transaction-line-views-cell-eta-msg-wrapper{
+	margin-bottom: $sc-margin-lv2;
+	p.etamessage-wrapper{
+		font-size: 0.8rem;
+		line-height: 1.4;
+	}
+}

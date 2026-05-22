@@ -1,0 +1,28 @@
+{
+	"name": "ShowAllTransactions",
+	"fantasyName": "Show All Transactions",
+	"vendor": "ACS",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "1.0.0",
+	"description": "Show all transactions bypassing terms restriction",
+	"javascript": {
+		"entry_points": {
+			"myaccount": "Modules/ShowAllTransactions/JavaScript/ShowAllTransactions.js"
+		},
+		"application": {
+			"myaccount": {
+				"files": [
+					"Modules/ShowAllTransactions/JavaScript/ShowAllTransactions.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/ACS/ShowAllTransactions@1.0.0",
+	"activation_id": "11",
+	"extension_id": "5901"
+}

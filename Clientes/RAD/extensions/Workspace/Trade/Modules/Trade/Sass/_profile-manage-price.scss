@@ -1,0 +1,128 @@
+
+.ManagePriceLabel{
+    line-height: 25px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+  margin: 0 8px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #5cb85c;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+.profile_price_preference {
+  display: inline;
+}
+////////
+fieldset.profile-price-privileges {
+  text-align: center;
+  div.profile-price-settings-controls-group {
+    display: inline-block;
+    float: left;
+    margin-right: 35px;
+    //@extend .col-xs-4;
+    //padding: 0px 10px;
+    //width: 33%;
+    label.profile-price-settings-form-label{
+      display: block;
+      text-align: left;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.profile-price-settings-controls-group {
+	margin-top: $sc-margin-lv4;
+}
+
+.profile-price-settings-form-label {
+  display:inline-block;
+  margin-bottom:$sc-margin-base * 2;
+  margin-top:$sc-margin-base * 2;
+  font-size:$sc-font-size-base;
+  font-weight:$sc-font-weight-normal;
+  color:$sc-color-copy;
+}
+
+.profile-price-settings-state-text {
+  line-height: 20px;
+  vertical-align: top;
+  font-weight: 300;
+}
+
+.overview-home-mysettings-row article section * {
+    line-height: 1.8;
+}
+
+.overview-home-orders{
+    .recordviews-value{
+        color: $sc-color-cuaternary !important;
+    }
+}
+.ManagePrice{
+  border-bottom: 1px solid #f1ede7;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.overview-shipping-card-button-edit, .overview-payment-card-button-edit, .overview-profile-card-button-edit{
+  line-height: 0.5 !important;
+}
+.overview-home-mysettings{
+  @media (max-width: $screen-md) {
+    margin: 15px 0;
+  }
+}

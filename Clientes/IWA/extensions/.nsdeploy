@@ -1,0 +1,12 @@
+{
+    "credentials": {
+        "user_agent": "sc-extension-devtools/2024.2.20",
+        "authID": "IWA-sb",
+        "hostname": "975151-SB1.restlets.api.netsuite.com",
+        "website": "10",
+        "domain": "sb-staging.iwawine.com",
+        "webapp_id": "9727786",
+        "ssp_folder": "9727786",
+        "is_scis": false
+    }
+}

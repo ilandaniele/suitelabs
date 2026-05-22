@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": { 
+        "KlaviyoCheckout.config": {
+            "group": "extensions",
+            "subtab": "KlaviyoCheckout_subtab",
+            "type": "string",
+            "title": "KlaviyoCheckout_Title",
+            "description": "Config description example",
+            "default": "Default config example"
+        }
+    }
+}

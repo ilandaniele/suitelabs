@@ -1,0 +1,27 @@
+{
+	"type": "object",
+	"subtab": {
+		"id": "velarochat",
+		"title": "Velaro Chat",
+		"description": "Velaro Chat Integration",
+		"group": "integrations"
+	},
+	"properties": {
+		"velarochat.siteid": {
+			"group": "integrations",
+			"subtab": "velarochat",
+			"type": "string",
+			"title": "Velaro Chat Site ID",
+			"description": "Enter your Velaro Chat Site Id. This value corresponds to the ID provided to you by Velaro Chat.",
+			"default": "20957"
+		},
+		"velarochat.groupid": {
+			"group": "integrations",
+			"subtab": "velarochat",
+			"type": "string",
+			"title": "Velaro Chat Group ID",
+			"description": "Enter your velarochat ID. This value corresponds to the ID provided to you by Velaro Chat.",
+			"default": "6929"
+		}
+	}
+} 

@@ -1,0 +1,34 @@
+.global-views-breadcrumb-item-active {
+	@extend .breadcrumb-item-active;
+}
+
+.global-views-breadcrumb-item {
+	@extend .breadcrumb-item;
+}
+
+.global-views-breadcrumb-divider {
+	@extend .breadcrumb-divider;
+}
+
+.global-views-breadcrumb {
+	@extend .breadcrumb;
+	@extend .clearfix;
+	font-size:14px;
+	margin: 0;
+	width: 100%;
+	padding: 0 30px;
+	height: 64px;
+	line-height: 64px;
+}
+
+.global-views-breadcrumb-divider-icon {
+	@extend .breadcrumb-divider-icon;
+}
+//awalabs
+.global-views-breadcrumb-item {
+	letter-spacing: 1px;
+	font-weight: 300;
+}
+.global-views-breadcrumb li:nth-child(1), .global-views-breadcrumb li:nth-child(2) {
+	display: none;
+}

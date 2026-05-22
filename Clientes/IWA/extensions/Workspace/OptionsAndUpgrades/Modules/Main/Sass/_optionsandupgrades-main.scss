@@ -1,0 +1,33 @@
+.to-related {
+    @extend .product-detail-to-quote-add-to-quote-button !optional;
+}
+
+.item-relations-related-row.no-images .item-relations-cell {
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    padding: 10px 10px 25px;
+    height: 150px;
+}
+
+.item-relations-related-oau-container {
+    margin-top: 20px;
+
+    .item-relations-related-item-title {
+        padding: 0;
+        text-transform: capitalize;
+    }
+
+    .item-relations-related-item-rate {
+        margin-bottom: 0;
+    }
+
+    .item-relations-related-carousel-next {
+        margin-right: 10px;
+    }
+
+    .item-relations-row {
+        display: flex;
+    }
+}

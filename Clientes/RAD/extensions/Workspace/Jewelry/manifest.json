@@ -1,0 +1,69 @@
+{
+	"name": "Jewelry",
+	"fantasyName": "Jewelry",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.1",
+	"description": "SuiteLabs v2.1.1, includes refactored code to get retail prices, fixed bug in the order confirmation page.",
+	"configuration": {
+		"files": [
+			"Modules/Jewelry/Configuration/Jewelry.json"
+		]
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/Jewelry/Sass/_jewelry.scss",
+			"myaccount": "Modules/Jewelry/Sass/_jewelry.scss",
+			"checkout": "Modules/Jewelry/Sass/_jewelry.scss"
+		},
+		"files": [
+			"Modules/Jewelry/Sass/_jewelry.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/Jewelry/JavaScript/AwaLabs.Jewelry.js",
+			"checkout": "Modules/Jewelry/JavaScript/AwaLabs.Jewelry.Checkout.js",
+			"myaccount": "Modules/Jewelry/JavaScript/AwaLabs.Jewelry.MyAccount.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Jewelry/JavaScript/AwaLabs.Jewelry.js",
+					"Modules/Jewelry/JavaScript/Jewelry.Utils.js",
+					"Modules/Jewelry/JavaScript/OrderWizard.Module.Confirmation.Jewelry.js"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/Jewelry/JavaScript/AwaLabs.Jewelry.Checkout.js",
+					"Modules/Jewelry/JavaScript/Jewelry.Utils.js",
+					"Modules/Jewelry/JavaScript/OrderWizard.Module.Confirmation.Jewelry.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/Jewelry/JavaScript/AwaLabs.Jewelry.MyAccount.js",
+					"Modules/Jewelry/JavaScript/Jewelry.Utils.js",
+					"Modules/Jewelry/JavaScript/OrderWizard.Module.Confirmation.Jewelry.js"
+				]
+			}
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/Jewelry/SuiteScript/AwaLabs.Jewelry.js",
+		"files": [
+			"Modules/Jewelry/SuiteScript/AwaLabs.Jewelry.js",
+			"Modules/Jewelry/SuiteScript/Jewelry.Utils.js",
+			"Modules/Jewelry/SuiteScript/Jewelry.LiveOrder.ServiceController.js"
+		]
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/Jewelry@2.1.1",
+	"activation_id": "11",
+	"extension_id": "16912"
+}

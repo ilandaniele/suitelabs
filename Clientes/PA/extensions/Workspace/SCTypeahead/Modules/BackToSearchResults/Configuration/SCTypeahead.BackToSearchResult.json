@@ -1,0 +1,18 @@
+{
+	"type": "object",
+    "subtab": {
+        "id": "backtosearchresults",
+        "title": "Back To Search Results",
+        "description": "Back To Search Results",
+        "group": "sctypeahead"
+    }
+,	"properties": {
+        "sctypeahead.backtosearchresults.enableBackToSearchResult":{
+            "type": "boolean",
+            "default": true,
+            "title": "Enable Back to search results",
+            "subtab": "backtosearchresults",
+            "group": "sctypeahead"
+        }
+	}
+}

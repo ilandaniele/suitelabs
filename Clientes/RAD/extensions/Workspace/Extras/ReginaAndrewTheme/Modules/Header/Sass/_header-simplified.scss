@@ -1,0 +1,23 @@
+.header-simplified-header-logo{
+	text-align: center;
+
+	.header-logo-image{
+		width: auto;
+	}
+}
+.header-simplified-header{
+	background-color: $sc-top-menu-background-color;
+	border-bottom: 1px solid #f1ede7;
+	position: absolute;
+	top: 10px;
+	padding-top: 10px;
+}
+.checkout-layout-header.sticky-header{
+	.header-simplified-header{
+		top:40px;
+		padding-top: 0;
+		@media (max-width: $screen-md) {
+			top:0;
+		}
+	}
+}

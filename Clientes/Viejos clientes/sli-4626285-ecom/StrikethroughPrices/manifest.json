@@ -1,0 +1,76 @@
+{
+    "name": "StrikethroughPrices",
+    "fantasyName": "Strikethrough prices",
+    "vendor": "NSeComm",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Adds color to strikethrough prices and default prices",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_strikethroughprices-main.scss",
+            "checkout": "Modules/Main/Sass/_strikethroughprices-main.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_strikethroughprices-main.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/strikethrough_prices_pdp.tpl",
+                    "Modules/Main/Templates/strikethrough_prices_mini_cart.tpl"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/Templates/strikethrough_prices_pdp.tpl",
+                    "Modules/Main/Templates/strikethrough_prices_mini_cart.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/StrikethroughPrices.js",
+            "checkout": "Modules/Main/JavaScript/StrikethroughPrices.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/StrikethroughPrices.js",
+                    "Modules/Main/JavaScript/StrikethroughPricesPDP.View.js",
+                    "Modules/Main/JavaScript/StrikethroughPricesMiniCart.View.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/JavaScript/StrikethroughPrices.js",
+                    "Modules/Main/JavaScript/StrikethroughPricesPDP.View.js",
+                    "Modules/Main/JavaScript/StrikethroughPricesMiniCart.View.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\StrikethroughPrices",
+    "suitescript2": {
+        "files": []
+    }
+}

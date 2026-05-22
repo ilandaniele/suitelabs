@@ -1,0 +1,52 @@
+
+.store-locator-main {
+	@extend .container;
+	margin-bottom:$sc-margin-lv4;
+}
+
+.store-locator-main-layout {
+	width:100%;
+	min-height:100%;
+	height:auto;
+	display: table;
+}
+
+.store-locator-main-title {
+	margin-bottom:$sc-margin-lv4;
+}
+
+.store-locator-main-layout-left {
+	@extend .col-xs-12;
+	@extend .col-sm-6;
+	position: static;
+  	background:$sc-neutral-shade-0;
+  	padding:0px;
+}
+
+.store-locator-main-layout-right {
+	@extend .col-sm-6;
+	background:$sc-neutral-shade-0;
+	padding:0;
+	position: static;
+	@media (min-width: $screen-sm-min) {
+		padding-left: $sc-padding-lv3;
+	}
+}
+
+.store-locator-main-search, .store-locator-main-results {
+	padding:0px;
+}
+
+.store-locator-main-see-all-stores {
+	margin-bottom:$sc-margin-lv4;
+	text-transform: capitalize;
+	line-height: 34px;
+	@media (max-width: $screen-lg) {
+		margin-top: 10px;
+		float: left;
+	}
+}
+
+
+
+

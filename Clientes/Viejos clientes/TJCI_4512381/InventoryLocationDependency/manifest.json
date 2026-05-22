@@ -1,0 +1,85 @@
+{
+    "name": "InventoryLocationDependency",
+    "fantasyName": "Inventory Location Dependency",
+    "vendor": "PSeCom",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Will display inventory in PDP depending on Customer Location",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/InvLocDep/Sass/_invlocdep.scss",
+            "myaccount": "Modules/InvLocDep/Sass/_invlocdep.scss",
+            "checkout": "Modules/InvLocDep/Sass/_invlocdep.scss"
+        },
+        "files": [
+            "Modules/InvLocDep/Sass/_invlocdep.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/InvLocDep/Templates/inventory_stock_location.tpl"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/InvLocDep/Templates/inventory_stock_location.tpl"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/InvLocDep/Templates/inventory_stock_location.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/InvLocDep/JavaScript/InventoryStockLocation.js",
+            "myaccount": "Modules/InvLocDep/JavaScript/InventoryStockLocation.js",
+            "checkout": "Modules/InvLocDep/JavaScript/InventoryStockLocation.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/InvLocDep/JavaScript/InventoryStockLocation.js",
+                    "Modules/InvLocDep/JavaScript/InventoryStockLocation.View.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/InvLocDep/JavaScript/InventoryStockLocation.js",
+                    "Modules/InvLocDep/JavaScript/InventoryStockLocation.View.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/InvLocDep/JavaScript/InventoryStockLocation.js",
+                    "Modules/InvLocDep/JavaScript/InventoryStockLocation.View.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\InventoryLocationDependency",
+    "suitescript2": {
+        "files": []
+    }
+}

@@ -1,0 +1,47 @@
+{
+	"name": "CheckoutImprovements",
+	"fantasyName": "Checkout Improvements",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.1",
+	"description": "SuiteLabs v2.1.1 refers to the SCA upgrade to 23.2, it also includes some refactoring",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"checkout": "Modules/CheckoutSteps/Sass/_checkout-improvements.scss"
+		},
+		"files": [
+			"Modules/CheckoutSteps/Sass/_checkout-improvements.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"checkout": "Modules/CheckoutSteps/JavaScript/AwaLabs.CheckoutImprovements.js"
+		},
+		"application": {
+			"checkout": {
+				"files": [
+					"Modules/CheckoutSteps/JavaScript/AwaLabs.CheckoutImprovements.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/CheckoutImprovements@2.1.1",
+	"activation_id": "11",
+	"extension_id": "16901"
+}

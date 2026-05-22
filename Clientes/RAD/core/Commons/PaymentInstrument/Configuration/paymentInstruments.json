@@ -1,0 +1,9 @@
+{
+    "type": "object",
+    "group": {
+        "id": "paymentInstruments",
+        "title": "Payment Instruments & Methods",
+        "docRef": "section_0319044705",
+        "description": "Payment instruments and methods configuration."
+    }
+}

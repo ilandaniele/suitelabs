@@ -1,0 +1,64 @@
+{
+    "name": "CookieModalConfirmation",
+    "fantasyName": "Cookie Modal Confirmation",
+    "vendor": "NSeComm",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": ">=20.2.0",
+        "SCS": ">=20.2.0"
+    },
+    "description": "This extension displays modal from the first visit in the website and check if the visitor is about 18 years of age.",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": [
+                "img/porthos-logo-popup.jpg"
+            ]
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/NSeComm.CookieModalConfirmation.json"
+        ]
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_nsecomm-cookie-modal-main.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_nsecomm-cookie-modal-main.scss",
+            "Modules/CookieModalConfirmation/Sass/_cookie-modal-confirmation.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/CookieModalConfirmation/Templates/cookie_modal_confirmation_view.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/NSeComm.CookieModalConfirmation.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.CookieModalConfirmation.Main.js",
+                    "Modules/CookieModalConfirmation/JavaScript/CookieModalConfirmation.View.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace/CookieModalConfirmation"
+}

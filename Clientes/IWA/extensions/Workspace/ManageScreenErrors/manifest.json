@@ -1,0 +1,35 @@
+{
+    "name": "ManageScreenErrors",
+    "fantasyName": "Manage Screen Errors",
+    "vendor": "ACS",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Scroll user to the error on checkout and PDP",
+    "skins": [],
+    "javascript": {
+        "entry_points": {
+            "checkout": "Modules/Main/JavaScript/ManageCheckoutErrors.Main.js",
+            "shopping": "Modules/Main/JavaScript/ManageShoppingErrors.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/ManageShoppingErrors.Main.js",
+                    "Modules/Main/JavaScript/Utils.Extend.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/JavaScript/ManageCheckoutErrors.Main.js",
+                    "Modules/Main/JavaScript/Utils.Extend.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\ManageScreenErrors"
+}

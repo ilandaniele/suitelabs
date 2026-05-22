@@ -1,0 +1,25 @@
+.stock-status-container label {
+    font-weight: bold;
+    margin-right: 5px;
+    margin-bottom: 0px;
+}
+
+.stock-status-container img{
+    margin-left: 5px
+}
+
+.stock-status-container p {
+    font-size: 12px;
+}
+.stock-status-container label, 
+.stock-status-container span {
+	font-size: 14px;
+}
+.cart-detailed-body .stock-status-container {
+	margin-top: 5px;
+}
+td.transaction-stock-container {
+	padding-top: 0;
+	padding-bottom: 0;
+	margin-top: -15px;
+}

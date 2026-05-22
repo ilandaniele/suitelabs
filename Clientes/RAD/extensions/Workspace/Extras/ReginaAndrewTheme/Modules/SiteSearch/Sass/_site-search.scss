@@ -1,0 +1,90 @@
+.site-search {
+	display: inline-block;
+	width: 100%;
+	background: $sc-neutral-shade-0;
+	&.active{
+		display:block;
+	}
+	@media (min-width: $screen-md) {
+		display: inline-block !important;
+	}
+}
+
+@media (max-width: $screen-md) {
+	.shopping-layout-header,
+	.checkout-layout-header,
+	.myaccount-layout-header{
+		&:not(.sticky-header) {
+			.site-search{
+				display: inline-block !important;
+			}
+		}
+
+	}
+}
+
+.site-search-content {
+	@extend .nav-search-content;
+}
+
+
+
+.site-search-content-input {
+	@extend .nav-search-content-input;
+	.itemssearcher-input {
+		border: none;
+		&::placeholder{
+			font-weight: 300;
+			letter-spacing: 1px;
+			color: #5a5959;
+		}
+		&:hover{
+			border: none !important;
+		}
+	}
+	.itemssearcher-input:focus{
+		outline:none;
+		outline-style:none;
+		box-shadow:none;
+		border-color:transparent;
+	}
+}
+
+.site-search-input-icon {
+	@extend .nav-search-input-icon;
+	font-size: $sc-font-size-xxl;
+}
+
+.site-search-input-icon-light {
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjMuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA2NS42IDY1LjYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDY1LjYgNjUuNjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM1QTU5NTk7fQo8L3N0eWxlPgo8cGF0aCBjbGFzcz0ic3QwIiBkPSJNNjUuMiw2My4xTDQ1LjIsNDMuMmM0LjEtNC42LDYuNi0xMC42LDYuNi0xNy4zQzUxLjgsMTEuNiw0MC4yLDAsMjUuOSwwUzAsMTEuNiwwLDI1LjlzMTEuNiwyNS45LDI1LjksMjUuOQoJYzYuNiwwLDEyLjctMi41LDE3LjMtNi42bDE5LjksMTkuOWMwLjMsMC4zLDAuNywwLjQsMSwwLjRzMC43LTAuMiwxLTAuNEM2NS43LDY0LjYsNjUuNyw2My43LDY1LjIsNjMuMXogTTI1LjksNDkKCWMtMTIuNywwLTIzLTEwLjMtMjMtMjNzMTAuMy0yMywyMy0yM3MyMywxMC4zLDIzLDIzUzM4LjYsNDksMjUuOSw0OXoiLz4KPC9zdmc+Cg==');
+        position: absolute;
+        top: 0;
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-position: 9px 13px;
+        background-repeat: no-repeat;
+        background-size: 24px;
+
+	@media (max-width: $screen-md) {
+		background-position: 9px 9px;
+	}
+}
+
+.site-search-input-reset {
+	@extend .nav-search-input-reset;
+	right: 0;
+}
+
+.site-search-button-submit {
+	@extend .nav-search-button-submit;
+	border-radius: $sc-border-radius;
+}
+
+.site-search-button-close {
+	@extend .nav-search-button-close;
+}
+
+.site-search-input-reset-icon {
+	@extend .nav-search-input-reset-icon;
+}

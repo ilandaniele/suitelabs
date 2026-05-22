@@ -1,0 +1,19 @@
+.location-inventory-row {
+    margin-left: auto;
+    display: flex;
+
+    .name {
+        width: 100px;
+        border: 1px solid black;
+        text-align: left;
+        padding-left: 5px;
+    }
+
+    .quantity {
+        width: 50px;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+        text-align: center;
+    }
+}

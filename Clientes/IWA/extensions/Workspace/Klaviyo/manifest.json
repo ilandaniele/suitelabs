@@ -1,0 +1,49 @@
+{
+    "name": "Klaviyo",
+    "fantasyName": "Klaviyo",
+    "vendor": "SuiteLabs",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "This extension integrates SuiteCommerce with Klaviyo to send marketing emails and track user metrics",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "checkout": "Modules/Main/JavaScript/SuiteLabs.Klaviyo.Checkout.js",
+            "shopping": "Modules/Main/JavaScript/SuiteLabs.Klaviyo.Shopping.js"
+        },
+        "application": {
+            "checkout": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.Klaviyo.Checkout.js",
+                    "Modules/Main/JavaScript/Klaviyo.Tracker.js"
+                ]
+            },
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.Klaviyo.Shopping.js",
+                    "Modules/Main/JavaScript/Klaviyo.Tracker.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\Klaviyo",
+    "suitescript2": {
+        "files": []
+    }
+}

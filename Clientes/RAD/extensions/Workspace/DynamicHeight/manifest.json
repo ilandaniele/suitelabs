@@ -1,0 +1,51 @@
+{
+	"name": "DynamicHeight",
+	"fantasyName": "Faceted Items Dynamic Height",
+	"vendor": "SuiteLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "1.0.0",
+	"description": "This extension applies a dynamic height on facets leveraging HTML5 grid system to improve the look and feel of the layout",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/Main/Sass/_dynamicheight-main.scss"
+		},
+		"files": [
+			"Modules/Main/Sass/_dynamicheight-main.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/Main/JavaScript/DynamicHeight.Facets.Browse.View.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Main/JavaScript/DynamicHeight.Facets.Browse.View.js",
+					"Modules/Main/JavaScript/SuiteLabs.DynamicHeight.Main.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/SuiteLabs/DynamicHeight@1.0.0",
+	"activation_id": "11",
+	"extension_id": "17301"
+}

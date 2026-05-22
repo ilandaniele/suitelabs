@@ -1,0 +1,36 @@
+{
+    "name": "ShippingMethodsFiltering",
+    "fantasyName": "Shipping Methods Filtering",
+    "vendor": "NSeComm",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "version": "1.0.0",
+    "description": "Adds live order filtering for shipping methods depending if the buyer is inside US or not, and if the products in cart are hazardous or not",
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/ShippingMethodsFiltering.json"
+        ]
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/Main/SuiteScript/NSeComm.ShippingMethodsFiltering.js",
+        "files": [
+            "Modules/Main/SuiteScript/NSeComm.ShippingMethodsFiltering.js",
+            "Modules/LiveOrder/SuiteScript/ShippingMethodsFiltering.Model.js"
+        ]
+    },
+    "suitescript2": {
+        "files": []
+    }
+}

@@ -1,0 +1,54 @@
+{
+	"name": "OrderStatusImprovementsHandlebarsExtras",
+	"fantasyName": "Order Status Improvements Handlebars Extras",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "2.0.0",
+	"description": "Order Status Improvements Handlebars Extras",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/OrderStatusImprovementsHandlebarsExtras/JavaScript/AwaLabs.OrderStatusImprovementsHandlebarsExtras.js",
+			"myaccount": "Modules/OrderStatusImprovementsHandlebarsExtras/JavaScript/AwaLabs.OrderStatusImprovementsHandlebarsExtras.js",
+			"checkout": "Modules/OrderStatusImprovementsHandlebarsExtras/JavaScript/AwaLabs.OrderStatusImprovementsHandlebarsExtras.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/OrderStatusImprovementsHandlebarsExtras/JavaScript/AwaLabs.OrderStatusImprovementsHandlebarsExtras.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/OrderStatusImprovementsHandlebarsExtras/JavaScript/AwaLabs.OrderStatusImprovementsHandlebarsExtras.js"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/OrderStatusImprovementsHandlebarsExtras/JavaScript/AwaLabs.OrderStatusImprovementsHandlebarsExtras.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/OrderStatusImprovementsHandlebarsExtras@2.0.0",
+	"activation_id": "11",
+	"extension_id": "10746"
+}

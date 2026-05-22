@@ -1,0 +1,193 @@
+{
+  "type": "object",
+  "modifications": [
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "11"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "12"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "13"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "14"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "15"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "16"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "17"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "18"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "19"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "20"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "21"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "22"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "23"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "24"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "25"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "26"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "27"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "28"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "29"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "30"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "31"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "32"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "33"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "34"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "35"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "36"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "37"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "38"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "39"
+      },
+      {
+        "target": "$.properties.facets.items.properties.priority.enum",
+        "action": "add",
+        "value": "40"
+      },
+      {
+        "target": "$.properties.facets.items.properties.parser.enum",
+        "action": "add",
+        "value": "float"
+      }
+  ],
+  "properties": {
+    "excludeFacets.facets": {
+      "group": "catalog",
+      "type": "array",
+      "title": "Exclude Facets",
+      "description": "Configure what are the facets you want to exclude from the response of the API",
+      "items": {
+        "type": "string",
+        "title": "Exclude Facets"
+      }
+    },
+    "masterFacets.facets": {
+      "group": "catalog",
+      "type": "array",
+      "title": "Master Facets",
+      "description": "Configure what are the master facets you want to apply on the API request by default",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "title": "Facet ID",
+            "description": "The id for master facet"
+          },
+          "value": {
+            "type": "string",
+            "title": "Value",
+            "description": "Default value for master facet"
+          }
+        }
+      }
+    }
+  }
+}

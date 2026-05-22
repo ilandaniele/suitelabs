@@ -1,0 +1,57 @@
+{
+    "name": "AdoptionSearchBox",
+    "fantasyName": "AdoptionSearchBox",
+    "vendor": "NSeComm",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "version": "1.0.0",
+    "description": "Adds a content box above from adoption-search content",
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/adoptionsearchbox.tpl"
+                ]
+            }
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_adoptionsearchbox-main.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_adoptionsearchbox-main.scss"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/AdoptionSearchBox.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/AdoptionSearchBox.js",
+                    "Modules/Main/JavaScript/AdoptionSearchBox.View.js"
+                ]
+            }
+        }
+    },
+    "suitescript2": {
+        "files": []
+    }
+}

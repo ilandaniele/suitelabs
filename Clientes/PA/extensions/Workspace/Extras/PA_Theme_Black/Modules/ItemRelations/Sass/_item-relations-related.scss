@@ -1,0 +1,80 @@
+.item-relations-related {
+	position: relative;
+}
+
+.item-relations-related .bx-controls-direction {
+    text-align: right;
+	margin-bottom: $sc-margin-lv3;
+}
+.item-relations-related h3 {
+	margin-bottom: $sc-margin-lv4;
+	font-weight: 500;
+	font-size: 1.5rem;
+  	@media (max-width: $screen-xs-max) {
+    	font-size: 1.35rem;
+  	}
+}
+
+.item-relations-related .global-views-star-rating {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+
+
+
+.item-relations-related-carousel-next{
+	@extend .button-tertiary;
+	@extend .button-small;
+	margin-left:$sc-margin-lv2;
+	cursor:pointer;
+	cursor:hand;
+	position:absolute;
+	right:0px;
+	top:50%;
+	padding-right: 0px;
+	.carousel-next-arrow{
+		@media (min-width: $screen-sm-min) {
+			font-size: 50px;
+		}
+		@media (max-width: $screen-xs-max) {
+			font-size: 40px;
+		}
+		
+	}
+}
+
+.item-relations-related-carousel-prev{
+	@extend .button-tertiary;
+	@extend .button-small;
+	cursor:pointer;
+	cursor:hand;
+	position:absolute;
+	left:0px;
+	top:50%;
+	padding-left: 0px;
+	.carousel-prev-arrow {
+		@media (min-width: $screen-sm-min) {
+			font-size: 50px;
+		}
+		@media (max-width: $screen-xs-max) {
+			font-size: 40px;
+		}
+		
+	}
+}
+.item-relations-related-carousel-next.disabled,
+.item-relations-related-carousel-prev.disabled {
+	display: none;
+}
+.control-text{
+	display:none;
+}
+
+.item-relations-related-row{
+	.item-relations-cell{
+		.item-relations-related-item-price{
+			min-height: 52px;
+		}
+	}
+}

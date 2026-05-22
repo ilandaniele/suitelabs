@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "modifications": [{
+        "target": "$.properties[facets].items.properties",
+        "action": "add",
+        "value": {
+            "standaloneFacet": {
+                "type": "boolean",
+                "title": "Standalone Facet"
+            }
+        }
+    }]
+}

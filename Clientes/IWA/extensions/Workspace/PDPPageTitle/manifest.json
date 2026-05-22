@@ -1,0 +1,35 @@
+{
+    "name": "PDPPageTitle",
+    "fantasyName": "PDP Page Title",
+    "vendor": "ACS",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Makes configurable the PDP page title for the site",
+    "skins": [],
+    "configuration": {
+        "files": [
+            "Modules/PDPPageTitle/Configuration/PDPPageTitle.json"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/PDPPageTitle/JavaScript/PDPPageTitle.View.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/PDPPageTitle/JavaScript/PDPPageTitle.View.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\PDPPageTitle",
+    "suitescript2": {
+        "files": []
+    }
+}

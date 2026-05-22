@@ -1,0 +1,20 @@
+{
+    "type": "object",
+
+    "subtab": {
+        "id": "plpCellContent",
+        "group": "extensions",
+        "title": "PLP Cell Content",
+        "description": "PLP Cell Content"
+    },
+
+    "properties": {
+        "plpCellContent.fieldId": {
+            "type": "string",
+            "group": "extensions",
+            "subtab": "plpCellContent",
+            "title": "Field ID",
+            "description": "Field ID"
+        }
+    }
+}

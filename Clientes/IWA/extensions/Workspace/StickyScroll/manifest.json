@@ -1,0 +1,41 @@
+{
+    "name": "StickyScroll",
+    "fantasyName": "Sticky Scroll",
+    "vendor": "SuiteLabs",
+    "version": "1.0.4",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Scroll automatically in the PLP to the last visited item from a PDP",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/SuiteLabs.StickyScroll.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.StickyScroll.Main.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\StickyScroll",
+    "suitescript2": {
+        "files": []
+    }
+}

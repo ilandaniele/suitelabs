@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "bulbs",
+        "title": "Bulbs",
+        "description": "Bulbs",
+        "group": "shoppingApplication"
+    },
+    "properties": {
+        "bulbs.bulbText": {
+            "group": "shoppingApplication",
+            "subtab": "bulbs",
+            "type": "string",
+            "title": "Bulb Text",
+            "description": "Bulb Text",
+            "default": "Add LED bulb(s) Qty: "
+        },
+        "bulbs.bulbFrostedText": {
+            "group": "shoppingApplication",
+            "subtab": "bulbs",
+            "type": "string",
+            "title": "Bulb Frosted Text",
+            "description": "Bulb Frosted Text",
+            "default": "Add LED bulb(s) Qty: "
+        },
+        "bulbs.enabled": {
+            "group": "shoppingApplication",
+            "subtab": "bulbs",
+            "type": "boolean",
+            "title": "Enabled",
+            "description": "Enabled",
+            "default": true
+        }
+    }
+}

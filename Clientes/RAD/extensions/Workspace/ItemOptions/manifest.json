@@ -1,0 +1,34 @@
+{
+	"name": "ItemOptions",
+	"fantasyName": "Item Options",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=20.1.0",
+		"SCS": ">=20.1.0"
+	},
+	"version": "2.0.0",
+	"description": "Item Options",
+	"configuration": {
+		"files": [
+			"Modules/ItemOptions/Configuration/ItemOptions.json"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/ItemOptions/JavaScript/AwaLabs.ItemOptions.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/ItemOptions/JavaScript/AwaLabs.ItemOptions.js",
+					"Modules/ItemOptions/JavaScript/ItemOptions.Utils.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/ItemOptions@2.0.0",
+	"activation_id": "11",
+	"extension_id": "10739"
+}

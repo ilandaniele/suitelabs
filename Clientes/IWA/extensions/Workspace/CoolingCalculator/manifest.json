@@ -1,0 +1,72 @@
+{
+    "name": "CoolingCalculator",
+    "fantasyName": "Cooling Calculator",
+    "vendor": "SuiteLabs",
+    "version": "1.0.2",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "This extension creates a new form in the site where users will be able to submit their thermal load calculation requests",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/CoolingCalculator.json"
+        ]
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_cooling-calculator.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_cooling-calculator.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/cooling_calculator_results.tpl",
+                    "Modules/Main/Templates/cooling_calculator.tpl",
+                    "Modules/Main/Templates/cooling_calculator_form.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/SuiteLabs.CoolingCalculator.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.CoolingCalculator.Main.js",
+                    "Modules/Main/JavaScript/CoolingCalculator.Results.View.js",
+                    "Modules/Main/JavaScript/CoolingCalculator.View.js",
+                    "Modules/Main/JavaScript/CoolingCalculator.Results.Model.js",
+                    "Modules/Main/SuiteScript2/CoolingCalculator.Model.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\CoolingCalculator",
+    "suitescript2": {
+        "files": [
+            "Modules/Main/SuiteScript2/CoolingCalculator.Model.js",
+            "Modules/Main/SuiteScript2/CoolingCalculator.Results.Service.ss"
+        ]
+    }
+}

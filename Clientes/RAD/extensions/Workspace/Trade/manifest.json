@@ -1,0 +1,85 @@
+{
+	"name": "Trade",
+	"fantasyName": "Trade",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "Trade. SuiteLabs v2.1.0, added a link in the PDP to take the user to the trade registration form",
+	"configuration": {
+		"files": [
+			"Modules/Trade/Configuration/Trade.json"
+		]
+	},
+	"templates": {
+		"application": {
+			"myaccount": {
+				"files": [
+					"Modules/Trade/Templates/profile_manage_price.tpl"
+				]
+			},
+			"shopping": {
+				"files": [
+					"Modules/Trade/Templates/trade_link_view.tpl",
+					"Modules/Trade/Templates/profile_manage_price.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"myaccount": "Modules/Trade/Sass/_profile-manage-price.scss",
+			"shopping": "Modules/Trade/Sass/_trade.scss"
+		},
+		"files": [
+			"Modules/Trade/Sass/_profile-manage-price.scss",
+			"Modules/Trade/Sass/_trade.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"checkout": "Modules/Trade/JavaScript/AwaLabs.Trade.js",
+			"myaccount": "Modules/Trade/JavaScript/AwaLabs.Trade.MyAccount.js",
+			"shopping": "Modules/Trade/JavaScript/AwaLabs.Trade.Shopping.js"
+		},
+		"application": {
+			"checkout": {
+				"files": [
+					"Modules/Trade/JavaScript/AwaLabs.Trade.js",
+					"Modules/Trade/JavaScript/Profile.Model.HidePrices.js",
+					"Modules/Trade/JavaScript/Trade.Link.View.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/Trade/JavaScript/AwaLabs.Trade.js",
+					"Modules/Trade/JavaScript/AwaLabs.Trade.MyAccount.js",
+					"Modules/Trade/JavaScript/Profile.ManagePrice.View.js",
+					"Modules/Trade/JavaScript/Profile.Model.HidePrices.js",
+					"Modules/Trade/JavaScript/Trade.Link.View.js"
+				]
+			},
+			"shopping": {
+				"files": [
+					"Modules/Trade/JavaScript/AwaLabs.Trade.js",
+					"Modules/Trade/JavaScript/AwaLabs.Trade.Shopping.js",
+					"Modules/Trade/JavaScript/Profile.Model.HidePrices.js",
+					"Modules/Trade/JavaScript/Trade.Link.View.js"
+				]
+			}
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/Trade/SuiteScript/AwaLabs.Trade.js",
+		"files": [
+			"Modules/Trade/SuiteScript/AwaLabs.Trade.js"
+		]
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/Trade@2.1.0",
+	"activation_id": "11",
+	"extension_id": "16916"
+}

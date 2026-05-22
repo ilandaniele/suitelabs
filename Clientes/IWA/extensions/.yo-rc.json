@@ -1,0 +1,12 @@
+{
+  "generator-extension": {
+    "ext_application": {
+      "RemoveFacetsEmptyCategories": [
+        "shopping"
+      ],
+      "EnhancedSearch": [
+        "shopping"
+      ]
+    }
+  }
+}

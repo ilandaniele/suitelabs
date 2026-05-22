@@ -1,0 +1,8 @@
+{
+	"type": "object"
+,	"group": {
+		"id": "sctypeahead"
+	,	"title": "SCTypeahead"
+	,	"description": "SCTypeahead Configurations"
+	}
+}

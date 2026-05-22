@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "paymentInstrumentAch",
+        "title": "Payment Instrument ACH",
+        "docRef": "section_0320120308",
+        "description": "Payment Instrument ACH",
+        "group": "paymentInstruments"
+    }
+    ,
+    "properties": {
+        "paymentInstrumentACHEnabled": {
+            "group": "paymentInstruments",
+            "subtab": "paymentInstrumentAch",
+            "type": "boolean",
+            "title": "ENABLE ACH PAYMENTS FOR MAKE A PAYMENT",
+            "description": "Check this box to enable ACH payments for all customers using the Make a Payment flow on your site.",
+            "default": false
+        }
+    }
+}

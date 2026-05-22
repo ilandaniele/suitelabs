@@ -1,0 +1,26 @@
+{
+    "name": "RemoveWholesaleShipping",
+    "fantasyName": "Remove Wholesale Shipping",
+    "vendor": "ACS",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Remove Wholesale Shipping for non login customers",
+    "skins": [],
+    "configuration": {
+        "files": [
+            "Modules/RemoveWholesaleShipping/Configuration/RemoveWholesaleShipping.json"
+        ]
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/RemoveWholesaleShipping/SuiteScript/RemoveWholesaleShipping.LiveOrder.Model.js",
+        "files": [
+            "Modules/RemoveWholesaleShipping/SuiteScript/RemoveWholesaleShipping.LiveOrder.Model.js"
+        ]
+    },
+    "local_folder": "Workspace\\RemoveWholesaleShipping"
+}

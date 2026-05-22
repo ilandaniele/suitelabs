@@ -1,0 +1,52 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "upsAddressValidation",
+        "title": "UPS Address Validation",
+        "description": "UPS Address Validation Extension Config",
+        "group": "extensions"
+    },
+    "properties": {
+        "extensions.upsAddressValidation.testingUrl": {
+            "group": "extensions",
+            "subtab": "upsAddressValidation",
+            "type": "string",
+            "title": "Testing API URL",
+            "description": "Testing API Host",
+            "default": "https://wwwcie.ups.com/rest/"
+        },
+        "extensions.upsAddressValidation.productionUrl": {
+            "group": "extensions",
+            "subtab": "upsAddressValidation",
+            "type": "string",
+            "title": "Production API URL",
+            "description": "Production API URL",
+            "default": "https://wwwcie.ups.com/rest/"
+        },
+        "extensions.upsAddressValidation.validationType": {
+            "group": "extensions",
+            "subtab": "upsAddressValidation",
+            "type": "string",
+            "enum": ["AV", "XAV"],
+            "title": "Validation Type",
+            "description": "API Validation Level - XAV enable street level",
+            "default": "AV"
+        },
+        "extensions.upsAddressValidation.testingMode": {
+            "group": "extensions",
+            "subtab": "upsAddressValidation",
+            "type": "boolean",
+            "title": "Testing Model",
+            "description": "Running in Test Model",
+            "default": false
+        },
+        "extensions.upsAddressValidation.enabled": {
+            "group": "extensions",
+            "subtab": "upsAddressValidation",
+            "type": "boolean",
+            "title": "Validation Enabled",
+            "description": "UPS Address Validation Enabled",
+            "default": true
+        }
+    }
+}

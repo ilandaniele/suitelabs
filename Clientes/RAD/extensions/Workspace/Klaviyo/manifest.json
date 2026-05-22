@@ -1,0 +1,140 @@
+{
+	"name": "Klaviyo",
+	"description": "SC Klaviyo integration",
+	"fantasyName": "Klaviyo",
+	"vendor": "Tavano",
+	"version": "3.0.7",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=20.2.1",
+		"SCS": ">=20.2.1"
+	},
+	"configuration": {
+		"files": [
+			"Modules/Klaviyo/Configuration/Klaviyo.json",
+			"Modules/KlaviyoCheckout/Configuration/KlaviyoCheckout.json"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Klaviyo.js",
+			"myaccount": "Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Klaviyo.js",
+			"checkout": "Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.Klaviyo.Checkout.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Klaviyo.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Cart.Sync.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.ProductView.Sync.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.LoaderSync.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Checkout.Sync.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Order.Sync.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Profile.Sync.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.AddOrderSource.Checkout.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.Checkout.Sync.Checkout.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.Klaviyo.Checkout.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.LoaderSync.Checkout.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.OrderSource.View.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.Profile.Sync.Checkout.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Profile.Model.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.Checkout.Profile.Model.js",
+					"Modules/KlaviyoProfile/JavaScript/Tavano.Klaviyo.KlaviyoProfile.Model.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Klaviyo.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Cart.Sync.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.ProductView.Sync.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.LoaderSync.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Checkout.Sync.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Order.Sync.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Profile.Sync.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.AddOrderSource.Checkout.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.Checkout.Sync.Checkout.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.Klaviyo.Checkout.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.LoaderSync.Checkout.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.OrderSource.View.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.Profile.Sync.Checkout.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Profile.Model.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.Checkout.Profile.Model.js",
+					"Modules/KlaviyoProfile/JavaScript/Tavano.Klaviyo.KlaviyoProfile.Model.js"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Klaviyo.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Cart.Sync.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.ProductView.Sync.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.LoaderSync.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Checkout.Sync.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Order.Sync.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Profile.Sync.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.AddOrderSource.Checkout.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.Checkout.Sync.Checkout.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.Klaviyo.Checkout.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.LoaderSync.Checkout.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.OrderSource.View.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.Profile.Sync.Checkout.js",
+					"Modules/Klaviyo/JavaScript/Tavano.Klaviyo.Profile.Model.js",
+					"Modules/KlaviyoCheckout/JavaScript/Tavano.Klaviyo.Checkout.Profile.Model.js",
+					"Modules/KlaviyoProfile/JavaScript/Tavano.Klaviyo.KlaviyoProfile.Model.js"
+				]
+			}
+		}
+	},
+	"templates": {
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Klaviyo/Templates/tavano_klaviyo_klaviyo.tpl",
+					"Modules/KlaviyoCheckout/Templates/tavano_klaviyo_klaviyoordersource.tpl"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/Klaviyo/Templates/tavano_klaviyo_klaviyo.tpl",
+					"Modules/KlaviyoCheckout/Templates/tavano_klaviyo_klaviyoordersource.tpl"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/Klaviyo/Templates/tavano_klaviyo_klaviyo.tpl",
+					"Modules/KlaviyoCheckout/Templates/tavano_klaviyo_klaviyoordersource.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/Klaviyo/Sass/_klaviyo-klaviyo.scss",
+			"myaccount": "Modules/Klaviyo/Sass/_klaviyo-klaviyo.scss",
+			"checkout": "Modules/Klaviyo/Sass/_klaviyo-klaviyo.scss"
+		},
+		"files": [
+			"Modules/Klaviyo/Sass/_klaviyo-klaviyo.scss"
+		]
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/Klaviyo/SuiteScript/Tavano.Klaviyo.Klaviyo.js",
+		"files": [
+			"Modules/Klaviyo/SuiteScript/Tavano.Klaviyo.Klaviyo.js",
+			"Modules/Klaviyo/SuiteScript/Klaviyo.ServiceController.js",
+			"Modules/KlaviyoProfile/SuiteScript/Tavano.Klaviyo.KlaviyoProfile.js",
+			"Modules/KlaviyoProfile/SuiteScript/KlaviyoProfile.ServiceController.js"
+		]
+	},
+	"assets": {
+		"services": {
+			"files": [
+				"services/Klaviyo.service.ss",
+				"services/KlaviyoProfile.Service.ss"
+			]
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/Tavano/Klaviyo@3.0.7",
+	"activation_id": "11",
+	"extension_id": "12101"
+}

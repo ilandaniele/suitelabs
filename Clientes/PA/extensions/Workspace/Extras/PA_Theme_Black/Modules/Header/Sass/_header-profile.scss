@@ -1,0 +1,476 @@
+.header-profile-welcome-link,
+.header-profile-login-link,
+.header-profile-register-link,
+.header-profile-loading-link,
+.get-tracking-button {
+	@extend %header-link;
+	color: $pa-white;
+	padding: 0;
+	text-transform: uppercase;
+
+}
+
+.header-profile-login-link {
+	padding: 0px;
+	display: inline-block;
+	vertical-align: middle;
+	text-transform: uppercase;
+	i {
+		// padding: 10px;
+		// margin: 0px;
+		@media (min-width: $screen-md-min){
+			display: none;
+		}
+	}
+	
+	.user-icon-desktop{
+		display:inline-block;
+		@media (max-width: $screen-xs-max){
+			display: none;
+		}
+		@include ipadPortrait {
+			display: none;
+		}
+	}
+	.user-icon-mobile{
+		display:inline-block;
+		@media (min-width: $screen-md-min){
+			display: none;
+		}
+	}
+}
+
+.track-order-mobile-only{
+	display: none;
+	@media (max-width: $screen-xs-max){
+		display: block;
+		.pa-icon.icon-trakmy-order{
+			height: 34px !important;
+		}
+	}
+}
+
+.header-profile-signout-link{
+	color: $pa-white;
+}
+.header-profile-welcome-link{
+	color: $pa-white;
+	position: relative;
+	.header-profile-welcome-user-icon {
+		position: relative;
+	}
+	.welcome-text {
+		display: inline-block;
+		vertical-align: top;
+	}
+	.header-profile-welcome-carret-icon {
+		vertical-align: top;
+		display: inline-block;
+		line-height: 44px;
+		@media (max-width: $screen-xs-max){
+			display: none;
+		}
+		@include ipadPortrait {
+			display: none;;
+		}
+	}
+	.header-profile-welcome-link-name {
+		@media (min-width: $screen-md-min){
+			display: inline-block;
+			max-width: 96px;
+			vertical-align: top;
+		}
+	}
+	.header-profile-welcome-user-icon{
+		display: inline-block;
+	}
+}
+
+.header-profile-welcome-link-name{
+	//display: block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	//overflow: hidden;
+	text-transform: capitalize;
+
+	@media (min-width: $screen-md-min){
+		display: inline;
+	}
+}
+
+.header-profile-welcome-user-icon{
+	@extend .fa;
+	@extend %fa-user;
+
+	//float:left;
+	//font-size: $sc-font-size-xxl;
+	padding: $sc-padding-lv1 0;
+	//margin-right: $sc-margin-lv3;
+
+	@media (min-width: $screen-md-min){
+		display: none;
+	}
+}
+
+.header-profile-welcome-carret-icon{
+	@extend .fa;
+	@extend %fa-angle-down;
+	display:none;
+	margin-left: $sc-margin-lv1;
+
+	@media (min-width: $screen-md-min){
+		display: inline;
+	}
+}
+
+
+
+//////////////////////////////////////////////////////////
+//login register
+
+.header-profile-menu-login{
+	color: $pa-white;
+
+	// @media (min-width: $screen-md-min) {
+	// 	color: $pa-dark-gray;
+	// }
+	
+	li {
+		display:inline-block;
+		padding: 0px 3px;
+		font-size: $sc-font-size-s;
+		vertical-align: middle;
+		padding: 0px 0px 0px 22px;
+		&.mobile-sign-up{
+			@media (min-width: $screen-md-min) {
+				display: inline-block;;
+			}
+			a {
+				color: #fff;
+			}
+		}
+		// a,
+		// button{
+		// 	.pa-icon{
+		// 		display: none;
+		// 	}
+		// }
+		
+		@media (max-width: $screen-sm-max) {
+			color: $pa-dark-gray;
+
+			&.vertical-divider{
+				display: none;;
+			}
+			display: block;
+			text-align: left;
+			height: auto;
+			line-height: normal;
+
+			a,
+			button{
+				text-align: left;
+				font-size: $sc-font-size-m;
+				color: $pa-dark-gray;
+				height: auto;
+				line-height: normal;
+				padding: 10px 0;
+				display: inline-block;
+				vertical-align: middle;
+				line-height: 24px;
+				
+				i{
+					font-size: 26px;;
+				}
+				span.pa-caption,
+				.pa-icon,
+				i{
+					display: inline-block;
+        			line-height: 24px;
+      				height: 24px;
+       				margin-right: 10px;
+				    
+				    &.user-icon-desktop{
+				        display: none;;
+				    }
+				}
+			}
+		}
+		@include ipadPortrait {
+			color: $pa-dark-gray;
+
+			&.vertical-divider{
+				display: none;;
+			}
+			display: block;
+			text-align: left;
+			height: auto;
+			line-height: normal;
+
+			a,
+			button{
+				text-align: left;
+				font-size: $sc-font-size-m;
+				color: $pa-dark-gray;
+				height: auto;
+				line-height: normal;
+				padding: 10px 0;
+				display: inline-block;
+				vertical-align: middle;
+				line-height: 24px;
+				
+				i{
+					font-size: 26px;;
+				}
+				span.pa-caption,
+				.pa-icon,
+				i{
+					display: inline-block;
+				    line-height: 24px;
+				    height: 24px;
+				    margin-right: 10px;;
+				    
+				    &.user-icon-desktop{
+				        display: none;;
+				    }
+				}
+			}
+		}
+		a{
+			text-transform: uppercase;
+		}
+	}
+}
+
+.header-sidebar-wrapper .header-profile-menu-login {
+	height: auto;
+	background-color: #fafafa;
+	border-bottom: 1px solid #d1d5db
+}
+
+.header-profile-login-icon{
+	@extend .fa;
+	@extend %fa-user;
+}
+
+.header-profile-login-icon,
+.header-profile-welcome-user-icon{
+	font-size: $sc-font-size-m;
+	
+	display: inline-block;
+	vertical-align: middle;
+	padding: 5px 5px 5px 7px;	
+	color: $pa-dark-gray;;
+	position: relative;	
+
+	@media (min-width: $screen-md-min){
+		background: $pa-accent;
+		margin-right: 15px;
+
+		&:after{
+			content: "";
+			display: block;
+			width: 0;
+			height: 0;
+			position: absolute;
+			left: 100%;
+			top: 0;
+			border-top: 12.5px solid transparent;
+			border-bottom: 12.5px solid transparent;
+			border-left: 12.5px solid $pa-accent;
+		}
+	}
+
+	@media (max-width: $screen-xs-max) {
+		display: none;;
+	}
+	@include ipadPortrait {
+		display:none;
+	}
+}
+
+//////////////////////////////////////////////////////////
+//my account menu
+.header-profile-menu-myaccount-container {
+	@extend .header-menu-level-container;
+	padding: $sc-padding-lv3 0 0 0;
+	z-index: 1002;
+	padding: 0px;
+}
+.open > [data-toggle="dropdown"].header-profile-welcome-link{
+	color: $pa-accent;
+}
+.open .header-profile-welcome-link:before {
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	margin-left: -7.5px;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid $sc-neutral-shade-0;
+	border-left: 7px solid transparent;
+	border-bottom-color: transparentize($sc-neutral-shade-500, 1-0.2);
+	content: '';
+	display: none;
+
+	@media (min-width: $screen-lg-min) {
+		display: block;
+	}
+}
+
+.open .header-profile-welcome-link:after {
+	position: absolute;
+	top: 51px;
+	left: 50%;
+	margin-left: -6.5px;
+	border-right: 6px solid transparent;
+	border-bottom: 6px solid $sc-neutral-shade-0;
+	border-left: 6px solid transparent;
+	content: '';
+	z-index: 9999;
+	display: none;
+
+	@media (min-width: $screen-lg-min) {
+		//display: block;
+	}
+}
+
+.header-profile-welcome-link,
+.header-profile-signout-link{
+	text-transform: capitalize;
+	color:#393a39;
+	@media (min-width: $screen-md-min) {
+		display: inline-block;
+		font-size: $sc-font-size-m;		
+		padding: 0 10px;
+		margin-top: -5px;
+	}
+	
+}
+
+.header-profile-signout-link{
+	font-weight: 600;
+	color: $pa-sale-red;
+	i{
+		color: $pa-sale-red;
+	}
+	&:hover{
+		color: $pa-sale-red;
+		opacity: 0.75;
+	}
+	@media (max-width: $screen-sm-max) {
+		display: none;
+		&.header-profile-tracker-link {
+			display: block;
+			padding: 10px 50px;
+		}
+	}
+	@media (max-width: $screen-xs-max) {
+		display: none;
+		&.header-profile-tracker-link {
+			display: block;
+			padding: 5px 25px;
+		}
+	}
+	
+	@include ipadPortrait {
+		display:none;
+	}
+}
+
+.pa-icon{
+	display: inline-block;
+	vertical-align: middle;
+	
+	&.icon-register,
+	&.icon-trakmy-order,
+	&.icon-quick-add{
+		@media (min-width: $screen-md-min){
+			display: none;
+		}
+	}
+}
+
+a.header-profile-welcome-link{
+	@media (max-width: $screen-sm-max){
+		color: $pa-dark-gray;
+		i.header-profile-welcome-carret-icon{
+			line-height: 24px;
+		}
+	}
+	& ~ a.header-menu-myaccount-signout-link{
+		display: inline-block;
+		color: #CE0E2D;
+		text-decoration: none;
+		font-size: 1.067rem;
+		padding: $sc-padding-lv2 $sc-padding-lv5 $sc-padding-lv1;
+		text-transform: capitalize;
+	
+		@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+			padding: $sc-padding-lv2 $sc-padding-lv2 * 5;
+		}
+		@media (min-width: $screen-md-min){
+			display: none;
+		}
+	}
+}
+img.pa-icon.user-icon-desktop {
+    display: none;
+}
+
+.header-profile-menu-login li.mobile-sign-up {
+	@media (min-width: $screen-md-min) {
+    display: none;
+     }    
+}
+span.pa-caption {
+    display: none;
+}
+.header-profile-welcome-link-name{
+	color:#CE0E2D;
+}
+.header-profile-tracker-link {
+	@media (min-width: $screen-md-min) {
+        display: none;
+	}
+}
+.header-profile-signout-link{
+text-transform: capitalize;	
+color:#393a39;
+}
+
+.tracking-order-text.pl8{
+	padding-left: 8px;
+}
+
+
+.myaccount-layout .header-profile-menu-myaccount-container,
+.shopping-layout .header-profile-menu-myaccount-container,
+.checkout-layout .header-profile-menu-myaccount-container {
+	@media (min-width: $screen-sm-min) {
+        background: #fff;
+        top: 100%;
+        box-shadow: 0px 6px 11px -5px rgba(0, 0, 0, 0.24);
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+        border-left: 1px solid #dadada;
+        border-bottom: 1px solid #dadada;
+        border-right: 1px solid #dadada;
+        border-top: 1px solid #dadada;
+        margin-top: 5px;
+        
+    }
+	@media (min-width: $screen-md-min) {
+       right: 0px !important;
+	}
+}
+ul.header-profile-menu-myaccount-container {
+    font-family: 'Noto Sans';
+	color: #393a39 !important;   
+}
+.open>.header-profile-welcome-link[data-toggle="dropdown"] {
+    color: #ce0d2c;
+    margin-top: 0px;   
+}
+.shopping-layout .header-profile-welcome-link:hover{
+	color: #393a39 !important;
+}

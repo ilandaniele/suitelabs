@@ -1,0 +1,59 @@
+{
+    "name": "PLPStockAvailability",
+    "fantasyName": "PLP Stock Availability",
+    "vendor": "PSeComm",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Exposes the stock availability in the PLP",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/PLPStockAvailability/Sass/_plpstockavailability.scss"
+        },
+        "files": [
+            "Modules/PLPStockAvailability/Sass/_plpstockavailability.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/PLPStockAvailability/Templates/plpstockavailability.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/PLPStockAvailability/JavaScript/PLPStockAvailability.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/PLPStockAvailability/JavaScript/PLPStockAvailability.js",
+                    "Modules/PLPStockAvailability/JavaScript/PLPStockAvailability.View.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\PLPStockAvailability",
+    "suitescript2": {
+        "files": []
+    }
+}

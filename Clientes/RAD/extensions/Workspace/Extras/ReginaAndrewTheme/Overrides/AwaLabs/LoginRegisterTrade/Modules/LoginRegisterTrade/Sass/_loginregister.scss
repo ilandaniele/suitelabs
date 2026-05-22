@@ -1,0 +1,269 @@
+/*
+	Sass Application Entry Point
+	Link all your sass dependencies in the right order
+
+	Example:
+	@import "other-sass-file.scss";
+	@import "../../<other module>/Sass/other-sass-file.scss";
+*/
+
+.loginregister-retail-wrapper {
+    max-width: 800px;
+    margin: $sc-margin-lv6 auto $sc-margin-lv8;
+    @include box-shadow(3px 3px 10px rgba(0,0,0,0.2));
+    border: 1px solid rgba($sc-color-secondary, 0.3);
+    padding: $sc-padding-lv5 ($sc-padding-lv7 * 2) ($sc-padding-lv5 * 2);
+}
+.loginregister-retail-title,
+.loginregister-retail-description {
+    text-align: center;
+}
+.loginregister-retail-title {
+    @extend h2;
+    margin-bottom: $sc-margin-lv3;
+}
+.loginregister-retail-title-strong {
+    font-weight: $sc-font-weight-bold;
+}
+.loginregister-retail-buttons {
+    text-align: center;
+}
+.loginregister-retail-wrapper .login-register-register-form-input {
+    min-width: 250px;
+}
+.loginregister-retail-wrapper .odd-field {
+    @media (min-width: $screen-sm-min) {
+        padding-right: 30px;
+    }
+}
+.loginregister-retail-wrapper .even-field {
+    @media (min-width: $screen-sm-min) {
+        padding-left: 30px;
+    }
+}
+.loginregister-trade-fields,
+.loginregister-retail-fields {
+    @media (min-width: $screen-sm-min) {
+        position: relative;
+        &:before {
+            content: "";
+            width: 1px;
+            background: $sc-color-theme-border-light;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: 1px;
+        }
+    }
+}
+.trade-customer h1 {
+    text-align: center;
+    margin-bottom: $sc-margin-lv2;
+    font-size: $sc-font-size-xxxl;
+    font-weight: $sc-font-weight-bold;
+}
+.trade-customer h2 {
+    text-align: center;
+    font-size: $sc-h3-font-size;
+    margin-bottom: $sc-margin-lv6;
+}
+.trade-customer .four-blocks {
+    margin: 0;
+    @extend .row;
+}
+.trade-customer .four-blocks > div {
+    @extend .col-sm-3;
+    padding: 0;
+    text-align: center;
+}
+.trade-customer .four-blocks .img {
+}
+.trade-customer .four-blocks h2 {
+    font-size: $sc-h3-font-size;
+    font-weight: $sc-font-weight-bold;
+    padding: 0 $sc-padding-lv3;
+    margin: $sc-padding-lv3 0;
+}
+
+.trade-customer .four-blocks h5 {
+    font-size: $sc-font-size-l;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: normal;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+.bottom-trade-section{
+    text-align: center;
+    h2{
+        color: black;
+        font-weight: 300;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        &.custom-title{
+            position: relative;
+            padding: 40px 0;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            &:before, &:after{
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                width:112px;
+                height: 1px;
+                background: $sc-color-secondary;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &:after{
+                top: 100%;
+            }
+        }
+    }
+    li{
+        display: block;
+        padding:5px 0;
+    }
+    h5{
+        margin-top: 40px;
+        letter-spacing: 1px;
+        a{
+            font-weight:400;
+        }
+    }
+}
+.login-register-trade-form,
+.login-register-register-form{
+    margin-top:20px;
+    label{
+        //text-transform: uppercase;
+        //margin-bottom: 20px;
+        span{
+            //color: $sc-color-secondary;
+            //font-weight: 400;
+            //font-size:14px;
+        }
+    }
+    input::placeholder{
+        text-align: left;
+        font-style: normal;
+        color:#757575;
+        text-transform: capitalize !important;
+    }
+    .login-register-register-form-required {
+        color: $sc-color-primary;
+    }
+    label {
+        font-weight: $sc-font-weight-light;
+        font-size: $sc-font-size-xs;
+        letter-spacing: 0;
+    }
+    .login-register-login-form-controls-group,
+    .login-register-register-form-controls-group{
+        margin-top: $sc-margin-lv1;
+        @extend .clearfix;
+    }
+    hr.trade-line{
+        margin: 15px;
+        background-color:$sc-color-theme-border;
+    }
+    .login-register-trade-submit,
+    .login-register-register-form-submit{
+        @extend .button-primary;
+        @extend .button-medium;
+        padding: $sc-padding-lv4 $sc-padding-lv5;
+        font-size: $sc-font-size-m;
+        font-weight: $sc-font-weight-bold;
+        @media (min-width: $screen-sm) {
+            margin:0 15px;
+        }
+     }
+}
+.loginregister-trade-fields-bottom .login-register-trade-submit {
+    @media (min-width: $screen-sm-min) {
+        min-width: 260px;
+        font-weight: $sc-font-weight-bold;
+    }
+}
+.trade-customer-container-confirmation{
+    @extend .clearfix;
+    text-align: center;
+    h1 , h2{
+        font-weight: 300;
+        font-size: 100%;
+        color: $sc-color-secondary;
+    }
+    a{
+        @extend .button-primary;
+        @extend .button-medium;
+        float: right;
+        margin-top: 20px;
+    }
+}
+.login-register-trade-form {
+    .global-views-countriesDropdown-group-label,
+    .global-views-states-group-label {
+        margin: 0 0 8px;
+        padding: 0;
+        float: none;
+        //display: block;
+        //margin-top: 0;
+        //padding: 0;
+        //width: 100%;
+    }
+    .global-views-countriesDropdown-form-controls,
+    .global-views-states-group-form-controls{
+        //padding: 0;
+        //width: 100%;
+        width: auto;
+        float: none;
+        padding: 0;
+    }
+    .global-views-countriesDropdown-input-required,
+    .global-views-states-input-required {
+        color: inherit;
+        font-size: inherit;
+    }
+    select:disabled {
+        border: 1px solid #f1ede7;
+        background-color: #f1ede7;
+    }
+}
+.loginregister-trade-fields-bottom {
+    text-align: center;
+}
+.loginregister-trade-tax-message {
+    font-size: $sc-font-size-xs;
+    a {
+        color: $sc-color-info;
+        text-decoration: underline;
+    }
+}
+.loginregister-trade-message-title {
+    font-weight: $sc-font-weight-bold;
+    margin-bottom: $sc-margin-lv4;
+}
+.loginregister-trade-buttons {
+    padding-top: $sc-padding-lv8;
+    padding-bottom: $sc-padding-lv8;
+}
+.loginregister-trade-fields .global-views-countriesDropdown-select,
+.loginregister-trade-fields .global-views-states-group-select,
+.loginregister-trade-fields .login-register-login-form-select {
+    @extend .login-register-login-form-input;
+}
+.loginregister-trade-fields {
+    margin-bottom: $sc-margin-lv8;
+}
+span.login-register-register-label-message{
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 0;
+    display: block;
+    margin-top: -5px;
+}

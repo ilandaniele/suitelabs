@@ -1,0 +1,19 @@
+/*
+	Sass Application Entry Point
+	Link all your sass dependencies in the right order
+
+	Example:
+	@import "other-sass-file.scss";
+	@import "../../<other module>/Sass/other-sass-file.scss";
+*/ 
+
+.klaviyo-info-card {
+    border: 1px solid #efefef;
+	padding: 15px;
+}
+
+.klaviyo-info-card-content {
+	margin: 5px 0;
+    color: #000;
+    font-weight: bold;
+}

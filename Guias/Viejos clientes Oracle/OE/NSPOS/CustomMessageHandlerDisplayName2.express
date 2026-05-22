@@ -1,0 +1,59 @@
+// Create the class, inheriting MessagerClass, which includes self-registering handlers with Message Center
+
+class CustomerExtensionViewHandler(NetSuite.Retail.POS.Messaging.MessagerClass):
+
+ 
+
+//This is the handler for GetDisplayName2
+
+   [NetSuite.Retail.POS.Messaging.MessageHandlerMethod("GetDisplayName2")]
+
+   def GetDisplayName2(message as string, param as object):
+
+      if param.Name != "ItemID":
+
+         // Avoid running for every node under SaleReturnLineItem
+
+         return null
+
+ 
+
+      sessionId=NetSuite.Retail.POS.Shared.TransactionID("",System.DateTime.Now,null)
+
+      sessionId=MC.GetProperty("SessionID")
+
+      // Load the item
+
+      using item=NetSuite.Retail.POS.Shared.RAItem(sessionId):
+
+         if item.GetItem(param.InnerText,MC.GetProperty("Store.GroupID")):
+            //Modified this to get itemCode and frenchDesc. If frenchDesc isNotNull return both properties, else just return the itemCode
+            itemCode = item.GetExtendedProperty("Code")
+            frenchDesc = item.GetExtendedProperty("custitem_mktg_ca_fr_desc1")
+            if string.IsNullOrEmpty(frenchDesc):
+               return item.GetExtendedProperty("Code")
+            else:
+               return itemCode + "\r\n" + frenchDesc
+               
+            //return item.GetExtendedProperty("Code")
+ 
+
+//Clear the Handler if one already exists
+
+existingHandler = MC.GetProperty("CustomerExtensionViewHandler")
+
+if existingHandler != null:
+
+   MC.Unregister(existingHandler)
+
+ 
+
+// Instantiate and "Save" the handler. This maintains a reference.
+
+MC.SetProperty("CustomerExtensionViewHandler", CustomerExtensionViewHandler())
+
+ 
+
+// Tell the Object View class to refresh so it recognizes the new Extension View
+
+NetSuite.Retail.POS.Tools.UI.ObjectView.ResetTypeInfo()

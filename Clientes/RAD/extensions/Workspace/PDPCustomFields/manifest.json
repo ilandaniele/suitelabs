@@ -1,0 +1,60 @@
+{
+	"name": "PDPCustomFields",
+	"fantasyName": "PDP Custom Fields",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.2.0",
+	"description": "PDP Custom Fields. SuiteLabs v2.2.0, refactor to optimize code, fix bugs and delete unneeded files",
+	"configuration": {
+		"files": [
+			"Modules/PDPCustomFields/Configuration/PDPCustomFields.json"
+		]
+	},
+	"templates": {
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/PDPCustomFields/Templates/pdp_custom_field.tpl",
+					"Modules/PDPCustomFields/Templates/pdp_custom_field_future_availability.tpl",
+					"Modules/PDPCustomFields/Templates/pdp_custom_field_vectary_3d_model.tpl",
+					"Modules/PDPCustomFields/Templates/pdp_custom_field_romance_description.tpl",
+					"Modules/PDPCustomFields/Templates/pdp_custom_field_stock_messaging.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/PDPCustomFields/Sass/_pdp_custom_fields.scss"
+		},
+		"files": [
+			"Modules/PDPCustomFields/Sass/_pdp_custom_fields.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/PDPCustomFields/JavaScript/AwaLabs.PDPCustomFields.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/PDPCustomFields/JavaScript/AwaLabs.PDPCustomFields.js",
+					"Modules/PDPCustomFields/JavaScript/PDPCustomField.View.js",
+					"Modules/PDPCustomFields/JavaScript/PDPCustomField.FutureAvailability.View.js",
+					"Modules/PDPCustomFields/JavaScript/PDPCustomField.Vectary3dModel.View.js",
+					"Modules/PDPCustomFields/JavaScript/PDPCustomField.RomanceDescription.View.js",
+					"Modules/PDPCustomFields/JavaScript/PDPCustomField.Stock.Messaging.View.js",
+					"Modules/PDPCustomFields/JavaScript/PDPCustomField.Base.View.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/PDPCustomFields@2.2.0",
+	"activation_id": "11",
+	"extension_id": "17002"
+}

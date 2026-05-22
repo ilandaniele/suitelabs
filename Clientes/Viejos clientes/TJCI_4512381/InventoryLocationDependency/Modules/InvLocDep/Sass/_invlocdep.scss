@@ -1,0 +1,58 @@
+/*
+	Sass Application Entry Point
+	Link all your sass dependencies in the right order
+
+	Example:
+	@import "other-sass-file.scss";
+	@import "../../<other module>/Sass/other-sass-file.scss";
+*/ 
+
+.invlocdep-info-card {
+	background: white;
+	border: non;
+	padding: 0;
+}
+
+.newslettercct-background {
+	background: transparent !important;
+
+	.newslettercct-input-group {
+		
+		@media (min-width: $screen-sm-min) {
+			padding-right: 0;
+		}
+	}
+
+	.newslettercct-submit{
+		background-color: #333;
+		color: #eaeaea;
+		padding: 10px 40px;
+	}
+
+	.newslettercct-label {
+		display: none;
+	}
+
+	.newslettercct-header{
+		font-size: 1rem;
+	}
+
+	.newslettercct-subheader {
+		font-size: 1.5rem;
+		font-weight: bold;
+		font-style: italic;
+		color: #fff;
+	}
+}
+
+.facets-faceted-navigation-item-facet-group{
+	height: 300px;
+	overflow: auto;
+	margin-top: 20px;
+	border: 1px solid #eaeaea;
+}
+
+.noItem {
+	color: #f00;
+	font-weight: bold;
+}

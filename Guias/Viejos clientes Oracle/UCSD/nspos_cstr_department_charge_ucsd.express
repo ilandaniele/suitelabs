@@ -1,0 +1,802 @@
+/*
+Author: Jake Beckerleg
+Date: 3/19/18
+Customer: Campus Stores
+CO / BRD Reference: Tenders and Refunds FRD
+Deployment: File Cabinet - NSPOS > File System > RAPOS > Express
+Description: Tender button to call out to ERP for Department Charge tender
+Confluence Reference: https://confluence.corp.netsuite.com/display/TRA/Tenders+and+Refunds
+Reviewer: 
+Revisions:
+* TI1553 - Add support for Variable Price items (i.e. 'Require Price Entry at Register' checkbox)
+* TI1596 - Add support for Gift Certificate items
+* SVCS776 2019/03/25 JAB - Turn off Department Charge Limit by Channel
+* SVCS1420 2019/06/10 JAB - Department Charge Simplification - Only collect transaction level segments
+* SVCS3988 2020/04/28 JAB - Update Dept Charge Limit Enforcement message
+* SVCS3821 2020/05/01 JAB - Handle null value for Dept Charge limit
+* SVCS7662 2020/06/17 JAB - Revert price to base price if limit is exceeded
+* Customization 2021/12/22 MRB - Add "Show Dept Notes", write PO# to NetSuite.
+*/
+
+import System.Runtime.Serialization from System.Runtime.Serialization // import name space containing DataContract and DataMember
+import System.Runtime.Serialization.Json from System.Runtime.Serialization // import name space containing DataContractJsonSerializer
+   
+[DataContract]
+public class SearchFilter:
+   [DataMember]
+   public name as string
+   
+   [DataMember]
+   public operator as string
+   
+   [DataMember]
+   public value as Object
+   
+[DataContract]
+public class SearchRequest:
+   [DataMember]
+   public searchId as string
+   
+   [DataMember]
+   public filters as (SearchFilter):
+      get:
+         if filterList == null or filterList.Count == 0:
+            return null
+         return filterList.ToArray()
+      set:
+         filterList = System.Collections.Generic.List[ of SearchFilter] ()
+         for val in value:
+            filterList.Add(val)
+   
+   public filterList as System.Collections.Generic.List[ of SearchFilter]
+ 
+[DataContract]
+public class ValidateCreditLimitResponse:
+   [DataMember]
+   public validateCreditLimit as System.Collections.Generic.List[ of ValidateCreditLimitJSON]
+ 
+[DataContract]
+public class ValidateCreditLimitJSON:
+   [DataMember]
+   public purchaseAmount as decimal
+
+   [DataMember]
+   public creditLimit as string
+   
+   [DataMember]
+   public limitExceeded as bool
+   
+   [DataMember]
+   public errorMsg as string
+   
+[DataContract]
+public class ValidateSegmentResponse:
+   [DataMember]
+   public validateSegments as System.Collections.Generic.List[ of ValidateSegmentJSON]
+   
+[DataContract]
+public class ValidateSegmentJSON:
+   [DataMember]
+   public line as string
+   
+   [DataMember]
+   public seg1Text as string
+   
+   [DataMember]
+   public seg1ID as string
+   
+   [DataMember]
+   public seg1Valid as bool
+   
+   [DataMember]
+   public seg2Text as string
+   
+   [DataMember]
+   public seg2ID as string
+   
+   [DataMember]
+   public seg2Valid as bool
+
+
+/**
+ * Deserializes a  JSON string
+ *
+ * @params
+ *   type - The object to serialize
+ *   json - json string to deserialize
+ * @returns - deserialized JSON
+ */
+
+def DeserializeJson(type as System.Type, json as string):
+   using dcjs = DataContractJsonSerializer(type):
+      bytes as (byte) = System.Text.Encoding.UTF8.GetBytes(json)
+      using stream = System.IO.MemoryStream(bytes):
+         return dcjs.ReadObject(stream)
+   
+/**
+ * Serializes an object into a JSON string.
+ *
+ * @params
+ *   obj - The object to serialize
+ * @returns - JSON string serialization of object
+ */
+def SerializeJson(obj):
+   using dcjs = DataContractJsonSerializer(obj.GetType()):
+      using stream = System.IO.MemoryStream():
+         dcjs.WriteObject(stream, obj)
+         return System.Text.Encoding.UTF8.GetString(stream.ToArray())
+   
+/**
+ * Helper method for getting a value from XmlDocument or XmlNode given a path. Returns a default value if node is not found.
+ *
+ * @params
+ *   node - The XmlDocument or XmlNode parent/root
+ *   path - The path to search for single child node
+ *   defaultValue - The value to return if child node is not found
+ * @returns - InnerText of selected node (or defaultValue if node is not found)
+ */
+def getNodeInnerText(node, path, defaultValue):
+   childNode = node.SelectSingleNode(path)
+   if childNode == null:
+      return defaultValue
+   else:
+      return childNode.InnerText
+	  
+/**
+ * Helper method for getting a value from XmlDocument or XmlNode given a path.
+ *
+ * @params
+ *   node - The XmlDocument or XmlNode parent/root
+ *   path - The path to search for single child node
+ * @returns - InnerText of selected node (or empty string if node is not found)
+ */
+def getNodeInnerText(node, path):
+   return getNodeInnerText(node, path, "")
+
+/**
+ * Helper method to clean Xml by replacing invalid characters with escaped versions.
+ *
+ * @params
+ *   dirtyString - The string to clean.
+ * @returns - The string with invalid characters replaced with escaped versions.
+ */
+def sanitizeXml(dirtyString):
+   return dirtyString.Replace("&", "&amp;")
+   
+/**
+ * Helper method to clean Json by replacing invalid characters with escaped versions.
+ *
+ * @params
+ *   dirtyString - The string to clean.
+ * @returns - The string with invalid characters replaced with escaped versions.
+ */
+def sanitizeJson(dirtyString):
+   return dirtyString.Replace('"','').Replace('\\','"')
+   
+/**
+ * Calls ERP RESTlet for search requests. Tries up to four times to connect.
+ *
+ * @params
+ *   requestBody - Body string to attach to the request, should contain at least the search ID.
+ * @returns - Response object if successful (null if error)
+ */   
+def callErp(requestBody as string):
+   // Configure the request object
+   request = MC.SendMessage("GetRestletRequest")
+   request.method = "POST"
+   request.scriptId = "customscript_ra_re_saved_search"
+   request.deploymentId = "customdeploy_ra_re_saved_search"
+   request.body = requestBody
+
+   MC.SendMessage("Splash.Open")
+   MC.SendMessage("StatusUpdate", "Validating Customer is authorized for Dept Charge")
+
+   try:
+      for x in range(0,3):
+         // Submit the request
+         try:
+            response = MC.SendMessage("CallRestletOAuth", request)
+            if response.success:
+               print "Successful Saved Search ERP call"
+               response.response = sanitizeXml(response.response)
+               return response
+            elif x==3:
+               MC.Alert("Error retrieving Customer data. \n\nUnable to process Department Charge tender at this time.")
+               return null
+            else:
+               System.Threading.Thread.Sleep(1000)
+         except:
+            MC.Alert("Error retrieving Customer data. \n\nUnable to process Department Charge tender at this time.")
+            return null
+   ensure:
+      MC.SendMessage("Splash.Close")
+   MC.Alert("Error retrieving Customer data. \n\nUnable to process Department Charge tender at this time.")
+   return null
+   
+/**
+ * Calls ERP RESTlet for search requests. Tries up to four times to connect.
+ *
+ * @params
+ *   searchRequest - SearchRequest object containing search details
+ * @returns - Response object if successful (null if error)
+ */
+def callErp(searchRequest as SearchRequest):
+   return callErp(SerializeJson(searchRequest))
+   
+/**
+ * Calls ERP RESTlet for the NSTS | CSTR | RL | Val Dept Charge Seg script. Tries up to four times to connect.
+ *
+ * @params
+ *   requestBody - Body string to attach to the request, should contain the JSON request to the script.
+ * @returns - Response object if successful (null if error)
+ */   
+def callValidateSegmentErp(requestBody as string):
+   // Configure the request object
+   request = MC.SendMessage("GetRestletRequest")
+   request.method = "POST"
+   request.scriptId = "customscript_nsts_cstr_rl_valdepchrgseg"
+   request.deploymentId = "customdeploy_nsts_cstr_rl_valdepchrgseg"
+   request.body = requestBody
+   //request.responseType = typeof(ValidateCreditLimitResponse)
+
+   MC.SendMessage("Splash.Open")
+   MC.SendMessage("StatusUpdate", "Validating Dept Charge requirements")
+
+   try:
+      for x in range(0,3):
+         // Submit the request
+         try:
+            scriptResponse = MC.SendMessage("CallRestletOAuth", request)
+            if scriptResponse.success:
+               return scriptResponse
+            elif x==3:
+               MC.Alert("Error retrieving data. \n\nUnable to validate Department Charge segment at this time.")
+               return null
+            else:
+               System.Threading.Thread.Sleep(1000)
+         except:
+            MC.Alert("Error retrieving data. \n\nUnable to validate Department Charge segment at this time.")
+            return null
+   ensure:
+      MC.SendMessage("Splash.Close")
+   MC.Alert("Error retrieving data. \n\nUnable to validate Department Charge segment at this time.")
+   return null
+ 
+/**
+ * Sets the an item price level
+ *
+ * @params
+ *    item - the item object
+ *    _deptChargePriceLevel - the price level to use
+ */      
+def setPriceLevel(item as NetSuite.Retail.POS.Business.SaleReturnLineItem, _deptChargePriceLevel as string):
+   //Get ID and Price level
+   itemID = item.ID_ITM.Trim()
+   itemPriceLevel = itemID+"-"+_deptChargePriceLevel+"-USD"
+   print "Item price level lookup ID_ITM_SL_PRC is: "+itemPriceLevel
+   
+   //Call SQL to retrieve price for price level
+   newPrice as duck
+   newPrice = NetSuite.Retail.POS.Data.DataCenter.radManager.Scalar("select RP_SLS_CRT from RAPOS..RU_ITM_SL_PRC where ID_ITM_SL_PRC = '"+itemPriceLevel+"'")
+   
+   //Check for a null new price
+   if newPrice == null:
+      MC.Alert("Item '"+item.Name+"' with Internal ID '"+item.ID_ITM.Trim()+"' does not have a price set for the Department Charge price level.\n\nPlease inform your manager to review the Item record in NetSuite ERP and then re-save the Item record to initiate a sync to NSPOS. This item will be tendered using the base price level assigned at this location (typically MSRP).")
+      return
+
+   //Update the item's price
+   item.Changing()
+   item.ActualUnitPrice = item.RegularUnitPrice = newPrice
+   item.Update()
+   item.ApplyChanges()
+   
+   
+
+
+
+//*********
+//START
+//*********
+
+
+/*
+START - Validate Customer and retrieve relevant CS Custom Preference settings
+*/  
+ 
+//Get the customer on the transaction
+customer = MC.GetProperty("Transaction.Customer")
+if customer == null:
+   MC.Alert("This function requires a customer to be added to this transaction. Add a customer on the next screen.")
+   MC.Function("Find Customer")
+   customer = MC.GetProperty("Transaction.Customer")
+   if customer == null:
+      return
+
+//Get the customer internal ID and account for customers with blank ID_SSN (created at NSPOS and haven't had an ID assigned yet in ERP)
+customerID_SSN = NetSuite.Retail.POS.Data.DataCenter.radManager.Scalar("select ID_SSN from PA_PRS where ID_PRTY_PRS = @PartyID",
+NetSuite.Retail.POS.Data.QueryBuilder.CreateUUIDParameter("@PartyID", customer.PartyID))
+internalID = customerID_SSN.ToString().Trim()
+if string.IsNullOrEmpty(internalID):
+   MC.Alert("This Customer has not been setup properly in NetSuite ERP yet. \n\nPlease review the Customer record in NetSuite ERP and try again.")
+   return
+
+//Get customer information from ERP
+filters = System.Collections.Generic.List[ of SearchFilter] ()
+filters.Add(SearchFilter(name: "internalId", operator: "is", value: internalID))
+//response = callErp(SearchRequest(searchId: "customsearch_nsts_cstr_nspos_dept_charge", filterList: filters))
+response = callErp(SearchRequest(searchId: "customsearch_nsts_cstr_nspos_dept_ucsd", filterList: filters))
+
+//Check ERP response
+if response != null:
+  print response.response
+else:
+  print "No response from NetSuite ERP."
+  return
+
+
+//Define the variables we are going to need
+_custInternalID as string
+_custName as string
+_custTenderTypes as string
+_parentCompany as string
+/*Added for Customer Comments*/
+_custComments as string
+
+//Retrieve Customer info from ERP response
+using xmlDoc = XmlDocument():
+   xmlDoc.LoadXml(response.response.Substring(1, response.response.Length-2))
+   
+   if xmlDoc.OuterXml.Equals("<Results></Results>"):
+      MC.Alert("Unable to retrieve Customer Account information. \n\n Please check the Customer Account setup in NetSuite ERP.")
+      return
+
+   for custInfo in xmlDoc.SelectNodes("Results/Result"):
+      try:
+         _custInternalID = getNodeInnerText(custInfo, "internalid", "")
+         _custName = getNodeInnerText(custInfo, "altname", "")
+         _custTenderTypes = getNodeInnerText(custInfo, "custentity_nsts_cstr_tender_type", "")
+         _parentCompany = getNodeInnerText(custInfo, "parentCustomer_internalid", "")
+         _custComments = getNodeInnerText(custInfo, "comments", "")
+      except:
+         MC.Alert("Error retrieving Customer record details. \n\n Customer record must be updated in NetSuite ERP.")
+         return
+
+      //Find out if this is a child account
+      if string.IsNullOrEmpty(_parentCompany):
+         print "Customer does NOT have a Parent Customer"
+      else:
+         print "Update variables with Parent Customer info"
+         _custInternalID = getNodeInnerText(custInfo, "parentCustomer_internalid", "")
+         _custName = getNodeInnerText(custInfo, "parentCustomer_altname", "")
+         _custTenderTypes = getNodeInnerText(custInfo, "parentCustomer_custentity_nsts_cstr_tender_type", "")
+
+         
+//Retrieve the CS Custom Preferences settings from ERP. This file is created via a an ERP SuiteScript         
+print data = NetSuite.Retail.POS.IO.File.ReadAllText("RAFS Sync\\rentalEligibility.txt")
+
+        
+//Retrieve Dept Charge Ineligible message
+deptChargeIneligMessage = /<deptChargeIneligMessage>(.*?)<\/deptChargeIneligMessage>/.Match(data)
+_deptChargeIneligMessage = deptChargeIneligMessage.Groups[1].ToString()
+print "deptChargeIneligMessage: "+_deptChargeIneligMessage  
+
+   
+//Retrieve Dept Charge Tender Type
+deptChargeTenderType = /<deptChargeTenderType>(.*?)<\/deptChargeTenderType>/.Match(data)
+_deptChargeTenderType = deptChargeTenderType.Groups[1].ToString()
+print "deptChargeTenderType: "+_deptChargeTenderType
+if string.IsNullOrEmpty(_deptChargeTenderType):
+   MC.Alert("Unable to retrieve 'Department Charge Valid DC Tender Type' setting from NetSuite ERP.\n\nPlease check this setting in the CS Custom Preferences in NetSuite ERP, and then re-save the CS Custom Preferences record to initiate a sync to NSPOS.")
+   return
+   
+//Customer check for the Dept Charge Tender Type  
+if _custTenderTypes.Contains(_deptChargeTenderType):
+   print "VALID CUSTOMER: has Department Charge tender type"
+else:
+   if not string.IsNullOrEmpty(_deptChargeIneligMessage):
+      MC.Alert(_deptChargeIneligMessage)
+   else:
+      MC.Alert("This Customer is not setup for Department Charge. \n\nPlease update the Customer record in NetSuite ERP.")
+   return
+
+   
+//Retrieve Dept Charge payment method
+deptChargePayMethod = /<deptChargePayMethod>(.*?)<\/deptChargePayMethod>/.Match(data)
+_deptChargePayMethod = deptChargePayMethod.Groups[1].ToString()
+print "deptChargePayMethod: "+_deptChargePayMethod
+if string.IsNullOrEmpty(_deptChargePayMethod.ToString()) or _deptChargePayMethod.Equals("null"):
+   MC.Alert("Unable to retrieve 'Department Charge Payment Method' setting from NetSuite ERP.\n\nPlease check this setting in the CS Custom Preferences in NetSuite ERP, and then re-save the CS Custom Preferences record to initiate a sync to NSPOS.")
+   return
+   
+   
+//Retrieve Dept Charge price level - to be used later
+deptChargePriceLevel = /<deptChargePriceLevel>(.*?)<\/deptChargePriceLevel>/.Match(data)
+_deptChargePriceLevel = deptChargePriceLevel.Groups[1].ToString()
+print "deptChargePriceLevel: "+_deptChargePriceLevel
+if string.IsNullOrEmpty(_deptChargePriceLevel.ToString()) or _deptChargePriceLevel.Equals("null"):
+   MC.Alert("Unable to retrieve 'Department Charges Price Level' setting from NetSuite ERP.\n\nPlease check this setting in the CS Custom Preferences in NetSuite ERP, and then re-save the CS Custom Preferences record to initiate a sync to NSPOS.")
+   return
+   
+
+//Retrieve Dept Charge taxable flag
+deptChargeNonTaxable = /<deptChargeNonTaxable>(.*?)<\/deptChargeNonTaxable>/.Match(data)
+_deptChargeNonTaxable = deptChargeNonTaxable.Groups[1].ToString()
+print "deptChargeNonTaxable: "+_deptChargeNonTaxable
+if string.IsNullOrEmpty(_deptChargeNonTaxable.ToString()) or _deptChargeNonTaxable.Equals("null"):
+   MC.Alert("Unable to retrieve 'Department Charges are Non-Taxable' setting from NetSuite ERP.\n\nPlease check this setting in the CS Custom Preferences in NetSuite ERP, and then re-save the CS Custom Preferences record to initiate a sync to NSPOS.")
+   return
+   
+   
+//Retrieve Dept Charge non-taxable tax code
+deptChargeTaxCode = /<deptChargeTaxCode>(.*?)<\/deptChargeTaxCode>/.Match(data)
+_deptChargeTaxCode = deptChargeTaxCode.Groups[1].ToString()
+print "deptChargeTaxCode: "+_deptChargeTaxCode
+if _deptChargeNonTaxable.Equals("T") and (string.IsNullOrEmpty(_deptChargeTaxCode.ToString()) or _deptChargeTaxCode.Equals("null")):
+   MC.Alert("Unable to retrieve 'Department Charges Non-Taxable Tax Code' setting from NetSuite ERP.\n\nPlease check this setting in the CS Custom Preferences in NetSuite ERP, and then re-save the CS Custom Preferences record to initiate a sync to NSPOS.")
+   return
+   
+
+//Retrieve Require Dept Charge Segment 1 setting
+deptChargeReqSeg1 = /<deptChargeReqSeg1>(.*?)<\/deptChargeReqSeg1>/.Match(data)
+_deptChargeReqSeg1 = deptChargeReqSeg1.Groups[1].ToString()
+print "deptChargeReqSeg1: "+_deptChargeReqSeg1
+if string.IsNullOrEmpty(_deptChargeReqSeg1) or _deptChargeReqSeg1.Equals("null"):
+   MC.Alert("Unable to retrieve 'Require Department Charge Segment 1' setting from NetSuite ERP.\n\nPlease check this setting in the CS Custom Preferences in NetSuite ERP, and then re-save the CS Custom Preferences record to initiate a sync to NSPOS.")
+   return
+   
+   
+//Retrieve Require Dept Charge Segment 2 setting
+deptChargeReqSeg2 = /<deptChargeReqSeg2>(.*?)<\/deptChargeReqSeg2>/.Match(data)
+_deptChargeReqSeg2 = deptChargeReqSeg2.Groups[1].ToString()
+print "deptChargeReqSeg2: "+_deptChargeReqSeg2
+if string.IsNullOrEmpty(_deptChargeReqSeg2) or _deptChargeReqSeg2.Equals("null"):
+   MC.Alert("Unable to retrieve 'Require Department Charge Segment 2' setting from NetSuite ERP.\n\nPlease check this setting in the CS Custom Preferences in NetSuite ERP, and then re-save the CS Custom Preferences record to initiate a sync to NSPOS.")
+   return
+
+//SVCS776 - Retrieve Department Charge Limit Enforcement setting
+deptChargeLimitEnforce = /<deptChargeLimitEnforce>(.*?)<\/deptChargeLimitEnforce>/.Match(data)
+_deptChargeLimitEnforce = deptChargeLimitEnforce.Groups[1].ToString()
+print "deptChargeLimitEnforce: "+_deptChargeLimitEnforce
+if string.IsNullOrEmpty(_deptChargeLimitEnforce.ToString()) or _deptChargeLimitEnforce.Equals("null"):
+   MC.Alert("Unable to retrieve 'Department Charge Limit Enforcement' setting from NetSuite ERP.\n\nPlease check this setting in the CS Custom Preferences in NetSuite ERP, and then re-save the CS Custom Preferences record to initiate a sync to NSPOS.")
+   return
+
+/*
+END - Validate Customer and retrieve relevant CS Custom Preference settings
+*/ 
+
+/*Display Customer Comments if all the above checks worked*/
+if not string.IsNullOrEmpty(_custComments):
+   MC.Alert(_custComments)
+/*END Display Customer Comments if all the above checks worked*/
+
+/*
+START - Dept Charge Accounting Segment validation
+*/   
+
+//Declare segment collection variables
+segment1 as string
+segment2 as string
+
+//Collect first Dept Charge Accounting Segment if required
+if _deptChargeReqSeg1.Equals("T"):
+   //Prompt user for first segment
+   try:
+      segment1 = MC.GetEntry("Please enter the first Department Charge Accounting Segment")
+   except:
+      return
+         
+   //TI1626 - safety check for blank entry   
+   if string.IsNullOrEmpty(segment1):
+      print "Segment 1 is blank"
+      MC.Alert("The first Accounting Segment entered was blank. Please retry and make sure to populate the first Accounting Segment.")
+      SendKeys.Send("{ESC}")
+      return
+      
+
+      
+      
+//Collect second Dept Charge Accounting Segment if required
+if _deptChargeReqSeg2.Equals("T"):
+   //Prompt user for second segment
+   try:
+      segment2 = MC.GetEntry("Please enter the second Department Charge Accounting Segment")
+   except:
+      return
+         
+   //TI1626 - safety check for blank entry   
+   if string.IsNullOrEmpty(segment2):
+      print "Segment 2 is blank"
+      MC.Alert("The second Accounting Segment entered was blank. Please retry and make sure to populate the second Accounting Segment.")
+      SendKeys.Send("{ESC}")
+      return
+      
+//Show Notes from Segment 1 / 2      
+//Get Dept Charge Notes (Customization, MRB)
+try:
+   if not string.IsNullOrEmpty(segment1):
+      filters2 = System.Collections.Generic.List[ of SearchFilter] ()
+      filters2.Add(SearchFilter(name: "name", operator: "is", value: segment1))
+      response2 = callErp(SearchRequest(searchId: "customsearch1142", filterList: filters2))
+      //MC.Alert(response2.response)
+      deptNotes = response2.response.Substring(response2.response.IndexOf('<custrecord_ucsd_ptf_notes>')+27)
+      index = deptNotes.IndexOf('</custrecord_ucsd_ptf_notes></Result></Results>"')
+      deptNotes = deptNotes.Substring(0,index)
+      deptNotes = deptNotes.Replace("\\n","\r\n")
+      
+      if not string.IsNullOrEmpty(deptNotes):
+         MC.Alert(deptNotes)
+      
+   if not string.IsNullOrEmpty(segment2):
+      filters2 = System.Collections.Generic.List[ of SearchFilter] ()
+      filters2.Add(SearchFilter(name: "name", operator: "is", value: segment2))
+      response2 = callErp(SearchRequest(searchId: "customsearch1142", filterList: filters2))
+      //MC.Alert(response2.response)
+      deptNotes = response2.response.Substring(response2.response.IndexOf('<custrecord_ucsd_ptf_notes>')+27)
+      index = deptNotes.IndexOf('</custrecord_ucsd_ptf_notes></Result></Results>"')
+      deptNotes = deptNotes.Substring(0,index)
+      deptNotes = deptNotes.Replace("\\n","\r\n")
+      
+      if not string.IsNullOrEmpty(deptNotes):
+         MC.Alert(deptNotes)
+except e:
+   MC.Alert("Error Pulling Dept Charge Notes! " + e.ToString())
+
+      
+/*Collect PO# - Customization MRB*/
+_getPONum as string
+try:
+   _getPONum = MC.GetEntry("PO # (Optional):")
+except:
+   print "Do Nothing - Probably bad data or escaped optional prompt"
+/*END Collect PO# - Customization MRB*/
+
+
+//Only validate segments if we collected them
+if (not string.IsNullOrEmpty(segment1)) or (not string.IsNullOrEmpty(segment2)):
+
+   //Create the JSON for the Department Charge Accounting Segment(s) to ERP validation script. line is hardcoded as "1" since we only validate one set of segments
+   SegmentScriptBody as string = '{"validateSegments":[{"line":"1","seg1Text":"'+segment1+'","seg2Text":"'+segment2+'"}]}'
+      
+   //Call the Deparment Charge Validation Script 
+   try:
+      SegmentScriptResponse = callValidateSegmentErp(SerializeJson(SegmentScriptBody))
+      print "Successful Validate Segment ERP call"
+      print SegmentScriptResponse.response
+   except:
+      print "Failed Validate Segment ERP call"
+      return
+
+    /*
+   Example JSON response: "{\"validateSegments\":[{\"line\":\"1\",\"seg1Text\":\"d1\",\"seg1ID\":\"\",\"seg1Valid\":false,\"seg2Text\":\"d2\",\"seg2ID\":\"\",\"seg2Valid\":false}]}"
+   Cleaned up Segment JSON response: {"validateSegments":[{"line":"1","seg1Text":"d1","seg1ID":"","seg1Valid":false,"seg2Text":"d2","seg2ID":"","seg2Valid":false}]}
+   */
+
+   //Cleanup JSON response 
+   cleanSegmentScriptResponse = sanitizeJson(SegmentScriptResponse.response)
+   print "Cleaned up Segment JSON response: "+cleanSegmentScriptResponse
+   _SegmentScriptResponse = DeserializeJson(typeof(ValidateSegmentResponse),cleanSegmentScriptResponse)
+
+
+   //Parse the JSON response to determine if segments were valid
+   _line as string
+   _seg1Text as string
+   _seg1D as string
+   _seg1Valid as bool
+   _seg2Text as string
+   _seg2ID as string
+   _seg2Valid as bool
+
+   _line = _SegmentScriptResponse.validateSegments[0].line
+   print "line: "+_line
+   _seg1Text = _SegmentScriptResponse.validateSegments[0].seg1Text
+   print "seg1Text: "+_seg1Text
+   _seg1D = _SegmentScriptResponse.validateSegments[0].seg1ID
+   print "seg1ID: "+_seg1D
+   _seg1Valid = _SegmentScriptResponse.validateSegments[0].seg1Valid
+   print "seg1Valid: "+_seg1Valid
+   _seg2Text = _SegmentScriptResponse.validateSegments[0].seg2Text
+   print "seg2Text: "+_seg2Text
+   _seg2ID = _SegmentScriptResponse.validateSegments[0].seg2ID
+   print "seg2ID: "+_seg2ID
+   _seg2Valid = _SegmentScriptResponse.validateSegments[0].seg2Valid
+   print "seg2Valid: "+_seg2Valid
+
+   if _seg1Valid == false:
+      MC.Alert("The first Accounting Segment '${_seg1Text}' is not valid. Please doublecheck your Accounting Segments and retry.")
+      return
+      
+   if _seg2Valid == false:
+      MC.Alert("The second Accounting Segment '${_seg2Text}' is not valid. Please doublecheck your Accounting Segments and retry.")
+      return
+
+/*
+END - Dept Charge Accounting Segment validation
+*/ 
+
+
+/*
+START - Update price level and tax group
+*/
+
+//Need to check if there is a gift card item included to check the CBGC-related transaction column
+hasGiftCard as bool = false
+
+//Retrieve the tax group associated with the non-taxable setting
+if _deptChargeNonTaxable.Equals("T"):
+   //Call SQL to retrieve the tax group for the non-taxable setting
+   newTaxGroup as duck
+   newTaxGroup = NetSuite.Retail.POS.Data.DataCenter.radManager.Scalar("select ID_GP_TX from RAPOS..RU_TX_ATHY where ID_ATHY_TX='"+_deptChargeTaxCode+"' and TS_EP is null")
+   
+   //Check for a null tax group
+   if newTaxGroup == null:
+      MC.Alert("Unable to retrieve the tax code for the transaction to be non-taxable. Please use the 'Tax Exempt' standard NSPOS function if this transaction needs to be non-taxable.\n\nAlso, please report this issue to your system administrator.\nThe likely cause of this issue is that the 'Department Charge Non-Taxable Tax Code' setting in the CS Custom Preferences record does not match the non-taxable 'Tax Code/Group' that is set on the Location record corresponding to this NSPOS register.\nPlease review and update these values in NetSuite ERP. The typical tax code/group value that is used for non-taxable transactions is the tax group with internal ID of '-8'.")
+
+
+//Loop through each item to update tax (if applicable) and price level
+lines = MC.GetProperty("Transaction.Item.List")
+for x in lines:
+   raitem = x as NetSuite.Retail.POS.Shared.RAItem
+   giftcarditem = x as NetSuite.Retail.POS.Business.CreditDebitCardTenderLineItem
+   if (giftcarditem == null) and (raitem == null):
+      print "Not a GiftCard or Regular Item"
+      continue
+   if (raitem != null) and (raitem.Voided == true):
+      print "Voided Item"
+      continue
+   if giftcarditem != null:
+      print "GiftCard item. Don't update price or tax"
+      continue
+      
+   //Mark Gift Card item flag if one exists
+   if (giftcarditem != null) and (giftcarditem.Amount != 0):
+      hasGiftCard = true
+      print "Trx has Gift Card item"
+   
+   //Set item to tax exempt if flag is true and have a new tax group
+   if _deptChargeNonTaxable.Equals("T") and not newTaxGroup == null:
+      item = raitem as NetSuite.Retail.POS.Business.SaleReturnLineItem
+      item.TaxSwitch(newTaxGroup)
+      print "new tax group: "+newTaxGroup
+
+   //TI1553
+   //Set Department Charge Price Level via 'setPriceLevel' function
+   if not string.IsNullOrEmpty(_deptChargePriceLevel.ToString()) and not _deptChargePriceLevel.Equals("null"):
+      
+      if raitem.ExtendedProperties.ContainsKey("custitem_ra_item_requireprice") and raitem.ExtendedProperties["custitem_ra_item_requireprice"].Equals("True"):
+         if MC.GetYesNo("The item '"+raitem.Name+"' is a Variable Price item that you manually entered the price for. Would you like to update this item's price to be the Department Charge price instead?"):
+            print "Setting Dept Charge Price Level"
+            setPriceLevel(raitem,_deptChargePriceLevel)
+         else:
+            continue
+      else:      
+         print "Setting Dept Charge Price Level"
+         setPriceLevel(raitem,_deptChargePriceLevel)
+         
+MC.Alert("NOTICE: Item prices were updated to the Department Charge price level.")
+/*
+END - Update price level and tax group
+*/ 
+
+
+/*
+START - Dept Charge Credit Limit validation
+*/  
+
+//Get transaction total. Used to tender out at end of script and optionally check against DC credit limit if enabled
+transTotal as decimal = System.Convert.ToDecimal(MC.GetProperty("Transaction.Total"))
+
+//Check for the Department Charge Transaction Limit being exceeded if the setting is enabled to enforce the limit
+if _deptChargeLimitEnforce.ToUpper().Equals("TRUE"):
+
+   //Check the Charge Credit Limit
+   ChargeScriptBody as string = '{"validateCreditLimit":[{"purchaseAmount":"'+transTotal+'"}]}'
+   print "JSON request for Validate Dept Charge purchase: "+ChargeScriptBody
+
+   //CALL THE DEPARTMENT CHARGE CREDIT LIMIT VALIDATION SCRIPT 
+   try:
+      ChargeScriptResponse = callValidateSegmentErp(SerializeJson(ChargeScriptBody))
+      print "Successful Validate Credit Limit ERP call"
+      print "JSON respone for Validate Dept Charge purchase: "+ChargeScriptResponse.response
+   except:
+      print "Failed Validate Credit Limit ERP call"
+      return
+      
+   /*
+   example JSON = "{\"validateCreditLimit\":[{\"purchaseAmount\":7.65,\"creditLimit\":10000,\"limitExceeded\":false,\"errorMsg\":\"\"}]}"
+   example JSON after running through 'sanitizeJson' function = {"validateCreditLimit":[{"purchaseAmount":7.65,"creditLimit":10000,"limitExceeded":false,"errorMsg":""}]}
+   */
+
+   //Parse JSON response  
+   cleanChargeScriptResponse = sanitizeJson(ChargeScriptResponse.response)
+   print "Cleaned up JSON response: "+cleanChargeScriptResponse
+   _ChargeScriptResponse = DeserializeJson(typeof(ValidateCreditLimitResponse),cleanChargeScriptResponse)
+
+   _purchaseAmount as decimal = _ChargeScriptResponse.validateCreditLimit[0].purchaseAmount
+   _creditLimit as string = _ChargeScriptResponse.validateCreditLimit[0].creditLimit
+   _limitExceeded as bool = _ChargeScriptResponse.validateCreditLimit[0].limitExceeded
+   _errorMsg as string = _ChargeScriptResponse.validateCreditLimit[0].errorMsg
+
+   //Check for the Department Charge Transaction Limit being exceeded and if the setting is enabled to enforce the limit - SVCS776
+   if _limitExceeded == true:
+      MC.Alert("You have exceeded the Department Charge Transaction Limit of $"+_creditLimit)
+
+      //SVCS7662
+      for x in lines:
+         raitem = x as NetSuite.Retail.POS.Shared.RAItem
+         giftcarditem = x as NetSuite.Retail.POS.Business.CreditDebitCardTenderLineItem
+         if (giftcarditem == null) and (raitem == null):
+            print "Not a GiftCard or Regular Item"
+            continue
+         if (raitem != null) and (raitem.Voided == true):
+            print "Voided Item"
+            continue
+         if giftcarditem != null:
+            print "GiftCard item. Don't update price or tax"
+            continue
+         
+         //Revert items prices to base price which is "1" in database
+         setPriceLevel(raitem,"1")
+
+      MC.Alert("NOTICE: Item prices were reverted to the Base (MSRP) price level.")
+      return
+
+/*
+END - Dept Charge Credit Limit validation
+*/
+
+
+/*
+START - Record comments as needed
+*/
+
+//Record transaction body comments for the segments if they are non-null
+if not string.IsNullOrEmpty(_seg1D):
+   using comment=NetSuite.Retail.POS.Business.Comment("trx"):
+      comment.ReasonCode = "CBT1"
+      comment.CommentText = _seg1D.Trim()
+      comment.Hide=true
+      comment.Run()
+if not string.IsNullOrEmpty(_seg2ID):
+   using comment=NetSuite.Retail.POS.Business.Comment("trx"):
+      comment.ReasonCode = "CBT2"
+      comment.CommentText = _seg2ID.Trim()
+      comment.Hide=true
+      comment.Run()
+
+//Mark this as a Dept Charge transaction to check the custbody_nsts_cstr_dept_chg field in ERP
+using comment=NetSuite.Retail.POS.Business.Comment("trx"):
+   comment.ReasonCode = "CBDC"
+   comment.CommentText = "true"
+   comment.Hide=true
+   comment.Run()   
+   
+//TI1596 - Record transaction body checkbox if a Gift Certificate item exists on transaction
+if hasGiftCard == true:
+   print "Gift Certificate comment recorded"
+   using comment=NetSuite.Retail.POS.Business.Comment("trx"):
+      comment.ReasonCode = "CBGC"
+      comment.CommentText = "true"
+      comment.Hide=true
+      comment.Run()
+      
+/*PO Customization - MRB*/
+if not string.IsNullOrEmpty(_getPONum):
+   using comment=NetSuite.Retail.POS.Business.Comment("trx"):
+      comment.ReasonCode = "ZZPO"
+      comment.CommentText = _getPONum
+      comment.Hide=true
+      comment.Run()   
+
+//Execute tender
+using tenderProcess = NetSuite.Retail.POS.Business.TenderProcess("Tender:DC ${transTotal}"):
+   tenderProcess.Run()
+   
+/*
+END - Record comments as needed
+*/
+
+
+//*********
+//END
+//*********

@@ -1,0 +1,90 @@
+{
+    "name": "ShippingMethodExtension",
+    "fantasyName": "ShippingMethodExtension",
+    "vendor": "SSD",
+    "version": "1.0.7",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Shipping Method Extension. SuiteLabs v1.0.7 Fixed style that was affecting unwanted collapsed areas such as the shipping estimator",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": [
+                "services/ShippingMethod.Service.ss"
+            ]
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/ShippingMethodExtension/Sass/shipping_method_extension.scss",
+            "checkout": "Modules/ShippingMethodExtension/Sass/shipping_method_extension.scss"
+        },
+        "files": [
+            "Modules/ShippingMethodExtension/Sass/shipping_method_extension.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "checkout": {
+                "files": [
+                    "Modules/ShippingMethodExtension/Templates/order_wizard_cart_summary.tpl",
+                    "Modules/ShippingMethodExtension/Templates/order_wizard_shipmethod_module.tpl",
+                    "Modules/ShippingMethodExtension/Templates/cart_shippingMethod_form.tpl"
+                ]
+            },
+            "shopping": {
+                "files": [
+                    "Modules/ShippingMethodExtension/Templates/cart_shippingMethod_form.tpl",
+                    "Modules/ShippingMethodExtension/Templates/cart_summary.tpl",
+                    "Modules/ShippingMethodExtension/Templates/order_wizard_cart_summary.tpl",
+                    "Modules/ShippingMethodExtension/Templates/order_wizard_shipmethod_module.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "checkout": "Modules/ShippingMethodExtension/JavaScript/ShippingMethodExtension.Checkout.js",
+            "shopping": "Modules/ShippingMethodExtension/JavaScript/ShippingMethodExtension.Shopping.js"
+        },
+        "application": {
+            "checkout": {
+                "files": [
+                    "Modules/ShippingMethodExtension/JavaScript/ShippingMethodExtension.Checkout.js",
+                    "Modules/ShippingMethodExtension/JavaScript/OrderWizard.Module.CartSummary.Site.js",
+                    "Modules/ShippingMethodExtension/JavaScript/OrderWizard.Module.Shipmethod.Site.js",
+                    "Modules/ShippingMethodExtension/JavaScript/OrderWizard.Module.ShowShipments.Site.js",
+                    "Modules/ShippingMethodExtension/JavaScript/ShippingMethodExtension.View.js",
+                    "Modules/ShippingMethodExtension/JavaScript/Cart.ShippingMethodForm.View.Site.js",
+                    "Modules/ShippingMethodExtension/JavaScript/Cart.Summary.View.Site.js"
+                ]
+            },
+            "shopping": {
+                "files": [
+                    "Modules/ShippingMethodExtension/JavaScript/ShippingMethodExtension.Shopping.js",
+                    "Modules/ShippingMethodExtension/JavaScript/Cart.Detailed.View.Site.js",
+                    "Modules/ShippingMethodExtension/JavaScript/Cart.ShippingMethodForm.View.Site.js",
+                    "Modules/ShippingMethodExtension/JavaScript/Cart.Summary.View.Site.js",
+                    "Modules/ShippingMethodExtension/JavaScript/ShippingMethodExtension.View.js"
+                ]
+            }
+        }
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/ShippingMethodExtension/SuiteScript/LiveOrder.ShipMethods.Extension.js",
+        "files": [
+            "Modules/ShippingMethodExtension/SuiteScript/LiveOrder.ShipMethods.Extension.js"
+        ]
+    },
+    "local_folder": "Workspace\\ShippingMethodExtension"
+}

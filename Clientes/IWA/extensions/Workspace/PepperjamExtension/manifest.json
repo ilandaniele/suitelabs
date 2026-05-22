@@ -1,0 +1,40 @@
+{
+    "name": "PepperjamExtension",
+    "fantasyName": "Pepperjam Tracker Extension",
+    "vendor": "SuiteLabs",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": ">=22.2.0",
+        "SCS": ">=22.2.0"
+    },
+    "description": "Pepperjam tracker integration.",
+    "skins": [],
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/Main.json"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "checkout": "Modules/Main/JavaScript/PepperjamExtension.EntryPoint.js",
+            "shopping": "Modules/Main/JavaScript/PepperjamExtension.EntryPoint.js"
+        },
+        "application": {
+            "checkout": {
+                "files": [
+                    "Modules/Main/JavaScript/PepperjamExtension.EntryPoint.js",
+                    "Modules/Main/JavaScript/PepperjamTracker.js"
+                ]
+            },
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/PepperjamExtension.EntryPoint.js",
+                    "Modules/Main/JavaScript/PepperjamTracker.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\PepperjamExtension"
+}

@@ -1,0 +1,57 @@
+{
+	"name": "BulbUpsell",
+	"fantasyName": "Bulb Upsell",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.1",
+	"description": "SuiteLabs v2.1.1 refers to the SCA upgrade to 23.2, it includes a big refactor and some new functionality",
+	"configuration": {
+		"files": [
+			"Modules/BulbUpsell/Configuration/BulbUpsell.json"
+		]
+	},
+	"templates": {
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/BulbUpsell/Templates/bulb_upsell.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/BulbUpsell/Sass/_bulb-upsell.scss"
+		},
+		"files": [
+			"Modules/BulbUpsell/Sass/_bulb-upsell.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/BulbUpsell/JavaScript/AwaLabs.BulbUpsell.Shopping.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/BulbUpsell/JavaScript/AwaLabs.BulbUpsell.Shopping.js",
+					"Modules/BulbUpsell/JavaScript/BulbUpsell.View.js"
+				]
+			}
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/BulbUpsell/SuiteScript/AwaLabs.BulbUpsell.js",
+		"files": [
+			"Modules/BulbUpsell/SuiteScript/AwaLabs.BulbUpsell.js"
+		]
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/BulbUpsell@2.1.1",
+	"activation_id": "11",
+	"extension_id": "16604"
+}

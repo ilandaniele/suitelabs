@@ -1,0 +1,329 @@
+// Color palette
+//
+// Here you will find the main user interface color palette for the out of the box theme.
+// Shades of orange, blue-grey, white and grey are used for backgrounds, boders, buttons and text all along the application.
+//
+// Styleguide 1.1
+
+// Primary Color
+//
+// The Primary Color is used for primary actions and highlighted information.
+//
+// Colors:
+// $sc-color-primary: #e23200
+//
+/*PA Custom Variable Colors*/
+$pa-white: 			#ffffff;
+$pa-black: 			#000000;
+$pa-light-gray: 	#D6D6D6;
+$pa-dark-gray: 		#242424;
+$pa-primary: 		#F0F0F0;
+$pa-secondary: 		#393a39;
+$pa-tertiary: 		#989898;
+$pa-cta: 			#1c498e;
+$pa-accent: 		#FFD072;
+$pa-accent-dark: 	#DCA22E;
+$pa-success: 		#dff0d8;
+$pa-success-text: 	#3c763d;
+$pa-success-border: #d6e9c6;
+$pa-info: 			#d9edf7;
+$pa-info-text: 		#31708f;
+$pa-info-border: 	#bce8f1;
+$pa-warning: 		#fcf8e3;
+$pa-warning-text: 	#8a6d3b;
+$pa-warning-border: #faebcc;
+$pa-danger: 		#fffcfa;
+$pa-danger-text: 	#a94442;
+$pa-danger-border: 	rgba(169, 68, 66, 0.5);
+$pa-ribbon-shadow-color: rgba(0, 0, 0, 0.5);
+$pa-sale-red: #FF6060;
+$pa-manufacturer-label: #858785;
+$pa-manufacturer-link: #0000ff;
+$pa-add-to-cart-border: #183e79;
+$pa-social-icon-color: #525452;
+$pa-pdp-detail-specs-title-border-color: #D6D6D6;
+$pa-pdp-detail-specs-title-color: #adadad;
+$pa-review-button-bottom-border: #cccccc;
+$pa-review-filter-bottom-border: #252525;
+$pa-global-pagination-number-background-color: #e9e9e9;
+$pa-pdp-add-to-cart-hover-color: #1650a9;
+$pa-login-restrictions-link-color: #4569fc;
+$pa-mobile-pusher-background-color: #fdfdfd;
+$pa-shipping-method-bgcolor:#efefef;
+$pa-video-slider-col-color: #4f5150;
+$pa-send-email-button-hover-color: #ffd014;
+$pa-breadcrumb-background: #EEEEEE;
+$pa-executive-card-border-color: #D1D1D1;
+$pa-executive-card-arrow-color: #e8a828;
+$pa-title-link-hover-color: #0277BD;
+$pa-quick-add-product-title-hover-issue: #0277BD;
+$pa-gift-message-background-color: #c5ffc5;
+
+// Styleguide 1.1.2
+
+/*Default: CTA Buttons*/
+$sc-color-primary: #2D6ED1;
+$sc-header-background:#393A39;
+$sc-cart-background:#FFD072;
+// Secondary Color
+//
+// The Secondary Color is used for secondary actions. Different shades of this color are used for theme backgrounds, borders and text.
+//
+// Colors:
+// $sc-color-secondary: #15607b
+//
+// Styleguide 1.1.3
+
+/*Default: Menu Text Color, Secondary Buttons*/
+$sc-color-secondary: $pa-dark-gray;
+
+/*Default: Various Buttons*/
+$sc-color-tertiary: #ffffff;
+
+// Neutral shades
+//
+// The neutral shade palette is a scale from 1000 (dark) to 0 (light).
+// This theme defines a couple of medium scale values. The developer might find useful to add more intermetiate colors within the scale that might be referenced to this scale.
+//
+// Colors:
+// $sc-neutral-shade: #4D5256 - All the neutral shade variables are calculated from $sc-neutral-shade variable. $sc-neutral-shade is equivalent to $sc-neutral-shade-500. Therefore $sc-neutral-shade variable names ending in values above 500 will be darker and those below 500 will be lighter.
+// $sc-neutral-shade-700: #222426 - The darkest value on this scale is raraly used. It may be found on some texts or backgrounds.
+// $sc-neutral-shade-500: #4D5256 - In occasions you will find this shade assigned to text but most of the times it will be the shade used for shadows.
+// $sc-neutral-shade-300: #7E858B - This light shade is used exclusively used in texts.
+// $sc-neutral-shade-0: #FFFFFF - The lightest value on this scale is largely used and may be usually found in texts, backgrounds and borders.
+//
+// Styleguide 1.1.4
+$sc-neutral-shade: #4D5256; /* editable({"type": "color", "label": "Neutral color", "description": "This is the base neutral shade color. In the case of the 'out of the box' theme #4D5256. If only this color is changed the rest of the neutral shade variants will be derived from this one using the preset theme shading definition: 700, 500, 300, 0."}) */
+$sc-neutral-shade-700: darken($sc-neutral-shade, 18); /* editable({"type": "color", "label": "Shade 700"}) */
+$sc-neutral-shade-500: $sc-neutral-shade; /* editable({"type": "color", "label": "Shade 500"}) */
+$sc-neutral-shade-300: lighten($sc-neutral-shade, 20); /* editable({"type": "color", "label": "Shade 300"}) */
+$sc-neutral-shade-0: lighten($sc-neutral-shade, 100); /* editable({"type": "color", "label": "Shade 0"}) */
+
+// Theme Palette
+//
+// Just as the neutral shades palette, the Theme Palette is a scale from 1000 (dark) to 0 (light).
+// This theme defines a couple of medium scale values. The developer might find useful to add more intermetiate colors within the scale that might be referenced to this scale.
+//
+// Colors:
+// $sc-color-theme: #97CCDF - All the theme variables are calculated from $sc-color-theme variable. $sc-color-theme is equivalent to $sc-color-theme-500. Therefore $sc-color-theme variable names ending in values above 500 will be darker and those below 500 will be lighter.
+// $sc-color-theme-900: #0E3E50 - Used mainly for headings
+// $sc-color-theme-700: #16607B - new one
+// $sc-color-theme-500: #97CCDF - Used mainly for general backgrounds (also referenced as $sc-color-theme-background)
+// $sc-color-theme-300: #D2E8F0 - Used mainly for borders (also referenced as $sc-color-theme-border-light)
+// $sc-color-theme-100: #F1F8FA - Used mainly for borders (also referenced as $sc-color-theme-border)
+//
+// Styleguide 1.1.5
+
+/*Default: Text Color*/
+$sc-color-theme: $pa-secondary; /* editable({"type": "color", "label": "Theme color", "description": "This is the base theme color. If only this color is changed the rest of the theme color variants will be derived from this one using the preset theme shading definition: 900, 700, 500, 300, 100."}) */
+
+/*Default: Cart Icon, Varios Box Icons, SKU, Copyright*/
+$sc-color-theme-light: $pa-light-gray;
+
+$sc-color-theme-900: saturate(darken($sc-color-theme, 55), 18); /* editable({"type": "color", "label": "Shade 900"}) */
+$sc-color-theme-700: saturate(darken($sc-color-theme, 45), 17); /* editable({"type": "color", "label": "Shade 700"}) */
+$sc-color-theme-500: $sc-color-theme; /* editable({"type": "color", "label": "Shade 500"}) */
+$sc-color-theme-300: desaturate(lighten($sc-color-theme, 15), 3); /* editable({"type": "color", "label": "Shade 300"}) */
+$sc-color-theme-100: desaturate(lighten($sc-color-theme, 23), 3); /* editable({"type": "color", "label": "Shade 100"}) */
+/*Default: Header and Footer Color, looks like most text containers*/
+$sc-color-theme-border: desaturate(darken($pa-dark-gray, 8), 3); /* editable({"type": "color", "label": "Box border"}) */
+$sc-color-theme-border-light: $sc-color-theme-300; /* editable({"type": "color", "label": "Box border light"}) */
+$sc-color-theme-background: $pa-light-gray; /* editable({"type": "color", "label": "Box background"}) */
+$sc-color-theme-background-light: lighten($pa-light-gray, 3.5);
+$sc-color-theme-background-lightest: lighten($pa-light-gray, 6);
+$sc-color-background-list: #f1f8fa;
+// Messagging Palette
+//
+// The message box is defined by a colored text displayed over a colored background with an outline border.
+// It might or may not include an icon in which case it should use the same color as the text.
+// Possible message types are: Success, Warning, Error and Information.
+// Each type is defined by a main color used for text. Background and border colors are calculated according to the main color.
+//
+// Colors:
+// $sc-color-success: #097839 - Used for success messages
+// $sc-color-success-border: #C5F3D9 - Used for success messages
+// $sc-color-success-background: #E7FAEF - Used for success messages
+// $sc-color-warning: #946A00 - Used for warning messages
+// $sc-color-warning-border: #F4DC9F - Used for warning messages
+// $sc-color-warning-background: #FFF6E1 - Used for warning messages
+// $sc-color-error: #C01A29 - Used for error messages
+// $sc-color-error-border: #F1CED1 - Used for error messages
+// $sc-color-error-background: #FDF0F2 - Used for error messages
+// $sc-color-info: #15607B - Used for information messages
+// $sc-color-info-border: #D2E8F0 - Used for information messages
+// $sc-color-info-background: #F1F8FA; - Used for information messages
+//
+// Styleguide 1.1.6
+$sc-color-success: #4a7f35;
+$sc-color-success-background: #eef7e4;
+$sc-color-success-border: desaturate(lighten($sc-color-success, 61), 20);
+
+$sc-color-warning: #8e7728;
+$sc-color-warning-background: #f9f5cd;
+$sc-color-warning-border: desaturate(lighten($sc-color-warning, 50), 20);
+
+$sc-color-error: #C33C48;
+$sc-color-error-background: #FFE9F1;
+$sc-color-error-border: desaturate(lighten($sc-color-error, 45), 20);
+
+$sc-color-info: #15607B;
+$sc-color-info-border: #D2E8F0;
+$sc-color-info-background: #F1F8FA;
+
+// $sc-color-info: $sc-color-theme-light;
+// $sc-color-info-background: $sc-color-theme-light;
+// $sc-color-info-border: desaturate(lighten($sc-color-info, 60), 22);
+
+$sc-color-primary-hover: saturate(lighten($sc-color-primary, 4), 10);
+$sc-color-primary-active: desaturate(darken($sc-color-primary, 5), 10);
+$sc-color-primary-disable: lighten($sc-color-primary, 18);
+
+$sc-color-secondary-hover: saturate(lighten($sc-color-secondary, 4), 4);
+$sc-color-secondary-active: darken($sc-color-secondary, 6);
+
+$sc-color-tertiary-hover: $sc-color-secondary;
+$sc-color-tertiary-active: darken($sc-color-secondary, 6);
+// Links
+//
+// Links are used primarily as a navigational element. Links may also change what or how data is displayed (view more, show all). If the action taken by the user will change or manipulate data, use a button.
+// Two different color variables are defined for this element
+//
+// Colors:
+// $sc-color-link: #0067b9 - The color the link is written with. This color should ensure they look clickable.
+// $sc-color-link-hover: #198FEC - The color with which links are hilighted when hovered.
+// $sc-color-link-active: #0067B9
+//
+// Styleguide 1.1.7
+$sc-color-link: $pa-accent; /* editable({"type": "color", "label": "Link"}) */
+$sc-color-link-hover: lighten($sc-color-link, 10); /* editable({"type": "color", "label": "Hover state"}) */
+$sc-color-link-active: $pa-accent; /* editable({"type": "color", "label": "Active state"}) */
+
+// Copy
+//
+// The out of the box theme uses only 3 different color shades when it comes to rendering text.
+// The shades available are:
+//
+// Colors:
+// $sc-color-copy-dark: #222426 - Used for almost every text on the site.
+// $sc-color-copy: #4D5256 - Mainly used for values such as SKU
+// $sc-color-copy-light: #7E858B - Used for labels
+//
+// Styleguide 1.1.8
+$sc-color-copy-dark: #1f2223; /* editable({"type": "color", "label": "Dark"}) */
+$sc-color-copy: #404040; /* editable({"type": "color", "label": "Text"}) */
+$sc-color-copy-light: lighten($sc-color-copy, 22); /* editable({"type": "color", "label": "Light"}) */
+
+
+//TODO: FIND OUT
+$sc-color-range-off:#dcdcdc;
+$sc-color-range-on: $sc-color-primary;
+
+//Stars
+$sc-color-star-filled: #fc0;
+$sc-color-star-empty: #fffae5;
+$sc-color-star-error: $pa-danger-text;
+$sc-color-star-empty-disable: $pa-light-gray;
+
+// icons
+$sc-color-icon: #ffffff;
+
+//Status
+$sc-color-status: #fe6b38;
+
+$sc-pusher-bg: #ffffff;
+
+//Datepicker
+$sc-days-disabled: #c5dbe7;
+
+//Home Slide Theme
+$sc-color-slide-background:#e9f1f5;
+
+//Placeholder Colors
+$sc-color-placeholder: #aab0b3;
+
+.pa-primary {
+	color: $pa-primary;
+}
+.pa-secondary {
+	color: $pa-secondary;
+}
+.pa-cta {
+	color: $pa-cta;
+}
+.pa-accent {
+	color: $pa-accent;
+}
+.pa-white {
+	color: $pa-white;
+}
+.pa-black {
+	color: $pa-black;
+}
+.pa-light-gray {
+	color: $pa-light-gray;
+}
+.pa-dark-gray {
+	color: $pa-dark-gray;
+}
+
+@mixin pa-grad-gray {
+	background: -moz-linear-gradient(top, rgba(107,108,109,1) 0%, rgba(79,81,80,1) 64%);
+	background: -webkit-linear-gradient(top, rgba(107,108,109,1) 0%,rgba(79,81,80,1) 64%);
+	background: linear-gradient(to bottom, rgba(107,108,109,1) 0%,rgba(79,81,80,1) 64%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6b6c6d', endColorstr='#4f5150',GradientType=0 );
+}
+
+@mixin pa-grad-dark-gray {
+	background: #4f5150;
+	background: -moz-linear-gradient(top,  #4f5150 0%, #363837 100%);
+	background: -webkit-linear-gradient(top,  #4f5150 0%,#363837 100%);
+	background: linear-gradient(to bottom,  #4f5150 0%,#363837 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f5150', endColorstr='#363837',GradientType=0 );
+}
+
+@mixin pa-grad-cta {
+	//border: 1px solid #04255a;
+	background: #3b78d2;
+	background: -moz-linear-gradient(top,  #3b78d2 0%, #04255a 100%);
+	background: -webkit-linear-gradient(top,  #3b78d2 0%,#04255a 100%);
+	background: linear-gradient(to bottom,  #3b78d2 0%,#04255a 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b78d2', endColorstr='#04255a',GradientType=0 );
+}
+
+@mixin pa-grad-accent {
+	border: 1px solid #9A7B00;
+	background: #ffcc00;
+	background: -moz-linear-gradient(top,  #ffcc00 0%, #d6ab00 100%);
+	background: -webkit-linear-gradient(top,  #ffcc00 0%,#d6ab00 100%);
+	background: linear-gradient(to bottom,  #ffcc00 0%,#d6ab00 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcc00', endColorstr='#d6ab00',GradientType=0 );
+}
+
+$custom-main-navigation-submenu-bottom-border-color: #e7e7d8;
+$custom-main-navigation-submenu-background-color: rgba(255,255,255,0.95);
+$custom-main-navigation-submenu-promo-border-color: #dddddd;
+$custom-main-navigation-submenu-heading-border-color: #c8c8c8;
+$custom-main-navigation-submenu-link-color: #2c398d;
+$custom-banner-image-shop-now-button-border-color: #797979;
+$custom-top-selling-carousel-arrow: #207bc3;
+$custom-merchandising-zone-seprator-color: #e6e6e6;
+$custom-transparent-color: transparent;
+$custom-newsletter-submit-button-background-color: #d1d3d4;
+$custom-newsletter-submit-button-color: #444444;
+$custom-darkgrey-color: #666666;
+$custom-newsletter-validation-message-color: #ff4343;
+$custom-footer-social-media-icons-color: #0e70be;
+$custom-back-to-top-background-color: rgba(0, 0, 0, 0.45);
+$custom-back-to-top-box-shadow-color: rgba(0, 0, 0, 0.2);
+$custom-mobile-navigation-link-seprator-color: rgba(255,255,255, 0.2);
+$custom-sub-category-dropdown-boxshadow-color: rgba(0, 0, 0, 0.1);
+$custom-black-color: #000000;
+$custom-product-detail-pricing-box-color: #808080;
+$custom-header-footer-background-color: #0D182E;
+$custom-compare-background-color: transparent linear-gradient(96deg, rgba(13, 24, 46, 0.92) 0%, rgba(0, 51, 102, 0.92) 100%) 0% 0% no-repeat padding-box;
+$custom-wishlist-button-background-color: #ebf1f4;
+$custom-wishlist-button-active-icon-color: #f63440;
+$custom-deal-ribbon-background-color: transparent linear-gradient(180deg, #FE0000 0%, #7F0000 100%) 0% 0% no-repeat padding-box;
+$custom-deal-cross-button-color: #bd0000;
+$custom-email-me-instock-button-background-color: #2673B7;	//Previous -> #2D6ED1
+$custom-email-me-instock-button-background-color-hover: #4EA2EC;	//Previous -> #1C498e

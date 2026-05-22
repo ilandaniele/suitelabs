@@ -1,0 +1,65 @@
+{
+    "name": "EnhancedPDP",
+    "fantasyName": "Enhanced PDP",
+    "vendor": "SuiteLabs",
+    "version": "1.0.3",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Advanced features for Product Detail Pages, adding an enhanced version of the zoom feature, ability to add a video in the image gallery, etc",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/SuiteLabs.EnhancedPDP.json"
+        ]
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_enhancedpdp-main.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_enhancedpdp-main.scss",
+            "Modules/Main/Sass/_simple-lightbox.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/enhancedpdp_gallery.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/SuiteLabs.EnhancedPDP.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.EnhancedPDP.js",
+                    "Modules/Main/JavaScript/External.SimpleLightbox.js",
+                    "Modules/Main/JavaScript/jQuery.lightboxZoom.js",
+                    "Modules/Main/JavaScript/SuiteLabs.EnhancedPDP.Gallery.View.js",
+                    "Modules/Main/JavaScript/Product.Option.Model.MaxLength.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\EnhancedPDP",
+    "suitescript2": {
+        "files": []
+    }
+}

@@ -1,0 +1,174 @@
+.trade-customer h1{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+.trade-customer h2{
+  text-align: center;
+  color: $sc-color-secondary;
+}
+.trade-customer .four-blocks .img{
+  max-width: 300px;
+  margin: 0 auto;
+}
+.trade-customer .four-blocks h2{
+  font-size: 21px;
+}
+
+.trade-customer .four-blocks h5{
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: normal;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+.trade-customer .four-blocks{
+  max-width: 660px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.trade-customer .four-blocks > div{
+  @extend .col-sm-6;
+}
+.bottom-trade-section{
+  text-align: center;
+  h2{
+    color: black;
+    font-weight: 300;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    &.custom-title{
+      position: relative;
+      padding: 40px 0;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      &:before, &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        width:112px;
+        height: 1px;
+        background: $sc-color-secondary;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &:after{
+        top: 100%;
+      }
+    }
+  }
+  li{
+    display: block;
+    padding:5px 0;
+  }
+  h5{
+    margin-top: 40px;
+    letter-spacing: 1px;
+    a{
+      font-weight:400;
+    }
+  }
+}
+.login-register-trade-form,
+.login-register-register-form{
+  margin-top:20px;
+  label{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    span{
+      color: $sc-color-secondary;
+      font-weight: 400;
+      font-size:14px;
+    }
+  }
+  input::placeholder{
+    text-align: left;
+    font-style: normal;
+    color:#757575;
+    text-transform: capitalize !important;
+  }
+  label.login-register-register-form-label{
+    @extend .col-sm-3;
+    padding-top: 10px;
+  }
+  .in-line{
+    @extend .col-sm-9;
+    input[type="radio"]{
+      margin-right: 5px;
+      &.last-radio{
+        margin-left: 25px;
+      }
+    }
+    input[type="number"]{
+      transition: all 0.2s;
+      border:1px solid $sc-color-theme-border;
+      &:hover{
+        border: 1px solid $sc-color-secondary;
+      }
+    }
+    select{
+      width: 100%;
+      &::placeholder{
+        text-align: left;
+        font-style: normal;
+        color:#757575;
+      }
+    }
+  }
+  .login-register-login-form-controls-group,
+  .login-register-register-form-controls-group{
+    @extend .clearfix;
+  }
+  hr.trade-line{
+    margin: 15px;
+    background-color:$sc-color-theme-border;
+  }
+  .login-register-trade-submit,
+  .login-register-register-form-submit{
+    @extend .button-primary;
+    @extend .button-medium;
+    @media (min-width: $screen-sm) {
+      margin:0 15px;
+    }
+  }
+}
+
+.trade-customer-container-confirmation{
+  @extend .clearfix;
+  text-align: center;
+  h1 , h2{
+    font-weight: 300;
+    font-size: 100%;
+    color: $sc-color-secondary;
+  }
+  a{
+    @extend .button-primary;
+    @extend .button-medium;
+    float: right;
+    margin-top: 20px;
+  }
+}
+.login-register-trade-form{
+  .global-views-countriesDropdown-group-label,
+  .global-views-states-group-label{
+    display: block;
+    margin-top: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .global-views-countriesDropdown-form-controls,
+  .global-views-states-group-form-controls{
+    padding: 0;
+    width: 100%;
+  }
+  select:disabled {
+    border: 1px solid #f1ede7;
+    background-color: #f1ede7;
+  }
+}

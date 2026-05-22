@@ -1,0 +1,78 @@
+.order-history-list-tracking-number-not-available {
+	@extend .sc-value;
+}
+
+.order-history-list-tracking-number-label {
+	@extend .sc-label;
+	display:none;
+	@media (min-width: $screen-md-min) {
+		display: inline;
+	}
+}
+.order-history-list-tracking-number-not-available-label {
+	@extend .sc-label;
+	@media (min-width: $screen-md-min) {
+		display: none;
+	}
+}
+
+.order-history-list-tracking-number-available-label {
+	@extend .sc-label;
+	@media (min-width: $screen-md-min) {
+		display: none;
+	}
+}
+.order-history-list-tracking-number-control {
+	position: relative;
+	text-align:left;
+	display: inline-block;
+	@media (min-width: $screen-sm-min) {
+		text-align:right;
+	}
+
+	.dropdown-backdrop{
+		display:none;
+	}
+}
+
+.order-history-list-tracking-number-control-button {
+	@extend .button-primary;
+	@extend .button-small;
+	padding: 8px 8px;
+	font-size: 12px;
+	letter-spacing: 1px;
+	text-transform: capitalize;
+	font-weight: 400;
+	@media (max-width: $screen-md) {
+		margin-top: 10px;
+	}
+}
+.open > [data-toggle="dropdown"]{
+	&.order-history-list-tracking-number-control-button{
+		color: white;
+	}
+}
+.order-history-list-tracking-number-control-toggle-icon {
+	@extend .fa;
+	@extend %fa-angle-down;
+	margin-left: 5px;
+	display: inline-block;
+}
+
+.order-history-list-tracking-number-control-numbers {
+	@extend .sc-flyout-content;
+	left: auto;
+	right: 0;
+	&:before{
+		left: auto;
+		right: 10px;
+	}
+	&:after{
+		left: auto;
+		right: 11px;
+	}
+}
+
+.order-history-list-tracking-number-control-numbers-link {
+	font-size:12px;
+}

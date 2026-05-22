@@ -1,0 +1,76 @@
+.cookie-modal-confirmation-logo {
+    background: $sc-neutral-shade-300;
+    height: 100px;
+    margin: $sc-margin-lv4 auto ;
+    width: 100px;
+}
+
+.cookie-modal-confirmation {
+    .global-views-modal-content-header {
+        display: none;
+    }
+
+    .global-views-modal-content {
+        background-color: #666666;
+        border-radius: 0 !important;
+    }
+}
+
+.cookie-modal-confirmation-content {
+    text-align: center;
+    
+    p {
+        text-transform: $sc-h3-text-transform;
+        font-size: $sc-h5-desktop-font-size;
+        margin-bottom: $sc-margin-lv2;
+        color: #dddddd;
+    }
+
+    .cookie-modal-confirmation-welcome {
+        font-size: $sc-h3-desktop-font-size;
+        margin-bottom: $sc-margin-lv2;
+        color: #ffffff;
+
+        @media (min-width: $screen-md-min) {
+            margin-bottom: $sc-margin-lv4;
+            font-size: $sc-h1-desktop-font-size;
+        }
+    }
+
+}
+
+.cookie-modal-confirmation-date-select {
+    @extend .input-small;
+    display: inline-block;
+    margin-right: $sc-margin-lv2;
+    margin-top: $sc-margin-lv2;
+    margin-bottom: $sc-margin-lv4;
+}
+
+.cookie-modal-confirmation-date-submit {
+	@extend .button-large;
+    @extend .button-primary;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    border-radius: 0 !important;
+    color: #666666;
+
+    font-size: $sc-font-size-xl;
+    margin-bottom: $sc-margin-lv4;
+    width: 100%;
+
+    &:hover, &:active, &:focus {
+        background-color: #ffffff;
+        border-color: #ffffff;
+        color: #666666;
+    }
+
+    @media (min-width: $screen-md-min) {
+        width: 400px;
+    }
+}
+
+.cookie-modal-confirmation-date-young-age {
+    cursor: pointer;
+    font-style: italic;
+}

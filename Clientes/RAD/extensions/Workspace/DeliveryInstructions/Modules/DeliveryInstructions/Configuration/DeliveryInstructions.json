@@ -1,0 +1,203 @@
+{
+  "type": "object",
+  "subtab": {
+    "id": "deliveryinstructions",
+    "group": "checkoutApp",
+    "title": "Delivery Instructions"
+  },
+  "properties": {
+    "deliveryinstructions.shippingMethods": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "array",
+      "title": "Shipping Methods",
+      "description": "Ship Methods for which delivery instructions will appear for",
+      "items": {
+        "type": "object",
+        "properties": {
+          "internalid": {
+            "type": "string",
+            "title": "Shipmethods",
+            "mandatory": true
+          },
+          "name": {
+            "type": "string",
+            "title": "Name (just for Reference)",
+            "mandatory": true
+          },
+          "liftGate": {
+            "type": "boolean",
+            "title": "Enable Lift Gate"
+          },
+          "residentialAddress": {
+            "type": "boolean",
+            "title": "Enable Residential Address"
+          }
+        }
+      },
+      "default": [
+        {
+          "internalid": "5202",
+          "name": "Best Way",
+          "residentialAddress": true,
+          "liftGate": true
+        }
+      ]
+    },
+    "deliveryinstructions.liftGate.enabled": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "boolean",
+      "title": "Enable Lift Gate Option",
+      "default": true
+    },
+    "deliveryinstructions.liftGate.markupItem": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "string",
+      "title": "Lift Gate - Markup Item Id",
+      "default": "16079",
+      "mandatory": true
+    },
+    "deliveryinstructions.liftGate.serviceItem": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "string",
+      "title": "Lift Gate - Service Item Id",
+      "default": "16036",
+      "mandatory": true
+    },
+    "deliveryinstructions.liftGate.optionTitle": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "string",
+      "title": "Lift Gate Option Title",
+      "default": "<u>Lift Gate Needed</u>",
+      "mandatory": true
+    },
+    "deliveryinstructions.liftGate.optionDescription": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "string",
+      "title": "Lift Gate Option Description",
+      "default": "because I do not have dock-high doors for large Freight orders.",
+      "mandatory": true
+    },
+    "deliveryinstructions.residentialAddress.enabled": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "boolean",
+      "title": "Enable Residential Delivery Address Option",
+      "default": true
+    },
+    "deliveryinstructions.residentialAddress.markupItem": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "string",
+      "title": "Residential Delivery - Markup Item Id",
+      "default": "16080",
+      "mandatory": true
+    },
+    "deliveryinstructions.residentialAddress.serviceItem": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "string",
+      "title": "Residential Delivery - Service Item Id",
+      "default": "16037",
+      "mandatory": true
+    },
+    "deliveryinstructions.residentialAddress.optionTitle": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "string",
+      "title": "Residential Delivery Option Title",
+      "default": "<u>Residential Address</u>",
+      "mandatory": true
+    },
+    "deliveryinstructions.residentialAddress.optionDescription": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "string",
+      "title": "Residential Delivery Option Description",
+      "default": "because I work from home.",
+      "mandatory": true
+    },
+    "deliveryinstructions.freightItemMessage": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "string",
+      "title": "Freight Item Message",
+      "default": "White glove service available",
+      "mandatory": true
+    },
+    "deliveryinstructions.nonFreightItemMessage": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "string",
+      "title": "Non-Freight Item Message",
+      "default": "White glove service not available",
+      "mandatory": true
+    },
+    "deliveryinstructions.freight.maxQuantity": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "string",
+      "title": "Freight Max Quantity",
+      "default": "3",
+      "mandatory": true
+    },
+    "deliveryinstructions.freight.serviceItem": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "string",
+      "title": "Freight - Service Item Id",
+      "default": "33732",
+      "mandatory": true
+    },
+    "deliveryinstructions.freight.markupItem": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "string",
+      "title": "Freight - Markup Item Id",
+      "default": "33731",
+      "mandatory": true
+    },
+    "deliveryinstructions.whiteGlove.enabled": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "boolean",
+      "title": "Enable White Glove Option",
+      "default": true
+    },
+    "deliveryinstructions.whiteGlove.title": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "string",
+      "title": "White Glove Title",
+      "default": "White Glove"
+    },
+    "deliveryinstructions.whiteGlove.message": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "string",
+      "nsType": "textarea",
+      "title": "White Glove Message",
+      "default": "Delivery includes in-room placement of item(s), packaging removal, and up to 1 flight of stair carry"
+    },
+    "deliveryinstructions.whiteGlove.modalTitle": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "string",
+      "title": "White Glove Modal Title",
+      "default": "White Glove Delivery"
+    },
+    "deliveryinstructions.whiteGlove.disclaimer": {
+      "group": "checkoutApp",
+      "subtab": "deliveryinstructions",
+      "type": "string",
+      "nsType": "textarea",
+      "title": "White Glove Modal Disclaimer",
+      "default": "Do you agree with disabling the White Glove delivery service?"
+    }
+  }
+}

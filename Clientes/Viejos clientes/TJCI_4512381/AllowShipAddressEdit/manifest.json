@@ -1,0 +1,58 @@
+{
+    "name": "AllowShipAddressEdit",
+    "fantasyName": "Allow Ship Address Edit",
+    "vendor": "PSeComm",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "disable all address editing capabilities within My Account",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "myaccount": "Modules/AllowShipAddressEdit/Sass/_allowshipaddressedit.scss"
+        },
+        "files": [
+            "Modules/AllowShipAddressEdit/Sass/_allowshipaddressedit.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "myaccount": {
+                "files": [
+                    "Modules/AllowShipAddressEdit/Templates/allowshipaddressedit.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "myaccount": "Modules/AllowShipAddressEdit/JavaScript/AllowShipAddressEdit.js"
+        },
+        "application": {
+            "myaccount": {
+                "files": [
+                    "Modules/AllowShipAddressEdit/JavaScript/AllowShipAddressEdit.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\AllowShipAddressEdit",
+    "suitescript2": {
+        "files": []
+    }
+}

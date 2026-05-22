@@ -1,0 +1,98 @@
+{
+  "ShipmentRequest": {
+    "Request": {
+      "RequestOption": "nonvalidate",
+      "SubVersion": "1601",
+      "TransactionReference": {
+        "CustomerContext": "",
+        "TransactionIdentifier": "?"
+      }
+    },
+    "Shipment": {
+      "TaxInformationIndicator": "46-2605021",
+      "ShipmentRatingOptions": {
+        "NegotiatedRatesIndicator": "X"
+      },
+      "ItemizedChargesRequestedIndicator": "X",
+      "Description": "1507 US shipment",
+      "Shipper": {
+        "Name": "Turf Control",
+        "AttentionName": "Shipping Manager",
+        "CompanyDisplayableName": "Turf Control",
+        "ShipperNumber": "R1651X",
+        "Phone": {
+          "Number": "8774378324"
+        },
+        "Address": {
+          "AddressLine": "1825 E Germann Rd Suite 14",
+          "City": "CHANDLER",
+          "StateProvinceCode": "AZ",
+          "PostalCode": "85286",
+          "CountryCode": "US"
+        }
+      },
+      "ShipTo": {
+        "Name": "Turf Control",
+        "AttentionName": "Shipping Manager.name",
+        "CompanyDisplayableName": "Turf Control",
+        "Phone": {
+          "Number": "8774378324"
+        },
+        "Address": {
+          "AddressLine": "1825 E Germann Rd Suite 14",
+          "City": "CHANDLER",
+          "StateProvinceCode": "AZ",
+          "PostalCode": "85286",
+          "CountryCode": "US"
+        }
+      },
+      "ShipFrom": {
+        "Name": "test company 1",
+        "AttentionName": "maintenance",
+        "CompanyDisplayableName": "test company 1",
+        "Address": {
+          "AddressLine": "123 fake st.",
+          "City": "MESA",
+          "StateProvinceCode": "AZ",
+          "PostalCode": "85201",
+          "CountryCode": "US"
+        }
+      },
+      "PaymentInformation": {
+        "ShipmentCharge": {
+          "Type": "01",
+          "BillShipper": {
+            "AccountNumber": "R1651X"
+          }
+        }
+      },
+      "Service": {
+        "Code": "02",
+        "Description": "Ground"
+      },
+      "Package": {
+        "Description": "Package1",
+        "Packaging": {
+          "Code": "02",
+          "Description": "Customer Supplied Package"
+        },
+        "Dimensions": {
+          "UnitOfMeasurement": {
+            "Code": "IN",
+            "Description": "Inches"
+          },
+          "Length": "12",
+          "Width": "12",
+          "Height": "12"
+        },
+        "PackageWeight": {
+          "UnitOfMeasurement": {
+            "Code": "LBS",
+            "Description": "Pounds"
+          },
+          "Weight": "5"
+        }
+      }
+    }
+  }
+}

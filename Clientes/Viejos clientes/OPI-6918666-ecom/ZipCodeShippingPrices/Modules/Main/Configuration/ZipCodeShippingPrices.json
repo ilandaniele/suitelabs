@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "subtab": {
+      "id":"zipCodeShippingPrices",
+      "title":"Zip Code Shipping Prices",
+      "description":"Sets the orca delivery method a specific shipping price depending on the customer's zip code",
+      "group":"extensions"
+    },
+    "properties": {
+        "zipCodeShippingPrices.orcaShippingMethod": {
+            "group": "extensions",
+            "subtab": "zipCodeShippingPrices",
+            "type": "string",
+            "title": "Orca Delivery Shipping Method Name",
+            "description": "Name of Orca Delivery Shipping Method",
+            "default": "Orca Delivery"
+        }
+    }
+}

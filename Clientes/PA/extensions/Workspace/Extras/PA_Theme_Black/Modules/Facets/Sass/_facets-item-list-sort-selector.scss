@@ -1,0 +1,14 @@
+.facets-item-list-sort-selector {
+	@extend .list-header-filter-input;
+	@media (min-width: $screen-md-min ){
+		font-size: 0.97rem;
+		height: 42px;
+		padding: 9px 30px 9px 10px;
+	}
+}
+// .PA_Theme_Yellow{
+// 	.facets-item-list-sort-selector{
+// 		border-color: #000;
+// 		outline:none;
+// 	}
+// }

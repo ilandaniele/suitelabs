@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "priceToggle",
+        "title": "Price Toggle",
+        "description": "Price Toggle Config",
+        "group": "shoppingApplication"
+    },
+    "properties": {
+        "priceTogglePriceToggle": {
+            "group": "shoppingApplication",
+            "subtab": "priceToggle",
+            "type": "string",
+            "title": "Price Level for trade customer",
+            "description": "Price Level for trade customer",
+            "default": "pricelevel4"
+        }
+    }
+}

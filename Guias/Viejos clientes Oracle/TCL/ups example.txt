@@ -1,0 +1,101 @@
+var upsRequestPayload = {
+            "ShipmentRequest": {
+                "Request": {
+                    "RequestOption": "validate",
+                    "TransactionReference": {
+                        "CustomerContext": ""
+                    }
+                },
+                "Shipment": {
+                    "Shipper": {
+                        "Name": "Turf Control",
+                        "AttentionName": "Shipping Manager",
+                        "TaxIdentificationNumber": "46-2605021",
+                        "Phone": {
+                            "Number": "8774378324"
+                        },
+                        "ShipperNumber": "R1651X",
+                        "Address": {
+                            "AddressLine": "1825 E Germann Rd Suite 14",
+                            "City": "Chandler",
+                            "StateProvinceCode": "AZ",
+                            "PostalCode": "85286",
+                            "CountryCode": "US"
+                        }
+                    },
+                    "ShipTo": {
+                        "Name": "Turf Control",
+                        "AttentionName": "Shipping Manager",
+                        "Phone": {
+                            "Number": "8774378324"
+                        },
+                        "Address": {
+                            "AddressLine": "1825 E Germann Rd Suite 14",
+                            "City": "Chandler",
+                            "StateProvinceCode": "AZ",
+                            "PostalCode": "85286",
+                            "CountryCode": "US"
+                        }
+                    },
+                    "ShipFrom": {
+                        "Name": params.shipFrom.name,
+                        "AttentionName": params.shipFrom.attentionName,
+                        "Phone": {
+                            "Number": params.shipFrom.phone
+                        },
+                        "Address": {
+                            "AddressLine": params.shipFrom.addressLine,
+                            "City": shipFrom.city,
+                            "StateProvinceCode": params.shipFrom.stateProvinceCode,
+                            "PostalCode": params.shipFrom.postalCode,
+                            "CountryCode": params.shipFrom.countryCode
+                        }
+                    },
+                    "PaymentInformation": {
+                        "ShipmentCharge": {
+                            "Type": "01",
+                            "BillShipper": {
+                                "AccountNumber": "R1651X"
+                            }
+                        }
+                    },
+                    "Service": {
+                        "Code": "02",
+                        "Description": "Ground"
+                    },
+                    "Package": {
+                        "PackagingType": {
+                            "Code": "02",
+                            "Description": "Customer Supplied Package"
+                        },
+                        "Dimensions": {
+                            "UnitOfMeasurement": {
+                                "Code": "IN"
+                            },
+                            "Length": "12",
+                            "Width": "12",
+                            "Height": "6"
+                        },
+                        "PackageWeight": {
+                            "UnitOfMeasurement": {
+                                "Code": "LBS"
+                            },
+                            "Weight": "1"
+                        }
+                    }
+                },
+                "LabelSpecification": {
+                    "LabelImageFormat": {
+                        "Code": "GIF",
+                        "Description": "GIF"
+                    },
+                    "HTTPUserAgent": "Mozilla/4.5"
+                },
+                "ReceiptSpecification": {
+                    "ReceiptImageFormat": {
+                        "Code": "GIF",
+                        "Description": "GIF"
+                    },
+                    "HTTPUserAgent": "Mozilla/4.5"
+                }
+            }

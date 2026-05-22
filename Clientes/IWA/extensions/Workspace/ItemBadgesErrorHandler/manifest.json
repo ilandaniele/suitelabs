@@ -1,0 +1,41 @@
+{
+    "name": "ItemBadgesErrorHandler",
+    "fantasyName": "Item Badges Error Handler",
+    "vendor": "SuiteLabs",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Fixes some errors triggered, at Shopping Cart, by the Item Badges extension.",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/SuiteLabs.ItemBadgesErrorHandler.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.ItemBadgesErrorHandler.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\ItemBadgesErrorHandler",
+    "suitescript2": {
+        "files": []
+    }
+}

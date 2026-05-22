@@ -1,0 +1,59 @@
+{
+    "name": "ItemOptionsFieldHelp",
+    "fantasyName": "Item Options Field Help",
+    "vendor": "SuiteLabs",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "This extension adds a user friendly tooltip next to the item options label, to guide the user",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_item-options-field-help.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_item-options-field-help.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/item_options_field_help.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/SuiteLabs.ItemOptionsFieldHelp.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.ItemOptionsFieldHelp.Main.js",
+                    "Modules/Main/JavaScript/ItemOptionsFieldHelp.View.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\ItemOptionsFieldHelp",
+    "suitescript2": {
+        "files": []
+    }
+}

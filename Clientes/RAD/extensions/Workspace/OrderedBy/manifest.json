@@ -1,0 +1,22 @@
+{
+	"name": "OrderedBy",
+	"fantasyName": "Ordered By",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "Ordered By. SuiteLabs v2.1.0, removed unneeded modules.",
+	"ssp-libraries": {
+		"entry_point": "Modules/OrderedBy/SuiteScript/AwaLabs.OrderedBy.js",
+		"files": [
+			"Modules/OrderedBy/SuiteScript/AwaLabs.OrderedBy.js"
+		]
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/OrderedBy@2.1.0",
+	"activation_id": "11",
+	"extension_id": "16914"
+}

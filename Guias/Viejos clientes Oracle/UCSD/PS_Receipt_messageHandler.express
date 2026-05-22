@@ -1,0 +1,63 @@
+class displayPONum(NetSuite.Retail.POS.Messaging.MessagerClass):
+   [NetSuite.Retail.POS.Messaging.MessageHandlerMethod("displayPONum")]
+   def displayPONum(message as string, param as object):
+      try:
+         //The below only runs if the POS passes back TransactionID to the Message Handler, so it doesnt run multiple times
+         if param.Name != "TransactionID":
+            return
+         //The below gets the actual Transaction ID value and stores it into a variable for use in SQL
+         transID as duck
+         for item in param:
+            transID = item.Value
+            
+
+         PONum = NetSuite.Retail.POS.Data.DataCenter.radManager.Scalar("select RTRIM(NA_TXT) from RAPOS..TR_LTM_CMNT where ID_TRN = '"+transID+"' and CD_RSN = 'ZZPO'")
+         
+         if string.IsNullOrEmpty(PONum):
+            return
+         else:
+            MC.SetProperty("transIDForLater",transID)
+            return "Recharge PO#: "+PONum
+      except e:
+         print "Failed to find PO#"
+
+   [NetSuite.Retail.POS.Messaging.MessageHandlerMethod("displaySegments")]
+   def displaySegments(message as string, param as object):
+       try:
+             //The below only runs if the POS passes back TransactionID to the Message Handler, so it doesnt run multiple times
+             //MC.Alert(param.Name) //take the first one that appears, just to make sure it is actually a print receipt, and set the "transactionID" to the name given.
+             //return
+             
+             if param.Name != "TenderType":
+                return
+
+             transID = MC.GetProperty("transIDForLater")
+             if string.IsNullOrEmpty(transID):
+                return
+             
+             //The below gets the actual Transaction ID value and stores it into a variable for use in SQL
+             //transID as duck
+             //for item in param:
+             //transID = item.Value // we do not know the params name so it would break
+
+             Segment1 = ""
+             Segment2 = ""
+             Segment1 = NetSuite.Retail.POS.Data.DataCenter.radManager.Scalar("select RTRIM(NA_TXT) from RAPOS..TR_LTM_CMNT where ID_TRN = '"+transID+"' and CD_RSN = 'CBT1'")
+             Segment2 = NetSuite.Retail.POS.Data.DataCenter.radManager.Scalar("select RTRIM(NA_TXT) from RAPOS..TR_LTM_CMNT where ID_TRN = '"+transID+"' and CD_RSN = 'CBT2'")
+             Segments = Segment1 +" / "+ Segment2
+
+             if string.IsNullOrEmpty(Segments):
+                return
+             else:
+                return "Project Number / Task Number / Fund Source: "+Segments
+          except e:
+             print "Failed to find Segments"
+   
+   
+// Clear out the existing handler, if any (really only used when debugging)
+existingHandler = MC.GetProperty("displayPONum")
+if existingHandler != null:
+   MC.Unregister(existingHandler)
+      
+// Create our new handler as a property so it sticks around
+MC.SetProperty("displayPONum", displayPONum())

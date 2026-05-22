@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "assamblyInstructions.message": {
+            "group": "catalog",
+            "type": "string",
+            "nsType": "textarea",
+            "title": "Assambly Instructions message.",
+            "description": "This message will be displayed on a modal If user tries to download file while not logged in.",
+            "default": "Installation Guides are available for download for logged-in customers only. Please proceed to the <a data-action=\"goToLogin\"> Login / Register</a> page to either create a new account or login to your existing account."
+        }
+    }
+}

@@ -1,0 +1,21 @@
+import Newtonsoft.Json
+
+try :	
+	item = MC.GetProperty("Transaction.LineItem.Selected")
+	print item
+	// print JsonConvert.SerializeObject(item)
+	print item.TaxablePrice
+	
+	itemID = MC.GetProperty("Transaction.LineItem.Selected").ItemID.Trim()
+	print itemID
+
+	if itemID.Equals("ITM395"):
+		if item.TaxablePrice > 0:
+			print "Item with TaxablePrice positive"
+			using item = NetSuite.Retail.POS.Business.SaleReturn ("ID:ITM231"):
+				item.Run()
+
+
+
+except e:
+	print e

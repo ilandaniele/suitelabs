@@ -1,0 +1,289 @@
+.item-relations-related-item-price .itembadges-container-top-right,
+.itembadges-container-top-right {
+    top: -10px;
+    right: 10PX;
+    width: 40%;
+    @media(min-width: $screen-xs-min){
+        width: 30%;
+    }
+    @media(min-width: $screen-sm-min){
+        width: 40%;
+    }
+    @media(min-width: $screen-lg-min){
+        width: 30%;
+    }
+}
+.recently-viewed-items,
+.item-relations-related,
+.item-relations-correlated {
+    .itembadges-container-top-right {
+        top: 0;
+    }
+}
+.product-details-full-image-gallery-container {
+    .itembadges-container-top-right {
+        top: 0;
+        width: 25%;
+        @media(min-width: $screen-xs-min) and (max-width: $screen-xs-max){
+            width:20%;
+        }
+        @media(min-width: $screen-sm-min){
+            width: 15%;
+        }
+        @media(min-width: $screen-md-min){
+            width: 20%;
+        }
+        @media(min-width: $screen-lg-min){
+            width: 15%;
+        }
+    }
+}
+
+.product-reviews-center-container-header-title-container {
+    margin-bottom: 0 !important;
+}
+
+.product-reviews-center-container-wrapper {
+    margin-top: 0 !important;
+}
+
+.product-reviews-center-container-header-button {
+    text-align: center;
+    margin: 10px;
+}
+
+.in-stock-container p {
+    font-size: 14px;
+}
+.stock-status-container.in-stock-container label {
+    font-size: 17px;
+    line-height: initial;
+    margin-top: $sc-margin-lv2;
+}
+.shipping-information p{
+    font-size: 14px;
+    padding: 0;
+}
+.shipping-information{
+    margin-top: $sc-margin-lv1;
+}
+.shipping-information .shipping-label{
+    font-weight:bold;
+    line-height: initial;
+}
+
+// TABS PDP
+.product-details-full-main-product-information-container {
+    .product-details-information-tab-title {
+        a {
+            width: 100%;
+            @media(min-width: $screen-sm-min){
+                width: auto;
+            }
+        }
+    }
+    @media(min-width: $screen-md-min){
+        width: 80%;
+        margin: 20px auto 0;
+    }
+}
+
+// STARS REVIEW
+.global-views-star-rating {
+    display: inline-block;
+    cursor: pointer;
+}
+
+// Global search
+.header-site-search {
+    display: block !important;
+}
+.header-menu-secondary-nav {
+    margin-left: $sc-margin-lv6;
+}
+.header-logo-desktop-wrapper {
+    position: relative;
+    //top: -16px;
+}
+.site-search-content {
+    margin-bottom: $sc-margin-lv4;
+}
+.site-search-content:before,
+.site-search-content:after {
+    display: none;
+}
+
+.header-right-menu-also {
+    margin-left: auto !important;
+ }
+
+.cart-summary-expander-container {
+    padding: 0;
+}
+.cart-shippingMethods-form {
+    background-color: #eeeeee;
+    margin-bottom: $sc-margin-lv3;
+    border-radius: 5px;
+}
+.wizard-header {
+    border-bottom: 0;
+    .wizard-step-navigation {
+        .wizard-step-navigation-step {
+            margin-right: $sc-margin-lv2;
+        }
+        .wizard-step-navigation-step-anchor {
+            background-color: #EDEAEB;
+            font-weight: normal;
+            color: #a22f34;
+            padding: 0 $sc-padding-lv3 0 $sc-padding-lv5;
+            position: relative;
+            border: 0;
+            &.wizard-step-navigation-active {
+                background: #a22f34;
+                color: white;
+                &::after {
+                    border-left-color: #a22f34;
+                }
+            }
+            &::before {
+                content: ' ';
+                height: 0;
+                position: absolute;
+                width: 0;
+                left: -1px;
+                border: 12px solid transparent;
+                border-left-color: white;
+                z-index: 9999;
+            }
+            &::after {
+                content: ' ';
+                height: 0;
+                position: absolute;
+                width: 0;
+                right: -24px;
+                border: 12px solid transparent;
+                border-left-color: #EDEAEB;
+                z-index: 10000;
+            }
+        }
+        .wizard-step-navigation-divider {
+            display: none;
+        }
+    }
+}
+
+.cart-shippingMethods-form p {
+    margin-top: $sc-margin-lv3;
+}
+
+.newsletter-alert-placeholder .global-views-message-warning {
+    margin-top: 10px;
+}
+
+// ACS - Gaston Losardo - Move Site Search between Company Logo and Header right menu and Hiding SiteSearch on mobile
+
+#site-header {
+    .site-search {
+        padding: 0 !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+.header-right-menu {
+    @media (max-width: $screen-sm-min) {
+        width: auto;
+    }
+}
+
+#content .home-page {
+    @media (max-width: $screen-sm-min) {
+        margin-top: 0;
+    }
+}
+
+.header-right-menu {
+	.header-menu-mobile-cart {
+		.header-mini-cart-menu-cart-link {
+			@media (max-width: $screen-md-min) {
+				margin-top: $sc-margin-lv1;
+				margin-bottom: 0;
+			}
+		}
+	}
+	.header-menu-search-link {
+		@media (max-width: $screen-md-min) {
+			margin-top: $sc-margin-lv2;
+		}
+	}
+}
+
+input.itemssearcher-input.typeahead.tt-input {
+	@media (max-width: $screen-md-min) {
+		max-width: 100% !important;
+	}
+}
+
+input.itemssearcher-input {
+	@media (max-width: $screen-md-min) {
+		width: calc(90% - 30px);
+	}
+}
+
+#hs-mobile {
+	.site-search-button-submit {
+		visibility: visible;
+		
+		@media (max-width: $screen-md-min) {
+			right: 1%;
+		}
+	}
+	input.itemssearcher-input.typeahead.tt-hint {
+		@media (max-width: 750px) {
+			margin-left: 0 !important;
+		}
+	}
+}
+
+.product-details-full-main-content-right {
+    .product-details-full-content-header {
+        padding-bottom: 20px;
+    }
+}
+
+.product-details-call-us{
+    font-weight: 700;
+    color: #000000;
+    font-size: 14px;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 27px;
+    font-style: normal;
+}
+
+.order-wizard-address-module-form-placeholder.no-height {
+    height: 0;
+    background: none;
+    border: none !important;
+}
+
+.product-details-call-us-container{
+    margin-top: 10px;
+}
+
+.address-edit-fields-input-help {
+    display: inline-block;
+    margin: 0;
+}
+
+.address-edit-fields-group-help-container {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    margin-bottom: 15px;
+    color: #a31629;
+}
+
+.address-edit-fields-group-help-container svg {
+    align-self: normal;
+    margin-top: 5px;
+    min-width: 16px;
+}

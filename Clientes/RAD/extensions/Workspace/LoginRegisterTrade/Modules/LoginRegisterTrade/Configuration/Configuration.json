@@ -1,0 +1,44 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "LoginRegisterTrade",
+        "title": "Trade Register",
+        "description": "Trade Register",
+        "group": "shoppingApplication"
+    },
+    "properties": {
+        "tradeCustomerTypeId": {
+            "group": "shoppingApplication",
+            "subtab": "LoginRegisterTrade",
+            "type": "string",
+            "title": "Customer Trade Type Id",
+            "description": "Customer Trade Type Id",
+            "default": "1"
+        },
+        "tradeCustomerTradeSelectText": {
+            "group": "shoppingApplication",
+            "subtab": "LoginRegisterTrade",
+            "type": "string",
+            "title": "Trade Select Text",
+            "description": "Trade Select Text",
+            "default": "I am to the Trade"
+        },
+        "tradeCustomerTradeRegisterText": {
+            "group": "shoppingApplication",
+            "subtab": "LoginRegisterTrade",
+            "type": "string",
+            "nsType": "textarea",
+            "title": "Success Registration Message",
+            "description": "Success Registration Message",
+            "default": "Thanks for registering!"
+        },
+        "tradeCustomerRetailsSelectText": {
+            "group": "shoppingApplication",
+            "subtab": "LoginRegisterTrade",
+            "type": "string",
+            "title": "Retails Select Text",
+            "description": "Retails Select Text",
+            "default": "I am a Customer"
+        }
+    }
+}

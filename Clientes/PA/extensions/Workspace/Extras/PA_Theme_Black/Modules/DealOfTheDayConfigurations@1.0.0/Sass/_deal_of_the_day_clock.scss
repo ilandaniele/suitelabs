@@ -1,0 +1,61 @@
+.deal-counter-wrap {
+    float: left;
+    padding: 0 10px 0 0px;
+    @media (max-width: $screen-md-max) {
+        float: none;
+        display: inline-block;
+        overflow: hidden;
+        padding: 0px;
+    }
+    @media (max-width: $screen-xs-max) {
+        float: left;
+    }
+    .deal-counter-item {
+        float: left;
+        background-color: $sc-color-copy;
+        margin-left: 12px;
+        height: 52px;
+        width: 52px;
+        border-radius: 26px;
+        @media (max-width: $screen-xs-max) {
+            margin-left: 8px;
+            height: 38px;
+            width: 38px;
+            border-radius: 50%;
+        }
+        span {
+            color: $pa-white;
+            display: block;
+            float: left;
+            width: 100%;
+            font-weight: 700;
+            font-size: 23px;
+            line-height: 29px;
+            clear: both;
+            min-width: 36px;
+            padding: 4px 4px 0px;
+            font-family: $sc-font-family;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            @media (max-width: $screen-xs-max) {
+                font-size: 15px;
+                line-height: 20px;
+                min-width: 30px;
+                padding: 2px 3px 0px;
+            }
+            &:last-child {
+                font-size: 12px;
+                text-transform: uppercase;
+                font-weight: 400;
+                line-height: 12px;
+                padding: 0px 4px 3px;
+                font-family: $sc-font-family;
+                @media (max-width: $screen-xs-max) {
+                    font-size: 10px;
+                    line-height: 10px;
+                    padding: 0px 3px 2px;
+                }
+            }
+        }
+    }
+}

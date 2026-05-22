@@ -1,0 +1,183 @@
+.store-credits-list-button-back {
+	@extend .button-back;
+}
+.store-credits-list-header {
+	border-top: 1px solid $sc-color-theme-border-light;
+	padding: $sc-padding-lv3 0;
+	
+	h2{
+		@media (max-width: $screen-sm-max){
+			font-size: $sc-font-size-xl;
+		}
+	}
+}
+.store-credits-list-button-back-icon {
+	@extend .button-back-icon;
+}
+.store-credits-list-empty {
+	@extend .list-empty;
+}
+
+.store-credits-list-recordviews-container{
+	@media (min-width: $screen-md-min) {
+	.recordviews-actionable-title-header,
+	.recordviews-actionable-title {
+		width: 20%;
+	}
+	.recordviews-actionable-origin-header,
+	.recordviews-actionable-origin {
+		width: 15%;
+		text-align: left;
+	}
+	.recordviews-actionable-date-header,
+	.recordviews-date {
+		width: 20%;
+		text-align: right;
+	}
+	.recordviews-actionable-currency-header,
+	.recordviews-currency {
+		width: 20%;
+		text-align: right;
+	}
+	.recordviews-actionable-status-header,
+	.recordviews-actionable-status {
+		width: 25%;
+		text-align: left;
+	}
+	.recordviews-actionable-actions-header,
+	.recordviews-actionable-actions {
+		width: 30%;
+		text-align: right;
+	}
+}
+}
+
+.store-credits-list-recordviews-actionable-table {
+	@extend .recordviews-actionable-table;
+
+	.recordviews-actionable-origin {
+		padding-bottom:0px;
+	}
+
+	@media (min-width: $screen-sm-min) {
+		.recordviews-actionable-origin {
+			padding-bottom:$sc-padding-lv3;
+		}
+	}
+}
+
+.store-credits-list-recordviews-actionable-header{
+	@extend .recordviews-actionable-header;
+}
+
+.store-credits-list-recordviews-actionable-title-header{
+	@extend .recordviews-actionable-title-header;
+}
+
+.store-credits-list-recordviews-actionable-date-header{
+	@extend .recordviews-actionable-date-header;
+}
+
+.store-credits-list-recordviews-actionable-currency-header{
+	@extend .recordviews-actionable-currency-header;
+}
+
+.store-credits-list-recordviews-actionable-status-header{
+	@extend .recordviews-actionable-status-header;
+}
+
+.store-credits-list-recordviews-actionable-actions-header{
+	@extend .recordviews-actionable-actions-header;
+}
+
+.store-credits-list-case-list-paginator{
+	@extend .case-list-paginator;
+}
+
+.store-credits-list-recordviews-actionable-origin-header {
+	@extend .recordviews-actionable-origin-header;
+}
+.store-credits-list-header-nav {
+	margin-bottom: $sc-margin-lv4;
+	position:relative;
+}
+
+.store-credits-list-header-button-group {
+	@extend .pill-button-group;
+
+	a, span {
+		display:table-cell;
+	}
+}
+
+.store-credits-list-header-button-active {
+	@extend .button-medium;
+	@extend .pill-button-active;
+}
+
+.store-credits-list-header-button {
+	@extend .button-medium;
+	@extend .pill-button;
+}
+
+.store-credits-list-header-button-open-active {
+	@extend .store-credits-list-header-button-active;
+	width: auto;
+}
+
+.store-credits-list-header-button-instore-active {
+	@extend .store-credits-list-header-button-active;
+}
+
+.store-credits-list-header-button-all-active {
+	@extend .store-credits-list-header-button-active;
+	width: auto;
+}
+
+.store-credits-list-header-button-open {
+	@extend .store-credits-list-header-button;
+}
+
+.store-credits-list-header-button-instore {
+	@extend .store-credits-list-header-button;
+	border-left:0px;
+	border-right:0px;
+}
+
+.store-credits-list-header-button-all {
+	@extend .store-credits-list-header-button;
+}
+
+
+
+.store-credits-list-empty-section {
+	padding:$sc-padding-lv8 $sc-padding-lv3 $sc-padding-lv3 $sc-padding-lv3;
+ 	text-align:center;
+}
+
+.recordviews-actionable-status .recordviews-actionable-value{
+	color: $pa-cta;
+}
+
+@media (max-width: $screen-sm-max){
+	.store-credits-list-empty-section{
+		h5{
+			font-size: $sc-font-size-m;
+		}
+	}
+	.store-credits-list-header-button-all,
+	.store-credits-list-header-button-open{
+		border-color: $sc-color-theme-background;
+	}
+	.store-credits-list-header-button-open,
+	.store-credits-list-header-button-open-active,
+	.store-credits-list-header-button-all,
+	.store-credits-list-header-button-all-active{
+		display: inline-block;
+		padding: $sc-padding-lv2 $sc-padding-lv3;
+	}
+	.store-credits-list-header-button-open-active,
+	.store-credits-list-header-button-all-active{
+		margin-left: -$sc-margin-lv1;
+	}
+}

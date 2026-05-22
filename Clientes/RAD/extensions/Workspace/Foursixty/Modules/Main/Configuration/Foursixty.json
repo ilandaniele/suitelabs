@@ -1,0 +1,20 @@
+{
+    "type": "object",
+
+    "subtab": {
+        "id": "foursixty",
+        "group": "extensions",
+        "title": "Foursixty",
+        "description": "Foursixty"
+    },
+
+    "properties": {
+        "foursixty.scriptUrl": {
+            "type": "string",
+            "group": "extensions",
+            "subtab": "foursixty",
+            "title": "URL",
+            "description": "Foursixty script URL"
+        }
+    }
+}

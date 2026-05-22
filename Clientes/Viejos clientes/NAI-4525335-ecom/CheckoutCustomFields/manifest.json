@@ -1,0 +1,62 @@
+{
+    "name": "CheckoutCustomFields",
+    "fantasyName": "Checkout Custom Fields",
+    "vendor": "NSeComm",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "version": "1.0.0",
+    "description": "Adds custom fields for checkout view",
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/CheckoutCustomFields.json"
+        ]
+    },
+    "templates": {
+        "application": {
+            "checkout": {
+                "files": [
+                    "Modules/Main/Templates/CheckoutCustomFields.tpl"
+                ]
+            }
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "checkout": "Modules/Main/Sass/_checkoutcustomfields-main.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_checkoutcustomfields-main.scss"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "checkout": "Modules/Main/JavaScript/NSeComm.CheckoutCustomFields.js"
+        },
+        "application": {
+            "checkout": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.CheckoutCustomFields.js",
+                    "Modules/Main/JavaScript/CheckoutCustomFields.View.js"
+                ]
+            }
+        }
+    },
+    "suitescript2": {
+        "files": []
+    }
+}

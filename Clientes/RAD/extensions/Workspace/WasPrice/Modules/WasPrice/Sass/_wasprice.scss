@@ -1,0 +1,21 @@
+.was-price-price {
+    text-decoration: line-through;
+    font-size: 12px;
+}
+
+p.now {
+    font-weight: 300;
+    font-size: 14px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+[data-view='Cart.QuickAddToCart'] {
+    .now {
+        display: none;
+    }
+
+    .was-price-container {
+        text-align: center;
+    }
+}

@@ -1,0 +1,415 @@
+/*
+group({
+    "id": "custom-multiadd-page",
+    "label": "MultiAddToCart Page",
+    "description": "",
+    "children": [
+        "custom-multiadd-category",
+		"custom-multiadd-subcategory",
+		"custom-multiadd-item"
+    ]
+})
+*/
+$sc-multipadd-category-font: Lato; /* editable({
+	"type": "string",
+	"label": "Category Font",
+	"description": "Used mainly for category font in multiple add page."}) */
+$sc-multipadd-category-font-weight: 400; /* editable({
+	"type": "string",
+	"label": "Category Font Weight",
+	"description": "Used mainly for category font weight in multiple add page."}) */
+$sc-multipadd-category-font-size: 32px; /* editable({
+	"type": "string",
+	"label": "Category Font Size",
+	"description": "Used mainly for category font size in multiple add page."}) */
+$sc-multipadd-category-color: #666666; /* editable({
+    "type": "color",
+    "label": "Category Text Color",
+    "description": "Used mainly for category text color in multiple add page."}) */
+$sc-multipadd-category-bgcolor: #e5f1e1; /* editable({
+    "type": "color",
+    "label": "Category Background Color",
+    "description": "Used mainly for category background color in multiple add page."}) */
+$sc-multipadd-category-icon-bgcolor: #d9d9d5; /* editable({
+	"type": "color",
+	"label": "Category Icon Color",
+	"description": "Used mainly for category icon color in multiple add page."}) */
+$sc-multipadd-category-line-height: 60px; /* editable({
+	"type": "string",
+	"label": "Category Line Height",
+	"description": "Used mainly for category line height in multiple add page."}) */
+
+$sc-multipadd-subcategory-font: Lato;/* editable({
+	"type": "string",
+	"label": "Subcategory Font",
+	"description": "Used mainly for subcategory font in multiple add page."}) */
+$sc-multipadd-subcategory-font-weight: 400; /* editable({
+	"type": "string",
+	"label": "Subcategory Font Weight",
+	"description": "Used mainly for subcategory font weight in multiple add page."}) */
+$sc-multipadd-subcategory-font-size: 24px; /* editable({
+	"type": "string",
+	"label": "Category Font Size",
+	"description": "Used mainly for subcategory font size in multiple add page."}) */
+$sc-multipadd-subcategory-color: #666666; /* editable({
+	"type": "color",
+	"label": "Subcategory Text Color",
+	"description": "Used mainly for subcategory text color in multiple add page."}) */
+$sc-multipadd-subcategory-bgcolor: #fdfdfd; /* editable({
+	"type": "color",
+	"label": "Subcategory Background Color",
+	"description": "Used mainly for subcategory background color in multiple add page."}) */
+$sc-multipadd-subcategory-line-height: 36px; /* editable({
+	"type": "string",
+	"label": "Category Line Height",
+	"description": "Used mainly for subcategory line height in multiple add page."}) */
+
+$sc-multipadd-item-font: Lato;/* editable({
+	"type": "string",
+	"label": "Item Font",
+	"description": "Used mainly for item font in multiple add page."}) */
+$sc-multipadd-item-font-weight: 400; /* editable({
+	"type": "string",
+	"label": "Subcategory Font Weight",
+	"description": "Used mainly for item font weight in multiple add page."}) */
+$sc-multipadd-item-font-size: 28px; /* editable({
+	"type": "string",
+	"label": "Item Font Size",
+	"description": "Used mainly for item font size in multiple add page."}) */
+$sc-multipadd-item-color: #666666; /* editable({
+	"type": "color",
+	"label": "Item Text Color",
+	"description": "Used mainly for item text color in multiple add page."}) */
+$sc-multipadd-item-bgcolor: #ffffff; /* editable({
+	"type": "color",
+	"label": "Item Background Color",
+	"description": "Used mainly for item background color in multiple add page."}) */
+$sc-multipadd-item-line-height: 38px; /* editable({
+	"type": "string",
+	"label": "Item Line Height",
+	"description": "Used mainly for item line height in multiple add page."}) */
+$sc-multipadd-item-min-height: 38px; /* editable({
+	"type": "string",
+	"label": "Item Line Minimum Height",
+	"description": "Used mainly for item line minimum height in multiple add page."}) */
+
+
+/*
+group({
+   "id": "custom-multiadd-category",
+   "label": "Category",
+   "description": "Common variables for Category section",
+   "children": [
+	   	"$sc-multipadd-category-font",
+		"$sc-multipadd-category-font-size",
+		"$sc-multipadd-category-font-weight",
+        "$sc-multipadd-category-color",
+        "$sc-multipadd-category-bgcolor",
+	    "$sc-multipadd-category-line-height"
+    ]
+})
+*/
+
+/*
+group({
+   "id": "custom-multiadd-subcategory",
+   "label": "Subcategory",
+   "description": "Common variables for SubCategory section",
+   "children": [
+	   	"$sc-multipadd-subcategory-font",
+		"$sc-multipadd-subcategory-font-size",
+		"$sc-multipadd-subcategory-font-weight",
+       	"$sc-multipadd-subcategory-color",
+       	"$sc-multipadd-subcategory-bgcolor",
+	   	"$sc-multipadd-subcategory-line-height"
+    ]
+})
+*/
+
+/*
+group({
+   "id": "custom-multiadd-item",
+   "label": "Item",
+   "description": "Common variables for Item section",
+   "children": [
+	   	"$sc-multipadd-item-font",
+		"$sc-multipadd-item-font-size",
+		"$sc-multipadd-item-font-weight",
+       	"$sc-multipadd-item-color",
+       	"$sc-multipadd-item-bgcolor",
+	  	"$sc-multipadd-item-line-height",
+		"$sc-multipadd-item-min-height"
+    ]
+})
+*/
+
+.multiaddtocart-main-content{
+	@extend .row;
+}
+
+/* Top Left part for CMS area */
+.multiaddtocart-main-content-left{
+	@extend .col-xs-12;
+	@extend .col-md-3;
+	min-height: 1px;
+	@media (max-width: $screen-md-min) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+/* Top Center part for Multiple Add Function */
+.multiaddtocart-main-content-center{
+	@extend .col-xs-12;
+    @extend .col-md-6;
+    min-height: 1px;
+    @media (max-width: $screen-md-min) {
+        padding: 0 $sc-padding-lv4;
+    }
+}
+
+/* Top Right part for Multiple Add Function */
+.multiaddtocart-main-content-right{
+	@extend .col-xs-12;
+    @extend .col-md-3;
+    min-height: 1px;
+    @media (max-width: $screen-md-min) {
+        padding: 0 $sc-padding-lv4;
+    }
+}
+
+.multipaddto-category{
+	color: $sc-multipadd-category-color;
+	max-height: $sc-multipadd-category-line-height;
+	font-family: $sc-multipadd-category-font;
+	font-size: $sc-multipadd-category-font-size;
+	font-weight: $sc-multipadd-category-font-weight;
+	text-align: center;
+}
+.multipaddto-category:hover,
+.multipaddto-subcategory-name:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.multipaddto-category-name-text{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+}
+
+.multipaddto-subcategory,
+.multipaddto-item {
+	clear: both;
+}
+
+.multipaddto-subcategory{
+	color: $sc-multipadd-subcategory-color;
+	height: 100%;
+	margin-left: $sc-margin-lv2;
+	margin-top: $sc-margin-lv1;
+}
+
+.multipaddto-subcategory-name{
+	background-color: $sc-multipadd-subcategory-bgcolor;
+	font-family: $sc-multipadd-subcategory-font;
+	font-size: $sc-multipadd-subcategory-font-size;
+	font-weight: $sc-multipadd-subcategory-font-weight;
+	border-bottom: 1.5px solid;
+	border-bottom-color: $sc-color-theme-border;
+}
+
+.multipaddto-items{
+	display: none;
+}
+
+.multipaddto-item{
+	width: 100%;
+	min-height: $sc-multipadd-item-line-height;
+	overflow: hidden;
+	border-width: 1px;
+    border-style: solid;
+    border-color: #DDDDDD;
+    border-radius: 2px;
+	padding: 3px;
+	margin: 3px;
+}
+
+.multipaddto-category-name{
+	width: 100%;
+	height: 100%;
+	min-height: inherit;
+	vertical-align: middle;
+    text-align: center;
+	@extend .button-link;
+}
+
+.multipaddto-item-name {
+	display: inline-block;
+	@extend .col-xs-8;
+    @extend .col-md-8;
+}
+
+
+.multipaddto-item-quantity{
+	display: inline-block;
+	@extend .col-xs-4;
+    @extend .col-md-4;
+	min-height: $sc-multipadd-item-line-height;
+	overflow: hidden;
+}
+
+.multipaddto-item-name{
+	text-align: left;
+	padding-left: $sc-padding-lv1;
+}
+.multipaddto-item-quantity{
+	text-align: right;
+	padding-right: 0;
+	padding: 0;
+    margin: 0;
+    border: 0;
+    height: 100%;
+}
+
+.multipaddto-item-name {
+	@extend .pull-left;
+}
+
+.multipaddto-item-quantity {
+	@extend .pull-right;
+}
+
+.multipaddto-plus {
+    @extend .fa;
+    @extend .fa;
+}
+
+.multipaddto-category-0,
+.multipaddto-category-3,
+.multipaddto-category-6,
+.multipaddto-category-9{
+	@media (min-width: $screen-md-min) {
+		clear: left
+    }
+}
+
+.multipaddto-addtocart-button{
+	@extend .button-primary;
+	@extend .button-large;
+	width: 90%;
+    line-height:0.5;
+ 	margin-top: $sc-margin-lv3;
+    // padding: $sc-padding-lv4 $sc-padding-lv2;
+    font-size: $sc-font-size-xxl;
+    margin-bottom: $sc-margin-lv2;
+    // margin-left: $sc-margin-lv8;
+    // margin-right: $sc-margin-lv8;
+}
+
+.multipaddto-category-view-cart-last{
+	display: none;
+}
+
+.multi-add-to-heading-line {
+    max-height: $sc-multipadd-subcategory-line-height;
+	font-family: $sc-multipadd-subcategory-font;
+	font-size: $sc-multipadd-subcategory-font-size;
+	font-weight: $sc-multipadd-subcategory-font-weight;
+	text-align: center;
+}
+
+.multi-add-to-left-row {
+    display: flex;
+    flex-direction: column;
+	margin: 10px auto;
+	width: 80%;
+	align-items: center;
+
+    .item-component {
+        align-items:center;
+        width: 100%;
+
+        .column {
+            float: left;
+        }
+
+        .left {
+            width: 47%;
+            text-align: right;
+        }
+
+        .right {
+            width: 47%;
+            text-align: left;
+        }
+        .middle {
+            width: 6%;
+            text-align: center;
+        }
+    }
+}
+
+.multi-add-to-left-items{
+	max-height: 100px;
+	overflow-y:auto;
+}
+
+.progress-bar-legend {
+  display: none;
+}
+
+.progress-bar-frame {
+
+    .progress-bar-legend {
+        margin-bottom: 17px;
+    }
+
+    .progress-bar-container {
+      width: 100%;
+      height: 1rem;
+      border-radius: 5px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s;
+      will-change: transform;
+      box-shadow: 0 0 5px #69c14c;
+      display: none;
+      margin-top: 17px;
+
+      .progress-bar {
+        height: 100%;
+        width: 0%;
+        content: "";
+        background-color: $sc-button-primary-background-color; // #69c14c;
+        top:0;
+        bottom: 0;
+        left: -100%;
+        border-radius: inherit;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        color: white;
+      }
+    }
+}
+
+.category-dropdown-down-icon{
+	@extend .pull-right;
+	@extend .fa;
+    @extend %fa-angle-down;
+	margin-right: $sc-margin-lv1;
+	color: $sc-multipadd-category-icon-bgcolor;
+}
+
+.category-dropdown-up-icon{
+	@extend .pull-right;
+	@extend .fa;
+    @extend %fa-angle-up;
+	margin-right: $sc-margin-lv1;
+	color: $sc-multipadd-category-icon-bgcolor;
+}
+
+.ezcrowns-image{
+    max-width: 70%;
+}

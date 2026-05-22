@@ -1,0 +1,95 @@
+.location-steps-container{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-height: 320px;
+  overflow-x: auto;
+  padding: 0 15px;
+  .adp-placemark,
+  .last-step{
+    background: #eee;
+    border: 1px solid silver;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px 10px 0px;
+  }
+  .step-line{
+    border-bottom: 1px solid #cdcdcd;
+    padding: 3px 0px;
+  }
+  .step-distance{
+    display: inline-block;
+    float: right;
+    margin-right: 10px;
+    text-align: right;
+    width: 90px;
+  }
+  .step-number{
+    display: inline-block;
+    float: left;
+    width: 22px;
+  }
+  .step-intructions{
+    display: inline-block;
+    width: calc(100% - 160px);
+    padding-left: 15px;
+  }
+  .step-icon{
+    width: 18px;
+    height: 16px;
+    float: left;
+    display: inline-block;
+    margin-right: 5px;
+    &.with-icon{
+      background: url("https://maps.gstatic.com/mapfiles/api-3/images/maneuvers.png");
+    }
+    &.turn-right,
+    &.keep-right{
+      background-position: 0 -483px;
+    }
+    &.turn-left,
+    &.keep-left{
+      background-position: 0 -413px;
+    }
+    &.ramp-right{
+      background-position: 0 -429px;
+    }
+    &.ramp-left{
+      background-position: 0 -598px;
+    }
+    &.fork-left{
+      background-position: 0 -550px;
+    }
+    &.fork-right{
+      background-position: 0 -499px;
+    }
+    &.turn-slight-right{
+      background-position: 0 -51px;
+    }
+    &.turn-slight-left{
+      background-position: 0 -378px;
+    }
+    &.merge{
+      background-position: 0 -143px;
+    }
+    &.straight{
+      background-position: 0 -534px;
+    }
+    &.roundabout-right{
+      background-position: 0 -232px;
+    }
+    &.roundabout-left{
+      background-position: 0 -197px;
+    }
+    &.ferry{
+      background-position: 0 -614px;
+    }
+    &.turn-sharp-right{
+      background-position: 0 -582px;
+    }
+    &.turn-sharp-left{
+      background-position: 0 0;
+    }
+  }
+}

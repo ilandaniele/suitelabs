@@ -1,0 +1,21 @@
+{
+	"name": "RemoveDefaultShipMethod",
+	"fantasyName": "Remove Default Ship Method",
+	"vendor": "ACS",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"version": "1.0.0",
+	"description": "Remove Default Ship Method",
+	"ssp-libraries": {
+		"entry_point": "Modules/RemoveDefaulShipMethod/SuiteScript/RemoveDefaulShipMethod.js",
+		"files": [
+			"Modules/RemoveDefaulShipMethod/SuiteScript/RemoveDefaulShipMethod.js"
+		]
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/ACS/RemoveDefaultShipMethod@1.0.0",
+	"activation_id": "11",
+	"extension_id": "5601"
+}

@@ -1,0 +1,85 @@
+{
+    "name": "SearchRecommendations",
+    "fantasyName": "Search Recommendations",
+    "vendor": "SuiteLabs",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "This extension adds a new SMT area in the search section to allow the configuration of new search recommendations per page",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_search-recommendations.scss",
+            "myaccount": "Modules/Main/Sass/_search-recommendations.scss",
+            "checkout": "Modules/Main/Sass/_search-recommendations.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_search-recommendations.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/search_recommendations.tpl"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Main/Templates/search_recommendations.tpl"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/Templates/search_recommendations.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/SuiteLabs.SearchRecommendations.Main.js",
+            "myaccount": "Modules/Main/JavaScript/SuiteLabs.SearchRecommendations.Main.js",
+            "checkout": "Modules/Main/JavaScript/SuiteLabs.SearchRecommendations.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.SearchRecommendations.Main.js",
+                    "Modules/Main/JavaScript/SearchRecommendations.View.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.SearchRecommendations.Main.js",
+                    "Modules/Main/JavaScript/SearchRecommendations.View.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.SearchRecommendations.Main.js",
+                    "Modules/Main/JavaScript/SearchRecommendations.View.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\SearchRecommendations",
+    "suitescript2": {
+        "files": []
+    }
+}

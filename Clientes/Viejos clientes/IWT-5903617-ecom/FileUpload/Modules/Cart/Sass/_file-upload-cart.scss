@@ -1,0 +1,86 @@
+.cart-lines-upload-file-main {
+    margin: $sc-margin-lv4 0 $sc-margin-lv2;
+    font-size: 13px;
+    p {
+        font-weight: $sc-font-weight-bold;
+        line-height: normal;
+        margin-bottom: 5px;
+        font-size: 13px;
+
+        &.cart-lines-upload-file-info {
+            margin-bottom: $sc-margin-lv4;
+            span {
+                font-size: 13px;
+            }
+            .cart-lines-upload-file-info-light {
+                font-weight: normal;
+                color: $sc-neutral-shade;
+            }
+        }
+    }
+
+    .cart-lines-image-details{
+        a {
+            color: $sc-color-primary;
+            line-height: normal;
+            font-size: 13px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .cart-lines-special-instructions {
+        color: $sc-neutral-shade;
+    }
+}
+
+.transaction-line-views-selected-option[name="File ID"],
+.transaction-line-views-selected-option[name="File"] {
+    display: none !important;
+}
+
+.cart-lines-table-details {
+    .product-line-sku-container {
+        display: block;
+    }
+    .cart-item-summary-item-list-actionable-container-qty {
+        display: block;
+        .cart-item-summary-item-list-actionable-label-qty {
+            margin-right: $sc-margin-lv2;
+        }
+    }
+    .cart-item-summary-item-list-actionable-amount {
+        display: inline-flex;
+        .cart-item-summary-item-list-actionable-amount-label {
+            margin-right: $sc-margin-lv2;
+        }
+    }
+}
+
+.cart-lines-options {
+    .transaction-line-views-selected-option {
+        display: block;
+        .transaction-line-views-selected-option-label {
+            font-weight: $sc-font-weight-bold;
+            font-size: 13px;
+            color: $sc-color-secondary;
+            display: block;
+        }
+        .transaction-line-views-selected-option-value {
+            font-size: 13px;
+        }
+    }
+}
+
+.cart-lines-summary {
+    .quantity-pricing-expander-head {
+        margin-top: $sc-margin-lv2;
+    }
+    .quantity-pricing {
+        margin-top: 0;
+    }
+    @media(min-width: $screen-xs-min) and (max-width: $screen-xs-max){
+        width: 65%;
+    }
+}

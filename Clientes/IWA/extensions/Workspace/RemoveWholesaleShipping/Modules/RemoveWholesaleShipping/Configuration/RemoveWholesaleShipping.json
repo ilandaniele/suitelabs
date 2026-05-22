@@ -1,0 +1,19 @@
+{
+    "type": "object",
+     "subtab": {
+        "id": "removeWholesaleShipping",
+        "title": "Remove Wholesale Shipping",
+        "description": "Remove Wholesale Shipping",
+        "group": "extensions"
+    },
+    "properties": {
+        "extensions.removeWholesaleShipping.wholeSalesShippingIds": {
+            "group": "extensions",
+            "subtab": "removeWholesaleShipping",
+            "type": "string",
+            "title": "WholeSales Shipping Ids",
+            "description": "WholeSales Shipping Ids",
+            "default": ""
+        }
+    }
+}

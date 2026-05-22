@@ -1,0 +1,93 @@
+/*
+Author: Mat Burnett / Ilan Daniele
+Date: 12/2/2022
+Customer: CalTech
+CO / BRD Reference: EWR Fee Add to Items
+Deployment: File Cabinet > RAPOS > File System > System > Startup
+Description: Checks the field "custitem_ewr_fee_item" and if exists adds the EWR fee item. If the original EWR item is VOIDED, it voides the additional EWR fee too
+Confluence Reference: 
+Revisions:
+Changed from Line Item Added Folder to MessageHandler
+*/
+
+
+class ewrFeeCheck(NetSuite.Retail.POS.Messaging.MessagerClass):
+   [NetSuite.Retail.POS.Messaging.MessageHandlerMethod("Transaction.LineItem.Added")]
+   def checkEWRFee(message as string, param as object):
+      try: 
+         item = MC.GetProperty("Transaction.LineItem.Selected")
+         lineAssociated = item.AI_LN_ITM //sets whatever line item we have right now, to line number for it, we need to set that the ewr line that we created
+         if item.ExtendedProperties.ContainsKey("custitem_ewr_fee_item"):
+            ewrFee = item.ExtendedProperties["custitem_ewr_fee_item"]
+            if not string.IsNullOrEmpty(ewrFee):
+               print "Add ewrFee Item"
+               qty = item.Quantity
+               //Add item
+               itemAdd = "NIS"+ewrFee
+               print "itemAdd"
+               
+               if item.ToString().Trim().Equals("NetSuite.Retail.POS.Business.SaleReturnLineItem"):
+                   using item = NetSuite.Retail.POS.Business.SaleReturn("ID:"+itemAdd):
+                      item.Run()
+                   if qty.Equals("1.00"):
+                      print "Do Nothing"
+                   else:
+                      //Change the price
+                      item = MC.GetProperty("Transaction.LineItem.Selected")
+                      itemPrice = item.MO_PRC_ACT
+                      newPrice = itemPrice * qty
+                      item.Changing()
+                      item.ActualUnitPrice = item.RegularUnitPrice = newPrice
+                      item.Update()
+                      item.ApplyChanges()
+                      item.ExtendedProperties.Add("lineAssociated",lineAssociated.ToString()) //Set a custom property on the line so that this item relates to the original line item
+
+               elif item.ToString().Trim().Equals("NetSuite.Retail.POS.Business.ReturnSaleLineItem"): // adds case to check for return sale
+                  using ditem = NetSuite.Retail.POS.Business.ReturnSaleNonValidatedLine("ID:${itemAdd} noreason nocustomer"):
+                      ditem.Run()
+                  if qty.Equals("1.00"):
+                      print "Do Nothing"
+                  else:
+                      //Change the price
+                      item = MC.GetProperty("Transaction.LineItem.Selected")
+                      itemPrice = item.MO_PRC_ACT
+                      newPrice = itemPrice * qty //check price, needs to be negative
+                      item.Changing()
+                      item.ActualUnitPrice = item.RegularUnitPrice = newPrice
+                      item.Update()
+                      item.ApplyChanges()
+                      item.ExtendedProperties.Add("lineAssociated",lineAssociated.ToString()) //Set a custom property on the line so that this item relates to the original line item
+               else:
+                  return //if it's a comment it returns, it can be a comment that's why we add this line here
+            else:
+               print "No EWR Fee"
+      except:
+         return
+   
+   
+   
+   [NetSuite.Retail.POS.Messaging.MessageHandlerMethod("Transaction.LineItem.Changed")]
+   def checkEWRFeeVoid(message as string, param as object):
+      //MC.Alert("Check Changed")
+      item = param
+      if not item.Voided:
+         //Get a list of the items on this transaction as objects
+         lines = MC.GetProperty("Transaction.Item.List")
+         //Check if the key "lineAssociated" exists on the item, if so see if it matches what was voided, if it does void that too
+         for x in lines:
+            if x.ExtendedProperties.ContainsKey("lineAssociated"):
+               if x.GetExtendedProperty("lineAssociated").Equals(x.AI_LN_ITM.ToString()):
+                  x.ProcessVoid()
+               else:
+                  MC.Alert("No Match")
+
+   
+   
+// Instantiate and "Save" the handler. This maintains a reference.
+existingHandler = MC.GetProperty("ewrFeeCheck")
+if existingHandler != null:
+   MC.Unregister(existingHandler)
+MC.SetProperty("ewrFeeCheck", ewrFeeCheck())
+  
+// Tell the Object View class to refresh so it recognizes the new Extension View
+NetSuite.Retail.POS.Tools.UI.ObjectView.ResetTypeInfo()

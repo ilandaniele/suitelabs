@@ -1,0 +1,49 @@
+{
+    "name": "ResponsiveMerchZones",
+    "fantasyName": "Responsive Merch Zones",
+    "vendor": "SuiteLabs",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "This extension modifies the native behavior of merch zones to make them responsive",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_responsive-merch-zones.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_responsive-merch-zones.scss"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/SuiteLabs.ResponsiveMerchZones.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.ResponsiveMerchZones.Main.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\ResponsiveMerchZones",
+    "suitescript2": {
+        "files": []
+    }
+}

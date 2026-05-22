@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "properties": {
+        "ItemOptions.mobileTemplates": {
+            "group": "catalog",
+            "subtab": "itemoptions",
+            "type": "array",
+            "title": "Item options mobile templates",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "cartOptionId": {
+                        "type": "string",
+                        "title": "Cart Option Id",
+                        "description": "The id of an option in the cart (!required, is the primary key for the mapping)",
+                        "mandatory": true
+                    },
+                    "template": {
+                        "type": "string",
+                        "title": "Template",
+                        "description": "Template"
+                    }
+                }
+            }
+        }
+    }
+}

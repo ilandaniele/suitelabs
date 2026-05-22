@@ -1,0 +1,81 @@
+{
+    "name": "CartRestriction",
+    "fantasyName": "Cart Restriction",
+    "vendor": "NSeComm",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Sets a control to not allow to add equipment product to the cart if we already have marketing products on the cart and viceversa",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/CartRestriction.json"
+        ]
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_cart-restriction-pop-up.scss",
+            "myaccount": "Modules/Main/Sass/_cart-restriction-pop-up.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_cart-restriction-pop-up.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/cart_restriction_pop_up.tpl"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Main/Templates/cart_restriction_pop_up.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/NSeComm.CartRestriction.js",
+            "myaccount": "Modules/Main/JavaScript/NSeComm.CartRestriction.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.CartRestriction.js",
+                    "Modules/Main/JavaScript/CartRestriction.Model.js",
+                    "Modules/Main/JavaScript/CartRestrictionPopUp.View.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.CartRestriction.js",
+                    "Modules/Main/JavaScript/CartRestriction.Model.js",
+                    "Modules/Main/JavaScript/CartRestrictionPopUp.View.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\CartRestriction",
+    "suitescript2": {
+        "files": [
+            "Modules/Main/SuiteScript2/CartRestriction.Model.js"
+        ]
+    }
+}

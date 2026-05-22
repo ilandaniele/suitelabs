@@ -1,0 +1,57 @@
+{
+    "name": "InventoryLocationQuantitiesTable",
+    "fantasyName": "Inventory Location Quantities Table",
+    "vendor": "NSeComm",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "version": "1.0.1",
+    "description": "Adds a quantity table for the specific item selected from the PDP with its locations",
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/inventory_location_quantities_table.tpl"
+                ]
+            }
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_inventory-location-quantities-table.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_inventory-location-quantities-table.scss"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/InventoryLocationQuantitiesTable.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/InventoryLocationQuantitiesTable.js",
+                    "Modules/Main/JavaScript/InventoryLocationQuantitiesTable.View.js"
+                ]
+            }
+        }
+    },
+    "suitescript2": {
+        "files": []
+    }
+}

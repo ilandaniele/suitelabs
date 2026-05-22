@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "subtab": {
+    "id": "trade",
+    "title": "Trade",
+    "description": "Trade",
+    "group": "extensions"
+  },
+  "properties": {
+    "trade.freightShippingMethod": {
+      "group": "extensions",
+      "subtab": "trade",
+      "type": "string",
+      "title": "Freight Shipping Method",
+      "description": "Freight Shipping Method",
+      "default": "5202"
+    },
+    "trade.freightRetailShippingMethod": {
+      "group": "extensions",
+      "subtab": "trade",
+      "type": "string",
+      "title": "Freight Retail Shipping Method",
+      "description": "Freight Retail Shipping Method",
+      "default": "20716"
+    }
+  }
+}

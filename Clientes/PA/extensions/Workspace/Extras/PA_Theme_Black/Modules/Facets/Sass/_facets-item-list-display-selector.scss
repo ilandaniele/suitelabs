@@ -1,0 +1,54 @@
+.facets-item-list-display-selector{
+	@extend .icon-button;
+	@extend .icon-button-controls;
+	&.active {
+		border: 1px solid $custom-black-color;
+		i {
+			color: $custom-black-color;
+			@media (min-width: $screen-md-min ){
+				width: 42px;
+				height: 42px;
+				line-height: 42px;
+			}
+		}
+	}
+	@media (min-width: $screen-md-min ){
+		float: left;
+		margin-left: 5px;
+		width: 42px;
+		height: 42px;
+	}
+}
+
+//hide active on mobile
+.facets-item-list-display-selector.active{
+	display:none;
+
+	@media (min-width: $screen-sm-min){
+		display: inline-block;
+	}
+}
+
+//dispaly the grid icon
+.facets-item-list-display-selector-grid{
+	display:none;
+
+	@media (min-width: $screen-sm-min ){
+		display: inline-block;
+	}
+}
+// .PA_Theme_Yellow{
+// 	.facets-item-list-display-selector{
+// 		border: 1px solid #000;
+// 		i{
+// 			color: #000;
+// 		}		
+// 		&.active{
+// 			i{
+// 				color: $pa-accent;
+// 			}	
+// 			border:1px solid $pa-accent;		
+// 		}
+// 	}
+// }
+  

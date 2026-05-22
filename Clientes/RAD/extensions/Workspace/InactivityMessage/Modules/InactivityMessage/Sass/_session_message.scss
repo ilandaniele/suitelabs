@@ -1,0 +1,12 @@
+.modal-body-session-message{
+    border-top: 1px solid #efefef;
+    padding: 15px 0;
+}
+
+.session-message-logout-button{
+    margin-right: 2%;
+
+    @media (max-width: 767px) {
+        margin-bottom: 15px;
+    }
+}

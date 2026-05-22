@@ -1,0 +1,61 @@
+{
+	"name": "StickyHeader",
+	"fantasyName": "Sticky Header",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "2.0.0",
+	"description": "Sticky Header",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/StickyHeader/Sass/_stickyheader.scss",
+			"myaccount": "Modules/StickyHeader/Sass/_stickyheader.scss",
+			"checkout": "Modules/StickyHeader/Sass/_stickyheader.scss"
+		},
+		"files": [
+			"Modules/StickyHeader/Sass/_stickyheader.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/StickyHeader/JavaScript/AwaLabs.StickyHeader.js",
+			"myaccount": "Modules/StickyHeader/JavaScript/AwaLabs.StickyHeader.js",
+			"checkout": "Modules/StickyHeader/JavaScript/AwaLabs.StickyHeader.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/StickyHeader/JavaScript/AwaLabs.StickyHeader.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/StickyHeader/JavaScript/AwaLabs.StickyHeader.js"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/StickyHeader/JavaScript/AwaLabs.StickyHeader.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/StickyHeader@2.0.0",
+	"activation_id": "11",
+	"extension_id": "10759"
+}

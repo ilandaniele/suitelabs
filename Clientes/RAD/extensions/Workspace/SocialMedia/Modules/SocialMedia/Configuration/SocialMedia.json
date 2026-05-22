@@ -1,0 +1,68 @@
+{
+  "type": "object",
+  "subtab": {
+    "id": "socialmedia",
+    "title": "Social Media",
+    "description": "Social Media Url",
+    "docRef": "",
+    "group": "integrations"
+  },
+  "properties": {
+    "socialmedia.facebookUrl": {
+      "group": "integrations",
+      "subtab": "socialmedia",
+      "type": "string",
+      "title": "Facebook Url",
+      "description": "Enter your Facebook Url",
+      "default": "https://www.facebook.com/reginaandrewdetroit"
+    },
+    "socialmedia.linkedinUrl": {
+      "group": "integrations",
+      "subtab": "socialmedia",
+      "type": "string",
+      "title": "Linkedin Url",
+      "description": "Enter your Linkedin Url",
+      "default": ""
+    },
+    "socialmedia.youtubeUrl": {
+      "group": "integrations",
+      "subtab": "socialmedia",
+      "type": "string",
+      "title": "Youtube Url",
+      "description": "Enter your Youtube Url",
+      "default": ""
+    },
+    "socialmedia.twitterUrl": {
+      "group": "integrations",
+      "subtab": "socialmedia",
+      "type": "string",
+      "title": "Twitter Url",
+      "description": "Enter your Twitter Url",
+      "default": "https://twitter.com/ReginaAndrewDet"
+    },
+    "socialmedia.instagramUrl": {
+      "group": "integrations",
+      "subtab": "socialmedia",
+      "type": "string",
+      "title": "Instagram Url",
+      "description": "Enter your Instagram Url",
+      "default": "https://www.instagram.com/reginaandrewdetroit/"
+    },
+    "socialmedia.googleUrl": {
+      "group": "integrations",
+      "subtab": "socialmedia",
+      "type": "string",
+      "title": "Google Url",
+      "description": "Enter your Google Url",
+      "default": ""
+    },
+    "socialmedia.pinterestUrl": {
+      "group": "integrations",
+      "subtab": "socialmedia",
+      "type": "string",
+      "title": "Pinterest Url",
+      "description": "Enter your Pinterest Url",
+      "default": "https://www.pinterest.com/reginaandrewdetroit/"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "name": "ns-async",
+    "version": "1.0.0",
+    "description": "Run functions asynchronously",
+    "main": "async.js",
+    "scripts": {
+        "test": "jest --config ns-async.jest.config.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

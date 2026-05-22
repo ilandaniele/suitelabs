@@ -1,0 +1,201 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "enhancedSearch",
+        "title": "Trending Products and Categories",
+        "description": "Section with the trending products and categories",
+        "group": "extensions"
+    },
+    "properties": {
+        "enhancedSearch.trendingProductsLabel": {
+            "group": "extensions",
+            "subtab": "enhancedSearch",
+            "type": "string",
+            "title": "Trending Products Label Title",
+            "description": "Title for trending products label on the search bar",
+            "default": "Trending Products"
+        },
+        "enhancedSearch.maxProducts": {
+            "group": "extensions",
+            "subtab": "enhancedSearch",
+            "type": "string",
+            "title": "Maximum number of products to show",
+            "description": "Maximum number of products to show on the search bar",
+            "default": "7"
+        },
+        "enhancedSearch.trendingCategoriesLabel": {
+            "group": "extensions",
+            "subtab": "enhancedSearch",
+            "type": "string",
+            "title": "Trending Categories Label Title",
+            "description": "Title for trending categories label on the search bar",
+            "default": "Trending Categories"
+        },
+        "enhancedSearch.maxCategories": {
+            "group": "extensions",
+            "subtab": "enhancedSearch",
+            "type": "string",
+            "title": "Maximum number of categories to show",
+            "description": "Maximum number of categories to show on the search bar",
+            "default": "7"
+        },
+        "enhancedSearch.savedSearch": {
+            "group": "extensions",
+            "subtab": "enhancedSearch",
+            "type": "string",
+            "nsType": "textarea",
+            "title": "Tawk Live Chatbot Integration URL",
+            "description": "Display chat application in the webstore. Initially works on Tawk chatbot application.",
+            "default": "7"
+        },
+        "enhancedSearch.products": {
+            "group": "extensions",
+            "subtab": "enhancedSearch",
+            "type": "array",
+            "title": "Trending Products",
+            "description": "Array of Trending Products to show on the search bar",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "title": "Product ID",
+                        "description": "The id of the product that is going to be displayed on the search bar.",
+                        "mandatory": true
+                    },
+                    "displayName": {
+                        "type": "string",
+                        "title": "Product name",
+                        "description": "The name of the product that is going to be displayed on the search bar.",
+                        "translate": true
+                    },
+                    "sku": {
+                        "type": "string",
+                        "title": "Product SKU",
+                        "description": "The SKU of the product that is going to be displayed on the search bar.",
+                        "translate": true
+
+                    },
+                    "manufacturer": {
+                        "type": "string",
+                        "title": "Product Manufacturer",
+                        "description": "The Manufacturer of the product that is going to be displayed on the search bar.",
+                        "translate": true
+
+                    },
+                    "url": {
+                        "type": "string",
+                        "title": "Product URL",
+                        "description": "The URL of the product that is going to be displayed on the search bar."
+                    }
+                }
+            },
+
+            "default":[
+                {
+                    "id": "1",
+                    "displayName": "LaRue Tactical MBT-2S AR-15 Trigger - Straight Bow",
+                    "manufacturer": "",
+                    "sku": "",
+                    "url": "/larue-tactical-mbt-2s-straight"
+                },
+                {
+                    "id": "2",
+                    "displayName": "LaRue Tactical MBT-2S AR-15 Trigger - Curved",
+                    "manufacturer": "",
+                    "sku": "",
+                    "url": "/larue-tactical-mbt-2s-curved"
+                },
+                {
+                    "id": "3",
+                    "displayName": "Primary Arms Compact PLXC 1-8x24 FFP Rifle Scope",
+                    "manufacturer": "",
+                    "sku": "",
+                    "url": "/primary-arms-plxc-1-8x24"
+                }
+            ]
+        },
+        "enhancedSearch.categories": {
+            "group": "extensions",
+            "subtab": "enhancedSearch",
+            "type": "array",
+            "title": "Trending Categories",
+            "description": "Array of Trending Categories to show on the search bar",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "title": "Category ID",
+                        "description": "The id of the category that is going to be displayed on the search bar.",
+                        "mandatory": true
+                    },
+                    "displayName": {
+                        "type": "string",
+                        "title": "Category name",
+                        "description": "The name of the category that is going to be displayed on the search bar.",
+                        "translate": true
+                    },
+                    "url": {
+                        "type": "string",
+                        "title": "Category URL",
+                        "description": "The URL of the category that is going to be displayed on the search bar."
+                    }
+                }
+            },
+
+            "default":[
+                {
+                    "id": "1",
+                    "displayName": "Holosun Red dot",
+                    "url": "/holosun-red-dot"
+                },
+                {
+                    "id": "2",
+                    "displayName": "Geissele Automatics",
+                    "url": "/geissele-automatics"
+                },
+                {
+                    "id": "3",
+                    "displayName": "AR-15 Bolt Carriers",
+                    "url": "/ar15-bolt-carriers"
+                },
+                {
+                    "id": "4",
+                    "displayName": "Geissele Triggers",
+                    "url": "/geissele-triggers"
+                },
+                {
+                    "id": "5",
+                    "displayName": "AR-15 Charging Handles",
+                    "url": "/ar15-charging-handles"
+                },
+                {
+                    "id": "6",
+                    "displayName": "EOTech",
+                    "url": "/eotech"
+                },
+                {
+                    "id": "7",
+                    "displayName": "Bravo Company Manufacturing - Upper Receivers",
+                    "url": "/bcm-upper-receivers"
+                },
+                {
+                    "id": "8",
+                    "displayName": "Surefire Weapon Lights & Switches",
+                    "url": "/surefire-lights"
+                },
+                {
+                    "id": "9",
+                    "displayName": "Upper Receivers",
+                    "url": "/upper-receivers"
+                },
+                {
+                    "id": "10",
+                    "displayName": "AR-15 Upper Receivers",
+                    "url": "/ar15-upper-receivers"
+                }
+            ]
+        }
+    }
+}

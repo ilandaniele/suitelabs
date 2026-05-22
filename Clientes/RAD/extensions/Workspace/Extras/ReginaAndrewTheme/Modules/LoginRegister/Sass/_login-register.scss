@@ -1,0 +1,238 @@
+.login-register-header{
+	margin-bottom: $sc-margin-lv4;
+}
+.login-register{
+	text-align: center;
+	h1{
+		margin-top: 10px;
+		&.login-register-login-title,
+		&.login-register-title-register{
+			font-size:26px;
+			text-transform: uppercase;
+		}
+	}
+	h2{
+		color: $sc-color-secondary;
+		margin-top: 14px;
+		text-transform: uppercase;
+	}
+	@media (min-width: $screen-md) {
+		margin-top: 50px;
+	}
+}
+.login-register-title-register,
+.login-register-login-title {
+	color: $sc-color-tertiary;
+}
+.login-register-body{
+	@extend .row;
+	@media (min-width: $screen-sm) {
+		margin-top: 60px;
+		margin-bottom: 60px;
+	}
+}
+
+.login-register-body-colored{
+	@extend .login-register-body;
+	background-color: $sc-color-theme-background;
+
+	padding: $sc-padding-lv8 $sc-padding-lv1;
+
+	@media (min-width: $screen-md-min) {
+		padding: $sc-padding-lv8 $sc-padding-lv5;
+	}
+}
+.login-register-column {
+	@extend .col-xs-12;
+	@extend .col-sm-6;
+}
+.login-register-wrapper-column-login,
+.login-register-wrapper-column-register{
+	@extend .col-xs-12;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.login-register-wrapper-column-login{
+	padding-right: $sc-padding-lv2;
+}
+.login-register-wrapper-column-register {
+	padding-left: $sc-padding-lv2;
+}
+.login-register-wrapper-login,
+.login-register-wrapper-register{
+	@extend .box-column;
+	@include box-shadow(3px 3px 10px rgba(0,0,0,0.2));
+	padding-top: $sc-padding-lv7;
+	@media (min-width: $screen-sm) {
+		margin-bottom:0;
+		padding: $sc-padding-lv7 30px $sc-padding-lv3;
+	}
+	@media (min-width: $screen-sm-min) {
+		min-height: 460px;
+	}
+}
+
+.login-register-fields-wrapper {
+	@media (min-width: $screen-sm-min) {
+		min-height: 190px;
+	}
+}
+.login-register-login-form,
+.customer-type-dropdown-container,
+.login-register-forgot-password-form{
+	// max-width: 300px;
+	// margin: 0 auto;
+}
+.customer-type-dropdown-container{
+	.dropdown-menu{
+		margin: 0;
+		padding:0;
+		width: 100%;
+		border: none;
+		top:42px;
+		a.dropdown-item{
+			padding: 10px;
+			display: block;
+			color: #000;
+			font-size: 14px;
+			border: 1px solid #f1ede7;
+			line-height: normal;
+			width: 100%;
+			font-style: italic;
+			margin-bottom: 0;
+			text-align: center;
+			&:hover{
+				background: $sc-color-secondary;
+				color: white;
+			}
+		}
+	}
+	.login-register-register-form-controls-group{
+		margin-top: 20px;
+		.login-register-register-form-submit{
+			//width: 100%;
+			font-size: 14px;
+			min-width: 230px;
+
+		}
+		@media (min-width: $screen-sm) {
+			//margin-top: 95px;
+		}
+	}
+	i{
+		position: absolute;
+		top: 18px;
+		right: 12px;
+		pointer-events: none;
+			@extend .fa;
+			@extend %fa-angle-down;
+	}
+}
+.login-register-register-form-submit {
+	min-width: 270px;
+	padding-top: $sc-padding-lv4;
+	padding-bottom: $sc-padding-lv4;
+	@media (min-width: $screen-sm-min) {
+		font-size: 16px;
+		letter-spacing: 1px;
+	}
+}
+input.login-register-login-form-input,
+input.login-register-login-form-input{
+  &::placeholder{
+	  color: black;
+	  text-align: center;
+	  font-style: italic;
+  }
+}
+.login-register-login-form-input {
+	padding-top: $sc-padding-lv3;
+	padding-bottom: $sc-padding-lv3;
+}
+.customer-type{
+	padding: 10px;
+	color: #000;
+	font-size: 14px;
+	border: 1px solid #f1ede7;
+	line-height: normal;
+	width: 100%;
+	font-style: italic;
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+	background: white;
+	transition: all 0.2s;
+	&:hover{
+		border:1px solid $sc-color-secondary;
+	}
+	i{
+		@extend .fa;
+		@extend %fa-angle-down;
+	}
+}
+.login-register-forgot-password-form-input{
+	padding: 10px;
+	display: block;
+	color: #000;
+	font-size: 14px;
+	border: 1px solid #f1ede7;
+	line-height: normal;
+	width: 100%;
+	margin-bottom: 10px;
+	font-style: italic;
+	text-align: center;
+}
+.mean-tooltip{
+	font-style: italic;
+	color: $sc-color-secondary;
+}
+.login-register-login-description{
+	margin-top: $sc-margin-lv4;
+	margin-bottom: $sc-margin-lv3;
+	min-height: 44px;
+	position: relative;
+	span.required-text{
+		position: absolute;
+		left: 0;
+		bottom: -30px;
+		font-style: italic;
+		font-size: 13px;
+	}
+}
+.login-register-login-description a {
+	color: $sc-color-primary;
+	i{
+		@extend .fa;
+		@extend %fa-question-circle;
+		font-size: 18px;
+	}
+}
+.login-register-login-description .tooltip div{
+	&:last-of-type{
+		background: white !important;
+		color: $sc-color-copy-dark !important;
+		border: 2px solid $sc-color-secondary !important;
+		min-width: 320px !important;
+		text-align:center !important;
+		padding: 8px !important;
+	}
+}
+.tooltip-arrow{
+	border-top-color:$sc-color-secondary !important;
+}
+.login-register-wrapper-register .customer-type-dropdown-container {
+	margin-top: $sc-margin-lv7;
+}
+.login-register-wrapper-register .customer-type-dropdown-container .customer-type {
+	padding-top: $sc-padding-lv3;
+	padding-bottom: $sc-padding-lv3;
+	justify-content: center;
+}
+.loginregister-bottom-link {
+	text-align: center;
+	text-decoration: underline;
+	font-size: $sc-font-size-xxl;
+	margin-top: $sc-margin-lv8;
+	margin-bottom: $sc-margin-lv8 * 2;
+}

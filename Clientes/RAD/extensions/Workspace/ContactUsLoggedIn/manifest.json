@@ -1,0 +1,60 @@
+{
+	"name": "ContactUsLoggedIn",
+	"fantasyName": "Contact Us Logged In",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "SuiteLabs v2.1.0 refers to the SCA upgrade to 23.2, it also includes some refactoring",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"templates": {
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/ContactUsLoggedIn/Templates/contact_us_logged_in_page.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/ContactUsLoggedIn/Sass/_contact-us-logged-in.scss"
+		},
+		"files": [
+			"Modules/ContactUsLoggedIn/Sass/_contact-us-logged-in.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/ContactUsLoggedIn/JavaScript/AwaLabs.ContactUsLoggedIn.Shopping.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/ContactUsLoggedIn/JavaScript/AwaLabs.ContactUsLoggedIn.Shopping.js",
+					"Modules/ContactUsLoggedIn/JavaScript/ContactUsLoggedIn.Page.View.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/ContactUsLoggedIn@2.1.0",
+	"activation_id": "11",
+	"extension_id": "16902"
+}

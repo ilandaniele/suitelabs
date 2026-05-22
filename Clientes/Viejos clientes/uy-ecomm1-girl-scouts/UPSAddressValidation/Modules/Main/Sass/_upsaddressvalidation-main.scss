@@ -1,0 +1,26 @@
+.ups-valid-addresses {
+    .entered-address {
+        margin-bottom: 10px;
+    }
+
+    .mismatch-message {
+        margin-bottom: 20px;
+    }
+
+    [data-dismiss="modal"] {
+        color: $gs-color-tree-green;
+
+        &:hover {
+            color: $gs-color-tree-green-hover;
+        }
+    }
+}
+
+.ups-valid-addresses-options-table {
+    @extend .recordviews-table;
+    border: 1px solid #e0e0e0;
+}
+
+.ups-valid-addresses-options-table .recordviews-title {
+    border-bottom: 1px solid #e0e0e0;
+}

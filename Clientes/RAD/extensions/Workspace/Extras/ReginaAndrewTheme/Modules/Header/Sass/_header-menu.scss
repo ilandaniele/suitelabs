@@ -1,0 +1,296 @@
+
+///////////////////////////////////////////////////////////////
+//header search
+
+.header-menu-search {
+	float: right;
+}
+
+.header-menu-searchmobile-link {
+	margin-right: 0;
+	cursor: pointer;
+	background: none;
+
+	@media (min-width: $screen-sm-min) {
+		margin-right: $sc-margin-lv2;
+	}
+}
+
+.header-menu-searchmobile-link.active {
+	background: $sc-color-theme-background;
+}
+
+///////////////////////////////////////////////////////////////
+//header maxi menu
+
+.header-menu-level1 {
+	position: relative;
+}
+
+.header-menu-level1 > li {
+	display: inline-block;
+	float: left;
+	&:hover{
+		.header-menu-level-container{
+			display: block;
+		}
+	}
+	.header-menu-level-container > li {
+		@media (min-width: $screen-md-min) and (max-width: $screen-lg-min) {
+			width: 100%;
+		}
+	}
+}
+
+.header-menu-level1-anchor {
+	display: block;
+	position: relative;
+
+	padding: $sc-padding-lv2;
+	margin-right: $sc-main-navigation-link-margin-right;
+
+	color: $sc-main-navigation-link-color;
+    background-color: $sc-main-navigation-link-background-color;
+	font-weight: 300;
+    text-transform: $sc-main-navigation-link-text-transform;
+    letter-spacing: $sc-main-navigation-link-letter-spacing;
+
+    border-style: solid;
+	border-color: $sc-main-navigation-link-border-color;
+
+	border-top-width: $sc-main-navigation-link-border-top-width;
+	padding-top: ($sc-padding-lv2) - ($sc-main-navigation-link-border-top-width);
+
+	border-bottom-width: $sc-main-navigation-link-border-bottom-width;
+	padding-bottom: ($sc-padding-lv2) - ($sc-main-navigation-link-border-bottom-width);
+}
+
+.open .header-menu-level1-anchor{
+	color: black;
+}
+
+.header-menu-home-anchor,
+.header-menu-shop-anchor{
+	@extend .header-menu-level1-anchor;
+}
+
+//maxi menu level 2
+.header-menu-back {
+	display: none;
+}
+
+.header-menu-level2 > li {
+	min-width: calc(100% / 7);
+	display: block;
+	float: left;
+}
+
+.header-menu-level2-anchor {
+	text-decoration: $sc-main-navigation-submenu-heading-text-decoration;
+	font-weight: $sc-font-weight-semibold;
+	color: $sc-main-navigation-submenu-heading-color;
+	padding-bottom: $sc-padding-lv1;
+	margin-bottom: $sc-margin-lv2;
+	border-bottom: 1px solid $sc-main-navigation-submenu-heading-border-color;
+	display: block;
+    text-transform: uppercase;
+	&:hover {
+		color: $sc-color-copy;
+	}
+}
+
+//maxi menu level 3
+.header-menu-level3-anchor {
+	display: block;
+	&:hover, &:focus {
+		color: $sc-main-navigation-submenu-link-hover-color;
+	}
+
+	&:active, &.active {
+		color: $sc-main-navigation-submenu-link-active-color;
+	}
+}
+
+//container fix for maxi menu on desktop
+.header-menu-push-icon, .header-menu-pop-icon {
+	display: none;
+}
+
+.header-menu-level-container {
+	background-color: $sc-main-navigation-submenu-background-color;
+	display: none;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	min-height: 150px;
+	z-index: 1003;
+	padding: $sc-padding-lv5 0;
+	border-bottom: 1px solid $sc-color-theme-border-light;
+	border-top: 1px solid $sc-color-theme-border-light;
+	@include box-shadow(0 6px 12px transparentize($sc-neutral-shade-500, 1-0.175));
+
+	> li {
+		@extend .container;
+	}
+}
+
+//maxi menu opened
+.open .header-menu-level-container {
+	display: block;
+}
+
+.open .header-menu-level1-anchor:before{
+	position: absolute;
+	top: 47px;
+	left: 50%;
+	margin-left: -7.5px;
+	display: inline-block;
+	border-right: 7px solid transparent;
+	border-bottom: 7px solid $sc-neutral-shade-0;
+	border-left: 7px solid transparent;
+	border-bottom-color: transparentize($sc-neutral-shade-500, 1-0.2);
+	content: '';
+}
+
+.open .header-menu-level1-anchor:after{
+	position: absolute;
+	top: 48px;
+	left: 50%;
+	margin-left: -6.5px;
+	display: inline-block;
+	border-right: 6px solid transparent;
+	border-bottom: 6px solid $sc-neutral-shade-0;
+	border-left: 6px solid transparent;
+	content: '';
+	z-index: 9999;
+}
+
+//awalabs
+.header-menu-level1 {
+	@extend .clearfix;
+	display: flex;
+	width: 100%;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+.header-menu-secondary-nav {
+	@extend .clearfix;
+	background: #fff;
+}
+
+.header-menu-level1-anchor {
+	color: #5a5959;
+	font-family: $sc-font-family-secondary;
+	background-color: transparent;
+	font-size: 14px;
+	padding: 11px 15px 9px 15px;
+	letter-spacing: .13em;
+	font-weight: 400;
+	line-height: normal;
+	border-bottom: 3px solid transparent;
+	&:hover, &:focus{
+		color: black;
+		background-color: transparent;
+		border-bottom: 3px solid #384941;
+	}
+
+	&:active {
+		color: black;
+		background-color: transparent;
+		border-bottom: 3px solid #384941;
+	}
+    text-transform: uppercase;
+}
+//awalabs styles
+.header-menu-level2{
+	@extend .col-md-10;
+	display:table;
+}
+.header-menu-level-image{
+	@extend .col-md-2;
+	padding: 0;
+	a{
+		position: relative;
+		display: block;
+	}
+	h4{
+		position: absolute;
+		bottom: 15px;
+		display: block;
+		text-align: center;
+		width: 100%;
+		padding: 0 15px;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		color:white;
+		font-size: 16px;
+		font-weight: 500;
+		font-family: $sc-font-family-secondary;
+	}
+}
+.header-menu-level2-anchor{
+	text-align: left;
+	padding: 0 15px;
+	margin-bottom: 10px;
+	font-size: 13px;
+	font-weight: 800;
+	font-family: $sc-font-family-secondary;
+	border-bottom:none;
+	&:hover{
+		color: $sc-color-secondary;
+	}
+}
+.header-menu-level3-anchor{
+	text-align: left;
+	font-size: 13px;
+	padding: 0 15px;
+	margin-bottom: 10px;
+	&:hover{
+		color: $sc-color-secondary;
+	}
+}
+.header-menu-favorites{
+	float:right;
+	position: relative;
+	margin-right: 2px;
+}
+.header-sidebar-wrapper .header-menu-favorites{
+	display: none;
+}
+.header-menu-favorites-button{
+	height: 44px;
+	min-width: 44px;
+	line-height: 50px;
+	display: inline-block;
+	text-align: center;
+	i.pdp-favorites-unselected-icon{
+		@extend .fa;
+		@extend %fa-heart;
+		font-size: 22px;
+		line-height: 1;
+	}
+	span{
+		text-align: center;
+	}
+}
+.header-menu-favorites-dropdown{
+	@extend .header-mini-cart;
+	right: 0;
+	left: initial;
+	margin-right: -2px;
+	h4{
+		text-align:center;
+		margin-bottom: 10px;
+	}
+	.header-mini-cart-buttons-right{
+		padding: 0;
+		width: 100%;
+	}
+}
+.header-menu-projects-dropdown{
+	h4{
+		text-align:center;
+		margin-bottom: 10px;
+	}
+}

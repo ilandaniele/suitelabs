@@ -1,0 +1,46 @@
+{
+    "name": "HeaderFiltering",
+    "fantasyName": "Header Filtering",
+    "vendor": "SuiteLabs",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "This extension allows to configure which domains should be excluded from getting the X-SC-Touchpoint appended on ajax requests",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/HeaderFiltering.json"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/HeaderFiltering.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/HeaderFiltering.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\HeaderFiltering",
+    "suitescript2": {
+        "files": []
+    }
+}

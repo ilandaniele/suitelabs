@@ -1,0 +1,369 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "pdpCustomFields",
+        "title": "PDP Custom Fields",
+        "description": "Product detail page custom fields configuration",
+        "group": "catalog"
+    },
+    "properties": {
+        "pdpCustomFieldsList": {
+            "group": "catalog",
+            "subtab": "pdpCustomFields",
+            "type": "array",
+            "title": "PDP Custom Fields",
+            "description": "Product detail page custom fields configuration",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "internalId": {
+                        "type": "string",
+                        "title": "Internal Id",
+                        "mandatory": true
+                    },
+                    "label": {
+                        "type": "string",
+                        "title": "Label",
+                        "mandatory": true
+                    },
+                    "pdpLabel": {
+                        "type": "string",
+                        "title": "PDP Label",
+                        "mandatory": true
+                    },
+                    "order": {
+                        "type": "string",
+                        "title": "Order"
+                    },
+                    "displayInPDP": {
+                        "type": "boolean",
+                        "title": "Display in PDP"
+                    },
+                    "inactive": {
+                        "type": "boolean",
+                        "title": "Inactive"
+                    }
+                }
+            },
+
+            "default":[
+                {
+                    "internalId": "custitem57",
+                    "label": "bulbWattage",
+                    "pdpLabel":"Wattage:",
+                    "order":  "190",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem65",
+                    "label": "assembledheight",
+                    "pdpLabel": "Height:",
+                    "order":  "20",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem64",
+                    "label": "assembledwidth",
+                    "pdpLabel": "Width:",
+                    "order":  "30",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem63",
+                    "label": "assembledlength",
+                    "pdpLabel": "Depth:",
+                    "order":  "40",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem18",
+                    "label": "bulbqty",
+                    "pdpLabel": "Bulb Qty:",
+                    "order":  "200",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem20",
+                    "label": "sockettype",
+                    "pdpLabel": "Socket: ",
+                    "order":  "220",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem47",
+                    "label": "mainmaterial",
+                    "pdpLabel": "Material:",
+                    "order":  "260",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem13",
+                    "label": "finish",
+                    "pdpLabel": "Finish:",
+                    "order":  "270",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "quantityavailable",
+                    "label": "quantity",
+                    "pdpLabel": "Available Now:",
+                    "order":  "",
+                    "displayInPDP": false,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem_wiring_type",
+                    "label": "wiringtype",
+                    "pdpLabel": "Wiring Type:",
+                    "order":  "230",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem_max_height",
+                    "label": "maxheight",
+                    "pdpLabel": "Max Height:",
+                    "order":  "50",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitemshade_dims",
+                    "label": "shade",
+                    "pdpLabel": "Max Height:",
+                    "order":  "140",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem_canopy_dims",
+                    "label": "canopy",
+                    "pdpLabel": "Canopy:",
+                    "order":  "150",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem_black_plate_dims_lwh",
+                    "label": "backplate",
+                    "pdpLabel": "Backplate:",
+                    "order":  "1600",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem_bulb_type",
+                    "label": "bulbtype",
+                    "pdpLabel": "Bulb Type:",
+                    "order":  "210",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem_ceiling_chain_length",
+                    "label": "chain",
+                    "pdpLabel": "Chain:",
+                    "order":  "240",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem_cord_length",
+                    "label": "cord",
+                    "pdpLabel": "Cord:",
+                    "order":  "250",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem_retail_romance_desc",
+                    "label": "romanceDescription",
+                    "pdpLabel": "romanceDescription",
+                    "order":  "",
+                    "displayInPDP": false,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem_forecast_availability_detail",
+                    "label": "custitem_forecast_availability_detail",
+                    "pdpLabel": "custitem_forecast_availability_detail",
+                    "order":  "",
+                    "displayInPDP": false,
+                    "inactive": false
+                },
+                {
+                    "internalId": "pricelevel4",
+                    "label": "pricelevel4",
+                    "pdpLabel": "pricelevel4",
+                    "order":  "",
+                    "displayInPDP": false,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem_intro_date",
+                    "label": "introDate",
+                    "pdpLabel": "Intro Date:",
+                    "order":  "10",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem_actual_weight",
+                    "label": "actualWeight",
+                    "pdpLabel": "Weight:",
+                    "order":  "270",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitemseat_depth",
+                    "label": "seatDepth",
+                    "pdpLabel": "Seat Depth:",
+                    "order":  "80",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitemseat_height",
+                    "label": "seatHeight",
+                    "pdpLabel": "Seat Height:",
+                    "order":  "60",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem_seat_width",
+                    "label": "seatWidth",
+                    "pdpLabel": "Seat Width:",
+                    "order":  "70",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitemarm_height",
+                    "label": "armHeight",
+                    "pdpLabel": "Arm Height:",
+                    "order":  "90",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitemframe_width",
+                    "label": "frameWidth",
+                    "pdpLabel": "Frame Width:",
+                    "order":  "120",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custiteminner_mirror_dimensions",
+                    "label": "innerMirrorDimensions",
+                    "pdpLabel": "Inner Mirror Dimensions:",
+                    "order":  "130",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitemjunction_box_location",
+                    "label": "junctionBoxLocation",
+                    "pdpLabel": "Junction Box Location:",
+                    "order":  "170",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem_overall_length",
+                    "label": "overallLength",
+                    "pdpLabel": "Overall Length:",
+                    "order":  "110",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem_hanging_length",
+                    "label": "hangingLength",
+                    "pdpLabel": "Hanging Length:",
+                    "order":  "100",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "custitem_closure_type",
+                    "label": "closureType",
+                    "pdpLabel": "Closure Type:",
+                    "order":  "180",
+                    "displayInPDP": true,
+                    "inactive": false
+                },
+                {
+                    "internalId": "featureddescription",
+                    "label": "shippingAndDelivery",
+                    "pdpLabel": "shippingAndDelivery",
+                    "order":  "",
+                    "displayInPDP": false,
+                    "inactive": false
+                }
+            ]
+        },
+        "pdpCustomFieldsIntervals": {
+            "group": "catalog",
+            "subtab": "pdpCustomFields",
+            "type": "array",
+            "title": "PDP Custom Fields Intervals",
+            "description": "PDP Custom Fields Intervals",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "internalId": {
+                        "type": "string",
+                        "title": "Internal Id",
+                        "mandatory": true
+                    },
+                    "index": {
+                        "type": "string",
+                        "title": "Inactive"
+                    }
+                }
+            },
+
+            "default":[
+                {
+                    "internalId": "firstInterval",
+                    "index": "2"
+                },
+                {
+                    "internalId": "secondInterval",
+                    "index": "3"
+                },
+                {
+                    "internalId": "thirdInterval",
+                    "index": "4"
+                },
+                {
+                    "internalId": "fourthInterval",
+                    "index": "5"
+                },
+                {
+                    "internalId": "fifthInterval",
+                    "index": "6"
+                },
+                {
+                    "internalId": "sixthInterval",
+                    "index": "8"
+                },
+                {
+                    "internalId": "lastInterval",
+                    "index": "7"
+                }
+            ]
+        }
+    }
+}

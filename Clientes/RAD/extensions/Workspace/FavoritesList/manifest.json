@@ -1,0 +1,149 @@
+{
+	"name": "FavoritesList",
+	"fantasyName": "Favorites List",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "Favorites List. SuiteLabs v2.1.0 refers to the SCA upgrade to 23.2, also migrated related code from the Cart To Quote feature",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": [
+				"services/ShareFavorites.Service.ss"
+			]
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/FavoritesList/Configuration/FavoritesList.Configuration.json"
+		]
+	},
+	"templates": {
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/FavoritesList/Templates/product_list_details_favorites.tpl",
+					"Modules/FavoritesList/Templates/header_mini_favorites_item_cell.tpl",
+					"Modules/FavoritesList/Templates/header_mini_favorites.tpl",
+					"Modules/FavoritesList/Templates/header_mini_projects_item_cell.tpl",
+					"Modules/FavoritesList/Templates/header_mini_projects.tpl",
+					"Modules/FavoritesList/Templates/favorites_list_control_single.tpl"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/FavoritesList/Templates/product_list_details_favorites.tpl",
+					"Modules/FavoritesList/Templates/header_mini_favorites_item_cell.tpl",
+					"Modules/FavoritesList/Templates/header_mini_favorites.tpl",
+					"Modules/FavoritesList/Templates/header_mini_projects_item_cell.tpl",
+					"Modules/FavoritesList/Templates/header_mini_projects.tpl",
+					"Modules/FavoritesList/Templates/favorites_list_control_single.tpl"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/FavoritesList/Templates/product_list_details_favorites.tpl",
+					"Modules/FavoritesList/Templates/header_mini_favorites_item_cell.tpl",
+					"Modules/FavoritesList/Templates/header_mini_favorites.tpl",
+					"Modules/FavoritesList/Templates/header_mini_projects_item_cell.tpl",
+					"Modules/FavoritesList/Templates/header_mini_projects.tpl",
+					"Modules/FavoritesList/Templates/favorites_list_control_single.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/FavoritesList/Sass/_favoriteslist.scss",
+			"myaccount": "Modules/FavoritesList/Sass/_favoriteslist.scss"
+		},
+		"files": [
+			"Modules/FavoritesList/Sass/_favoriteslist.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/FavoritesList/JavaScript/AwaLabs.FavoritesList.js",
+			"myaccount": "Modules/FavoritesList/JavaScript/AwaLabs.FavoritesList.js",
+			"checkout": "Modules/FavoritesList/JavaScript/AwaLabs.FavoritesList.Checkout.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/FavoritesList/JavaScript/AwaLabs.FavoritesList.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.ProductList.Utils.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.ProductList.Details.View.js",
+					"Modules/FavoritesList/JavaScript/Project.ProductList.Lists.View.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.AddedToCart.Improved.View.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.BulkActions.Extended.View.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.ControlSingle.View.js",
+					"Modules/FavoritesList/JavaScript/ShareFavorites.Model.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.CartSaveForLater.View.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.ProductList.DetailsLater.View.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.ProductList.Control.View.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.ProductList.DisplayFull.View.js",
+					"Modules/FavoritesList/JavaScript/Header.MiniFavorites.View.js",
+					"Modules/FavoritesList/JavaScript/Header.MiniFavoritesItemCell.View.js",
+					"Modules/FavoritesList/JavaScript/Header.MiniProjects.View.js",
+					"Modules/FavoritesList/JavaScript/Header.MiniProjectsItemCell.View.js",
+					"Modules/FavoritesList/JavaScript/Favorites.ProductList.Details.View.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.ProductList.Model.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.ProductList.ControlItem.View.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.RequestQuoteWizard.Module.Items.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/FavoritesList/JavaScript/AwaLabs.FavoritesList.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.ProductList.Utils.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.ProductList.Details.View.js",
+					"Modules/FavoritesList/JavaScript/Project.ProductList.Lists.View.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.BulkActions.Extended.View.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.AddedToCart.Improved.View.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.ControlSingle.View.js",
+					"Modules/FavoritesList/JavaScript/ShareFavorites.Model.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.CartSaveForLater.View.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.ProductList.DetailsLater.View.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.ProductList.Control.View.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.ProductList.DisplayFull.View.js",
+					"Modules/FavoritesList/JavaScript/Header.MiniFavorites.View.js",
+					"Modules/FavoritesList/JavaScript/Header.MiniFavoritesItemCell.View.js",
+					"Modules/FavoritesList/JavaScript/Header.MiniProjects.View.js",
+					"Modules/FavoritesList/JavaScript/Header.MiniProjectsItemCell.View.js",
+					"Modules/FavoritesList/JavaScript/Favorites.ProductList.Details.View.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.ProductList.Model.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.ProductList.ControlItem.View.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.RequestQuoteWizard.Module.Items.js"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/FavoritesList/JavaScript/AwaLabs.FavoritesList.Checkout.js",
+					"Modules/FavoritesList/JavaScript/FavoritesList.RequestQuoteWizard.Module.Items.js",
+					"Modules/FavoritesList/JavaScript/ShareFavorites.Model.js"
+				]
+			}
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/FavoritesList/SuiteScript/AwaLabs.FavoritesList.js",
+		"files": [
+			"Modules/FavoritesList/SuiteScript/AwaLabs.FavoritesList.js",
+			"Modules/FavoritesList/SuiteScript/ShareFavorites.Model.js",
+			"Modules/FavoritesList/SuiteScript/ShareFavorites.ServiceController.js"
+		]
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/FavoritesList@2.1.0",
+	"activation_id": "11",
+	"extension_id": "16906"
+}

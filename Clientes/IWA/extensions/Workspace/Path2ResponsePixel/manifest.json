@@ -1,0 +1,58 @@
+{
+    "name": "Path2ResponsePixel",
+    "fantasyName": "Path2Response Pixel",
+    "vendor": "NSeComm",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": ">=22.2.0",
+        "SCS": ">=22.2.0"
+    },
+    "description": "Path2Response Pixel implementation to all pages.",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/Main.json"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/NSeComm.Path2ResponsePixel.Main.js",
+            "myaccount": "Modules/Main/JavaScript/NSeComm.Path2ResponsePixel.Main.js",
+            "checkout": "Modules/Main/JavaScript/NSeComm.Path2ResponsePixel.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.Path2ResponsePixel.Main.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.Path2ResponsePixel.Main.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.Path2ResponsePixel.Main.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\Path2ResponsePixel",
+    "suitescript2": {
+        "files": []
+    }
+}

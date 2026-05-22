@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "profileUtils",
+        "title": "Profile Utils",
+        "description": "Profile Utils Config",
+        "group": "shoppingApplication"
+    },
+    "properties": {
+        "ProfileUtilsTradeCustomerType": {
+            "group": "shoppingApplication",
+            "subtab": "profileUtils",
+            "type": "string",
+            "title": "Trade customer type id",
+            "description": "Trade customer type id",
+            "default": "2"
+        }
+    }
+}

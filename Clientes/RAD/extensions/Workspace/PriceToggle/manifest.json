@@ -1,0 +1,56 @@
+{
+	"name": "PriceToggle",
+	"fantasyName": "Price Toggle",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.1",
+	"description": "SuiteLabs v2.1.1, includes updated code for tracking transactions.",
+	"assets": {
+		"services": {
+			"files": []
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/PriceToggle/Configuration/Configuration.json"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/PriceToggle/JavaScript/AwaLabs.PriceToggle.js",
+			"myaccount": "Modules/PriceToggle/JavaScript/AwaLabs.PriceToggle.MyAccount.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/PriceToggle/JavaScript/AwaLabs.PriceToggle.js",
+					"Modules/PriceToggle/JavaScript/PriceToggle.Item.Model.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/PriceToggle/JavaScript/AwaLabs.PriceToggle.MyAccount.js",
+					"Modules/PriceToggle/JavaScript/PriceToggle.Item.Model.js"
+				]
+			}
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/PriceToggle/SuiteScript/AwaLabs.PriceToggle.js",
+		"files": [
+			"Modules/PriceToggle/SuiteScript/AwaLabs.PriceToggle.js",
+			"Modules/PriceToggle/SuiteScript/PriceToggle.LiveOrder.Listener.js"
+		]
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/PriceToggle@2.1.1",
+	"activation_id": "11",
+	"extension_id": "17003"
+}

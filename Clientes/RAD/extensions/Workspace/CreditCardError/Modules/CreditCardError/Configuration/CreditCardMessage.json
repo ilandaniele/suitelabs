@@ -1,0 +1,14 @@
+{
+    "type": "object",
+    "properties": {
+        "creditCardCVVError": {
+            "group": "checkoutApp",
+            "subtab": "creditcard",
+            "type": "string",
+            "title": "CVV/CSC Error Message",
+            "description": "Error Message to be displayed when CVV/CSC error occurs",
+            "default": "There was an issue while validating your CVV/CSC.",
+            "translate": true
+        }
+    }
+}

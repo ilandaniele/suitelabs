@@ -1,0 +1,17 @@
+{
+  "name": "clients",
+  "version": "1.0.0",
+  "description": "clients",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "3.9.1",
+    "eslint-config-airbnb": "13.0.0",
+    "eslint-plugin-requirejs": "3.0.0"
+  }
+}

@@ -1,0 +1,70 @@
+.recently-searched{
+	font-size: .93rem;
+	padding: 10px;
+	text-align: left;
+
+	@media (min-width: $screen-md-min) {
+		padding: 0;;
+	}
+
+	.label-recently-searched{
+		@media (min-width: $screen-md-min) {
+			padding: 10px 10px 0 10px;;
+		}
+	}
+
+	.recent-search-keyword{
+
+		background: url(getExtensionAssetsPath("img/recently-search-icon.svg"));
+		background-repeat: no-repeat, no-repeat;
+		background-position: left center;
+		background-size: 15px 15px;
+		text-align: left;
+		padding-left: 17px;
+		padding-top: 5px;
+    	padding-bottom: 5px;
+		display: flex;
+		align-items: center;
+
+		@media (min-width: $screen-md-min) {
+			margin-left: 10px;
+		}
+
+		.recent-keyword-link{
+			font-size: .93rem;
+			text-align: left;
+			padding: 0 10px;
+			flex: 1;
+			color: #242424;
+		}
+
+		.recent-search-keyword-remove-icon{
+			background: url(getExtensionAssetsPath("img/remove-recently-searched.svg"));
+			background-repeat: no-repeat, no-repeat;
+			background-position: left center;
+			background-size: 16px 16px;
+			width: 16px;
+    		height: 16px;
+
+			@media (min-width: $screen-md-min) {
+				margin-right: 10px;
+			}
+
+			&:hover{
+				background: url(getExtensionAssetsPath("img/hover-remove-recently-searched.svg"));
+			}
+		}
+	}
+
+	ul{
+		& > li{
+			&:hover{
+				background-color: #dfdfdf;
+
+				a{
+					color: #242424;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,55 @@
+{
+    "name": "NavigablePromoItems",
+    "fantasyName": "Navigable Promotion Items",
+    "vendor": "SuiteLabs",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Make promotion item lines navigable from the shopping cart.",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/SuiteLabs.NavigablePromoItems.json"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/suitelabs_cart_lines_free.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/SuiteLabs.NavigablePromoItems.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.NavigablePromoItems.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\NavigablePromoItems",
+    "suitescript2": {
+        "files": []
+    }
+}

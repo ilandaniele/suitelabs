@@ -1,0 +1,8 @@
+.custom-plp-fields-container {
+    margin-top: $sc-margin-lv1;
+}
+
+.custom-plp-fields-label {
+    @extend .sc-sku-label;
+    font-weight: 300;
+}

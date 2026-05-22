@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "categorysearch",
+        "group": "searchConfig",
+        "title": "Category Results",
+        "description": "Category Results related configuration"
+    },
+    "properties": {
+        "categoryResults.sort": {
+            "group": "searchConfig",
+            "subtab": "categorysearch",
+            "type": "string",
+            "title": "Sort param for Category Pages",
+            "description": "Sort param for Category Pages",
+            "default": "relevance"
+        }
+    }
+}

@@ -1,0 +1,230 @@
+{
+	"name": "SCTypeahead",
+	"fantasyName": "SC Typeahead",
+	"vendor": "PrimaryArms",
+	"type": "extension",
+	"target": "SCS,SCA",
+	"target_version": {
+		"SCS": ">=19.1.0",
+		"SCA": ">=19.1.0"
+	},
+	"version": "1.0.0",
+	"description": "SCA customized typeahed which would allow you to display category suggestions",
+	"assets": {
+		"img": {
+			"files": [
+				"img/icon-search-load.png",
+				"img/trending-search-icon.svg",
+				"img/recently-search-icon.svg",
+				"img/remove-recently-searched.svg",
+				"img/hover-remove-recently-searched.svg",
+				"img/header-profile.svg",
+				"img/mini-cart.svg",
+				"img/star-rating-sprite.png",
+				"img/icon-material-close.png"
+			]
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": [
+				"services/SCTypeahead.Service.ss",
+				"services/SCTypeahead.TrendingSearchFeature.Service.ss"
+			]
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/SCTypeahead/Configuration/SCTypeahead.json",
+			"Modules/StaticSaleCategories/Configuration/SCTypeahead.NoResults.json",
+			"Modules/SCTypeahead/Configuration/SCTypeahead.RelatedCategories.json",
+			"Modules/SCTypeahead/Configuration/SCTypeahead.Search.General.json",
+			"Modules/SCTypeahead/Configuration/SCTypeahead.TopSearchedCategories.json",
+			"Modules/SCTypeahead/Configuration/SCTypeahead.TopSearchedProducts.json",
+			"Modules/BackToSearchResults/Configuration/SCTypeahead.BackToSearchResult.json",
+			"Modules/TrendingSearch/Configuration/SCTypeahead.TrendingSearchFeature.json",
+			"Modules/RecentlySearchedKeywords/Configuration/SCTypeahead.RecentlySearched.json"
+		]
+	},
+	"templates": {
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/SCTypeahead/Templates/sc_typeahead_item.tpl",
+					"Modules/SCTypeahead/Templates/sc_typeahead_categories.tpl",
+					"Modules/SCTypeahead/Templates/sc_typeahead_itemssearcher.tpl",
+					"Modules/SCTypeahead/Templates/sc_typeahead_site_search.tpl",
+					"Modules/StaticSaleCategories/Templates/sc_typeahead_categories_activesale.tpl",
+					"Modules/StaticSaleCategories/Templates/sc_typeahead_categories_cell.tpl",
+					"Modules/StaticSaleCategories/Templates/sc_typeahead_categories_row.tpl",
+					"Modules/StaticSaleCategories/Templates/sc_typeahead_noresults.tpl",
+					"Modules/RecentlySearchedKeywords/Templates/sc_typeahead_recently_searched.tpl",
+					"Modules/TrendingSearch/Templates/sc_typeahead_trending_search.tpl",
+					"Modules/TrendingSearch/Templates/sc_typeahead_trending_categories.tpl",
+					"Modules/TrendingSearch/Templates/sc_typeahead_trending_products.tpl"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/SCTypeahead/Templates/sc_typeahead_item.tpl",
+					"Modules/SCTypeahead/Templates/sc_typeahead_categories.tpl",
+					"Modules/SCTypeahead/Templates/sc_typeahead_itemssearcher.tpl",
+					"Modules/SCTypeahead/Templates/sc_typeahead_site_search.tpl",
+					"Modules/StaticSaleCategories/Templates/sc_typeahead_categories_activesale.tpl",
+					"Modules/StaticSaleCategories/Templates/sc_typeahead_categories_cell.tpl",
+					"Modules/StaticSaleCategories/Templates/sc_typeahead_categories_row.tpl",
+					"Modules/StaticSaleCategories/Templates/sc_typeahead_noresults.tpl",
+					"Modules/RecentlySearchedKeywords/Templates/sc_typeahead_recently_searched.tpl",
+					"Modules/TrendingSearch/Templates/sc_typeahead_trending_search.tpl",
+					"Modules/TrendingSearch/Templates/sc_typeahead_trending_categories.tpl",
+					"Modules/TrendingSearch/Templates/sc_typeahead_trending_products.tpl"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/SCTypeahead/Templates/sc_typeahead_item.tpl",
+					"Modules/SCTypeahead/Templates/sc_typeahead_categories.tpl",
+					"Modules/SCTypeahead/Templates/sc_typeahead_itemssearcher.tpl",
+					"Modules/SCTypeahead/Templates/sc_typeahead_site_search.tpl",
+					"Modules/StaticSaleCategories/Templates/sc_typeahead_categories_activesale.tpl",
+					"Modules/StaticSaleCategories/Templates/sc_typeahead_categories_cell.tpl",
+					"Modules/StaticSaleCategories/Templates/sc_typeahead_categories_row.tpl",
+					"Modules/StaticSaleCategories/Templates/sc_typeahead_noresults.tpl",
+					"Modules/RecentlySearchedKeywords/Templates/sc_typeahead_recently_searched.tpl",
+					"Modules/TrendingSearch/Templates/sc_typeahead_trending_search.tpl",
+					"Modules/TrendingSearch/Templates/sc_typeahead_trending_categories.tpl",
+					"Modules/TrendingSearch/Templates/sc_typeahead_trending_products.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/SCTypeahead/Sass/_sctypeahead-sctypeahead.scss",
+			"myaccount": "Modules/SCTypeahead/Sass/_sctypeahead-sctypeahead.scss",
+			"checkout": "Modules/SCTypeahead/Sass/_sctypeahead-sctypeahead.scss"
+		},
+		"files": [
+			"Modules/SCTypeahead/Sass/_sctypeahead-sctypeahead.scss",
+			"Modules/SCTypeahead/Sass/_sctypeahead-header.scss",
+			"Modules/SCTypeahead/Sass/_sctypeahead-itemsearcher.scss",
+			"Modules/SCTypeahead/Sass/_sctypeahead-sitesearch.scss",
+			"Modules/StaticSaleCategories/Sass/_noresults.scss",
+			"Modules/TrendingSearch/Sass/_sctypeahead-trendingsearchfeature.scss",
+			"Modules/RecentlySearchedKeywords/Sass/_recentlysearched.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/SCTypeahead/JavaScript/SCTypeahead.Shopping.js",
+			"myaccount": "Modules/SCTypeahead/JavaScript/SCTypeahead.MyAccount.js",
+			"checkout": "Modules/SCTypeahead/JavaScript/SCTypeahead.Checkout.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.Categories.Collection.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.Categories.Model.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.ItemsSearcher.Item.View.Extend.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.ItemsSearcher.View.Extend.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.SiteSearch.View.Extend.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.Header.View.Extend.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.StringLookup.Utils.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.Utils.Extend.js",
+					"Modules/BackToSearchResults/JavaScript/SCTypeahead.BackToSearchResults.Cart.Detailed.View.Extend.js",
+					"Modules/BackToSearchResults/JavaScript/SCTypeahead.BackToSearchResults.Facets.Browse.View.Extend.js",
+					"Modules/BackToSearchResults/JavaScript/SCTypeahead.BackToSearchResults.Header.View.Extend.js",
+					"Modules/BackToSearchResults/JavaScript/SCTypeahead.BackToSearchResults.Home.View.Extend.js",
+					"Modules/BackToSearchResults/JavaScript/SCTypeahead.BackToSearchResults.ProductDetails.Full.View.Extend.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.Checkout.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.MyAccount.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.Shopping.js",
+					"Modules/StaticSaleCategories/JavaScript/SCTypeahead.Categories.ActiveSale.View.js",
+					"Modules/StaticSaleCategories/JavaScript/SCTypeahead.NoResults.View.js",
+					"Modules/TrendingSearch/JavaScript/SCTypeahead.TrendingSearchFeature.Model.js",
+					"Modules/RecentlySearchedKeywords/JavaScript/SCTypeahead.RecentlySearched.View.js",
+					"Modules/TrendingSearch/JavaScript/SCTypeahead.TrendingSearch.View.js",
+					"Modules/TrendingSearch/JavaScript/SCTypeahead.TrendingSearchFeature.Collection.js",
+					"Modules/TrendingSearch/JavaScript/SCTypeahead.TrendingCategories.View.js",
+					"Modules/TrendingSearch/JavaScript/SCTypeahead.TrendingProducts.View.js",
+					"Modules/RecentlySearchedKeywords/JavaScript/SCTypeahead.RecentlySearched.Collection.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.Categories.Collection.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.Categories.Model.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.ItemsSearcher.Item.View.Extend.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.ItemsSearcher.View.Extend.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.SiteSearch.View.Extend.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.Header.View.Extend.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.StringLookup.Utils.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.Utils.Extend.js",
+					"Modules/BackToSearchResults/JavaScript/SCTypeahead.BackToSearchResults.Cart.Detailed.View.Extend.js",
+					"Modules/BackToSearchResults/JavaScript/SCTypeahead.BackToSearchResults.Facets.Browse.View.Extend.js",
+					"Modules/BackToSearchResults/JavaScript/SCTypeahead.BackToSearchResults.Header.View.Extend.js",
+					"Modules/BackToSearchResults/JavaScript/SCTypeahead.BackToSearchResults.Home.View.Extend.js",
+					"Modules/BackToSearchResults/JavaScript/SCTypeahead.BackToSearchResults.ProductDetails.Full.View.Extend.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.Checkout.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.MyAccount.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.Shopping.js",
+					"Modules/StaticSaleCategories/JavaScript/SCTypeahead.Categories.ActiveSale.View.js",
+					"Modules/StaticSaleCategories/JavaScript/SCTypeahead.NoResults.View.js",
+					"Modules/TrendingSearch/JavaScript/SCTypeahead.TrendingSearchFeature.Model.js",
+					"Modules/RecentlySearchedKeywords/JavaScript/SCTypeahead.RecentlySearched.View.js",
+					"Modules/TrendingSearch/JavaScript/SCTypeahead.TrendingSearch.View.js",
+					"Modules/TrendingSearch/JavaScript/SCTypeahead.TrendingSearchFeature.Collection.js",
+					"Modules/TrendingSearch/JavaScript/SCTypeahead.TrendingCategories.View.js",
+					"Modules/TrendingSearch/JavaScript/SCTypeahead.TrendingProducts.View.js",
+					"Modules/RecentlySearchedKeywords/JavaScript/SCTypeahead.RecentlySearched.Collection.js"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.Categories.Collection.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.Categories.Model.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.ItemsSearcher.Item.View.Extend.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.ItemsSearcher.View.Extend.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.SiteSearch.View.Extend.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.Header.View.Extend.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.StringLookup.Utils.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.Utils.Extend.js",
+					"Modules/BackToSearchResults/JavaScript/SCTypeahead.BackToSearchResults.Cart.Detailed.View.Extend.js",
+					"Modules/BackToSearchResults/JavaScript/SCTypeahead.BackToSearchResults.Facets.Browse.View.Extend.js",
+					"Modules/BackToSearchResults/JavaScript/SCTypeahead.BackToSearchResults.Header.View.Extend.js",
+					"Modules/BackToSearchResults/JavaScript/SCTypeahead.BackToSearchResults.Home.View.Extend.js",
+					"Modules/BackToSearchResults/JavaScript/SCTypeahead.BackToSearchResults.ProductDetails.Full.View.Extend.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.Checkout.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.MyAccount.js",
+					"Modules/SCTypeahead/JavaScript/SCTypeahead.Shopping.js",
+					"Modules/StaticSaleCategories/JavaScript/SCTypeahead.Categories.ActiveSale.View.js",
+					"Modules/StaticSaleCategories/JavaScript/SCTypeahead.NoResults.View.js",
+					"Modules/TrendingSearch/JavaScript/SCTypeahead.TrendingSearchFeature.Model.js",
+					"Modules/RecentlySearchedKeywords/JavaScript/SCTypeahead.RecentlySearched.View.js",
+					"Modules/TrendingSearch/JavaScript/SCTypeahead.TrendingSearch.View.js",
+					"Modules/TrendingSearch/JavaScript/SCTypeahead.TrendingSearchFeature.Collection.js",
+					"Modules/TrendingSearch/JavaScript/SCTypeahead.TrendingCategories.View.js",
+					"Modules/TrendingSearch/JavaScript/SCTypeahead.TrendingProducts.View.js",
+					"Modules/RecentlySearchedKeywords/JavaScript/SCTypeahead.RecentlySearched.Collection.js"
+				]
+			}
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/SCTypeahead/SuiteScript/SCTypeahead.js",
+		"files": [
+			"Modules/SCTypeahead/SuiteScript/SCTypeahead.js",
+			"Modules/SCTypeahead/SuiteScript/SCTypeahead.Model.js",
+			"Modules/TrendingSearch/SuiteScript/SCTypeahead.TrendingSearchFeature.Model.js",
+			"Modules/TrendingSearch/SuiteScript/SCTypeahead.TrendingSearchFeature.ServiceController.js",
+			"Modules/SCTypeahead/SuiteScript/SCTypeahead.ServiceController.js"
+		]
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/PrimaryArms/SCTypeahead@1.0.0",
+	"activation_id": "3",
+	"extension_id": "2001"
+}

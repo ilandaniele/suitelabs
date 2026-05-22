@@ -1,0 +1,51 @@
+{
+	"name": "AwaCaseForm",
+	"fantasyName": "AwaLabs Case Form",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "AwaLabs Case Form. SuiteLabs v2.1.0 refers to the SCA upgrade to 23.2",
+	"assets": {
+		"services": {
+			"files": [
+				"services/CaseForm.Case.Service.ss"
+			]
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/AwaCaseForm/Configuration/CaseForm.json"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"myaccount": "Modules/AwaCaseForm/JavaScript/AwaLabs.CaseForm.js"
+		},
+		"application": {
+			"myaccount": {
+				"files": [
+					"Modules/AwaCaseForm/JavaScript/AwaLabs.CaseForm.js",
+					"Modules/AwaCaseForm/JavaScript/CaseForm.Case.Model.js",
+					"Modules/AwaCaseForm/JavaScript/CaseForm.Case.Collection.js",
+					"Modules/AwaCaseForm/JavaScript/CaseForm.Case.Create.View.js"
+				]
+			}
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/AwaCaseForm/SuiteScript/AwaLabs.CaseForm.js",
+		"files": [
+			"Modules/AwaCaseForm/SuiteScript/AwaLabs.CaseForm.js",
+			"Modules/AwaCaseForm/SuiteScript/CaseForm.Case.Model.js",
+			"Modules/AwaCaseForm/SuiteScript/CaseForm.Case.ServiceController.js"
+		]
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/AwaCaseForm@2.1.0",
+	"activation_id": "11",
+	"extension_id": "16602"
+}

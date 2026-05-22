@@ -1,0 +1,59 @@
+{
+	"name": "HeadContentByApplication",
+	"fantasyName": "Head Content By Application",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "Head Content By Application. SuiteLabs v2.1.0, removed unneeded modules.",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/HeadContentByApplication/Configuration/HeadContentByApplication.json"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/HeadContentByApplication/JavaScript/AwaLabs.HeadContentByApplication.js",
+			"checkout": "Modules/HeadContentByApplication/JavaScript/AwaLabs.HeadContentByApplication.js",
+			"myaccount": "Modules/HeadContentByApplication/JavaScript/AwaLabs.HeadContentByApplication.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/HeadContentByApplication/JavaScript/AwaLabs.HeadContentByApplication.js"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/HeadContentByApplication/JavaScript/AwaLabs.HeadContentByApplication.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/HeadContentByApplication/JavaScript/AwaLabs.HeadContentByApplication.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/HeadContentByApplication@2.1.0",
+	"activation_id": "11",
+	"extension_id": "16909"
+}

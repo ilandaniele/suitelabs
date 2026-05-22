@@ -1,0 +1,38 @@
+{
+	"name": "ExpectedShipDate",
+	"fantasyName": "Expected Ship Date",
+	"vendor": "ACS",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"version": "1.0.0",
+	"description": "Show Expected Ship Date on order details",
+	"configuration": {
+		"files": [
+			"Modules/ExpectedShipDate/Configuration/ExpectedShipDate.json"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"myaccount": "Modules/ExpectedShipDate/JavaScript/ExpectedShipDate.js"
+		},
+		"application": {
+			"myaccount": {
+				"files": [
+					"Modules/ExpectedShipDate/JavaScript/ExpectedShipDate.js"
+				]
+			}
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/ExpectedShipDate/SuiteScript/OrderHistory.ExpectedShipDate.js",
+		"files": [
+			"Modules/ExpectedShipDate/SuiteScript/OrderHistory.ExpectedShipDate.js"
+		]
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/ACS/ExpectedShipDate@1.0.0",
+	"activation_id": "11",
+	"extension_id": "4901"
+}

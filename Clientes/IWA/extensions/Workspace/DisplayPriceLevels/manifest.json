@@ -1,0 +1,49 @@
+{
+    "name": "DisplayPriceLevels",
+    "fantasyName": "Display Price Levels",
+    "vendor": "SuiteLabs",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": ">=22.0",
+        "SCS": ">=22.0"
+    },
+    "description": "Displays a table of price levels for logged in customers with price levels.",
+    "skins": [],
+    "configuration": {
+        "files": [
+            "Modules/DisplayPriceLevels/Configuration/DisplayPriceLevels.json"
+        ]
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/DisplayPriceLevels/Sass/_displaypricelevels.scss"
+        },
+        "files": [
+            "Modules/DisplayPriceLevels/Sass/_displaypricelevels.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/DisplayPriceLevels/Templates/themehelper_product_views_price.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/DisplayPriceLevels/JavaScript/DisplayPriceLevels.EntryPoint.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/DisplayPriceLevels/JavaScript/DisplayPriceLevels.EntryPoint.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\DisplayPriceLevels"
+}

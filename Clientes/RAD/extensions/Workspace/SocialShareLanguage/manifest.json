@@ -1,0 +1,39 @@
+{
+	"name": "SocialShareLanguage",
+	"fantasyName": "Social Share Language",
+	"vendor": "SuiteLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "1.0.0",
+	"description": "Extension to improve the social share language",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/Main/JavaScript/SuiteLabs.SocialShareLanguage.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Main/JavaScript/SuiteLabs.SocialShareLanguage.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/SuiteLabs/SocialShareLanguage@1.0.0",
+	"activation_id": "11",
+	"extension_id": "17901"
+}

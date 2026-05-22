@@ -1,0 +1,53 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "tavanoKlaviyo",
+        "title": "Klaviyo",
+        "description": "",
+        "group": "extensions",
+        "docRef": ""
+    },
+    "properties": {
+        "tavanoKlaviyo.itemOptions": {
+            "group": "extensions",
+            "subtab": "tavanoKlaviyo",
+            "type": "array",
+            "title": "Item Options",
+            "docRef": "",
+            "description": "",
+            "items": {
+                "type": "string",
+                "title": "options",
+                "mandatory": false
+            }
+        },
+        "tavanoKlaviyo.columns.customFields": {
+            "group": "extensions",
+            "subtab": "tavanoKlaviyo",
+            "type": "array",
+            "title": "Custom Fields",
+            "description": "",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "nsid": {
+                        "type": "string",
+                        "title": "Netsuite ID",
+                        "description": "Internal Id of the NS Field"
+                        
+                    },
+                    "nsidparent": {
+                        "type": "string",
+                        "title": "Netsuite ID Parent Item",
+                        "description": "Use this field to send the parent info instead of child"
+                    },
+                    "klaviyokey": {
+                        "type": "string",
+                        "title": "Klaviyo mapping",
+                        "description": "Enter the koy of this field in Klaviyo"
+                    }
+                }
+            }
+        }
+    }
+}

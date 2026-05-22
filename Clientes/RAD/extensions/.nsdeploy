@@ -1,0 +1,12 @@
+{
+    "credentials": {
+        "user_agent": "sc-extension-devtools/2024.2.20",
+        "authID": "RAD-sb",
+        "hostname": "1283670-SB2.restlets.api.netsuite.com",
+        "website": 2,
+        "domain": "rad-sb24.reginaandrew.com",
+        "webapp_id": "26393364",
+        "ssp_folder": "26393364",
+        "is_scis": false
+    }
+}

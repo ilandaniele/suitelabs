@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "subtab": {
+      "id":"checkoutCustomFields",
+      "title":"Checkout Custom Fields",
+      "description":"Checkout Custom Fields Extension configuration",
+      "group":"extensions"
+    },
+    "properties": {
+        "checkoutCustomFields.disclaimer": {
+            "group": "extensions",
+            "subtab": "checkoutCustomFields",
+            "type": "string",
+            "nsType": "textarea",
+            "title": "Disclaimer",
+            "description": "Content that will display, allows to add HTML content",
+            "default": "Text"
+        }
+    }
+}

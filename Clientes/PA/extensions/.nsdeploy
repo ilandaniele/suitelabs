@@ -1,0 +1,12 @@
+{
+    "credentials": {
+        "user_agent": "sc-extension-devtools/2024.2.50",
+        "authID": "PA-pd",
+        "hostname": "3901023.restlets.api.netsuite.com",
+        "website": "2",
+        "domain": "www.primaryarms.com",
+        "webapp_id": "13080826",
+        "ssp_folder": "13080826",
+        "is_scis": false
+    }
+}

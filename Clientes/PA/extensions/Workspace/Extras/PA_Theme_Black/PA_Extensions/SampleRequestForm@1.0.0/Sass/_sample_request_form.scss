@@ -1,0 +1,22 @@
+.sample-request-form-header-wrapper{
+	text-align: center;
+}
+.sample-request-form-header{
+	@extend .product-list-lists-title;
+	float: none;
+	text-align: center;
+	margin-bottom: 0;
+	
+	@media (min-width: $screen-sm-min){
+		height: 25px;
+		line-height: 1;
+	}
+}
+.form-loader{
+	background-image: url(getThemeAssetsPath("img/bx_loader.gif"));
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	height: 50px;
+	margin-top: 25px;
+}

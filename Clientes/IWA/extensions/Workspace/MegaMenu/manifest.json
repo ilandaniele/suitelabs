@@ -1,0 +1,73 @@
+{
+    "name": "MegaMenu",
+    "fantasyName": "Mega Menu",
+    "vendor": "NSeComm",
+    "version": "1.0.3",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Extension to transform the main menu in a Mega Menu. Include images form the configuration. SuiteLabs v1.0.3 We added the 'Find out More' link into the related thumbnail image.",
+    "skins": [],
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/Main.json"
+        ]
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_mega-menu.scss",
+            "myaccount": "Modules/Main/Sass/_mega-menu.scss",
+            "checkout": "Modules/Main/Sass/_mega-menu.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_mega-menu.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/mega_menu.tpl"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Main/Templates/mega_menu.tpl"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/Templates/mega_menu.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/NSeComm.MegaMenu.js",
+            "myaccount": "Modules/Main/JavaScript/NSeComm.MegaMenu.js",
+            "checkout": "Modules/Main/JavaScript/NSeComm.MegaMenu.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.MegaMenu.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.MegaMenu.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.MegaMenu.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\MegaMenu"
+}

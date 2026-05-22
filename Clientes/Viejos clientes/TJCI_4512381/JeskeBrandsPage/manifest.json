@@ -1,0 +1,70 @@
+{
+    "name": "JeskeBrandsPage",
+    "fantasyName": "Jeske Brands Page",
+    "vendor": "PSeComm",
+    "version": "1.0.1",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Creates the Jeske Brand Page",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/BrandPage/Sass/_jeskebrandspage-brandpage.scss"
+        },
+        "files": [
+            "Modules/BrandPage/Sass/_jeskebrandspage-brandpage.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/BrandPage/Templates/brands_list.tpl",
+                    "Modules/BrandPage/Templates/brandspage_collection.tpl",
+                    "Modules/BrandPage/Templates/brandspage_details.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/BrandPage/JavaScript/BrandPage.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/BrandPage/JavaScript/BrandPage.js",
+                    "Modules/BrandPage/JavaScript/BrandPage.List.View.js",
+                    "Modules/BrandPage/JavaScript/BrandsPage.List.Model.js",
+                    "Modules/BrandPage/JavaScript/BrandsPage.List.Collection.js",
+                    "Modules/BrandPage/JavaScript/BrandsPage.List.Collection.View.js",
+                    "Modules/BrandPage/JavaScript/BrandsPage.List.Details.View.js",
+                    "Modules/BrandPage/JavaScript/BrandsPage.List.Helper.js",
+                    "Modules/BrandPage/SuiteScript2/BrandsPage.List.Model.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\JeskeBrandsPage",
+    "suitescript2": {
+        "files": [
+            "Modules/BrandPage/SuiteScript2/BrandsPage.List.Model.js",
+            "Modules/BrandPage/SuiteScript2/BrandsPage.List.Service.ss"
+        ]
+    }
+}

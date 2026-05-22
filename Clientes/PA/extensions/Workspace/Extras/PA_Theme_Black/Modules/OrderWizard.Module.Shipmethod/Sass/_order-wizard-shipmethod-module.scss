@@ -1,0 +1,64 @@
+.order-wizard-shipmethod-module{
+	@extend .box-column;
+}
+
+.order-wizard-shipmethod-module-title{
+	margin-bottom: $sc-margin-lv4;
+}
+
+.order-wizard-shipmethod-module-message{
+	@extend .message-warning;
+}
+
+.order-wizard-shipmethod-module-option-select{
+	@extend .input-large;
+}
+
+.order-wizard-shipmethod-module-option{
+	color: $sc-color-copy;
+	display: block;
+	padding: 1rem;
+	margin-bottom: $sc-margin-lv2;
+	background: $pa-shipping-method-bgcolor;
+	//border: 1px solid $sc-color-theme-border;
+	cursor: pointer;
+}
+// .PA_Theme_Yellow{
+// 	.order-wizard-shipmethod-module-option{
+// 		background: #fff;
+// 		border-bottom:1px solid #000;
+// 		margin: 0;
+// 	}
+// 	.order-wizard-shipmethod-module-option-active {
+// 		background: $pa-shipping-method-bgcolor;
+// 	}
+// 	.order-wizard-shipmethod-module{
+// 		& > :last-child{
+// 			border: 0 none;
+// 		}
+// 	}
+// }
+.order-wizard-shipmethod-module-option-active {
+	background-color: $sc-neutral-shade-0;
+}
+
+.order-wizard-shipmethod-module-checkbox{
+	margin-right: $sc-margin-lv2;
+}
+
+.order-wizard-shipmethod-module-option-price{
+	float: right;
+}
+
+.order-wizard-msr-shipmethod-module-message{
+	@extend .message-warning;
+}
+
+.order-wizard-msr-shipmethod-package-message-icon{
+	@extend .icon-base;
+	@extend %fa-exclamation-triangle;
+}
+
+.order-wizard-shipmethod-module-option-name {
+	width: calc(100% - 35px);
+}

@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "myAccountAdditionalFields",
+        "group": "extensions",
+        "title": "My Account - Additional Fields"
+    },
+    "properties": {
+        "myAccountAdditionalFields.index": {
+            "group": "extensions",
+            "subtab": "myAccountAdditionalFields",
+            "type": "string",
+            "title": "Menu index",
+            "description": "Index that will be used to set the menu position in the left bar",
+            "default": "3"
+        }
+    }
+}

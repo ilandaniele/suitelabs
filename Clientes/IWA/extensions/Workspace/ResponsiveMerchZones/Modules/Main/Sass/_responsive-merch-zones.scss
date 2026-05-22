@@ -1,0 +1,53 @@
+.cms-merchzone-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#cms_merchzonetwo .cms-merchzone-item {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 100%;
+
+    .item-name {
+        flex-grow: 2;
+    }
+
+    .cms-merchzone-see-more {
+        width: fit-content;
+    }
+}
+
+@media (min-width: $screen-sm-min) {
+    .cms-merchzone-grid-3-cols {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .cms-merchzone-grid-4-cols {
+        grid-template-columns: repeat(4, 1fr)
+    }
+
+    .cms-merchzone-grid-5-cols {
+        grid-template-columns: repeat(4, 1fr)
+    }
+
+    .cms-merchzone-grid-6-cols {
+        grid-template-columns: repeat(4, 1fr)
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .cms-merchzone-grid-5-cols {
+        grid-template-columns: repeat(5, 1fr)
+    }
+
+    .cms-merchzone-grid-6-cols {
+        grid-template-columns: repeat(5, 1fr)
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .cms-merchzone-grid-6-cols {
+        grid-template-columns: repeat(6, 1fr)
+    }
+}

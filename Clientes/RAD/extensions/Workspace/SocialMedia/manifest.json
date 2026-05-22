@@ -1,0 +1,77 @@
+{
+	"name": "SocialMedia",
+	"fantasyName": "Social Media",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "Changed the social media urls to configuration's fields. SuiteLabs v2.1.0, removed deprecated function parameter.",
+	"configuration": {
+		"files": [
+			"Modules/SocialMedia/Configuration/SocialMedia.json"
+		]
+	},
+	"templates": {
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/SocialMedia/Templates/social-media.tpl"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/SocialMedia/Templates/social-media.tpl"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/SocialMedia/Templates/social-media.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/SocialMedia/Sass/_social-media.scss",
+			"myaccount": "Modules/SocialMedia/Sass/_social-media.scss",
+			"checkout": "Modules/SocialMedia/Sass/_social-media.scss"
+		},
+		"files": [
+			"Modules/SocialMedia/Sass/_social-media.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/SocialMedia/JavaScript/AwaLabs.SocialMedia.js",
+			"myaccount": "Modules/SocialMedia/JavaScript/AwaLabs.SocialMedia.js",
+			"checkout": "Modules/SocialMedia/JavaScript/AwaLabs.SocialMedia.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/SocialMedia/JavaScript/AwaLabs.SocialMedia.js",
+					"Modules/SocialMedia/JavaScript/SocialMedia.View.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/SocialMedia/JavaScript/AwaLabs.SocialMedia.js",
+					"Modules/SocialMedia/JavaScript/SocialMedia.View.js"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/SocialMedia/JavaScript/AwaLabs.SocialMedia.js",
+					"Modules/SocialMedia/JavaScript/SocialMedia.View.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/SocialMedia@2.1.0",
+	"activation_id": "11",
+	"extension_id": "17005"
+}

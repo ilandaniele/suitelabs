@@ -1,0 +1,32 @@
+.custom-form-controls-group {
+  margin-bottom: $sc-margin-lv3;
+}
+
+.custom-form-submit {
+  @extend .button-medium;
+}
+
+.custom-form-label {
+  margin-bottom: 0;
+}
+
+.custom-form-select[multiple] {
+  background: none;
+}
+
+.custom-form-grecaptcha-disclaimer {
+  margin-top: $sc-margin-lv4;
+  font-size: 12px;
+}
+
+.custom-form-country,
+.custom-form-state {
+  @media (min-width: $screen-md-min) {
+    max-width: 300px;
+  }
+}
+
+.custom-form-tooltip {
+    @extend .sc-tooltip;
+    margin: 4px;
+}

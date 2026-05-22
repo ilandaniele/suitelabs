@@ -1,0 +1,62 @@
+{
+    "name": "CustomLogin",
+    "fantasyName": "Custom Login",
+    "vendor": "NSeComm",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "version": "1.0.0",
+    "description": "Customized Login Page to Support SSO besides the native SCA Login",
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/CustomLogin.json"
+        ]
+    },
+    "templates": {
+        "application": {
+            "checkout": {
+                "files": [
+                    "Modules/Main/Templates/customlogin.tpl"
+                ]
+            }
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "checkout": "Modules/Main/Sass/_customlogin-main.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_customlogin-main.scss"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "checkout": "Modules/Main/JavaScript/NSeComm.CustomLogin.Main.js"
+        },
+        "application": {
+            "checkout": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.CustomLogin.Main.js",
+                    "Modules/Main/JavaScript/CustomLogin.View.js"
+                ]
+            }
+        }
+    },
+    "suitescript2": {
+        "files": []
+    }
+}

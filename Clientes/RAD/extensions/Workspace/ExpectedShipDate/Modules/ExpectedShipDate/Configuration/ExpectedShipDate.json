@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "orderHistory",
+        "title": "Order History",
+        "description": "Order History configuration",
+        "group": "extensions"
+      },
+    "properties": { 
+        "orderHistory.expectedShipDate": {
+            "group": "extensions",
+            "subtab": "orderHistory",
+            "type": "string",
+            "title": "Expected Ship Date Field",
+            "description": "Expected Ship Date Field",
+            "default": "custcol_exp_ship_date"
+        }
+    }
+}

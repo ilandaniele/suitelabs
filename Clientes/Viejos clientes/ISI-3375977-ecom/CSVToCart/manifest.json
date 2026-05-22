@@ -1,0 +1,65 @@
+{
+    "name": "CSVToCart",
+    "fantasyName": "CSV to Cart",
+    "vendor": "NSeComm",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "version": "1.0.0",
+    "description": "Adds items to cart from a CSV file",
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": [
+                "services/CSVToCart.Service.ss"
+            ]
+        }
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/section-csvtocart.tpl"
+                ]
+            }
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_csvtocart.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_csvtocart.scss"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/NSeComm.CSVToCart.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/CSVToCart.View.js",
+                    "Modules/Main/JavaScript/NSeComm.CSVToCart.js",
+                    "Modules/Main/JavaScript/CSVToCart.Model.js"
+                ]
+            }
+        }
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/Main/SuiteScript/NSeComm.CSVToCart.js",
+        "files": [
+            "Modules/Main/SuiteScript/NSeComm.CSVToCart.js",
+            "Modules/Main/SuiteScript/CSVToCart.ServiceController.js",
+            "Modules/Main/SuiteScript/CSVToCart.Model.js"
+        ]
+    }
+}

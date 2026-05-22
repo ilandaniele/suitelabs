@@ -1,0 +1,95 @@
+{
+    "dbConfig": {
+        "keepalive": false,
+        "port": 7777,
+        "https": false,
+        "key": "KEYPEM",
+        "cert": "CERTPEM"
+    },
+    "scaffolding": {
+        "keepalive": false,
+        "port": 7777
+    },
+    "fetchConfig": {
+        "extension": "SCTypeahead"
+    },
+    "extensionMode": true,
+    "preserveManifest": false,
+    "folders": {
+        "source": {
+            "source_path": "Workspace",
+            "extras_path": "Workspace/Extras"
+        },
+        "application_manifest": "Workspace/Extras",
+        "theme": "Extras",
+        "overrides": "Overrides",
+        "output": "LocalDistribution/tmp",
+        "local": "LocalDistribution",
+        "deploy": "DeployDistribution",
+        "extensions_dest_name": "Deploy_Extensions",
+        "extmech_parent": "-15",
+        "extensions_path": [
+            "Workspace/SCTypeahead"
+        ],
+        "theme_path": "Workspace/Extras/PA_Theme_Black",
+        "overrides_path": "Workspace/Extras/PA_Theme_Black/Overrides"
+    },
+    "application": {
+        "application_manifest": {
+            "type": "SCA",
+            "version": "19.2.3",
+            "application": [
+                "shopping",
+                "myaccount",
+                "checkout"
+            ],
+            "extensible_resources": [
+                "skins",
+                "javascript",
+                "ssp-libraries",
+                "sass",
+                "templates",
+                "services",
+                "configuration",
+                "assets"
+            ]
+        }
+    },
+    "services": {
+        "EXTENSION_SERVICE": {
+            "script": "customscript_ns_sc_ext_mech_restlets",
+            "deploy": "customdeploy_ns_sc_ext_mech_restlets"
+        },
+        "WEBSITE_SERVICE": {
+            "script": "customscript_ns_sc_ext_mech_restlets",
+            "deploy": "customdeploy_ns_sc_ext_mech_restlets"
+        },
+        "FILE_SERVICE": {
+            "script": "customscript_ns_sc_ext_mech_restlets",
+            "deploy": "customdeploy_ns_sc_ext_mech_restlets"
+        },
+        "DEPLOY_SERVICE": {
+            "script": "customscript_ext_mech_deployer_rest",
+            "deploy": "customdeploy_ext_mech_deployer_rest"
+        }
+    },
+    "deploy_config": {
+        "update": true,
+        "chunk_size": 80
+    },
+    "credentials": {
+        "user_agent": "sc-extension-devtools/2024.2.50",
+        "authID": "PA-pd",
+        "key": "6003abc39544e8b999fd2c8fd0c643a1cfb751552d45d215e4fcb7c3af9a70ad",
+        "secret": "8b1b1107c327ae8f9e6092fe9dac01fb0a7b14ee939be5ce42f0e73089df27ee",
+        "account": "3901023",
+        "hostname": "3901023.restlets.api.netsuite.com",
+        "website": "2",
+        "domain": "www.primaryarms.com",
+        "webapp_id": "13080826",
+        "ssp_folder": "13080826",
+        "is_scis": false
+    },
+    "product": "gulp",
+    "nsdeployPath": ".nsdeploy"
+}

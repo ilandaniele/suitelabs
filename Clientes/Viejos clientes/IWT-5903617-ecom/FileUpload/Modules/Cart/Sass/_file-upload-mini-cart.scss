@@ -1,0 +1,36 @@
+.header-mini-cart-upload-file-main {
+    margin: $sc-margin-lv4 0;
+    font-size: 13px;
+    p {
+        font-weight: $sc-font-weight-bold;
+        font-size: 13px;
+
+        &.header-mini-cart-upload-file-info {
+            margin-bottom: $sc-margin-lv4;
+            span {
+                font-size: 13px;
+            }
+            .header-mini-cart-upload-file-info-light {
+                font-weight: normal;
+                color: $sc-neutral-shade;
+            }
+        }
+    }
+
+    .header-mini-cart-image-details{
+        a {
+            color: $sc-color-primary;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .header-mini-cart-special-instructions {
+        color: $sc-neutral-shade;
+    }
+}
+
+.cart-lines-image-details a {
+    word-break: break-all;
+}

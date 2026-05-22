@@ -1,0 +1,41 @@
+{
+    "name": "WebsiteItems",
+    "fantasyName": "Website Items",
+    "vendor": "NSeComm",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "This customization allows to display different item information for each independent NetSuite site.",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/WebsiteItems.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/WebsiteItems.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\WebsiteItems",
+    "suitescript2": {
+        "files": []
+    }
+}

@@ -1,0 +1,102 @@
+{
+	"name": "AwaFileUpload",
+	"fantasyName": "AwaLabs File Upload",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "AwaLabs File Upload. SuiteLabs v2.1.0 refers to the SCA upgrade to 23.2",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"templates": {
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/AwaFileUpload/Templates/fileupload_image_thumbnail.tpl",
+					"Modules/AwaFileUpload/Templates/fileupload.tpl"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/AwaFileUpload/Templates/fileupload_image_thumbnail.tpl",
+					"Modules/AwaFileUpload/Templates/fileupload.tpl"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/AwaFileUpload/Templates/fileupload_image_thumbnail.tpl",
+					"Modules/AwaFileUpload/Templates/fileupload.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/AwaFileUpload/Sass/_fileupload.scss",
+			"myaccount": "Modules/AwaFileUpload/Sass/_fileupload.scss",
+			"checkout": "Modules/AwaFileUpload/Sass/_fileupload.scss"
+		},
+		"files": [
+			"Modules/AwaFileUpload/Sass/_fileupload.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/AwaFileUpload/JavaScript/AwaLabs.FileUpload.js",
+			"myaccount": "Modules/AwaFileUpload/JavaScript/AwaLabs.FileUpload.js",
+			"checkout": "Modules/AwaFileUpload/JavaScript/AwaLabs.FileUpload.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/AwaFileUpload/JavaScript/AwaLabs.FileUpload.js",
+					"Modules/AwaFileUpload/JavaScript/FileUpload.File.Collection.js",
+					"Modules/AwaFileUpload/JavaScript/FileUpload.File.Model.js",
+					"Modules/AwaFileUpload/JavaScript/FileUpload.File.Thumbnail.View.js",
+					"Modules/AwaFileUpload/JavaScript/FileUpload.File.View.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/AwaFileUpload/JavaScript/AwaLabs.FileUpload.js",
+					"Modules/AwaFileUpload/JavaScript/FileUpload.File.Collection.js",
+					"Modules/AwaFileUpload/JavaScript/FileUpload.File.Model.js",
+					"Modules/AwaFileUpload/JavaScript/FileUpload.File.Thumbnail.View.js",
+					"Modules/AwaFileUpload/JavaScript/FileUpload.File.View.js"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/AwaFileUpload/JavaScript/AwaLabs.FileUpload.js",
+					"Modules/AwaFileUpload/JavaScript/FileUpload.File.Collection.js",
+					"Modules/AwaFileUpload/JavaScript/FileUpload.File.Model.js",
+					"Modules/AwaFileUpload/JavaScript/FileUpload.File.Thumbnail.View.js",
+					"Modules/AwaFileUpload/JavaScript/FileUpload.File.View.js"
+				]
+			}
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/AwaFileUpload/SuiteScript/AwaLabs.FileUpload.js",
+		"files": [
+			"Modules/AwaFileUpload/SuiteScript/AwaLabs.FileUpload.js",
+			"Modules/AwaFileUpload/SuiteScript/FileUpload.File.Model.js"
+		]
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/AwaFileUpload@2.1.0",
+	"activation_id": "11",
+	"extension_id": "16603"
+}

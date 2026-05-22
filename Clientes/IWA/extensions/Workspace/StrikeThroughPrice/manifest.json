@@ -1,0 +1,39 @@
+{
+    "name": "StrikeThroughPrice",
+    "fantasyName": "StrikeThroughPrice",
+    "vendor": "ACS",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "StrikeThrough online customer price vs given price",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/StrikeThroughPrice/JavaScript/StrikeThroughPrice.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/StrikeThroughPrice/JavaScript/StrikeThroughPrice.js",
+                    "Modules/StrikeThroughPrice/JavaScript/ACS.StrikeThrough.Prices.Helper.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\StrikeThroughPrice"
+}

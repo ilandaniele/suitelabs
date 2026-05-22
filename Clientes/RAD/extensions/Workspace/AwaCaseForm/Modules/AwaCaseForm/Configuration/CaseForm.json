@@ -1,0 +1,51 @@
+{
+    "type": "object",
+    "properties": {
+        "cases.uploadFileTypesOfInquiries": {
+            "group": "myAccountApp",
+            "subtab": "case",
+            "type": "array",
+            "title": "Upload File Types of Inquiries",
+            "description": "Type of Inquiries list to display upload file field",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "title": "ID",
+                        "description": "ID"
+                    },
+                    "text": {
+                        "type": "string",
+                        "title": "Text",
+                        "description": "Text"
+                    }
+                }
+            },
+            "default": [
+                {
+                    "id": "3",
+                    "text": "Claim"
+                },
+                {
+                    "id": "7",
+                    "text": "Company Info"
+                },
+                {
+
+                    "id": "20",
+                    "text": "eCommerce Request"
+                },
+                {
+                    "id": "22",
+                    "text": "Marketing Request"
+                },
+                {
+                    "id": "10",
+                    "text": "Requesting Documents"
+                }
+            ]
+
+        }
+    }
+}

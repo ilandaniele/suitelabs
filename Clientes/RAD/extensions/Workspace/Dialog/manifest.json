@@ -1,0 +1,94 @@
+{
+	"name": "Dialog",
+	"fantasyName": "Dialog",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "2.0.0",
+	"description": "My cool extension does magic!",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/Dialog/Configuration/Configuration.json"
+		]
+	},
+	"templates": {
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Dialog/Template/dialog.tpl"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/Dialog/Template/dialog.tpl"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/Dialog/Template/dialog.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/Dialog/Sass/_dialog-dialog.scss",
+			"myaccount": "Modules/Dialog/Sass/_dialog-dialog.scss",
+			"checkout": "Modules/Dialog/Sass/_dialog-dialog.scss"
+		},
+		"files": [
+			"Modules/Dialog/Sass/_dialog-dialog.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/Dialog/JavaScript/AwaLabs.Dialog.js",
+			"myaccount": "Modules/Dialog/JavaScript/AwaLabs.Dialog.js",
+			"checkout": "Modules/Dialog/JavaScript/AwaLabs.Dialog.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Dialog/JavaScript/Dialog.View.js",
+					"Modules/Dialog/JavaScript/AwaLabs.Dialog.js",
+					"Modules/Dialog/JavaScript/Dialog.Service.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/Dialog/JavaScript/Dialog.View.js",
+					"Modules/Dialog/JavaScript/AwaLabs.Dialog.js",
+					"Modules/Dialog/JavaScript/Dialog.Service.js"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/Dialog/JavaScript/Dialog.View.js",
+					"Modules/Dialog/JavaScript/AwaLabs.Dialog.js",
+					"Modules/Dialog/JavaScript/Dialog.Service.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/Dialog@2.0.0",
+	"activation_id": "11",
+	"extension_id": "10721"
+}

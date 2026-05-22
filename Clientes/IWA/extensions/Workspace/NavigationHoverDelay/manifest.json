@@ -1,0 +1,39 @@
+{
+    "name": "NavigationHoverDelay",
+    "fantasyName": "Navigation Hover Delay",
+    "vendor": "SuiteLabs",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "This extension add a delay effect to the top navigation.",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_navigationhoverdelay-main.scss",
+            "myaccount": "Modules/Main/Sass/_navigationhoverdelay-main.scss",
+            "checkout": "Modules/Main/Sass/_navigationhoverdelay-main.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_navigationhoverdelay-main.scss"
+        ]
+    },
+    "local_folder": "Workspace\\NavigationHoverDelay",
+    "suitescript2": {
+        "files": []
+    }
+}

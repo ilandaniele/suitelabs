@@ -1,0 +1,89 @@
+{
+    "name": "MyDownloadsSection",
+    "fantasyName": "My Downloads Section",
+    "vendor": "NSeComm",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "version": "1.0.0",
+    "description": "Adds a my downloads section into my account menu",
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/section-mydownloads.tpl"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/Templates/section-mydownloads.tpl"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Main/Templates/section-mydownloads.tpl"
+                ]
+            }
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_mydownloadssection-main.scss",
+            "checkout": "Modules/Main/Sass/_mydownloadssection-main.scss",
+            "myaccount": "Modules/Main/Sass/_mydownloadssection-main.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_mydownloadssection-main.scss"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/MyDownloadsSection.js",
+            "checkout": "Modules/Main/JavaScript/MyDownloadsSection.js",
+            "myaccount": "Modules/Main/JavaScript/MyDownloadsSection.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/MyDownloadsSection.js",
+                    "Modules/Main/JavaScript/MyDownloadsSection.Model.js",
+                    "Modules/Main/JavaScript/MyDownloadsSection.View.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/JavaScript/MyDownloadsSection.js",
+                    "Modules/Main/JavaScript/MyDownloadsSection.Model.js",
+                    "Modules/Main/JavaScript/MyDownloadsSection.View.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Main/JavaScript/MyDownloadsSection.js",
+                    "Modules/Main/JavaScript/MyDownloadsSection.Model.js",
+                    "Modules/Main/JavaScript/MyDownloadsSection.View.js"
+                ]
+            }
+        }
+    },
+    "suitescript2": {
+        "files": [
+            "Modules/Main/SuiteScript2/MyDownloadsSection.Service.ss",
+            "Modules/Main/SuiteScript2/MyDownloadsSection.Model.js"
+        ]
+    }
+}

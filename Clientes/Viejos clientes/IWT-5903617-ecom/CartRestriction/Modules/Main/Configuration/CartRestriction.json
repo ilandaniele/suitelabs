@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "subtab": {
+      "id":"cartRestriction",
+      "title":"Cart Restriction",
+      "description":"Cart Restriction Extension configuration",
+      "group":"extensions"
+    },
+    "properties": {
+        "cartRestriction.siteUrl": {
+            "group": "extensions",
+            "subtab": "cartRestriction",
+            "type": "string",
+            "title": "Site URL",
+            "description": "Site URL",
+            "default": "https://order-sandbox.intermexusa.com/"
+        }
+    }
+}

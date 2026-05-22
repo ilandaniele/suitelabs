@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+        "OrderStatusImprovements.enable": {
+            "group": "extensions",
+            "type": "boolean",
+            "title": "Order Status Improvements Enable / Disable",
+            "description": "Check this checkbox to display the improvements for extension Order Status - 1.0.2",
+            "default": true
+        }
+    }
+}

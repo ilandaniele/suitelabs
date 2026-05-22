@@ -1,0 +1,56 @@
+{
+    "name": "ProductBanner",
+    "fantasyName": "Product Banner",
+    "vendor": "SuiteLabs",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "This extension adds the ability to configure multiple banners on the PDP",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/ProductBanner.json"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/product_banner.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/SuiteLabs.ProductBanner.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.ProductBanner.Main.js",
+                    "Modules/Main/JavaScript/ProductBanner.View.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\ProductBanner",
+    "suitescript2": {
+        "files": []
+    }
+}

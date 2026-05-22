@@ -1,0 +1,110 @@
+.sc-order-status-details{
+  padding-bottom: $sc-padding-base * 5;
+
+  &-reset {
+    margin-top: $sc-margin-base * 3;
+
+    &-button {
+      @extend .button-medium;
+      @extend .button-primary;
+    }
+  }
+
+  &-number {
+    margin-top: $sc-margin-lv4;
+    background-color: $sc-color-theme-background;
+    padding: $sc-padding-base * 3;
+  }
+
+  &-info {
+    padding: $sc-padding-base * 4 $sc-padding-base * 3 $sc-padding-base * 4 $sc-padding-base * 3;
+    @extend .col-md-12;
+
+    &-shipping-date {
+      @extend .col-md-4;
+      @media (min-width: $screen-md-min) {
+        padding-left: $sc-padding-base * 5;
+      }
+      padding-left: 0;
+    }
+
+    &-status {
+      @extend .col-md-8;
+      padding-left: 0;
+
+      .highlight-status-error {
+        color: $sc-color-error;
+      }
+    }
+  }
+
+  &-summary {
+    @extend .col-md-12;
+    padding-bottom:$sc-padding-base * 3 ;
+    padding-left: 0;
+    padding-right: 0;
+
+    &-order {
+      @extend .col-md-4;
+      padding-right: 0;
+      padding-left: 0;
+      margin-bottom:$sc-margin-base * 2 ;
+      @media (min-width: $screen-md-min) {
+        @extend .col-md-push-8
+      }
+    }
+
+    &-item {
+      @extend .col-md-8;
+      padding-left: 0;
+      padding-right: 0;
+      @media (min-width: $screen-md-min) {
+        padding-right: $sc-padding-base * 3;
+        @extend .col-md-pull-4
+      }
+
+      &-header {
+        border: 1px solid $sc-color-theme-border;
+        padding-top:$sc-padding-base * 2 ;
+        padding-bottom:$sc-padding-base * 2 ;
+        margin-left: 0;
+
+        &-item {
+          @extend .col-md-7;
+          @extend .col-xs-7;
+        }
+
+        &-quantity {
+          @extend .col-md-2;
+          @extend .col-xs-2;
+        }
+
+        &-status {
+          @extend .col-md-3;
+          @extend .col-xs-3;
+        }
+      }
+
+      &-line {
+        padding-top:$sc-padding-base * 3 ;
+        padding-bottom:$sc-padding-base * 3 ;
+        margin-top: $sc-margin-base;
+
+        &-item {
+          @extend .col-md-7;
+          @extend .col-xs-7;
+        }
+
+        &-quantity {
+          @extend .col-md-2;
+          @extend .col-xs-2;
+        }
+
+        &-status {
+          @extend .col-md-3;
+          @extend .col-xs-3;
+        }
+      }
+    }
+  }
+}

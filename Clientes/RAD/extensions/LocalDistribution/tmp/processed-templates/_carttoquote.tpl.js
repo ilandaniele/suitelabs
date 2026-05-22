@@ -1,0 +1,23 @@
+define('_carttoquote.tpl', ['Handlebars','Handlebars.CompilerNameLookup'], function (Handlebars, compilerNameLookup){ var t = {"1":function(container,depth0,helpers,partials,data) {
+    var stack1, alias1=depth0 != null ? depth0 : (container.nullContext || {});
+
+  return "    <a class=\"cart-detailed-proceed-to-checkout cart-summary-button-request-quote\n        "
+    + ((stack1 = compilerNameLookup(helpers,"if").call(alias1,(depth0 != null ? compilerNameLookup(depth0,"showProceedButton") : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data,"loc":{"start":{"line":3,"column":8},"end":{"line":3,"column":81}}})) != null ? stack1 : "")
+    + "\"\n       href=\"#request-a-quote\" data-touchpoint=\"customercenter\" data-hashtag=\"#request-a-quote\" data-action=\"cart-detail-to-quote\"\n       origin_hash=\"request-a-quote\" origin=customercente>\n        "
+    + container.escapeExpression((compilerNameLookup(helpers,"translate")||(depth0 && compilerNameLookup(depth0,"translate"))||container.hooks.helperMissing).call(alias1,"Submit as Quote",{"name":"translate","hash":{},"data":data,"loc":{"start":{"line":6,"column":8},"end":{"line":6,"column":39}}}))
+    + "\n    </a>\n";
+},"2":function(container,depth0,helpers,partials,data) {
+    return " cart-summary-button-proceed-checkout-sb ";
+},"4":function(container,depth0,helpers,partials,data) {
+    var stack1, alias1=depth0 != null ? depth0 : (container.nullContext || {});
+
+  return "    <a class=\"cart-summary-button-proceed-checkout cart-summary-button-request-quote\n        "
+    + ((stack1 = compilerNameLookup(helpers,"if").call(alias1,(depth0 != null ? compilerNameLookup(depth0,"showProceedButton") : depth0),{"name":"if","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data,"loc":{"start":{"line":10,"column":8},"end":{"line":10,"column":81}}})) != null ? stack1 : "")
+    + "\"\n       href=\"#request-a-quote\" data-touchpoint=\"customercenter\" data-hashtag=\"#request-a-quote\" data-action=\"cart-to-quote\"\n       origin_hash=\"request-a-quote\" origin=customercente>\n        "
+    + container.escapeExpression((compilerNameLookup(helpers,"translate")||(depth0 && compilerNameLookup(depth0,"translate"))||container.hooks.helperMissing).call(alias1,"Submit as Quote",{"name":"translate","hash":{},"data":data,"loc":{"start":{"line":13,"column":8},"end":{"line":13,"column":39}}}))
+    + "\n    </a>\n";
+},"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = compilerNameLookup(helpers,"if").call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? compilerNameLookup(depth0,"isCartDetail") : depth0),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.program(4, data, 0),"data":data,"loc":{"start":{"line":1,"column":0},"end":{"line":15,"column":7}}})) != null ? stack1 : "");
+},"useData":true}; var main = t.main; t.main = function(){ arguments[1] = arguments[1] || {}; var ctx = arguments[1]; ctx._extension_path = 'http://localhost:7777/tmp/extensions/AwaLabs/CartToQuote/2.1.0/'; ctx._theme_path = 'http://localhost:7777/tmp/extensions/AwaLabs/ReginaAndrewTheme/23.2.2/'; return main.apply(this, arguments); }; var template = Handlebars.template(t); template.Name = '_carttoquote'; return template;});

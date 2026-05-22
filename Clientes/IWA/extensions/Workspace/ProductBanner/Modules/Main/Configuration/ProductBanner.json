@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "productBanner",
+        "group": "extensions",
+        "title": "Product Banners",
+        "description": "Configure different product banners"
+    },
+    "properties": {
+        "productBanner.banners": {
+            "group": "extensions",
+            "subtab": "productBanner",
+            "type": "array",
+            "title": "Product Banners",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "key": {
+                        "type": "string",
+                        "title": "Banner Key",
+                        "mandatory": true
+                    },
+                    "placeholder": {
+                        "type": "string",
+                        "title": "Banner Placeholder",
+                        "mandatory": true
+                    },
+                    "content": {
+                        "type": "string",
+                        "nsType": "textarea",
+                        "title": "Banner Content (HTML)",
+                        "mandatory": true
+                    }
+                }
+            }
+        }
+    }
+}

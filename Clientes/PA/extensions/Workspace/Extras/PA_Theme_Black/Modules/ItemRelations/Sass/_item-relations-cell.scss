@@ -1,0 +1,37 @@
+.item-relations-cell {
+    text-align: center;
+    padding: 10px;
+}
+.item-relations-cell>div {
+    border: 1px solid #eaeaea;
+    border-radius: 0;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background: #fff;
+    position: relative;
+    margin: 0px;
+    padding: 5px;
+    @media (min-width: $screen-md-min){
+        max-width: 464px;
+    }
+    &:hover {
+        box-shadow: 0px 0px 0px rgba(0,0,0,0.25), 0 0px 5px rgba(0,0,0,0.22);
+        border-color: #ccc;
+    }
+}
+
+.item-relations-wrapper{
+    position: relative;
+    
+    .itembadges-container.itembadges-container-top-left{
+        top:0;
+        left: 0;
+        right: auto;
+        position: absolute;
+    }
+    .itembadges-container.itembadges-container-top-right{
+        top:0;
+        right: 0;
+        left:auto;
+        position: absolute;
+    }
+}

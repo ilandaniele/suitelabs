@@ -1,0 +1,80 @@
+{
+    "name": "SignifydTrackerExtension",
+    "fantasyName": "SignifydTrackerExtension",
+    "vendor": "SSD",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Adds SignifydTracker implementation to SCA website",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": [
+                "services/SignifydTracker.Service.ss"
+            ]
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/SignifydTrackerExtension/Configuration/SignifydTrackerExtension.json"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/SignifydTrackerExtension/JavaScript/SignifydTrackerExtension.js",
+            "myaccount": "Modules/SignifydTrackerExtension/JavaScript/SignifydTrackerExtension.js",
+            "checkout": "Modules/SignifydTrackerExtension/JavaScript/SignifydTrackerExtension.Checkout.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/SignifydTrackerExtension/JavaScript/OrderWizard.SignifydTracker.js",
+                    "Modules/SignifydTrackerExtension/JavaScript/SignifydTracker.js",
+                    "Modules/SignifydTrackerExtension/JavaScript/SignifydTracker.Model.js",
+                    "Modules/SignifydTrackerExtension/JavaScript/SignifydTrackerExtension.Checkout.js",
+                    "Modules/SignifydTrackerExtension/JavaScript/SignifydTrackerExtension.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/SignifydTrackerExtension/JavaScript/OrderWizard.SignifydTracker.js",
+                    "Modules/SignifydTrackerExtension/JavaScript/SignifydTracker.js",
+                    "Modules/SignifydTrackerExtension/JavaScript/SignifydTracker.Model.js",
+                    "Modules/SignifydTrackerExtension/JavaScript/SignifydTrackerExtension.Checkout.js",
+                    "Modules/SignifydTrackerExtension/JavaScript/SignifydTrackerExtension.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/SignifydTrackerExtension/JavaScript/OrderWizard.SignifydTracker.js",
+                    "Modules/SignifydTrackerExtension/JavaScript/SignifydTracker.js",
+                    "Modules/SignifydTrackerExtension/JavaScript/SignifydTracker.Model.js",
+                    "Modules/SignifydTrackerExtension/JavaScript/SignifydTrackerExtension.Checkout.js",
+                    "Modules/SignifydTrackerExtension/JavaScript/SignifydTrackerExtension.js"
+                ]
+            }
+        }
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/SignifydTrackerExtension/SuiteScript/SignifydTrackerExtension.js",
+        "files": [
+            "Modules/SignifydTrackerExtension/SuiteScript/SignifydTrackerExtension.js",
+            "Modules/SignifydTrackerExtension/SuiteScript/SignifydTracker.Model.js",
+            "Modules/SignifydTrackerExtension/SuiteScript/SignifydTracker.ServiceController.js"
+        ]
+    },
+    "local_folder": "Workspace\\SignifydTrackerExtension",
+    "suitescript2": {
+        "files": []
+    }
+}

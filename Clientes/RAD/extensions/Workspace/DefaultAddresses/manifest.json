@@ -1,0 +1,33 @@
+{
+	"name": "DefaultAddresses",
+	"fantasyName": "Default Addresses",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "Set extra custom fields to track the default addresses. SuiteLabs v2.1.0 refers to the SCA upgrade to 23.2",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/DefaultAddresses/SuiteScript/AwaLabs.DefaultAddresses.js",
+		"files": [
+			"Modules/DefaultAddresses/SuiteScript/AwaLabs.DefaultAddresses.js"
+		]
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/DefaultAddresses@2.1.0",
+	"activation_id": "11",
+	"extension_id": "16903"
+}

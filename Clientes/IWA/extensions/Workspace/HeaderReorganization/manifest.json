@@ -1,0 +1,85 @@
+{
+    "name": "HeaderReorganization",
+    "fantasyName": "Header Reorganization",
+    "vendor": "SuiteLabs",
+    "version": "1.0.1",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "This extension reorganizes elements in header. Depends on a Data View: Header.Reoganization. Data view located in module ThemeHelper, header template.",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_header-reorganization-main.scss",
+            "myaccount": "Modules/Main/Sass/_header-reorganization-main.scss",
+            "checkout": "Modules/Main/Sass/_header-reorganization-main.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_header-reorganization-main.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/header_reorganization_header_profile.tpl"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Main/Templates/header_reorganization_header_profile.tpl"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/Templates/header_reorganization_header_profile.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/SuiteLabs.HeaderReorganization.Main.js",
+            "myaccount": "Modules/Main/JavaScript/SuiteLabs.HeaderReorganization.Main.js",
+            "checkout": "Modules/Main/JavaScript/SuiteLabs.HeaderReorganization.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.HeaderReorganization.Main.js",
+                    "Modules/Main/JavaScript/HeaderReorganization.Header.Profile.View.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.HeaderReorganization.Main.js",
+                    "Modules/Main/JavaScript/HeaderReorganization.Header.Profile.View.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.HeaderReorganization.Main.js",
+                    "Modules/Main/JavaScript/HeaderReorganization.Header.Profile.View.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\HeaderReorganization",
+    "suitescript2": {
+        "files": []
+    }
+}

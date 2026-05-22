@@ -1,0 +1,199 @@
+{
+    "dbConfig": {
+        "keepalive": false,
+        "port": 7777,
+        "https": false,
+        "key": "KEYPEM",
+        "cert": "CERTPEM"
+    },
+    "scaffolding": {
+        "keepalive": false,
+        "port": 7777
+    },
+    "fetchConfig": {
+        "extension": "AddrexxAddressValidation,AvailableFinishesExtension,BackbonePluginInstaller,CoolingCalculator,CoreContent,CustomCSSFileExtension,CustomFields,CustomFieldsPlacement,CustomForms,DisplayPriceLevels,EnhancedPDP,EnhancedProductReviews,GiftWrap,HeaderFiltering,HeaderReorganization,HideFacets,ItemBadges,ItemBadgesErrorHandler,ItemOptionsFieldHelp,ItemRecSysWidget,ItemResultsSorting,Klaviyo,ManageScreenErrors,MegaMenu,NavigablePromoItems,NavigationHoverDelay,NewsletterDoNotEmail,OptionsAndUpgrades,OrderStatus,PDPPageTitle,Path2ResponsePixel,PayPalExpressPatch,PayPalOptions,PepperjamExtension,PermissionsLevelsFix,PoshThemeExtension,ProductBanner,QuoteButton,QuoteToSalesOrderSite,RemovePOForNonB2B,RemoveWholesaleShipping,RemoveYouMayAlsoLike,ResponsiveMerchZones,SEOImagePatch,SearchRecommendations,ShippingMethodExtension,Signifyd,SignifydTrackerExtension,StickyScroll,StockStatusExtension,StrikeThroughPrice,ThemeHelper,VelaroChat,WishlistNotifyText",
+        "overwrite_ext": [
+            "Workspace/NewsletterDoNotEmail",
+            "Workspace/ThemeHelper",
+            "Workspace/AddrexxAddressValidation",
+            "Workspace/AvailableFinishesExtension",
+            "Workspace/BackbonePluginInstaller",
+            "Workspace/CoolingCalculator",
+            "Workspace/CoreContent",
+            "Workspace/CustomCSSFileExtension",
+            "Workspace/CustomFields",
+            "Workspace/CustomFieldsPlacement",
+            "Workspace/CustomForms",
+            "Workspace/DisplayPriceLevels",
+            "Workspace/EnhancedPDP",
+            "Workspace/EnhancedProductReviews",
+            "Workspace/GiftWrap",
+            "Workspace/HeaderFiltering",
+            "Workspace/HeaderReorganization",
+            "Workspace/HideFacets",
+            "Workspace/ItemBadges",
+            "Workspace/ItemBadgesErrorHandler",
+            "Workspace/ItemOptionsFieldHelp",
+            "Workspace/ItemRecSysWidget",
+            "Workspace/ItemResultsSorting",
+            "Workspace/Klaviyo",
+            "Workspace/ManageScreenErrors",
+            "Workspace/MegaMenu",
+            "Workspace/NavigablePromoItems",
+            "Workspace/NavigationHoverDelay",
+            "Workspace/OptionsAndUpgrades",
+            "Workspace/OrderStatus",
+            "Workspace/PDPPageTitle",
+            "Workspace/Path2ResponsePixel",
+            "Workspace/PayPalExpressPatch",
+            "Workspace/PayPalOptions",
+            "Workspace/PepperjamExtension",
+            "Workspace/PermissionsLevelsFix",
+            "Workspace/PoshThemeExtension",
+            "Workspace/ProductBanner",
+            "Workspace/QuoteButton",
+            "Workspace/QuoteToSalesOrderSite",
+            "Workspace/RemovePOForNonB2B",
+            "Workspace/RemoveWholesaleShipping",
+            "Workspace/RemoveYouMayAlsoLike",
+            "Workspace/ResponsiveMerchZones",
+            "Workspace/SEOImagePatch",
+            "Workspace/SearchRecommendations",
+            "Workspace/ShippingMethodExtension",
+            "Workspace/Signifyd",
+            "Workspace/SignifydTrackerExtension",
+            "Workspace/StickyScroll",
+            "Workspace/StockStatusExtension",
+            "Workspace/StrikeThroughPrice",
+            "Workspace/VelaroChat",
+            "Workspace/WishlistNotifyText"
+        ]
+    },
+    "extensionMode": true,
+    "preserveManifest": false,
+    "folders": {
+        "source": {
+            "source_path": "Workspace",
+            "extras_path": "Workspace/Extras"
+        },
+        "application_manifest": "Workspace/Extras",
+        "theme": "Extras",
+        "overrides": "Overrides",
+        "output": "LocalDistribution/tmp",
+        "local": "LocalDistribution",
+        "deploy": "DeployDistribution",
+        "extensions_dest_name": "Deploy_Extensions",
+        "extmech_parent": "-15",
+        "extensions_path": [
+            "Workspace/AvailableFinishesExtension",
+            "Workspace/BackbonePluginInstaller",
+            "Workspace/CoolingCalculator",
+            "Workspace/CustomCSSFileExtension",
+            "Workspace/CustomFieldsPlacement",
+            "Workspace/CustomForms",
+            "Workspace/DisplayPriceLevels",
+            "Workspace/EnhancedPDP",
+            "Workspace/EnhancedProductReviews",
+            "Workspace/EnhancedSearch",
+            "Workspace/HeaderFiltering",
+            "Workspace/HeaderReorganization",
+            "Workspace/HideFacets",
+            "Workspace/ItemBadgesErrorHandler",
+            "Workspace/ItemOptionsFieldHelp",
+            "Workspace/ItemResultsSorting",
+            "Workspace/Klaviyo",
+            "Workspace/ManageScreenErrors",
+            "Workspace/MegaMenu",
+            "Workspace/NavigablePromoItems",
+            "Workspace/NavigationHoverDelay",
+            "Workspace/NewsletterDoNotEmail",
+            "Workspace/OptionsAndUpgrades",
+            "Workspace/Path2ResponsePixel",
+            "Workspace/PayPalExpressPatch",
+            "Workspace/PayPalOptions",
+            "Workspace/PDPPageTitle",
+            "Workspace/PepperjamExtension",
+            "Workspace/PermissionsLevelsFix",
+            "Workspace/ProductBanner",
+            "Workspace/QuoteButton",
+            "Workspace/QuoteToSalesOrderSite",
+            "Workspace/RemovePOForNonB2B",
+            "Workspace/RemoveWholesaleShipping",
+            "Workspace/RemoveYouMayAlsoLike",
+            "Workspace/ResponsiveMerchZones",
+            "Workspace/SearchRecommendations",
+            "Workspace/SEOImagePatch",
+            "Workspace/ShippingMethodExtension",
+            "Workspace/Signifyd",
+            "Workspace/SignifydTrackerExtension",
+            "Workspace/StickyScroll",
+            "Workspace/StockStatusExtension",
+            "Workspace/StrikeThroughPrice",
+            "Workspace/ThemeHelper",
+            "Workspace/VelaroChat",
+            "Workspace/WishlistNotifyText"
+        ],
+        "theme_path": "Workspace/Extras/Posh",
+        "overrides_path": "Workspace/Extras/Posh/Overrides"
+    },
+    "application": {
+        "application_manifest": {
+            "type": "SCA",
+            "version": "22.2.1",
+            "application": [
+                "shopping",
+                "myaccount",
+                "checkout"
+            ],
+            "extensible_resources": [
+                "skins",
+                "javascript",
+                "ssp-libraries",
+                "sass",
+                "templates",
+                "services",
+                "configuration",
+                "assets",
+                "suitescript2",
+                "translations"
+            ]
+        }
+    },
+    "services": {
+        "EXTENSION_SERVICE": {
+            "script": "customscript_ns_sc_ext_mech_restlets",
+            "deploy": "customdeploy_ns_sc_ext_mech_restlets"
+        },
+        "WEBSITE_SERVICE": {
+            "script": "customscript_ns_sc_ext_mech_restlets",
+            "deploy": "customdeploy_ns_sc_ext_mech_restlets"
+        },
+        "FILE_SERVICE": {
+            "script": "customscript_ns_sc_ext_mech_restlets",
+            "deploy": "customdeploy_ns_sc_ext_mech_restlets"
+        },
+        "DEPLOY_SERVICE": {
+            "script": "customscript_ext_mech_deployer_rest",
+            "deploy": "customdeploy_ext_mech_deployer_rest"
+        }
+    },
+    "deploy_config": {
+        "update": true,
+        "chunk_size": 80
+    },
+    "credentials": {
+        "user_agent": "sc-extension-devtools/2024.2.20",
+        "authID": "IWA-sb",
+        "hostname": "975151-SB1.restlets.api.netsuite.com",
+        "website": "10",
+        "domain": "sb-staging.iwawine.com",
+        "webapp_id": "9727786",
+        "ssp_folder": "9727786",
+        "is_scis": false,
+        "key": "9dcfaf022663e13dd67960b838553a04658a5d4abdc723853f37d9c8319155a9",
+        "secret": "d22051584402d6ad7012ebd87413c190235b53fb6d91e746f7d2cf702ebf2faf",
+        "account": "975151-SB1"
+    },
+    "product": "gulp",
+    "nsdeployPath": ".nsdeploy"
+}

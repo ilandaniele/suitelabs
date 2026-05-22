@@ -1,0 +1,42 @@
+{
+    "name": "ItemResultsSorting",
+    "fantasyName": "Item Results Sorting",
+    "vendor": "SuiteLabs",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "This extension changes the sorting field used on the results pages when customers search by a specific keyword",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/SuiteLabs.ItemResultsSorting.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.ItemResultsSorting.Main.js",
+                    "Modules/Main/JavaScript/Facets.Translator.ItemResultsSorting.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\ItemResultsSorting",
+    "suitescript2": {
+        "files": []
+    }
+}

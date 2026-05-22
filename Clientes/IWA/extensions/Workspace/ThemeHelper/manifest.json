@@ -1,0 +1,234 @@
+{
+    "name": "ThemeHelper",
+    "fantasyName": "Theme Helper",
+    "vendor": "NSeComm",
+    "version": "1.0.18",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Helper extension to adapt the theme to third party extensions. ACS v1.0.18, restrict Call us for more information message to active items only.",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_themehelper-main.scss",
+            "myaccount": "Modules/Main/Sass/_themehelper-main.scss",
+            "checkout": "Modules/Main/Sass/_themehelper-main.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_themehelper-main.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/themehelper_cart_lines.tpl",
+                    "Modules/Main/Templates/themehelper_facets_item_cell_grid.tpl",
+                    "Modules/Main/Templates/themehelper_facets_item_cell_list.tpl",
+                    "Modules/Main/Templates/themehelper_facets_item_cell_table.tpl",
+                    "Modules/Main/Templates/themehelper_product_details_quickview.tpl",
+                    "Modules/Main/Templates/themehelper_transaction_line_views_cell_navigable.tpl",
+                    "Modules/Main/Templates/themehelper_facets_facet_browse.tpl",
+                    "Modules/Main/Templates/themehelper_transaction_line_views_cell_actionable.tpl",
+                    "Modules/Main/Templates/themehelper_cart_summary.tpl",
+                    "Modules/Main/Templates/themehelper_order_wizard_cart_summary.tpl",
+                    "Modules/Main/Templates/themehelper_creditcard_edit_form.tpl",
+                    "Modules/Main/Templates/themehelper_product_details_full_view.tpl",
+                    "Modules/Main/Templates/themehelper_login_register_register.tpl",
+                    "Modules/Main/Templates/themehelper_header.tpl",
+                    "Modules/Main/Templates/themehelper_order_wizard_address_module.tpl",
+                    "Modules/Main/Templates/themehelper_creditcard_edit_form_securitycode.tpl",
+                    "Modules/Main/Templates/themehelper_cart_detailed.tpl",
+                    "Modules/Main/Templates/themehelper_product_reviews_center.tpl",
+                    "Modules/Main/Templates/themehelper_footer.tpl",
+                    "Modules/Main/Templates/themehelper_product_list_control.tpl",
+                    "Modules/Main/Templates/themehelper_product_views_price.tpl",
+                    "Modules/Main/Templates/themehelper_facets_faceted_navigation_item_category.tpl",
+                    "Modules/Main/Templates/theme_helper_address_edit_fields.tpl"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Main/Templates/themehelper_cart_lines.tpl",
+                    "Modules/Main/Templates/themehelper_facets_item_cell_grid.tpl",
+                    "Modules/Main/Templates/themehelper_facets_item_cell_list.tpl",
+                    "Modules/Main/Templates/themehelper_facets_item_cell_table.tpl",
+                    "Modules/Main/Templates/themehelper_product_details_quickview.tpl",
+                    "Modules/Main/Templates/themehelper_transaction_line_views_cell_navigable.tpl",
+                    "Modules/Main/Templates/themehelper_facets_facet_browse.tpl",
+                    "Modules/Main/Templates/themehelper_transaction_line_views_cell_actionable.tpl",
+                    "Modules/Main/Templates/themehelper_cart_summary.tpl",
+                    "Modules/Main/Templates/themehelper_order_wizard_cart_summary.tpl",
+                    "Modules/Main/Templates/themehelper_creditcard_edit_form.tpl",
+                    "Modules/Main/Templates/themehelper_product_details_full_view.tpl",
+                    "Modules/Main/Templates/themehelper_login_register_register.tpl",
+                    "Modules/Main/Templates/themehelper_header.tpl",
+                    "Modules/Main/Templates/themehelper_order_wizard_address_module.tpl",
+                    "Modules/Main/Templates/themehelper_creditcard_edit_form_securitycode.tpl",
+                    "Modules/Main/Templates/themehelper_cart_detailed.tpl",
+                    "Modules/Main/Templates/themehelper_product_reviews_center.tpl",
+                    "Modules/Main/Templates/themehelper_footer.tpl",
+                    "Modules/Main/Templates/themehelper_product_list_control.tpl",
+                    "Modules/Main/Templates/themehelper_product_views_price.tpl",
+                    "Modules/Main/Templates/themehelper_facets_faceted_navigation_item_category.tpl",
+                    "Modules/Main/Templates/theme_helper_address_edit_fields.tpl"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/Templates/themehelper_cart_lines.tpl",
+                    "Modules/Main/Templates/themehelper_facets_item_cell_grid.tpl",
+                    "Modules/Main/Templates/themehelper_facets_item_cell_list.tpl",
+                    "Modules/Main/Templates/themehelper_facets_item_cell_table.tpl",
+                    "Modules/Main/Templates/themehelper_product_details_quickview.tpl",
+                    "Modules/Main/Templates/themehelper_transaction_line_views_cell_navigable.tpl",
+                    "Modules/Main/Templates/themehelper_facets_facet_browse.tpl",
+                    "Modules/Main/Templates/themehelper_transaction_line_views_cell_actionable.tpl",
+                    "Modules/Main/Templates/themehelper_cart_summary.tpl",
+                    "Modules/Main/Templates/themehelper_order_wizard_cart_summary.tpl",
+                    "Modules/Main/Templates/themehelper_creditcard_edit_form.tpl",
+                    "Modules/Main/Templates/themehelper_product_details_full_view.tpl",
+                    "Modules/Main/Templates/themehelper_login_register_register.tpl",
+                    "Modules/Main/Templates/themehelper_header.tpl",
+                    "Modules/Main/Templates/themehelper_order_wizard_address_module.tpl",
+                    "Modules/Main/Templates/themehelper_creditcard_edit_form_securitycode.tpl",
+                    "Modules/Main/Templates/themehelper_cart_detailed.tpl",
+                    "Modules/Main/Templates/themehelper_product_reviews_center.tpl",
+                    "Modules/Main/Templates/themehelper_footer.tpl",
+                    "Modules/Main/Templates/themehelper_product_list_control.tpl",
+                    "Modules/Main/Templates/themehelper_product_views_price.tpl",
+                    "Modules/Main/Templates/themehelper_facets_faceted_navigation_item_category.tpl",
+                    "Modules/Main/Templates/theme_helper_address_edit_fields.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/NSeComm.ThemeHelper.Main.js",
+            "myaccount": "Modules/Main/JavaScript/NSeComm.ThemeHelper.MyAccount.js",
+            "checkout": "Modules/Main/JavaScript/NSeComm.ThemeHelper.Checkout.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.ThemeHelper.Main.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductDetails.Full.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Cart.Lines.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductDetails.QuickView.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Transaction.Line.Views.Cell.Navigable.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Cart.Item.Summary.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Facets.Browse.View.js",
+                    "Modules/Main/JavaScript/NSeComm.ThemeHelper.MyAccount.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Transaction.Line.Views.Cell.Actionable.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Cart.Summary.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.OrderWizard.Module.CartSummary.js",
+                    "Modules/Main/JavaScript/ThemeHelper.LoginRegister.Register.View.js",
+                    "Modules/Main/JavaScript/NSeComm.ThemeHelper.Checkout.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Header.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.OrderWizard.Module.Address.js",
+                    "Modules/Main/JavaScript/ThemeHelper.CreditCard.Edit.Form.SecurityCode.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.CreditCard.Edit.Form.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.GoogleTagManager.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Cart.Detailed.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductReviews.Review.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductDetails.Quantity.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductHideAddToCart.Checker.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductReviews.Center.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Footer.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductList.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductViews.Price.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Facets.FacetedNavigationItemCategory.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Address.Edit.Fields.View.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.ThemeHelper.Main.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductDetails.Full.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Cart.Lines.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductDetails.QuickView.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Transaction.Line.Views.Cell.Navigable.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Cart.Item.Summary.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Facets.Browse.View.js",
+                    "Modules/Main/JavaScript/NSeComm.ThemeHelper.MyAccount.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Transaction.Line.Views.Cell.Actionable.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Cart.Summary.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.OrderWizard.Module.CartSummary.js",
+                    "Modules/Main/JavaScript/ThemeHelper.LoginRegister.Register.View.js",
+                    "Modules/Main/JavaScript/NSeComm.ThemeHelper.Checkout.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Header.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.OrderWizard.Module.Address.js",
+                    "Modules/Main/JavaScript/ThemeHelper.CreditCard.Edit.Form.SecurityCode.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.CreditCard.Edit.Form.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.GoogleTagManager.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Cart.Detailed.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductReviews.Review.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductDetails.Quantity.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductHideAddToCart.Checker.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductReviews.Center.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Footer.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductList.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Facets.FacetedNavigationItemCategory.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Address.Edit.Fields.View.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.ThemeHelper.Main.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductDetails.Full.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Cart.Lines.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductDetails.QuickView.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Transaction.Line.Views.Cell.Navigable.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Cart.Item.Summary.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Facets.Browse.View.js",
+                    "Modules/Main/JavaScript/NSeComm.ThemeHelper.MyAccount.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Transaction.Line.Views.Cell.Actionable.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Cart.Summary.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.OrderWizard.Module.CartSummary.js",
+                    "Modules/Main/JavaScript/ThemeHelper.LoginRegister.Register.View.js",
+                    "Modules/Main/JavaScript/NSeComm.ThemeHelper.Checkout.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Header.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.OrderWizard.Module.Address.js",
+                    "Modules/Main/JavaScript/ThemeHelper.CreditCard.Edit.Form.SecurityCode.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.CreditCard.Edit.Form.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.GoogleTagManager.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Cart.Detailed.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductReviews.Review.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductDetails.Quantity.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductHideAddToCart.Checker.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductReviews.Center.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Footer.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.ProductList.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Facets.FacetedNavigationItemCategory.View.js",
+                    "Modules/Main/JavaScript/ThemeHelper.Address.Edit.Fields.View.js"
+                ]
+            }
+        }
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/Main/SuiteScript/ThemeHelper.Account.Model.js",
+        "files": [
+            "Modules/Main/SuiteScript/ThemeHelper.Account.Model.js",
+            "Modules/Main/SuiteScript/ThemeHelper.Newsletter.Model.js"
+        ]
+    },
+    "local_folder": "Workspace\\ThemeHelper",
+    "suitescript2": {
+        "files": []
+    }
+}

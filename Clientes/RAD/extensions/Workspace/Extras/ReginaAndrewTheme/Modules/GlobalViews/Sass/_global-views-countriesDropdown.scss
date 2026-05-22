@@ -1,0 +1,15 @@
+
+
+.global-views-countriesDropdown-select {
+    @extend .input-large
+}
+
+.global-views-countriesDropdown-input-required{
+	@extend .input-required;
+}
+.global-views-countriesDropdown-group-label{
+  @extend .address-edit-fields-group-label;
+}
+.global-views-countriesDropdown-form-controls{
+  @extend .col-sm-9;
+}

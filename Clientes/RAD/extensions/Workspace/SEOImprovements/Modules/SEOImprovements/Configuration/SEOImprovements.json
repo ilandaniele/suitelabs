@@ -1,0 +1,25 @@
+{
+    "type": "object",
+
+    "properties": {
+        "seo.siteTitle": {
+            "group": "advancedSettings",
+            "type": "string",
+            "title": "Alternative site title",
+            "description": "If not set on CMS you can set here a site title"
+        },
+        "seo.siteDescription": {
+            "group": "advancedSettings",
+            "type": "string",
+            "nsType": "textarea",
+            "title": "Alternative site description",
+            "description": "If not set on CMS you can set here a site description"
+        },
+        "seo.productDescriptionField": {
+            "group": "catalog",
+            "type": "string",
+            "title": "Metadata Description alternative field (for SEO)",
+            "description": "Set a field id to source the description of the metadata description from product."
+        }
+    }
+}

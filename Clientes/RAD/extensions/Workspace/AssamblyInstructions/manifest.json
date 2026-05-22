@@ -1,0 +1,67 @@
+{
+	"name": "AssamblyInstructions",
+	"fantasyName": "Assambly Instructions",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "2.0.1",
+	"description": "Adds Assambly Instructions icon and functionality to the Product Details Page. SuiteLabs v2.0.1, hide section if not available to improve PDP icons placement",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/Configuration/AssamblyInstructions.json"
+		]
+	},
+	"templates": {
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Main/Templates/awalabs_assambly_instructions.tpl",
+					"Modules/Main/Templates/awalabs_assambly_modal.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/Main/Sass/_assamblyinstructions-main.scss"
+		},
+		"files": [
+			"Modules/Main/Sass/_assamblyinstructions-main.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/Main/JavaScript/AwaLabs.AssamblyInstructions.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Main/JavaScript/AssamblyInstructions.View.js",
+					"Modules/Main/JavaScript/AwaLabs.AssamblyInstructions.js",
+					"Modules/Main/JavaScript/AssamblyInstructions.Modal.View.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/AssamblyInstructions@2.0.1",
+	"activation_id": "11",
+	"extension_id": "14602"
+}

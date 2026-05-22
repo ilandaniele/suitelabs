@@ -1,0 +1,33 @@
+{
+	"name": "InventoryDisplayFix",
+	"fantasyName": "Inventory Display Fix",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "2.0.1",
+	"description": "Inventory Display Fix. SuiteLabs v2.0.1, replaced suitelet call for a new config setting to increase SEO Engine response times and performance",
+	"configuration": {
+		"files": [
+			"Configuration/InventoryDisplayFix.json"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/InventoryDisplayFix/JavaScript/AwaLabs.InventoryDisplayFix.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/InventoryDisplayFix/JavaScript/AwaLabs.InventoryDisplayFix.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/InventoryDisplayFix@2.0.1",
+	"activation_id": "11",
+	"extension_id": "17701"
+}

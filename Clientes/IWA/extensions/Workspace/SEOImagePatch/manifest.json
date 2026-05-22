@@ -1,0 +1,41 @@
+{
+    "name": "SEOImagePatch",
+    "fantasyName": "SEO Engine Image Patch",
+    "vendor": "SuiteLabs",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "SEO Page Generator issue fix for &#39;noscript&#39; tag around images.",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/SuiteLabs.SEOImagePatch.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.SEOImagePatch.Main.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\SEOImagePatch",
+    "suitescript2": {
+        "files": []
+    }
+}

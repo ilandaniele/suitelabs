@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "headerCustomization",
+        "title": "Header Customization",
+        "description": "Header Customization",
+        "group": "layout"
+    },
+    "properties": {
+        "BackgroundHeaderColor": {
+            "group": "layout",
+            "subtab": "headerCustomization",
+            "type": "string",
+            "title": "Header Background Color",
+            "description": "This property set the Header Background Color",
+            "default": "#000"
+        },
+        "headerCustomization.customerTypeFieldId": {
+            "group": "layout",
+            "subtab": "headerCustomization",
+            "type": "string",
+            "title": "Customer type field id",
+            "description": "Customer type field id",
+            "default": "custentity_rad_web_customer_type"
+        },
+        "headerCustomization.accountBalanceName": {
+            "group": "layout",
+            "subtab": "headerCustomization",
+            "type": "string",
+            "title": "account Balance Name",
+            "description": "account Balance Name",
+            "default": "Account Balance"
+        },
+        "headerCustomization.printStatementName": {
+            "group": "layout",
+            "subtab": "headerCustomization",
+            "type": "string",
+            "title": "print Statement Name",
+            "description": "print Statement Name",
+            "default": "Print a Statement"
+        }
+    }
+}

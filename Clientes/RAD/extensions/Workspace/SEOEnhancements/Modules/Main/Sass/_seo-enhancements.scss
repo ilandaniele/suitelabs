@@ -1,0 +1,4 @@
+// Remove link attributes since now the H1 is a self targeted link
+.sc-blog-home-default-layout-page-title h1 { 
+    pointer-events: none;
+}

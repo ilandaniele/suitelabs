@@ -1,0 +1,47 @@
+{
+	"name": "HideSections",
+	"fantasyName": "Hide Shopping Sections",
+	"vendor": "SuiteLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "1.0.0",
+	"description": "This extension is a merge from the old Hide Shipping Estimate, Hide Quantity and Hide No Reviews extensions.",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/Main/Configuration/HideSections.json"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/Main/JavaScript/AwaLabs.HideSections.Shopping.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Main/JavaScript/AwaLabs.HideSections.Shopping.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/SuiteLabs/HideSections@1.0.0",
+	"activation_id": "11",
+	"extension_id": "16910"
+}

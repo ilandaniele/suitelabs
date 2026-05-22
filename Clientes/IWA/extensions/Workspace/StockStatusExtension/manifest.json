@@ -1,0 +1,85 @@
+{
+    "name": "StockStatusExtension",
+    "fantasyName": "StockStatusExtension",
+    "vendor": "SSD",
+    "version": "1.0.3",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Adds product stock status messaging to website.",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/StockStatusExtension/Sass/stock_status_extension.scss",
+            "myaccount": "Modules/StockStatusExtension/Sass/stock_status_extension.scss",
+            "checkout": "Modules/StockStatusExtension/Sass/stock_status_extension.scss"
+        },
+        "files": [
+            "Modules/StockStatusExtension/Sass/stock_status_extension.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/StockStatusExtension/Templates/stock_status_extension.tpl"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/StockStatusExtension/Templates/stock_status_extension.tpl"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/StockStatusExtension/Templates/stock_status_extension.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/StockStatusExtension/JavaScript/StockStatusExtension.Shopping.js",
+            "myaccount": "Modules/StockStatusExtension/JavaScript/StockStatusExtension.js",
+            "checkout": "Modules/StockStatusExtension/JavaScript/StockStatusExtension.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/StockStatusExtension/JavaScript/StockStatusExtension.Shopping.js",
+                    "Modules/StockStatusExtension/JavaScript/Facets.ItemCell.View.Extension.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/StockStatusExtension/JavaScript/StockStatusExtension.js",
+                    "Modules/StockStatusExtension/JavaScript/Facets.ItemCell.View.Extension.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/StockStatusExtension/JavaScript/StockStatusExtension.js",
+                    "Modules/StockStatusExtension/JavaScript/Facets.ItemCell.View.Extension.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\StockStatusExtension",
+    "suitescript2": {
+        "files": []
+    }
+}

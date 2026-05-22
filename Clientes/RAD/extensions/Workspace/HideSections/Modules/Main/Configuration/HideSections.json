@@ -1,0 +1,35 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "hideSections",
+        "title": "Hide Sections",
+        "description": "Hide Sections",
+        "group": "extensions"
+    },
+    "properties": {
+        "hideSections.shippingEstimate": {
+            "group": "extensions",
+            "subtab": "hideSections",
+            "type": "boolean",
+            "title": "Hide shipping estimate",
+            "description": "Hide shipping estimate",
+            "default": false
+        },
+        "hideSections.quantity": {
+            "group": "extensions",
+            "subtab": "hideSections",
+            "type": "boolean",
+            "title": "Hide quantity",
+            "description": "Hide quantity",
+            "default": true
+        },
+        "hideSections.noReviews": {
+            "group": "extensions",
+            "subtab": "hideSections",
+            "type": "boolean",
+            "title": "Hide no reviews",
+            "description": "Hide no reviews",
+            "default": true
+        }
+    }
+}

@@ -1,0 +1,55 @@
+{
+	"name": "OuterCSS",
+	"fantasyName": "Outer CSS",
+	"vendor": "SuiteLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "1.0.0",
+	"description": "Enables the ability to link an outer CSS file to the webstore",
+	"assets": {},
+	"configuration": {
+		"files": [
+			"Modules/Main/Configuration/OuterCSS.json"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/Main/JavaScript/SuiteLabs.OuterCSS.Shopping.js",
+			"myaccount": "Modules/Main/JavaScript/SuiteLabs.OuterCSS.MyAccount.js",
+			"checkout": "Modules/Main/JavaScript/SuiteLabs.OuterCSS.Checkout.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Main/JavaScript/SuiteLabs.OuterCSS.Checkout.js",
+					"Modules/Main/JavaScript/SuiteLabs.OuterCSS.MyAccount.js",
+					"Modules/Main/JavaScript/SuiteLabs.OuterCSS.Shopping.js",
+					"Modules/Main/JavaScript/SuiteLabs.OuterCSS.Helper.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/Main/JavaScript/SuiteLabs.OuterCSS.Checkout.js",
+					"Modules/Main/JavaScript/SuiteLabs.OuterCSS.MyAccount.js",
+					"Modules/Main/JavaScript/SuiteLabs.OuterCSS.Shopping.js",
+					"Modules/Main/JavaScript/SuiteLabs.OuterCSS.Helper.js"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/Main/JavaScript/SuiteLabs.OuterCSS.Checkout.js",
+					"Modules/Main/JavaScript/SuiteLabs.OuterCSS.MyAccount.js",
+					"Modules/Main/JavaScript/SuiteLabs.OuterCSS.Shopping.js",
+					"Modules/Main/JavaScript/SuiteLabs.OuterCSS.Helper.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/SuiteLabs/OuterCSS@1.0.0",
+	"activation_id": "11",
+	"extension_id": "14901"
+}

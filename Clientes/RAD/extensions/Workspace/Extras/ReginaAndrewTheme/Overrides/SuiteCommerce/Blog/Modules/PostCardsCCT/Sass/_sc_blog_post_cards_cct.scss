@@ -1,0 +1,12 @@
+@media (min-width: $screen-md-min) {
+  .cms-content-cct_sc_blog_article_cards {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+.sc-blog-post-cards-cct {
+  &-heading {
+    margin-bottom: $sc-margin-lv3;
+  }
+}

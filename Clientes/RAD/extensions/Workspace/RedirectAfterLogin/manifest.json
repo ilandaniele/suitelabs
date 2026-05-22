@@ -1,0 +1,43 @@
+{
+	"name": "RedirectAfterLogin",
+	"fantasyName": "Redirect After Login",
+	"vendor": "SuiteLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "1.0.0",
+	"description": "This extension allows users to be redirected to the last seen page before login",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/Main/JavaScript/SuiteLabs.RedirectAfterLogin.Main.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Main/JavaScript/SuiteLabs.RedirectAfterLogin.Main.js",
+					"Modules/Main/JavaScript/Header.Profile.View.RedirectAfterLogin.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/SuiteLabs/RedirectAfterLogin@1.0.0",
+	"activation_id": "11",
+	"extension_id": "15201"
+}

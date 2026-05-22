@@ -1,0 +1,21 @@
+{
+	"name": "NewsletterConfig",
+	"fantasyName": "Newsletter Config",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": " >=20.1",
+		"SCS": " >=20.1"
+	},
+	"version": "2.0.0",
+	"description": "Newsletter Config",
+	"configuration": {
+		"files": [
+			"Modules/NewsletterConfig/Configuration/Newsletter.json"
+		]
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/NewsletterConfig@2.0.0",
+	"activation_id": "11",
+	"extension_id": "10745"
+}

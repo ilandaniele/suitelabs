@@ -1,0 +1,74 @@
+{
+    "name": "CustomForms",
+    "fantasyName": "CMS Custom Forms",
+    "vendor": "SuiteLabs",
+    "version": "2.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "CMS Content Type for Online Case/Customer Forms",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": [
+                "services/CustomForms.Service.ss"
+            ]
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_customforms-cctcustomforms.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_cctcustomforms.scss",
+            "Modules/Main/Sass/_customforms-cctcustomforms.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/customforms_form.tpl",
+                    "Modules/Main/Templates/customforms.tpl",
+                    "Modules/Main/Templates/sample_case_form.tpl",
+                    "Modules/Main/Templates/sample_lead_form.tpl",
+                    "Modules/Main/Templates/sample.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/SuiteLabs.CustomForms.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/CustomForms.Form.View.js",
+                    "Modules/Main/JavaScript/CustomForms.Model.js",
+                    "Modules/Main/JavaScript/CustomForms.View.js",
+                    "Modules/Main/JavaScript/SuiteLabs.CustomForms.Main.js"
+                ]
+            }
+        }
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/Main/SuiteScript/SuiteLabs.CustomForms.Main.js",
+        "files": [
+            "Modules/Main/SuiteScript/SuiteLabs.CustomForms.Main.js",
+            "Modules/Main/SuiteScript/CustomForms.Model.js",
+            "Modules/Main/SuiteScript/CustomForms.ReCAPTCHA.js",
+            "Modules/Main/SuiteScript/CustomForms.ServiceController.js"
+        ]
+    },
+    "local_folder": "Workspace\\CustomForms"
+}

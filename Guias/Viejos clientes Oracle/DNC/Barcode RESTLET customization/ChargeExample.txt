@@ -1,0 +1,10 @@
+curl --location 'https://stadium.qa.mars.vnops.net/operator/discount_charge_nonces/charge' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer eyJhdWQiOiJ0aGlyZHBhcnR5LXBvc3NhbmRib3gtMDFnZmJnOWdzMTlqamJxYzZ3c3JkMGoyZzUiLCJhbGciOiJFUzI1NiJ9.eyJzdWIiOiI0OGVmNDU3YS1jYjU3LTQ4NDMtYWU4Mi1mZjA0NjBhOTI0N2YiLCJpc3MiOiJodHRwczovL3BvcnRpY28ucWEubWFycy52bm9wcy5uZXQiLCJuYW1lIjoiIiwiZW1haWwiOiJjZjNkOGE3Mi03ODQzLTQ1NDEtYTk1My1jMzZlMmVjY2Q3MGNAdmVudWVuZXh0LmNvbSIsImdpdmVuX25hbWUiOm51bGwsImZhbWlseV9uYW1lIjpudWxsLCJwaWN0dXJlIjpudWxsLCJ6b25laW5mbyI6bnVsbCwibG9jYWxlIjoiZW5fVVMiLCJ3aXNkb21fYWNjZXNzIjpudWxsLCJwcmVmZXJyZWRfbGFuZGluZ19wYWdlIjpudWxsLCJwaG9uZV9udW1iZXIiOm51bGwsImV4cCI6MTcwNTk0MDMyNCwianRpIjoiZDY1NzQ4YzUtNzdhNy00ZTU5LTllNjQtZDczMTU5ZmNhMDkyIiwiYXBwX3JvbGUiOlsidGhpcmRwYXJ0eSIsInBvc3NhbmRib3giXSwiZGV2aWNlX2lkIjoiY2YzZDhhNzItNzg0My00NTQxLWE5NTMtYzM2ZTJlY2NkNzBjIiwicGVybSI6WyJQb3NzYW5kYm94VGhpcmRwYXJ0eSJdfQ.GZqp8ZTSCsmBY6show4z9nLXXVOe2TkYObbzbU2zxMVv4y-qE9J_D3I11ZybC6xU34VZ8YaTna-WJgKGp6pxFw' \
+--data '{
+    "discount_charge_qr": "7986892386443267",
+    "amount_in_cents": 100,
+    "merchant_account_id": "7CFBDCB9-26B5-4841-8AFD-CE99E7381F41",
+    "revenue_center": "6172",
+    "check_num": "3434634564"
+}'

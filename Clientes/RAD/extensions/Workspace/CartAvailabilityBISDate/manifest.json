@@ -1,0 +1,55 @@
+{
+	"name": "CartAvailabilityBISDate",
+	"fantasyName": "Cart Availability and BIS Date",
+	"vendor": "ACS",
+	"type": "extension",
+	"target": "SCS,SCA",
+	"target_version": {
+		"SCS": "",
+		"SCA": ""
+	},
+	"version": "1.0.0",
+	"description": "Display Availability and Back In Stock Date on the Webstore&#39;s Shopping Cart",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/CartAvailabilityBISDate/Sass/_shopping-cartavailabilitybisdate.scss",
+			"myaccount": "Modules/CartAvailabilityBISDate/Sass/_myaccount-cartavailabilitybisdate.scss",
+			"checkout": "Modules/CartAvailabilityBISDate/Sass/_checkout-cartavailabilitybisdate.scss"
+		},
+		"files": [
+			"Modules/CartAvailabilityBISDate/Sass/_checkout-cartavailabilitybisdate.scss",
+			"Modules/CartAvailabilityBISDate/Sass/_common-cartavailabilitybisdate.scss",
+			"Modules/CartAvailabilityBISDate/Sass/_myaccount-cartavailabilitybisdate.scss",
+			"Modules/CartAvailabilityBISDate/Sass/_shopping-cartavailabilitybisdate.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/CartAvailabilityBISDate/JavaScript/CartAvailabilityBISDate.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/CartAvailabilityBISDate/JavaScript/CartAvailabilityBISDate.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/ACS/CartAvailabilityBISDate@1.0.0",
+	"activation_id": "11",
+	"extension_id": "7501"
+}

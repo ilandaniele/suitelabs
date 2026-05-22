@@ -1,0 +1,19 @@
+{
+	"type": "object"
+,	"subtab": {
+		"id": "pathTwoResponse"
+	,	"title": "Path 2 Response"
+	,	"description": "Path 2 Response Pixel"
+	,   "group": "integrations"
+	}
+,	"properties": {
+		"pathTwoResponse.url": {
+			"group": "integrations"
+		,	"subtab": "pathTwoResponse"
+		,	"type": "string"
+		,	"title": "path2Response URL"
+		,	"description": "Enter the Path 2 Response url."
+		,	"default": "https://p.alocdn.com/c/vkabxw5c/a/etarget/p.gif?label=iwawineaccessor"
+		}
+	}
+}

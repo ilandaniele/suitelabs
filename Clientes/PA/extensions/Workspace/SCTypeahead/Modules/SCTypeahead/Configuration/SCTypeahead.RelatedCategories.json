@@ -1,0 +1,55 @@
+{
+	"type": "object",
+    "subtab": {
+        "id": "relatedcategories",
+        "title": "Related Categories",
+        "description": "Related Categories",
+        "group": "sctypeahead"
+    }
+,	"properties": {
+		"sctypeahead.relatedcategories.showRelatedCategoriesBySku":{
+			"type": "boolean",
+			"default": true,
+			"title": "Show Related Categories For SKU",
+			"description": "Enabling this will show related categories associated with item SKU entered by user in search query.",
+			"subtab": "relatedcategories",
+			"group": "sctypeahead"
+		},
+
+		"sctypeahead.relatedcategories.showInstruction":{
+			"type": "boolean",
+			"default": false,
+			"title": "Show Instruction For All Related Categories/SubCategories",
+			"description": "Enabling this will show instruction against each of the related categories/subcategories.",
+			"subtab": "relatedcategories",
+			"group": "sctypeahead"
+		},
+
+		"sctypeahead.relatedcategories.showInstructionWhenDuplicates":{
+			"type": "boolean",
+			"default": true,
+			"title": "Show Instruction Only For Duplicated Related Categories/SubCategories",
+			"description": "Enabling this will show instruction against duplicated related categories/subcategories.",
+			"subtab": "relatedcategories",
+			"group": "sctypeahead"
+		},
+
+		"sctypeahead.relatedcategories.instructionTextCategories":{
+			"type": "string",
+			"default": "(in categories)",
+			"title": "Instruction text for categories",
+			"description": "Instruction text for categories",
+			"subtab": "relatedcategories",
+			"group": "sctypeahead"
+		},
+
+		"sctypeahead.relatedcategories.instructionTextSubCategories":{
+			"type": "string",
+			"default": "(in sub-categories)",
+			"title": "Instruction text for subcategories",
+			"description": "Instruction text for categories",
+			"subtab": "relatedcategories",
+			"group": "sctypeahead"
+		}
+	}
+}

@@ -1,0 +1,62 @@
+{
+	"type": "object",
+    "subtab": {
+        "id": "PLPCustomFields",
+        "title": "Additional Product List Fields",
+        "group": "extensions"
+    },
+	"properties": {
+        "extensions.PLPCustomFields.fields": {
+            "group": "extensions",
+            "subtab": "PLPCustomFields",
+            "type": "array",
+            "title": "Product List Custom Fields",
+            "description": "Custom Fields to display in the Product List Page",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "fieldLabel": {
+                        "type": "string",
+                        "title": "Label",
+                        "mandatory": true
+                    },
+                    "fieldID": {
+                        "type": "string",
+                        "title": "Field ID",
+                        "mandatory": true
+                    },
+                    "showLabel": {
+                        "title": "Show the Label",
+                        "type": "boolean",
+                        "default": true
+                    },
+                    "show": {
+                        "title": "Show in Product List",
+                        "type": "boolean",
+                        "default": false
+                    }
+                }
+            },
+            "default":[
+                {
+                    "fieldLabel": "SKU:",
+                    "fieldID": "itemid",
+                    "showLabel": true,
+                    "show": false
+                },
+                {
+                    "fieldLabel": "Brand:",
+                    "fieldID": "custitem_bl_brand",
+                    "showLabel": true,
+                    "show": false
+                },
+                {
+                    "fieldLabel": "Short description:",
+                    "fieldID": "description",
+                    "showLabel": true,
+                    "show": false
+                }
+            ]
+        }
+	}
+}

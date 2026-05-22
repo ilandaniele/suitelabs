@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "outercss",
+        "group": "layout",
+        "title": "Outer CSS",
+        "description": "Enables the ability to link an outer CSS file to the webstore"
+    },
+    "properties": {
+        "outercss.shopping": {
+            "group": "layout",
+            "subtab": "outercss",
+            "type": "string",
+            "title": "Shopping CSS"
+        },
+        "outercss.myaccount": {
+            "group": "layout",
+            "subtab": "outercss",
+            "type": "string",
+            "title": "My Account CSS"
+        },
+        "outercss.checkout": {
+            "group": "layout",
+            "subtab": "outercss",
+            "type": "string",
+            "title": "Checkout CSS"
+        }
+    }
+}

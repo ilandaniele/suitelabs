@@ -1,0 +1,16 @@
+ul.search-recommendations-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: $sc-margin-lv2;
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: $sc-font-weight-bold;
+
+    a {
+        font-weight: $sc-font-weight-normal;
+    }
+
+    li {
+        list-style: none;
+    }
+}

@@ -1,0 +1,25 @@
+define('product_reviews_review.tpl', ['Handlebars','Handlebars.CompilerNameLookup'], function (Handlebars, compilerNameLookup){ var t = {"1":function(container,depth0,helpers,partials,data) {
+    return "            - <i class=\"product-reviews-review-icon-ok-sign\" data-toggle=\"tooltip\" data-placement=\"right\" title=\""
+    + container.escapeExpression((compilerNameLookup(helpers,"translate")||(depth0 && compilerNameLookup(depth0,"translate"))||container.hooks.helperMissing).call(depth0 != null ? depth0 : (container.nullContext || {}),"verified purchaser",{"name":"translate","hash":{},"data":data,"loc":{"start":{"line":14,"column":113},"end":{"line":14,"column":147}}}))
+    + "\"></i>\n";
+},"3":function(container,depth0,helpers,partials,data) {
+    return "                <div class=\"product-reviews-review-rating-per-attribute\">\n                    <div data-view=\"Global.StarRatingAttribute\"></div>\n                </div>\n";
+},"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=container.hooks.helperMissing, alias3="function", alias4=container.escapeExpression;
+
+  return "<div class=\"product-reviews-review\" itemprop=\"review\" data-id=\""
+    + alias4(((helper = (helper = compilerNameLookup(helpers,"reviewId") || (depth0 != null ? compilerNameLookup(depth0,"reviewId") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"reviewId","hash":{},"data":data,"loc":{"start":{"line":1,"column":63},"end":{"line":1,"column":75}}}) : helper)))
+    + "\">\n    <div class=\"product-reviews-review-comment-item-cell\">\n        <div data-view=\"ProductReview.Review.Global.StarRating\" itemprop=\"reviewRating\" ></div>\n        <span class=\"product-reviews-review-comment-item-cell-date\" itemprop=\"datePublished\">\n            "
+    + alias4(((helper = (helper = compilerNameLookup(helpers,"reviewCreatedOn") || (depth0 != null ? compilerNameLookup(depth0,"reviewCreatedOn") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"reviewCreatedOn","hash":{},"data":data,"loc":{"start":{"line":5,"column":12},"end":{"line":5,"column":33}}}) : helper)))
+    + "\n        </span>\n    </div>\n    <h4 class=\"product-reviews-review-title\" itemprop=\"name\">\n        "
+    + alias4(((helper = (helper = compilerNameLookup(helpers,"reviewTitle") || (depth0 != null ? compilerNameLookup(depth0,"reviewTitle") : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"reviewTitle","hash":{},"data":data,"loc":{"start":{"line":9,"column":8},"end":{"line":9,"column":23}}}) : helper)))
+    + "\n    </h4>\n    <p class=\"product-reviews-review-comment-username\">\n        "
+    + alias4((compilerNameLookup(helpers,"translate")||(depth0 && compilerNameLookup(depth0,"translate"))||alias2).call(alias1,"by <span itemprop=\"author\">$(0)</span>",(depth0 != null ? compilerNameLookup(depth0,"reviewAuthor") : depth0),{"name":"translate","hash":{},"data":data,"loc":{"start":{"line":12,"column":8},"end":{"line":12,"column":75}}}))
+    + "\n"
+    + ((stack1 = compilerNameLookup(helpers,"if").call(alias1,(depth0 != null ? compilerNameLookup(depth0,"isReviewVerified") : depth0),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data,"loc":{"start":{"line":13,"column":8},"end":{"line":15,"column":15}}})) != null ? stack1 : "")
+    + "    </p>\n    <div class=\"product-reviews-review-review\">\n        <p class=\"product-reviews-review-review-description\" itemprop=\"description\">\n            "
+    + alias4((compilerNameLookup(helpers,"breaklines")||(depth0 && compilerNameLookup(depth0,"breaklines"))||alias2).call(alias1,(depth0 != null ? compilerNameLookup(depth0,"reviewText") : depth0),{"name":"breaklines","hash":{},"data":data,"loc":{"start":{"line":19,"column":12},"end":{"line":19,"column":37}}}))
+    + "\n        </p>\n        <div class=\"product-reviews-review-review-rating\">\n"
+    + ((stack1 = compilerNameLookup(helpers,"if").call(alias1,(depth0 != null ? compilerNameLookup(depth0,"isReviewRatingPerAttributesLegthGreaterThan0") : depth0),{"name":"if","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data,"loc":{"start":{"line":22,"column":12},"end":{"line":26,"column":19}}})) != null ? stack1 : "")
+    + "        </div>\n    </div>\n\n</div>\n\n\n\n\n";
+},"useData":true}; var main = t.main; t.main = function(){ arguments[1] = arguments[1] || {}; var ctx = arguments[1]; ctx._extension_path = 'http://localhost:7777/tmp/extensions/AwaLabs/ReginaAndrewTheme/23.2.2/'; ctx._theme_path = 'http://localhost:7777/tmp/extensions/AwaLabs/ReginaAndrewTheme/23.2.2/'; return main.apply(this, arguments); }; var template = Handlebars.template(t); template.Name = 'product_reviews_review'; return template;});

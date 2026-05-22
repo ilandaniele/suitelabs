@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "HeadContentByApplication.shopping": {
+            "group": "shoppingApplication",
+            "type": "string",
+            "nsType": "textarea",
+            "title": "Add content in head",
+            "description": "Add html content in head tag"
+        },
+        "HeadContentByApplication.checkout": {
+            "group": "checkoutApp",
+            "type": "string",
+            "nsType": "textarea",
+            "title": "Add content in head",
+            "description": "Add html content in head tag"
+        },
+        "HeadContentByApplication.myaccount": {
+            "group": "myAccountApp",
+            "type": "string",
+            "nsType": "textarea",
+            "title": "Add content in head",
+            "description": "Add html content in head tag"
+        }
+    }
+}

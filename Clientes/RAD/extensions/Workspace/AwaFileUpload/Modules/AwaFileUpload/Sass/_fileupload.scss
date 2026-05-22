@@ -1,0 +1,50 @@
+.fileupload-info-card {
+    @extend .info-card;
+}
+
+.fileupload-info-card-content {
+    @extend .info-card-content;
+    color: $sc-color-secondary;
+    font-weight: bold;
+}
+.fileupload-fileupload-remove span{
+    color: $sc-color-primary;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 600;
+}
+.fileupload-fileupload-remove-icon{
+    @extend .fa;
+    @extend %fa-times-circle;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.global-views-confirmation-footer {
+    margin-top: 15px;
+    .global-views-confirmation-confirm-button{
+        @extend .button-primary;
+        @extend .button-medium;
+        margin-right: 5px;
+    }
+    .global-views-confirmation-cancel-button{
+        @extend .button-secondary;
+        @extend .button-medium;
+    }
+}
+.fileupload-form-controls-container{
+    position: relative;
+    width: 100%;
+    input.fileupload-fileupload-uploader{
+        cursor:pointer;
+        border: none;
+    }
+    .browse-button{
+        position: absolute;
+        top: 0;
+        left: 0;
+        @extend .button-primary;
+        @extend .button-large;
+        pointer-events: none;
+        width: 100%;
+    }
+}

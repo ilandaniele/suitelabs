@@ -1,0 +1,20 @@
+.cart-add-to-cart-button-button{
+	@extend .button-primary;
+	@extend .button-large;
+	width: 100%;
+ 	margin-top: $sc-margin-lv3;
+}
+
+.cart-add-to-cart-button {
+	position: static;
+}
+
+.product-details-full-actions-container {
+	float:left;
+	.cart-add-to-cart-button-button{
+		@media (min-width: 480px) {
+			max-width: 250px;
+			min-width: 250px;
+		}
+	}
+}

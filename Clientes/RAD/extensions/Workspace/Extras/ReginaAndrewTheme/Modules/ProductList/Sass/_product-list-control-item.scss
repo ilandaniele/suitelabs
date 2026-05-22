@@ -1,0 +1,19 @@
+
+
+.product-list-control-item-label {
+	cursor: pointer;
+	padding: $sc-padding-lv1 0;
+	margin-bottom: $sc-margin-lv1;
+	display: inline-block;
+	width: 100%
+}
+//awalabs
+.product-list-control-item-label {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	.product-list-control-item-checkbox{
+		margin:0;
+		margin-right: 8px;
+	}
+}

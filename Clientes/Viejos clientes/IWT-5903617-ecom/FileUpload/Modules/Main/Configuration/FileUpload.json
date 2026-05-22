@@ -1,0 +1,28 @@
+{
+	"type": "object",
+    "subtab": {
+        "id": "uploadFileText",
+        "title": "Upload File Paragraphs",
+        "description": "Upload file paragraphs",
+        "group": "extensions"
+    },
+	"properties": {
+		"uploadFileText.title": {
+            "group": "extensions",
+            "subtab": "uploadFileText",
+            "title": "Title Paragraph",
+            "description": "",
+            "type": "string",
+            "default": "Upload your custom file. File charge applies. Proof provided before production."
+        },
+		"uploadFileText.fileInformation": {
+            "group": "extensions",
+            "subtab": "uploadFileText",
+            "title": "File Information Paragraph",
+            "description": "",
+            "type": "string",
+            "nsType": "textarea",
+            "default": "<span class=\"product-details-upload-file-info-light\">Compatible file extensions to upload: </span><span>png, jpg, gif, doc, docx, pdf, tif, ppt, psd, ai</span><br/>If you need to upload more than one custom file, please contact our customer service department"
+        }
+	}
+}

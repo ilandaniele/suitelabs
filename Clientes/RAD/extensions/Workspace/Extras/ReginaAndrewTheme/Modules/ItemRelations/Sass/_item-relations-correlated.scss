@@ -1,0 +1,34 @@
+.item-relations-correlated {
+	position: relative;
+  margin-bottom: 20px;
+  .bx-wrapper{
+    margin: 0 auto;
+    @media (min-width: $screen-md) {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.item-relations-correlated .bx-controls-direction {
+    text-align: right;
+	margin-bottom: $sc-margin-lv3;
+}
+
+.item-relations-correlated h3 {
+    margin-bottom: $sc-margin-lv8;
+}
+
+.item-relations-correlated .global-views-star-rating {
+    margin: 0 auto;
+    display: inline-block;
+}
+.item-relations-correlated .item-relations-correlated-row .item-views-related-item-price{
+margin-top: 15px;
+}
+
+//awalabs
+.item-relations-correlated h3 {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}

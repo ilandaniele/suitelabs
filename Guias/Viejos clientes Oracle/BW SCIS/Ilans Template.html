@@ -1,0 +1,731 @@
+<?xml version="1.0"?>
+<!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdf>
+  	<!-- CHANGE LOG
+  	7/20/17 JAB - Initial customizaitons for S&L
+	9/1/17 JAB - additional config requests from S&L
+	-->
+	<head>
+	<#if .locale == "ru_RU">
+	    <link name="verdana" type="font" subtype="opentype" src="${nsfont.verdana}" src-bold="${nsfont.verdana_bold}" bytes="2" />
+	</#if>
+	    <style type="text/css">
+	    	.receipt-preview { font-family: "Helvetica"}
+			@media print{
+				body { margin: 0.5; width: 100%; table-layout: fixed}
+
+				.receipt-print-ticket {
+					overflow: hidden; background-color: white; font-size: 12px; padding-left: 10px; padding-right: 10px; word-break: normal; word-wrap: normal; display: block; font-family: "Helvetica", serif; table-layout: fixed}
+
+				.receipt-print-ticket img { display: block; margin: auto; }
+
+				.receipt-print-reverse {
+					background-color: #000000 !important; color: #FFFFFF !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+				.receipt-print-ticket-epson-tm-t88v { padding: 0; margin-left: 0px; margin-top: 5px; width: 300px; }
+
+				.receipt-print-ticket-epson-tm-t88v td,span { font-size: 10px; }
+				.receipt-print-ticket-epson-tm-t88v img.logo { width: auto; margin: auto; max-width: 300px; max-height: 100px; }
+				.receipt-print-ticket-epson-tm-t88v img.item-image { width: 50px; margin: 0.2em; }
+				.receipt-print-ticket-epson-tm-t88v .containerBarcode img { margin: 0 auto; width: 230px; }
+				.receipt-print-ticket-epson-tm-t88v td.containerTotal { position: relative; padding: 0.1em; border: 1px solid; border-right-width: initial; font-size: 26px; font-weight: bold; background: #eeeeee; }
+				.receipt-print-ticket-epson-tm-t88v td.containerTotal span.total { font-size: 32px; vertical-align:middle; }
+
+				/*Epson Native Printing*/
+				.receipt-print-ticket-tm-t88v { padding: 0; margin-left: 0px; width: 300px; }
+
+				.receipt-print-ticket-tm-t88v td,span { font-size: 25px; }
+				.receipt-print-ticket-tm-t88v img.logo { width: auto; margin: auto; max-width: 400px; max-height: 100px; }
+				.receipt-print-ticket-tm-t88v img.item-image { width: 120px; margin: 0.2em; }
+				.receipt-print-ticket-tm-t88v .containerBarcode img { margin: 0 auto; width: 500px; }
+				.receipt-print-ticket-tm-t88v td.containerTotal { position: relative; padding: 0.1em; border: 1px solid; border-right-width: initial; font-size: 50px; font-weight: bold; background: #eeeeee; }
+				.receipt-print-ticket-tm-t88v td.containerTotal span.total { font-size: 30px; vertical-align:middle; }
+				/*End Epson Native Printing*/
+
+				.receipt-print-ticket-tsp650 { margin-left: 0in; }
+				.receipt-print-ticket-tsp650 td,span { font-size: 30px; }
+				.receipt-print-ticket-tsp650 img.logo { width: auto; margin: auto; max-width: 900px; max-height: 300px; }
+				.receipt-print-ticket-tsp650 img.item-image { width: 175px; margin: 0.2em; }
+				.receipt-print-ticket-tsp650 .containerBarcode img { margin: 0 auto; width: 500px; }
+				.receipt-print-ticket-tsp650 td.containerTotal { position: relative; padding: 0.1em; border: 1px solid; font-size: 80px; font-weight: bold; background: #eeeeee; }
+				.receipt-print-ticket-tsp650 td.containerTotal span.total { font-size: 42px; vertical-align:middle; }
+
+				.receipt-print-ticket-tsp650-oprint td,span { font-size: 28px; }
+				.receipt-print-ticket-tsp650-oprint { -ms-transform: scale(1,0.4); -webkit-transform: scale(1,0.4); transform: scale(1,0.4); transform-origin(top); -webkit-transform-origin: top; -webkit-transform-origin: top; -ms-transform-origin: top;}
+                .receipt-print-ticket-tsp650-oprint .containerBarcode img { margin: 0 auto; width: 500px; }
+                .receipt-print-ticket-tsp650-oprint td.containerTotal { position: relative; padding: 0.1em; border: 1px solid; font-size: 80px; font-weight: bold; background: #eeeeee; }
+
+				.receipt-print-ticket-epson-tm-t88v-oprint {
+					width: 900px; -ms-transform: scale(1,0.4); -webkit-transform: scale(1,0.4); transform: scale(1,0.4); -webkit-transform-origin: top; -webkit-transform-origin: top; -ms-transform-origin: top; }
+
+				.receipt-print-ticket-epson-tm-t88v-oprint td,span { font-size: 30px; }
+				.receipt-print-ticket-epson-tm-t88v-oprint img.logo { width: auto; margin: auto; width: 500px; min-height: 150px; max-height: 300px; }
+				.receipt-print-ticket-epson-tm-t88v-oprint img.item-image { width: 175px; margin: 0.2em; }
+				.receipt-print-ticket-epson-tm-t88v-oprint td.containerTotal { position: relative; padding: 0.1em; border: 1px solid; border-right-width: initial; font-size: 60px; font-weight: bold; background: #eeeeee; }
+              	.receipt-print-ticket-epson-tm-t88v-oprint .containerBarcode img { margin: 0 auto; width: 500px; }
+				.receipt-print-ticket-epson-tm-t88v-oprint td.containerTotal img span.total { font-size: 60px; vertical-align:middle; }
+
+				.receipt-print-ticket-rj-400 { font-size: 16px; width: 450px; line-height: 20px; margin-left: 0.2in; }
+				.receipt-print-ticket-rj-400 img { width: 500px; margin-left: -30px; }
+			}
+
+			/*Specific Windows Desktop styles: Internet Explorer 11+*/
+			@media print and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+				.receipt-print-ticket-tsp650 .containerBarcode img { width: 300px; }
+				.receipt-print-ticket-tsp650 td,span { font-size: 20px; }
+				.receipt-print-ticket-tsp650 td.containerTotal { font-size: 60px; }
+				.receipt-print-ticket-tsp650 td.containerTotal span.total { font-size: 22px; }
+				.receipt-print-ticket-tsp650 img.logo { width: 80% !important; }
+			}
+			@page { size: auto; margin: 5px; }
+		</style>
+
+                    </head>
+
+	<body padding="0.5in 0.5in 0.5in 0.5in" size="Letter">
+		<#if JSON?has_content>
+			<table border="0" width="100%"  data-role="printer-receipt" colspan="4" style="table-layout: fixed; font-size: 95%; font-family: Helvetica, serif" >
+				<tr style="display:none;">
+					<th width="20%">&#160;</th>
+					<th width="50%">&#160;</th>
+					<th width="10%">&#160;</th>
+                    <th width="10%">&#160;</th>
+                  	<th width="10%">&#160;</th>
+				</tr>
+
+				<!-- COMPANY INFORMATION-->
+				<tr>
+					<td align="left" style="width: 30%"><img class="logo" style="width: 80%" src="${JSON.urlLogo?html}"/></td>
+                    <td style="padding: 1em 0; padding-left: 3em; width: 30%" align="left">${JSON.location.address?html?replace("\n", "<br />")}</td>
+                    <td align="left" style="padding: 1em 0; width: 40%">
+                        <table border="0" width="100%" data-role="printer-receipt" style="table-layout: fixed; font-size: 95%; font-family: Helvetica, serif">
+                            <!-- TIMESTAMP-->
+                            <tr>
+                                <td align="left" width="50%" style="font-weight: bold; padding-top:1em">${JSON.createddate?html}</td>
+                            </tr>
+                            
+                            
+                            <!-- GENERAL ORDER INFORMATION-->
+                            <#if JSON.summary?has_content && JSON.summary.tranid?has_content>
+                                <tr>
+                                  <td style="padding-bottom: 1px">Transaction #: ${JSON.summary.tranid?html}</td>
+                                  <!-- <td style="padding-bottom: 1px" align="left" colspan="4">${JSON.summary.tranid?html}</td> -->
+                                </tr>
+                                </#if>
+                            <#if JSON.creditmemo?has_content && JSON.creditmemo.summary?has_content && JSON.creditmemo.summary.tranid?has_content>
+                                <tr>
+                                  <td style="padding-bottom: 1px">${JSON.labels.creditMemo?html} #: ${JSON.creditmemo.summary.tranid?html}</td>
+                                  <!--  <td style="padding-bottom: 1px" align="left" colspan="4">${JSON.creditmemo.summary.tranid?html}</td> -->
+                                </tr>
+                            </#if>
+
+                            <#if JSON.operation?has_content>
+                                <tr>
+                                    <td style="padding-bottom: 1px">${JSON.labels.operation?html}: ${JSON.operation?html}</td>
+                                    <!-- <td style="padding-bottom: 1px" align="left" colspan="4">${JSON.operation?html}</td> -->
+                                </tr>
+                            </#if>
+                        </table>
+                    </td>
+				</tr>
+
+				<#if JSON.location?has_content && JSON.location.address?has_content>
+					<tr>
+						<td style="padding: 1em 0;" align="left" colspan="5"> <br /> </td>
+ 
+					</tr>
+				</#if>
+			</table>
+			<table width="100%"  data-role="printer-receipt" colspan="4" style="border-top: 0.10em solid; table-layout: fixed; font-size: 95%; font-family: Helvetica, serif" >
+				<tr style="padding: 1px 0;">
+					<td align="center" colspan="5"></td>
+				</tr>
+               
+                <!-- CUSTOMER-->
+				<#if JSON.customer?has_content && JSON.customer.isdefault == "false">
+					<#if JSON.customer.name?has_content>
+					<tr>
+						<td style="padding-bottom: 1px">${JSON.labels.customer.customer?html}:</td>
+						<td style="padding-bottom: 1px" align="left" colspan="4">${JSON.customer.entityid?html}</td>
+					</tr>
+					</#if>
+
+				<#elseif JSON.creditmemo?has_content && JSON.creditmemo.customer?has_content && JSON.creditmemo.customer.isdefault == "false">
+					<#if JSON.creditmemo.customer.name?has_content>
+					<tr>
+						<td style="padding-bottom: 1px">${JSON.labels.customer.customer?html}:</td>
+						<td style="padding-bottom: 1px" align="left" colspan="4">${JSON.creditmemo.customer.entityid?html}</td>
+					</tr>
+					</#if>
+				</#if>
+
+				<!-- SALES ASSOCIATE-->
+				<#if JSON.salesassoc?has_content && JSON.salesassoc.name?has_content>
+					<tr>
+						<td style="padding-bottom: 1em">Sales Associate:</td>
+						<td style="padding-bottom: 1em" align="left" colspan="4">${JSON.salesassoc.name?html} </td>
+					</tr>
+				<#elseif JSON.creditmemo?has_content && JSON.creditmemo.salesassoc?has_content && JSON.creditmemo.salesassoc.name?has_content>
+					<tr>
+						<td style="padding-bottom: 1em">Sales Associate:</td>
+						<td style="padding-bottom: 1em" align="left" colspan="4">${JSON.creditmemo.salesassoc.name?html} </td>
+					</tr>
+				</#if>
+
+				<!-- SALES REP-->
+				<#if JSON.salesrep?has_content && JSON.salesrep.name?has_content>
+					<tr>
+						<td style="padding-bottom: 1px">${JSON.labels.salesRep?html}:</td>
+						<td style="padding-bottom: 1px" align="left" colspan="4">${JSON.salesrep.name?html} </td>
+					</tr>
+				<#elseif JSON.creditmemo?has_content && JSON.creditmemo.salesrep?has_content && JSON.creditmemo.salesrep.name?has_content>
+					<tr>
+						<td style="padding-bottom: 1px">${JSON.labels.salesRep?html}:</td>
+						<td style="padding-bottom: 1px" align="left" colspan="4">${JSON.creditmemo.salesrep.name?html} </td>
+					</tr>
+				</#if>
+			
+			<tr style="border-top: 0.10em solid gray; padding: 1px 0;">
+					<td align="center" colspan="5"></td>
+			</tr>
+			
+			</table>
+			<table border="0" width="100%"  data-role="printer-receipt" colspan="4" style="table-layout: fixed; font-size: 95%; font-family: Helvetica, serif" >
+
+
+				<!-- LINES RETURNED ORDER-->
+				<#if JSON.creditmemo?has_content && JSON.creditmemo.lines?has_content>
+                    <tr>
+                        <td style="padding-top: 1em; font-weight: bold; width: 20%"></td>
+                        <td style="padding-left: 1em; padding-top: 1em; font-weight: bold; width: 50%">Item</td>
+                        <td style="padding-top: 1em; font-weight: bold; width: 10%" align="right">Qty</td>
+                        <td style="padding-top: 1em; font-weight: bold; width: 10%" align="right">Price</td>
+                        <td style="padding-left: 0.5em; padding-top: 1em; font-weight: bold; width: 10%" align="right">Amount</td>
+                    </tr>
+				</#if>
+				
+              	<!-- ROW ON TABLE-->
+				<#list JSON.creditmemo.lines as lineCM>
+					<#if lineCM.item.itemType != "Payment" && lineCM.item.itemType != "Discount">
+						<tr>
+							<td style="padding-top: 1em; width: 20%">
+							  <#if lineCM.item.itemType != "Payment"  && lineCM.item.itemType != "Discount" && lineCM.item.thumbnail?has_content>
+							  	<img class="item-image" src="${lineCM.item.thumbnail?html}" width="45" height="45"/>
+							  </#if>
+							</td>
+
+							<td style="padding-left: 1em; padding-top: 1em; width: 50%">
+								<#if lineCM.item.itemType == "Payment" >
+									${lineCM.item.displayname?html}
+								<#elseif lineCM.item.itemType == "Discount">
+									**${lineCM.item.displayname?html}
+								<#elseif lineCM.item.itemType == "GiftCert">
+									(${lineCM.quantity?html}x)
+									${lineCM.item.displayname?html}
+									<br />
+									**Code: ${lineCM.giftcertnumber?html}
+								<#else>
+									<#if lineCM.customExtraFields.custcol_ns_pos_storedescription?has_content>
+                                    	${lineCM.customExtraFields.custcol_ns_pos_storedescription} <br/> Item Number: ${lineCM.item.displayname?html}
+                                    <#else>
+                                    	${lineCM.item.displayname?html}
+                                    </#if>
+									(${lineCM.quantity?html}x)
+									${lineCM.item.displayname?html}
+									<#if lineCM.note?has_content>
+										<br />
+										**<span style="font-style: italic;">${lineCM.note?html}</span>
+									</#if>
+								</#if>
+							</td>
+
+							<td style="padding-top: 1em; width: 10%" align="right">${lineCM.quantity?html}x</td>
+                            <td style="padding-top: 1em; width: 10%" align="right">$${lineCM.item.price?html}</td>
+							<td style="padding-left: 0.5em; padding-top: 1em; width: 10%" align="right">$${lineCM.amount?html}</td>
+
+						</tr>
+					</#if>
+                    <!-- Discount items -->
+                    <#if lineCM.item.itemType == "Discount">
+						<tr>
+							<td style="width: 20%">
+							  <#if lineCM.item.itemType != "Payment"  && lineCM.item.itemType != "Discount" && lineCM.item.thumbnail?has_content>
+							  	<img class="item-image" src="${lineCM.item.thumbnail?html}" width="45" height="45"/>
+							  </#if>
+							</td>
+
+							<td style="padding-left: 1em;width: 50%">
+								<#if lineCM.item.itemType == "Payment" >
+									${lineCM.item.displayname?html}
+								<#elseif lineCM.item.itemType == "Discount">
+									**${lineCM.item.displayname?html}
+								<#elseif lineCM.item.itemType == "GiftCert">
+									(${lineCM.quantity?html}x)
+									${lineCM.item.displayname?html}
+									<br />
+									**Code: ${lineCM.giftcertnumber?html}
+								<#else>
+									<#if lineCM.customExtraFields.custcol_ns_pos_storedescription?has_content>
+                                    	${lineCM.customExtraFields.custcol_ns_pos_storedescription} <br/> Item Number: ${lineCM.item.displayname?html}
+                                    <#else>
+                                    	${lineCM.item.displayname?html}
+                                    </#if>
+									(${lineCM.quantity?html}x)
+									${lineCM.item.displayname?html}
+									<#if lineCM.note?has_content>
+										<br />
+										**<span style="font-style: italic;">${lineCM.note?html}</span>
+									</#if>
+								</#if>
+							</td>
+
+							<td style="width: 10%" align="right"></td>
+                            <td style="width: 10%" align="right">$${lineCM.item.price?html}</td>
+							<td style="padding-left: 0.5em;width: 10%" align="right">$${lineCM.amount?html}</td>
+
+						</tr>
+                        <!-- Add sapce after discount item -->
+                        <tr>
+							<td style="padding: 5px;" align="center" colspan="5"></td>
+						</tr>
+					</#if>
+				</#list>
+				
+                <!-- ROW ON TABLE-->
+                <!-- FULFILLMENT LINES -->
+				<#if JSON.fulfillment?has_content>
+                  <tr>
+                	  <td style="font-weight: bold; width: 20%"></td>
+                      <td style="font-weight: bold; padding-left: 1em; width: 50%">Item</td>
+                      <td style="padding-left:.5em; font-weight: bold; width: 10%" align="right">Qty</td>
+                      <td style="padding-left:.5em; font-weight: bold; width: 10%" align="right">Price</td>
+                      <td style="padding-left:.5em; font-weight: bold; width: 10%" align="right">Amount</td>
+                  </tr>
+                  <#list JSON.fulfillment.lines as line>
+                  	<#if line.quantityrejected == "0">
+                      <tr style="background-color:#eeeeee;">
+                          <td style="width: 20%"><img class="item-image" src="${line.item.thumbnail?html}" width="45" height="45"/></td>
+
+                          <td style="padding-left: 1em;width: 50%">
+                          	  <#if line.customExtraFields.custcol_ns_pos_storedescription?has_content>
+                                   ${line.customExtraFields.custcol_ns_pos_storedescription} <br/> Item Number: ${line.item.displayname?html}
+                              <#else>
+                                   ${line.item.displayname?html}
+                              </#if>
+                              (${line.quantity?html}x) ${line.item.displayname?html}
+                          </td>
+
+                          <td style="padding-left:.5em;color:rgba(0,0,0,.6);width: 10%" align="right">${line.quantity?html}x</td>
+                          <td style="padding-left:.5em;color:rgba(0,0,0,.6);width: 10%" align="right">$${line.item.price?html}</td>
+						  <td style="padding-left:.5em;color:rgba(0,0,0,.6);width: 10%" align="right">$${line.amount?html}</td>
+                      </tr>
+                  	</#if>
+                  </#list>
+
+                  <tr style="border-bottom: 0.05em solid gray;padding: 1px 0;background-color:#eee;color:rgba(0,0,0,.6);">
+                    <td align="right" colspan="5" style="padding-right:8%;">Paid online in ${JSON.fulfillment.createdfrom.name}</td>
+                  </tr>
+                </#if>
+
+				<!-- ORDER LINES-->
+                <#if JSON.lines?has_content>
+                  	<tr>
+                      <td style="padding-top: 1em; font-weight: bold; width: 50%; padding-left: 0.5em" align="left">Item</td>
+                      <td style="padding-top: 1em; font-weight: bold; width: 15%" align="center">Qty</td>
+                      <td style="padding-top: 1em; font-weight: bold; width: 15%" align="center">Price</td>
+                      <td style="padding-top: 1em; font-weight: bold; width: 20%" align="right">Amount</td>
+                    </tr>
+				<#list JSON.lines as line>
+					<#if line.item.voidqty == "0" && line.item.itemType != "Payment" && line.item.itemType != "Discount">
+						<tr>
+							<td style="padding-top: 0.25em; padding-bottom: 0.25em; font-size: 10px !important; padding-left: 0.5em" align="left">
+								<#if line.item.itemType == "Discount">
+									**${line.item.displayname?html}
+								<#elseif line.item.itemType == "GiftCert">
+									(${line.quantity?html}x)
+									${line.item.displayname?html}
+									<br />
+									**Code: ${line.giftcertnumber?html}
+								<#else>
+									<#if line.customExtraFields.custcol_ns_pos_storedescription?has_content>
+                                    	${line.customExtraFields.custcol_ns_pos_storedescription} <br/> Item Number: ${line.item.displayname?html}
+                                    <#else>
+                                    	${line.item.displayname?html}
+                                    </#if>
+									<#if line.note?has_content >
+										<br />
+										**<span style="font-style:italic;">${line.note?html}</span>
+									</#if>
+									<#list line.serialnumbers as serialnumber>
+										<br />
+										**<span style="font-style: italic;">${serialnumber?html}</span>
+									</#list>
+								</#if>
+							</td>
+
+							<td align="center" style="padding-top: 1em; width: 15%">${line.quantity?html}x</td>
+                            <td align="center" style="padding-top: 1em; width: 15%">$${line.item.price?html}</td>
+							<td align="right" style="padding-top: 1em; width: 20%" >$${line.amount?html}</td>
+						</tr>
+					</#if>
+                    <!-- Discount items -->
+                    <#if line.item.voidqty == "0" && line.item.itemType == "Discount">
+						<tr>
+							<td style="width: 20%">
+							  <#if line.item.itemType != "Discount" && line.item.thumbnail?has_content>
+							  	<img class="item-image" src="${line.item.thumbnail?html}" width="45" height="45"/>
+							  </#if>
+							</td>
+
+							<td style="width: 50%">
+								<#if line.item.itemType == "Discount">
+									**${line.item.displayname?html}
+								<#elseif line.item.itemType == "GiftCert">
+									(${line.quantity?html}x)
+									${line.item.displayname?html}
+									<br />
+									**Code: ${line.giftcertnumber?html}
+								<#else>
+									<#if line.customExtraFields.custcol_ns_pos_storedescription?has_content>
+                                    	${line.customExtraFields.custcol_ns_pos_storedescription} <br/> Item Number: ${line.item.displayname?html}
+                                    <#else>
+                                    	${line.item.displayname?html}
+                                    </#if>
+									<#if line.note?has_content >
+										<br />
+										**<span style="font-style:italic;">${line.note?html}</span>
+									</#if>
+									<#list line.serialnumbers as serialnumber>
+										<br />
+										**<span style="font-style: italic;">${serialnumber?html}</span>
+									</#list>
+								</#if>
+							</td>
+
+							<td align="center" style="width: 10%"></td>
+                            <td align="center" style="width: 10%">${line.item.price?html}</td>
+							<td style="padding-left: 0.5em;width: 10%" align="right">$${line.amount?html}</td>
+						</tr>
+                        <!-- Add space after discount item -->
+                        <tr>
+							<td style="padding: 5px;" align="center" colspan="5"></td>
+						</tr>
+					</#if>
+				</#list>
+				
+				<tr>
+					<td align="center" colspan="5" style="padding-bottom: 1em;"></td>
+				</tr>
+				
+                </#if>
+
+				<!-- CREDITMEMO SUMMMARY (RETURN) GROUP-->
+				<#if JSON.creditmemo?has_content && JSON.creditmemo.summary?has_content>
+					<tr style="border-top: 0.10em solid gray; padding: 1px 0;">
+						<td align="center" colspan="5"></td>
+					</tr>
+					
+					<tr>
+						<td align="center" colspan="5" style="padding-top: 1em;"></td>
+					</tr>
+
+					<tr>
+						<td align="right" colspan="3">${JSON.labels.returnSubtotal?html}&#160;</td>
+						<td align="right">$${JSON.creditmemo.summary.subtotal?html}</td>
+					</tr>
+
+					<#if JSON.creditmemo.summary.discounttotal?has_content && JSON.creditmemo.summary.discounttotal != " 0.00">
+						<tr>
+							<td align="right" colspan="3">${JSON.labels.returnDiscount?html}&#160;</td>
+							<td align="right">$${JSON.creditmemo.summary.discounttotal?html}</td>
+						</tr>
+					</#if>
+
+                    <!-- TAXES GROUPED BY RATE-->
+                    <#if JSON.creditmemo.summary.taxtotal?has_content>
+                      <#list JSON.creditmemo.summary.taxes as tax>
+                        <#if tax.amount != " 0.00">
+                            <tr>
+                                <td align="right" colspan="3">${JSON.labels.tax1?html} @${tax.rate?html}</td>
+                                <td align="right">$${tax.amount?html}</td>
+                            </tr>
+                        </#if>
+                      </#list>
+                    </#if>
+
+					<#if JSON.creditmemo.summary.total?has_content>
+						<tr>
+							<td align="right" colspan="3">${JSON.labels.returnTotal?html}&#160;</td>
+							<td align="right">$${JSON.creditmemo.summary.total?html}</td>
+						</tr>
+					</#if>
+				</#if>
+
+				<!-- NOTES -->
+				<#if JSON.notes?has_content>
+					<tr>
+						<td colspan="5">
+							Notes:
+						</td>
+					</tr>
+					<#list JSON.notes as note>
+						<tr>
+							<td colspan="5" style="font-style: italic;">
+								**${note.title}<#if note.note?has_content>: ${note.note}</#if>
+							</td>
+						</tr>
+					</#list>
+				</#if>
+
+				<!-- SUMMMARY GROUP-->
+				<#if JSON.summary?has_content>
+					<tr style="border-top: 0.10em solid gray; padding: 1px 0;">
+						<td align="center" colspan="5"></td>
+					</tr>
+					
+					<tr>
+						<td align="center" colspan="5" style="padding-top: 1em;"></td>
+					</tr>
+
+					<!-- ROUNDING GROUP-->
+					<#if JSON.roundingLine?has_content>
+						<tr>
+							<td align="right" colspan="3"> ${JSON.labels.rounding?html}&#160;</td>
+							<td align="right">$${JSON.roundingLine.amount?html}</td>
+						</tr>
+					</#if>
+					
+					<!-- SUBTOTAL GROUP-->
+					<tr>
+						<td align="right" colspan="3">${JSON.labels.subtotal?html}&#160;</td>
+						<td align="right">$${JSON.summary.subtotal?html}</td>
+					</tr>
+					
+					<!-- DISCOUNT GROUP-->
+					<#if JSON.summary.discounttotal?has_content && JSON.summary.discounttotal != " 0.00">
+						<tr>
+							<td align="right" colspan="3">${JSON.labels.discount?html}&#160;</td>
+							<td align="right">$${JSON.summary.discounttotal?html}</td>
+						</tr>
+					</#if>
+                    
+                    <tr>
+						<td align="center" colspan="5" style="padding-bottom: 1em;"></td>
+					</tr>
+                    
+					<!-- SHIPPING GROUP-->
+					<#if JSON.summary.shippingcost?has_content && JSON.summary.shippingcost != " 0.00">
+						<tr>
+							<td align="right" colspan="3">${JSON.labels.shippingCost?html}&#160;</td>
+							<td align="right">$${JSON.summary.shippingcost?html}</td>
+						</tr>
+					</#if>
+					
+					<!-- HANDLING GROUP-->
+					<#if JSON.summary.handlingcost?has_content && JSON.summary.handlingcost != " 0.00">
+						<tr>
+							<td align="right" colspan="3">${JSON.labels.handlingCost?html}&#160;</td>
+							<td align="right">$${JSON.summary.handlingcost?html}</td>
+						</tr>
+					</#if>
+					
+					<!-- TAXES GROUPED BY RATE-->
+                    <#if JSON.summary.taxtotal?has_content>
+                      <#list JSON.summary.taxes as tax>
+                           <tr>
+                              <td align="right" colspan="3">${JSON.labels.tax1?html} @ ${tax.rate?html}</td>
+                     	      <td align="right">$${tax.amount?html}</td>
+                     	   </tr>
+                      </#list>
+                    </#if>
+					
+					<tr>
+						<td align="center" colspan="5" style="padding-bottom: 1em;"></td>
+					</tr>
+
+				</#if>
+
+				<tr>
+					<td style="padding-bottom: 1em; font-weight: bold" align="right" colspan="3" >${JSON.labels.totalLow?html}&#160;</td>
+					<td style="padding-bottom: 1em; font-weight: bold" align="right">$${JSON.summary.totalValue?html}</td>
+				</tr>
+
+				<!-- PAYMENTS GROUP-->
+				<#list JSON.payments as payment>
+					<tr>
+						<td style="${(payment_index == 0)?string('', 'padding-top: 1em;')}" align="right" colspan="3">${payment.paymentmethodname?html}&#160;</td>
+						<td style="${(payment_index == 0)?string('', 'padding-top: 1em;')}" align="right">$${payment.totalTendered?html}</td>
+					</tr>
+
+					<#if payment.checknum?has_content>
+						<tr>
+							<td align="right" colspan="3">**${JSON.labels.payments.checknum?html}:&#160;</td>
+							<td class="checknumber" align="right">${payment.checknum?html}</td>
+					</tr>
+					</#if>
+
+					<#if payment.ccnumber?has_content>
+						<tr>
+							<td align="right" colspan="3">**${JSON.labels.payments.ccnumber?html}:&#160;</td>
+							<td align="right">${payment.ccnumber?html}</td>
+						</tr>
+					</#if>
+
+					<#if payment.ccexpiredate?has_content>
+						<tr>
+							<td align="right" colspan="3">**${JSON.labels.payments.ccexpiredate?html}:&#160;</td>
+							<td align="right">${payment.ccexpiredate?html}</td>
+						</tr>
+					</#if>
+
+					<#if payment.authcode?has_content>
+						<tr>
+							<td align="right" colspan="3">**${JSON.labels.payments.authcode?html}:&#160;</td>
+							<td align="right">${payment.authcode?html}</td>
+						</tr>
+					</#if>
+
+					<#if payment.ccname?has_content>
+						<tr>
+							<td align="right" colspan="3">**${JSON.labels.payments.ccname?html}:&#160;</td>
+							<td align="right">${payment.ccname?html}</td>
+						</tr>
+					</#if>
+				</#list>
+
+				<!-- PURCHASE ON ACCOUNT -->
+				<#if JSON.terms?has_content>
+				<tr>
+					<td align="right" colspan="3">${JSON.labels.payOnAccount?html}</td>
+					<td align="right">$${JSON.terms.amount?html}</td>
+				</tr>
+				</#if>
+
+				<!-- GIFTCERTIFICATES GROUP-->
+				<#list JSON.giftcertificates as gift>
+					<tr>
+						<td style="padding-top: 1em;" align="right" colspan="3"> ${JSON.labels.giftcards.giftcard?html}&#160;</td>
+						<td style="padding-top: 1em;" align="right"> $${gift.applied?html}</td>
+					</tr>
+                    <tr>
+						<td align="right" colspan="3">Giftcard Remaining Balance:&#160;</td>
+						<td align="right">$${JSON.customExtraFields.custbody_scis_gc_balance_rec?html}</td>
+					</tr>
+					<#if gift.giftcertnumber?has_content>
+						<tr>
+							<td align="right" colspan="3">${JSON.labels.giftcards.giftcertnumber?html}:&#160;</td>
+							<td align="right">${gift.giftcertnumber?html}</td>
+						</tr>
+					</#if>
+
+				</#list>
+
+
+				<!-- REFUNDMETHOD GROUP-->
+				<#list JSON.creditmemo.refunds as refund>
+					<tr>
+						<td align="right" colspan="3"> ${refund.paymentmethodname?html} ${JSON.labels.refunds.refund?html}&#160;</td>
+						<td align="right"> $${refund.total?html}</td>
+					</tr>
+
+					<#if refund.checknum?has_content>
+						<tr>
+							<td align="right" colspan="3">**${JSON.labels.refunds.checknum?html}:&#160;</td>
+							<td class="checknumber" align="right">${refund.checknum?html}</td>
+						</tr>
+					</#if>
+				</#list>
+
+				<!-- CHANGE-->
+				<#if JSON.summary?has_content && JSON.summary.changedue?has_content>
+					<tr>
+						<td style="padding-top: 1em;" align="right" colspan="3">${JSON.labels.change?html}&#160;</td>
+						<td style="padding-top: 1em;" align="right">${JSON.summary.changedue?html}</td>
+					</tr>
+				</#if>
+
+
+				<!-- TOTAL AND BARCODE-->
+				<tr>
+					<td style="padding: 0.5em;" align="left" colspan="5"></td>
+				</tr>
+				
+				<!-- Commenting out Total section per S&L request
+				<tr>
+					<td align="center" colspan="3" class="containerTotal">
+						<span class="total" >${JSON.labels.total?html}</span>
+						${JSON.summary.total?html}
+					</td>
+				</tr>
+
+				<tr>
+				    <td style="padding-top: 2em; padding-bottom: 0.5em" colspan="3"></td>
+			  	</tr>
+				-->
+				<#list JSON.payments as payment>
+					<#if payment.shopperprintblock?has_content>
+					<tr>
+						<td>${payment.shopperprintblock?html}</td>
+					</tr>
+					</#if>
+				</#list>
+
+	            <#list JSON.refunds as refund>
+					<#if refund.shopperprintblock?has_content>
+					<tr>
+						<td>${refund.shopperprintblock?html}</td>
+					</tr>
+					</#if>
+				</#list>
+
+	            <#list JSON.creditmemo.refunds as refund>
+					<#if refund.shopperprintblock?has_content>
+					<tr>
+						<td>${refund.shopperprintblock?html}</td>
+					</tr>
+					</#if>
+				</#list>
+
+                <tr style="border-top: 0.10em solid gray; padding: 1px 0;">
+						<td align="center" colspan="5"></td>
+				</tr>
+
+				<tr>
+					<td style="padding: 0.5em;" align="left" colspan="5"></td>
+				</tr>
+				
+			</table>
+			<table border="0" width="20%"  data-role="printer-receipt" colspan="4" style="table-layout: fixed;">
+
+			 	<#if JSON.summary?has_content && JSON.summary.tranid?has_content>
+			 			<tr class="containerBarcode">
+			 				<td align="center" colspan="4"><barcode codetype="code128" showtext="false" height="20" width="100" value="${JSON.summary.tranid?html}" /></td>
+			 			</tr>
+			 	<#elseif JSON.creditmemo?has_content && JSON.creditmemo.summary?has_content && json.creditmemo.summary.tranid?has_content>
+			 			<tr class="containerBarcode">
+			 			 	<td align="center" colspan="4"><barcode codetype="code128" showtext="false" height="20" width="100" value="${JSON.summary.tranid?html}" /></td>
+			 			</tr>
+			 	</#if>
+			</table>	
+			<table border="0" width="100%"  data-role="printer-receipt" colspan="4" style="table-layout: fixed; font-size: 95%; font-family: Helvetica, serif" >
+				
+				<!-- RETURN POLICY INFO -->
+				
+				<tr>
+					<td style="padding: 0.5em;" align="left" colspan="5"></td>
+				</tr>
+				
+                <tr>
+                  <td align="center" colspan="5" style="font-color:gray;font-size:12px" >www.batterywarehouse.com |   Customer Care 800-276-8002</td>
+                </tr>
+                <tr>
+                  <td align="center" colspan="5" style="font-color:gray">&#160;</td>
+                </tr>
+                <tr>
+                  <td align="center" colspan="5" style="font-color:gray;font-size:12px" >Return Policy</td>
+                </tr>
+		    </table>
+			<br />
+		</#if>
+	</body>
+</pdf>

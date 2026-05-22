@@ -1,0 +1,54 @@
+.checkout-layout {
+	@extend %sc-layout;
+}
+
+.checkout-layout-header {
+	margin-bottom: $sc-margin-lv4;
+
+	@media (min-width: $screen-sm-min){
+		margin-bottom: $sc-margin-lv8;
+	}
+	
+}
+
+@media (min-width: $screen-md-min){
+	.checkout-layout-header .header-logo,
+	.checkout-layout-header .header-logo .header-logo-image{
+		max-width: 999px;
+		display: block;
+		margin: 0 auto;
+		max-height: 52px;
+		width: auto;
+	}
+	
+	.checkout-layout-header .header-simplified-header{
+		height: auto;
+		padding:10px;
+		background: $pa-dark-gray;
+	}
+}
+
+.checkout-layout-content, .checkout-layout-notifications{
+	@extend .container;
+}
+
+.checkout-layout-footer {
+	@extend %sc-footer !optional;
+}
+
+
+
+.checkout-layout-no-javascript-msg {
+	@extend .message-warning;
+	width: 100%;
+}
+
+.checkout-layout-content{
+	margin-top: $sc-margin-lv3;
+}
+
+.checkout-layout-notifications {
+	div[data-view="Promocode.Notifications"] {
+		display: none;
+	}
+}

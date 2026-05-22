@@ -1,0 +1,57 @@
+{
+    "name": "VelaroChat",
+    "fantasyName": "VelaroChat",
+    "vendor": "SSD",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCS,SCA",
+    "target_version": {
+        "SCS": "",
+        "SCA": ""
+    },
+    "description": "VelaroChat",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": [
+                "services/VelaroChat.Service.ss"
+            ]
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/VelaroChat/Configuration/VelaroChat.json"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/VelaroChat/JavaScript/VelaroChat.js",
+            "myaccount": "Modules/VelaroChat/JavaScript/VelaroChat.js",
+            "checkout": "Modules/VelaroChat/JavaScript/VelaroChat.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/VelaroChat/JavaScript/VelaroChat.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/VelaroChat/JavaScript/VelaroChat.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/VelaroChat/JavaScript/VelaroChat.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\VelaroChat"
+}

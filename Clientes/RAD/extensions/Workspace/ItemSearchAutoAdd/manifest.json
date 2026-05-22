@@ -1,0 +1,40 @@
+{
+	"name": "ItemSearchAutoAdd",
+	"fantasyName": "Item Search Auto-Add",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "SuiteLabs v2.1.0, new tracker event for suggested items",
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/ItemSearchAutoAdd/JavaScript/AwaLabs.ItemSearchAutoAdd.js",
+			"myaccount": "Modules/ItemSearchAutoAdd/JavaScript/AwaLabs.ItemSearchAutoAdd.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/ItemSearchAutoAdd/JavaScript/AwaLabs.ItemSearchAutoAdd.js",
+					"Modules/ItemSearchAutoAdd/JavaScript/ItemSearchAutoAdd.ItemSearcher.View.js",
+					"Modules/ItemSearchAutoAdd/JavaScript/ItemSearchAutoAdd.QuickAdd.View.js",
+					"Modules/ItemSearchAutoAdd/JavaScript/ItemSearchAutoAdd.Product.Model.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/ItemSearchAutoAdd/JavaScript/AwaLabs.ItemSearchAutoAdd.js",
+					"Modules/ItemSearchAutoAdd/JavaScript/ItemSearchAutoAdd.ItemSearcher.View.js",
+					"Modules/ItemSearchAutoAdd/JavaScript/ItemSearchAutoAdd.QuickAdd.View.js",
+					"Modules/ItemSearchAutoAdd/JavaScript/ItemSearchAutoAdd.Product.Model.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/ItemSearchAutoAdd@2.1.0",
+	"activation_id": "11",
+	"extension_id": "17001"
+}

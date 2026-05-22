@@ -1,0 +1,33 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "navPromoItems",
+        "group": "extensions",
+        "title": "Navigable Promo Items",
+        "description": "Enhanced behavior for Promotion Items in the Shopping Cart"
+    },
+    "properties": {
+        "navPromoItems.promoTexts": {
+            "group": "extensions",
+            "subtab": "navPromoItems",
+            "type": "array",
+            "title": "Message to be displayed above the promotion, in the shopping cart.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "promoCode": {
+                        "type": "string",
+                        "title": "Promotion Code",
+                        "mandatory": true
+                    },
+                    "promoText": {
+                        "type": "string",
+                        "title": "Promotion Message",
+                        "mandatory": true,
+                        "default": "The following item is free but it may generate shipping costs."
+                    }
+                }
+            }
+        }
+    }
+}

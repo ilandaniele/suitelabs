@@ -1,0 +1,25 @@
+<Bundle>
+  <param>
+    <name>SuiteCommerce Advanced</name>
+    <nslogin></nslogin>
+    <nscompany>QA PSG - 9422678 - SuiteCommerce Advanced 2024.1.30</nscompany>
+    <nsaccnt>9775668</nsaccnt>
+    <bundle_id>519479</bundle_id>
+    <qabundle_testfolder_id></qabundle_testfolder_id>
+    <prodcompany>NetSuite Platform Solutions Group - SuiteCommerce Advanced 2024.1.30</prodcompany>
+    <prodaccount>9775680</prodaccount>
+    <prodbundle_id>519481</prodbundle_id>
+    <product_name></product_name>
+    <devaccnt>NA</devaccnt>
+    <devbundle_id>NA</devbundle_id>
+    <baselabel>SCA_2024.1.30</baselabel>
+    <version>2024.1.30</version>
+    <datelabel>2024.09.24</datelabel>
+    <buildno>0</buildno>
+    <scrum>Scrum-PSGECommerce@netsuite.com</scrum>
+    <versioningmode>MINOR</versioningmode>
+    <qabundle_folder_id>NA</qabundle_folder_id>
+    <ci_plans />
+    <ci_automation_accounts></ci_automation_accounts>
+  </param>
+</Bundle>

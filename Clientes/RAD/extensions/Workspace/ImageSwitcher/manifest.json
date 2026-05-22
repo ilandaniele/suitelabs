@@ -1,0 +1,54 @@
+{
+	"name": "ImageSwitcher",
+	"fantasyName": "Image Switcher",
+	"vendor": "SuiteLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "1.0.0",
+	"description": "This extension allows to switch on hover the images of a product at the product list page.",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"configuration": {
+		"files": []
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/Main/Sass/_image_switcher.scss"
+		},
+		"files": [
+			"Modules/Main/Sass/_image_switcher.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/Main/JavaScript/SuiteLabs.ImageSwitcher.Main.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Main/JavaScript/SuiteLabs.ImageSwitcher.Main.js",
+					"Modules/Main/JavaScript/ImageSwitcher.Facets.ItemCell.View.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/SuiteLabs/ImageSwitcher@1.0.0",
+	"activation_id": "11",
+	"extension_id": "17201"
+}

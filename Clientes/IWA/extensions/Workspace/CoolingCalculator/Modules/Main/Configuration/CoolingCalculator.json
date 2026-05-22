@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "coolingCalculator",
+        "group": "extensions",
+        "title": "Cooling Calculator",
+        "description": "Section to configure all properties related to the Cooling Calculator feature"
+    },
+    "properties": { 
+        "coolingCalculator.formId": {
+            "group": "extensions",
+            "subtab": "coolingCalculator",
+            "type": "string",
+            "title": "Form Id"
+        }
+    }
+}

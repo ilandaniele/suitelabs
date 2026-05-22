@@ -1,0 +1,71 @@
+{
+	"name": "GeoIPLocation",
+	"fantasyName": "Geo IP Location",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "SuiteLabs v2.1.0 refers to the SCA upgrade to 23.2, it also includes some refactoring",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": [
+				"services/GeoIPLocation.Service.ss",
+				"services/restrictedIp.ssp"
+			]
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/GeoIPLocation/Configuration/Configuration.json"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/GeoIPLocation/JavaScript/AwaLabs.GeoIpLocation.js",
+			"checkout": "Modules/GeoIPLocation/JavaScript/AwaLabs.GeoIpLocation.js",
+			"myaccount": "Modules/GeoIPLocation/JavaScript/AwaLabs.GeoIpLocation.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/GeoIPLocation/JavaScript/AwaLabs.GeoIpLocation.js"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/GeoIPLocation/JavaScript/AwaLabs.GeoIpLocation.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/GeoIPLocation/JavaScript/AwaLabs.GeoIpLocation.js"
+				]
+			}
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/GeoIPLocation/SuiteScript/AwaLabs.GeoIPLocation.js",
+		"files": [
+			"Modules/GeoIPLocation/SuiteScript/GeoIPLocation.ServiceController.js",
+			"Modules/GeoIPLocation/SuiteScript/AwaLabs.GeoIPLocation.js",
+			"Modules/GeoIPLocation/SuiteScript/GeoIPLocation.Model.js",
+			"Modules/GeoIPLocation/SuiteScript/GeoIPLocation.Account.Model.js"
+		]
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/GeoIPLocation@2.1.0",
+	"activation_id": "11",
+	"extension_id": "16908"
+}

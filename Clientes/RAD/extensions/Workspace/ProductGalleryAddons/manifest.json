@@ -1,0 +1,37 @@
+{
+	"name": "ProductGalleryAddons",
+	"fantasyName": "Product Gallery Addons",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=20.1.0",
+		"SCS": ">=20.1.0"
+	},
+	"version": "2.0.0",
+	"description": "Product Gallery Addons",
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/ProductGalleryAddons/Sass/_product-gallery-addons.scss"
+		},
+		"files": [
+			"Modules/ProductGalleryAddons/Sass/_product-gallery-addons.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/ProductGalleryAddons/JavaScript/AwaLabs.ProductGalleryAddons.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/ProductGalleryAddons/JavaScript/AwaLabs.ProductGalleryAddons.js",
+					"Modules/ProductGalleryAddons/JavaScript/libraries/jquery.fitvids.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/ProductGalleryAddons@2.0.0",
+	"activation_id": "11",
+	"extension_id": "10753"
+}

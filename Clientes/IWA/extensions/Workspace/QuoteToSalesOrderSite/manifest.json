@@ -1,0 +1,21 @@
+{
+    "name": "QuoteToSalesOrderSite",
+    "fantasyName": "QuoteToSalesOrder Site",
+    "vendor": "ACS",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Add fix for missing tax in Quote To Sales Order Flow",
+    "skins": [],
+    "ssp-libraries": {
+        "entry_point": "Modules/Main/SuiteScript/QuoteToSalesOrder.Model.Site.js",
+        "files": [
+            "Modules/Main/SuiteScript/QuoteToSalesOrder.Model.Site.js"
+        ]
+    },
+    "local_folder": "Workspace\\QuoteToSalesOrderSite"
+}

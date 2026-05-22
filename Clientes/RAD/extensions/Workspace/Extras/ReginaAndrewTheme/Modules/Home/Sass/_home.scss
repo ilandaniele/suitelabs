@@ -1,0 +1,309 @@
+
+
+.home-slide-main-container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  @media (min-width:$screen-lg) {
+    height: 595px !important;
+  }
+}
+.home-slide-main-container .description,
+.banner-section .description{
+  width: 400px;
+  margin: 50px;
+  position: absolute;
+  bottom: 0;
+  .title{
+    font-size: 36px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 40px;
+    &.white{
+      color: white;
+      font-weight: 600;
+    }
+  }
+  .subtitle{
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 300;
+    &.white{
+      color: white;
+    }
+  }
+  .button{
+    text-align: center;
+    margin-top: 30px;
+    a{
+      @extend .button-primary;
+      @extend .button-large;
+      display:inline-block !important;
+      width: auto !important;
+      font-size: 15px;
+      font-family: $sc-font-family;
+    }
+  }
+  @media (max-width: $screen-md) {
+    width: 100%;
+    margin: 40px 0;
+  }
+}
+.home-main-slider .home-slider-prev-icon, .home-main-slider .home-slider-next-icon{
+  color: black;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 50px;
+  text-align: center;
+  &:hover{
+    color:$sc-color-secondary;
+  }
+}
+.home-main-slider .bx-wrapper .bx-controls-direction{
+  position: absolute;
+  top: 50%;
+  margin-top: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  padding: 0 30px;
+  z-index: 100;
+  @media (max-width: $screen-xs) {
+    padding: 0 15px;
+  }
+}
+.home-slider-prev-icon{
+  @extend .icon-angle-left;
+  float: left;
+}
+.home-slider-next-icon{
+  @extend .icon-angle-right;
+  float: right;
+}
+.home-main-slider .bx-wrapper{
+  position:relative;
+}
+html .bx-controls{
+  margin: 0;
+}
+html .home-main-slider .bx-wrapper .bx-pager{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 40px;
+  z-index: 100;
+  @media (max-width: $screen-md) {
+    display: none;
+  }
+}
+html .home-main-slider .bx-wrapper .bx-pager a{
+  height: 13px ;
+  width: 13px ;
+  margin: 8px ;
+  transition: background-color 0.5s, opacity 0.5s;
+  font-size: 0;
+  text-indent: -9999px;
+  color: #ccc !important;
+  background-color: #fff !important;
+  opacity: 0.5;
+  border-radius: 50%;
+  &.active{
+    opacity: 1;
+  }
+}
+.banner-section{
+  background-position: center center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 30px;
+  overflow: hidden;
+  height: 600px;
+  background-size: cover;
+  text-align: center;
+  margin-top: 30px;
+  @media (max-width: $screen-sm) {
+    height: 400px;
+  }
+}
+
+.home-bottom-banner-5{
+  margin-bottom: 80px;
+  margin-top: 10px;
+  padding: 0 50px;
+}
+.centered-content{
+  @extend .col-sm-3;
+  @media (max-width: $screen-sm) {
+    width: 50%;
+    float: left;
+    margin-bottom: 25px;
+  }
+  @media (max-width: $screen-xs) {
+    width: 50%;
+    float: left;
+    margin-bottom: 25px;
+  }
+  text-align:center;
+  a{
+    display: block;
+    font-weight: 300;
+    font-size: 14px;
+    img{
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 15px;
+      opacity: 1;
+      transition: all 0.2s;
+    }
+    &:hover{
+      img{
+        opacity: 0.7;
+      }
+    }
+  }
+  &.tips-design{
+    @extend .col-xs-4;
+    @media (max-width: $screen-xs) {
+      width: 33%;
+      float: left;
+      margin-bottom: 25px;
+    }
+  }
+}
+.design-tips a{
+  width: 100%;
+  background-color: black;
+  padding: 25px 20px;
+  color: white;
+  font-size: 42px;
+  letter-spacing: 1.5px;
+  display: block;
+  text-align: center;
+  font-weight: 400;
+  @media (max-width: $screen-xs) {
+    font-size: 35px;
+  }
+}
+.home-bottom-banner-7{
+  margin-top: 20px;
+  margin-bottom: 70px;
+  @media (min-width: $screen-sm) {
+    padding: 0 50px;
+  }
+}
+
+.sc-order-status-form .sc-order-status-form-fields{
+  @extend .col-md-7;
+}
+.foursixty-header{
+  display: none;
+  text-align: center;
+  h1{
+    font-style: italic;
+    font-weight: 300;
+    font-family: $sc-font-family-secondary;
+  }
+  .foursixty-header-details{
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 15px;
+    text-transform: uppercase;
+  }
+}
+.fs-desktop .fs-timeline-entry{
+  margin:7px;
+}
+.fs-slider-next-button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 30px;
+}
+.fs-slider-prev-button{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 10000;
+  background-color: rgba(255, 255, 255, 0.85);
+  width: 30px;
+}
+
+.foursixty-header {
+  text-align: center;
+
+  h1 {
+    font-style: italic;
+  }
+
+  .foursixty-header-details {
+    @extend h5;
+    text-transform: uppercase;
+  }
+}
+
+.foursixty-container .fs-has-links {
+  display: none;
+}
+
+.foursixty-container .fs-wrapper {
+  height: auto
+}
+
+.foursixty-container .fs-entry-container {
+  height: 0 !important;
+  padding-top: 25% !important;
+}
+
+.home-page .foursixty-container .fs-entry-container {
+  width: 25% !important;
+}
+
+
+.foursixty-container .fs-wrapper div.fs-text-container .fs-entry-title,
+.foursixty-container div.fs-detail-title {
+  font-family: Times New Roman, serif;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.foursixty-container div.fs-text-container .fs-entry-date,
+.foursixty-container div.fs-detail-container .fs-post-info,
+.foursixty-container div.fs-wrapper div.fs-has-links::after,
+.foursixty-container .fs-text-product,
+.foursixty-container .fs-overlink-text {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.foursixty-container .fs-wrapper div.fs-text-container * {
+  color: rgb(0, 0, 0)
+}
+
+.foursixty-container .fs-wrapper div.fs-text-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0px
+}
+
+.foursixty-container div.fs-entry-date {
+  display: none
+}
+
+.foursixty-container div.fs-entry-title {
+  display: none
+}
+
+.foursixty-container .fs-wrapper div.fs-timeline-entry {
+  margin: 7px
+}
+

@@ -1,0 +1,97 @@
+.requestquote-wizard-module-items {
+	margin-bottom: $sc-margin-lv4;
+}
+
+.requestquote-wizard-module-items-table{
+	@extend .table-flex-item-navigable;
+	table-layout: fixed;
+
+	.item-views-cell-actionable-table-last {
+		@media (min-width: $screen-md-min) {
+			text-align: right
+		}
+	}
+
+	tr {
+		@extend .recordviews-actionable-row;
+	}
+
+	.item-views-cell-actionable-table-middle {
+		padding-top: $sc-padding-lv3;
+	}
+
+	.item-views-cell-actionable-table-middle + .item-views-cell-actionable-table-middle {
+		padding-top: 0;
+
+		@media (min-width: $screen-md-min) {
+			padding-top: $sc-padding-lv3;
+		}
+	}
+}
+
+.requestquote-wizard-module-items-header {
+	@extend .recordviews-actionable-row;
+	display: none;
+	@media (min-width: $screen-md-min) {
+		display: table-header-group;
+		width: 100%;
+	}
+}
+.myaccount-layout-main{
+	.requestquote-wizard-module-items-header {
+		> tr{
+			border: none;
+		}
+		display: table-caption !important;
+		th.list-header-view-select-all{
+			padding-bottom: 5px;
+			display: table-cell !important;
+		}
+		@media (min-width: $screen-md-min) {
+			display: table-header-group;
+			width: 100%;
+			th.list-header-view-select-all{
+				padding-bottom: 15px;
+			}
+		}
+	}
+	.requestquote-wizard-module-items-line-actions{
+		@media (max-width: $screen-md) {
+			margin-bottom: 15px;
+		}
+	}
+}
+.requestquote-wizard-module-items-header-image {
+	@extend .item-view-cell-navigable-item-image;
+	font-size: $sc-font-size-m;
+	font-weight: $sc-font-weight-semibold;
+}
+.requestquote-wizard-module-items-header-details {
+	color: $sc-color-theme-500;
+	font-size: $sc-font-size-m;
+	font-weight: $sc-font-weight-semibold;
+}
+
+.requestquote-wizard-module-items-table th.list-header-view-select-all {
+	display: table-cell;
+}
+.requestquote-wizard-module-items{
+	.requestquote-wizard-module-items-line-actions-button-add{
+		@media (min-width: $screen-lg) {
+			margin-left: 10px;
+		}
+		@media (max-width: $screen-sm) {
+			margin-left: 10px;
+		}
+		@media (max-width:420px) {
+			margin-left: 0;
+		}
+	}
+}
+.requestquote-wizard-step-content-main{
+	a.address-details-action{
+		@media (max-width: $screen-sm) {
+			margin-bottom: 10px;
+		}
+	}
+}

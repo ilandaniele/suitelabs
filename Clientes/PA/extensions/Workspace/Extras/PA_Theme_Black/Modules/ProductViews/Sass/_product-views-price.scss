@@ -1,0 +1,59 @@
+.product-views-price-lead{
+	@extend .middle-price;
+	&.map-type-price {
+		display: none;
+	}
+	&.map-type-text {
+		cursor: pointer;
+		&.price-in-cart {
+			cursor: default;
+		}
+	}
+}
+.product-views-price {
+	&.map-type {
+		.product-views-price-lead{
+			&.map-type-price {
+				display: block;
+			}
+			&.map-type-text {
+				display: none;
+			}
+		}
+	}
+}
+.product-details-full-content .deal-products-wrapper .item-relations-related-item-price .product-views-price {
+	.product-views-price-exact .product-views-price-lead {
+		&.map-type-price {
+			display: none;
+		}
+	}
+	&.map-type {
+		.product-views-price-exact .product-views-price-lead {
+			&.map-type-price {
+				display: block;
+			}
+			&.map-type-text {
+				display: none;
+			}
+		}
+	}
+}
+.product-views-price-old{
+	@extend .old-price;
+}
+
+.product-views-price-login-to-see-prices-highlighted {
+	margin-top: $sc-margin-lv2;
+    margin-bottom: $sc-margin-lv2;
+}
+.product-views-price-login-to-see-prices {
+    @extend .message;
+}
+
+.product-views-price-message {
+	font-weight: normal;
+}
+
+
+

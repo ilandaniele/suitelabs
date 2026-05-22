@@ -1,0 +1,17 @@
+.checkout-custom-fields {
+    .checkout-custom-fields-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        .title{
+            font-size: 1.067rem;
+            margin: 0;
+            font-style: normal;
+            line-height: 1.6;
+            letter-spacing: 0;
+            color: #5a5a5a;
+        }
+    }
+}

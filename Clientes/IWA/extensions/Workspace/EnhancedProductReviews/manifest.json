@@ -1,0 +1,59 @@
+{
+    "name": "EnhancedProductReviews",
+    "fantasyName": "Enhanced Product Reviews",
+    "vendor": "SuiteLabs",
+    "version": "1.0.1",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "This extension adds custom behaviors to the product reviews section, enhancing the experience for the users",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/EnhancedProductReviews.json"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/enhanced_global_views_star_rating.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/SuiteLabs.Enhanced.ProductReviews.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.Enhanced.ProductReviews.Main.js",
+                    "Modules/Main/JavaScript/GlobalViews.StarRating.View.EPR.js",
+                    "Modules/Main/JavaScript/ProductDetails.Full.View.EPR.js",
+                    "Modules/Main/JavaScript/ProductReviews.Center.View.EPR.js",
+                    "Modules/Main/JavaScript/Facets.ItemCell.View.EPR.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\EnhancedProductReviews",
+    "suitescript2": {
+        "files": []
+    }
+}

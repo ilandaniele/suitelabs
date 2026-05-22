@@ -1,0 +1,42 @@
+{
+	"name": "OrderWizardModuleCartSummaryHideTax",
+	"fantasyName": "Order Wizard Module Cart Summary HideTax",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCS,SCA",
+	"target_version": {
+		"SCS": ">=20.1.0",
+		"SCA": ">=20.1.0"
+	},
+	"version": "2.0.0",
+	"description": "Order Wizard Module Cart Summary HideTax",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"javascript": {
+		"entry_points": {
+			"checkout": "Modules/OrderWizardModuleCartSummaryHideTax/JavaScript/AwaLabs.OrderWizardModuleCartSummaryHideTax.js"
+		},
+		"application": {
+			"checkout": {
+				"files": [
+					"Modules/OrderWizardModuleCartSummaryHideTax/JavaScript/AwaLabs.OrderWizardModuleCartSummaryHideTax.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/OrderWizardModuleCartSummaryHideTax@2.0.0",
+	"activation_id": "11",
+	"extension_id": "10747"
+}

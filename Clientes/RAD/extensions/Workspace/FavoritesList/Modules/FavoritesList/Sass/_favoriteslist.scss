@@ -1,0 +1,90 @@
+.header-menu-projects-icon {
+    @extend .fa;
+    @extend %fa-pencil-square-o;
+    font-size: 24px;
+    line-height: 1;
+    color: $sc-color-theme;
+
+    &:hover, &:active, &:focus{
+        color: $sc-color-theme;
+    }
+}
+.product-list-bulk-actions-button-download{
+
+    @extend .button-list-header;
+    @extend .button-list-header-shrink;
+    @extend .button-primary;
+    width: auto;
+    margin-right: 4px;
+    float: left;
+    .print-icon {
+        color: #ffffff !important;
+
+    }
+}
+
+.product-list-bulk-actions-button-download:hover{
+    .print-icon {
+        color:$sc-color-copy !important;
+    }
+}
+.print-icon:hover{
+    color:$sc-color-copy;
+}
+.pdp-favorites-selected-icon {
+    @extend .fa;
+    @extend %fa-heart;
+    font-size: 24px;
+    line-height: 1;
+}
+.header-mini-projects-cell{
+    a > div label{
+        pointer-events: none;
+    }
+    a:hover{
+        > div label{
+            color: $sc-color-secondary;
+        }
+    }
+}
+
+.stock-notifications-accordion{
+    .accordion-head-toggle-custom{
+        @media (max-width: $screen-sm-max) {
+            width: calc(100% - 40px);
+            padding: 15px 0;
+        }
+    }
+}
+
+.product-list-bulk-actions-button-group {
+    float: none;
+    .product-list-bulk-actions-delete-wrapper {
+        float: right;
+        .product-list-bulk-actions-button-wishlist {
+            @extend .button-primary;
+            @extend .button-medium;
+        }
+        .product-list-bulk-actions-button-remove {
+            @extend .button-primary;
+            @extend .button-medium;
+            margin-top: 10px;
+            @media (min-width: $screen-sm) {
+                margin-left: 5px;
+                margin-top: 0;
+            }
+        }
+    }
+
+    .product-list-bulk-actions-button-download {
+        text-align: center;
+        color: white !important;
+        font-size: 12px !important;
+        @extend .button-primary;
+        @extend .button-medium;
+        i.print-icon {
+            @extend .fa;
+            @extend %fa-download;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+    "name": "Signifyd",
+    "fantasyName": "Signifyd",
+    "vendor": "Folio3",
+    "version": "1.0.1",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Signifyd Tracker. SuiteLabs v1.0.1 removed debugger commands",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": []
+    },
+    "templates": {
+        "application": {
+            "checkout": {
+                "files": [
+                    "Modules/Signifyd/Templates/signifyd.tpl",
+                    "Modules/Signifyd/Templates/signifyd_session_view.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "checkout": "Modules/Signifyd/JavaScript/Signifyd.js"
+        },
+        "application": {
+            "checkout": {
+                "files": [
+                    "Modules/Signifyd/JavaScript/Signifyd.js",
+                    "Modules/Signifyd/JavaScript/Signifyd.View.js",
+                    "Modules/Signifyd/JavaScript/Signifyd.Session.View.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\Signifyd"
+}

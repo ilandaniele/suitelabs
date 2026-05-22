@@ -1,0 +1,38 @@
+{
+    "name": "AgeRestrictionPopUp",
+    "fantasyName": "Age Restriction Pop Up",
+    "vendor": "NSeComm",
+    "type": "extension",
+    "target": "SCIS",
+    "target_version": {
+        "SCIS": ""
+    },
+    "version": "1.0.0",
+    "description": "Adds a pop up for age restriction",
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "instore": "Modules/Main/JavaScript/NSeComm.AgeRestrictionPopUp.js"
+        },
+        "application": {
+            "instore": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.AgeRestrictionPopUp.js"
+                ]
+            }
+        }
+    },
+    "suitescript2": {
+        "files": []
+    }
+}

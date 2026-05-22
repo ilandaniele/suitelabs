@@ -1,0 +1,53 @@
+{
+	"name": "CheckoutSteps",
+	"fantasyName": "Checkout Steps",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"version": "2.0.0",
+	"description": "Adds the checkout steps as clickable elements at the top and bottom sections of checkout",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"templates": {
+		"application": {
+			"checkout": {
+				"files": [
+					"Modules/CheckoutSteps/Templates/order_wizard_steps_module.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"checkout": "Modules/CheckoutSteps/Sass/_order-wizard-steps-module.scss"
+		},
+		"files": [
+			"Modules/CheckoutSteps/Sass/_order-wizard-steps-module.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"checkout": "Modules/CheckoutSteps/JavaScript/AwaLabs.CheckoutSteps.js"
+		},
+		"application": {
+			"checkout": {
+				"files": [
+					"Modules/CheckoutSteps/JavaScript/AwaLabs.CheckoutSteps.js",
+					"Modules/CheckoutSteps/JavaScript/AwaLabs.StepModule.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/CheckoutSteps@2.0.0",
+	"activation_id": "11",
+	"extension_id": "10715"
+}

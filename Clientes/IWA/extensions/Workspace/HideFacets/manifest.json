@@ -1,0 +1,55 @@
+{
+    "name": "HideFacets",
+    "fantasyName": "Hide Facets from Filters",
+    "vendor": "NSeComm",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": ">=22.2.0",
+        "SCS": ">=22.2.0"
+    },
+    "description": "Hide facets from filters.",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/Main.json"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/facets_faceted_navigation_hide_option.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/NSeComm.HideFacets.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.HideFacets.Main.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\HideFacets",
+    "suitescript2": {
+        "files": []
+    }
+}

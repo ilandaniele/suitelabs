@@ -1,0 +1,100 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "dialogConfig",
+        "title": "Dialogs Configuration",
+        "description": "Dialogs Configuration",
+        "group": "shoppingApplication"
+    },
+    "properties": {
+        "dialogsConfig": {
+            "type": "array",
+            "title": "Dialogs configurations items",
+            "description": "Dialogs configurations items",
+            "group": "shoppingApplication",
+            "subtab": "dialogConfig",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "title": "Name",
+                        "description": "Name"
+                    },
+                    "headerText": {
+                        "type": "string",
+                        "title": "Header Text",
+                        "description": "Header Text",
+                        "translate": true
+                    },
+                    "body": {
+                        "type": "string",
+                        "nsType": "textarea",
+                        "title": "Dialog Body",
+                        "description": "Dialog Body"
+                    },
+                    "hasOkBtn": {
+                        "type": "boolean",
+                        "title": "Has Ok Btn",
+                        "description": "Has Ok Btn"
+                    },
+                    "okBtnText": {
+                        "type": "string",
+                        "title": "Ok Btn Text",
+                        "description": "Ok Btn Text",
+                        "translate": true
+                    },
+                    "hasCancelBtn": {
+                        "type": "boolean",
+                        "title": "Has Cancel Btn",
+                        "description": "Has Cancel Btn"
+                    },
+                    "cancelBtnText": {
+                        "type": "string",
+                        "title": "Cancel Btn Text",
+                        "description": "Cancel Btn Text",
+                        "translate": true
+                    }
+                }
+            },
+            "default": [
+                {
+                    "name": "Pending Trade Approval - Checkout",
+                    "headerText": "",
+                    "body": "<CENTER>\n<img src=\"/CMS/Development/Published/Images/RAD-logo-for-pop-up_3.png\"><br>\n<img src=\"/CMS/Development/Published/Images/CREST-popup-2.png\">\n<br><br>\n<h1 style=\"color: #AD986E; font-weight: 300; font-size: 100%; \">PENDING TRADE APPROVAL</h1>\n<br>\n<h2 style=\"color: #AD986E; font-weight: 300; font-size: 100%; \">Please be aware that you're checking out at retail pricing <br> while your account is pending approval.\n</h2>",
+                    "hasOkBtn": true,
+                    "okBtnText": "Continue",
+                    "hasCancelBtn": false,
+                    "cancelBtnText": ""
+                },
+                {
+                    "name": "Pending Trade Approval - Logged In",
+                    "headerText": "",
+                    "body": "<CENTER>\n<img src=\"/CMS/Development/Published/Images/RAD-logo-for-pop-up_3.png\"><br>\n<img src=\"/CMS/Development/Published/Images/CREST-popup-2.png\">\n<br><br>\n<h1 style=\"color: #AD986E; font-weight: 300; font-size: 100%; \">PENDING TRADE APPROVAL</h1>\n<br>\n<h2 style=\"color: #AD986E; font-weight: 300; font-size: 100%; \">Please notice that you will be browsing at retail pricing<br> while your account is pending approval.\n\n</h2>",
+                    "hasOkBtn": true,
+                    "okBtnText": "Continue",
+                    "hasCancelBtn": false,
+                    "cancelBtnText": ""
+                },
+                {
+                    "name": "Pending Trade Approval - Session Timeout",
+                    "headerText": "",
+                    "body": "<CENTER>\n<img src=\"/CMS/Development/Published/Images/RAD-logo-for-pop-up_3.png\"><br>\n<img src=\"/CMS/Development/Published/Images/CREST-popup-2.png\">\n<br><br>\n<h1 style=\"color: #AD986E; font-weight: 300; font-size: 100%; \">PENDING TRADE APPROVAL</h1>\n<br>\n<h2 style=\"color: #AD986E; font-weight: 300; font-size: 100%; \">Please notice that you're browsing at retail pricing<br> while your account is pending approval.\n\n</h2>",
+                    "hasOkBtn": true,
+                    "okBtnText": "Continue",
+                    "hasCancelBtn": false,
+                    "cancelBtnText": ""
+                },
+                {
+                    "name": "Pending Trade Approval - Registered",
+                    "headerText": "",
+                    "body": "<CENTER>\n<img src=\"/CMS/Development/Published/Images/RAD-logo-for-pop-up_3.png\"><br>\n<img src=\"/CMS/Development/Published/Images/CREST-popup-2.png\">\n<br><br>\n<h1 style=\"color: #AD986E; font-weight: 300; font-size: 100%; \">THANK YOU FOR REGISTERING</h1>\n<br>\n<h2 style=\"color: #AD986E; font-weight: 300; font-size: 100%; \">You may use your credentials to log in and browse the site <br>at retail pricing while your account is pending Trade approval.</h2>",
+                    "hasOkBtn": true,
+                    "okBtnText": "Continue",
+                    "hasCancelBtn": false,
+                    "cancelBtnText": ""
+                }
+            ]
+        }
+    }
+}

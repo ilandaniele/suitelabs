@@ -1,0 +1,42 @@
+{
+	"name": "PLPColorRelations",
+	"fantasyName": "Product Listing Page Color Relations",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "2.0.0",
+	"description": "Product Listing Page color relations between facet color options and products images",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/PLPColorRelations/JavaScript/AwaLabs.PLPColorRelations.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/PLPColorRelations/JavaScript/AwaLabs.PLPColorRelations.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/PLPColorRelations@2.0.0",
+	"activation_id": "11",
+	"extension_id": "10750"
+}

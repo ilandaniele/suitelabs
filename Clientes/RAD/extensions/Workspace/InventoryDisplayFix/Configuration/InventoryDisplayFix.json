@@ -1,0 +1,13 @@
+{
+    "type": "object",
+
+    "properties": {
+        "inventoryDisplay.dropShipSpecialOrderItemsAlwaysInStock": {
+            "group": "extensions",
+            "subtab": "inventoryDisplay",
+            "type": "boolean",
+            "title": "Drop Ship/Special Order items are always in stock",
+            "description": "Drop Ship/Special Order items are always in stock"
+        }
+    }
+}

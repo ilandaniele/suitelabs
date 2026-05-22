@@ -1,0 +1,41 @@
+{
+    "name": "PayPalExpressPatch",
+    "fantasyName": "PayPal Express Patch",
+    "vendor": "SuiteLabs",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "This extension fixes the issue where users who do not have payment methods associated yet, get stuck in the checkout flow because, after paying with paypal, they still are requested to enter a payment method",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "checkout": "Modules/Main/JavaScript/SuiteLabs.PayPalExpressPatch.Main.js"
+        },
+        "application": {
+            "checkout": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.PayPalExpressPatch.Main.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\PayPalExpressPatch",
+    "suitescript2": {
+        "files": []
+    }
+}

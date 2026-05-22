@@ -1,0 +1,203 @@
+footer {
+    background: #f8f8f6;
+    // background: $sc-footer-background-color;
+    // border-top: 1px solid #000;
+    color: $sc-footer-text-color;
+    margin-top: 1.6em;
+
+    p {
+        color: $sc-footer-text-color;
+        margin-right: $sc-margin-lv2;
+    }
+
+    a {
+        color: $sc-footer-link-color;
+        margin-right: $sc-margin-lv2;
+
+        &:hover {
+            color: $sc-footer-link-color-hover;
+        }
+
+        &:active {
+            color: $sc-footer-link-color-active;
+        }
+    }
+
+    ul{
+        display:block;
+        list-style: none;
+        margin: 0;
+        font-weight: 300;
+    }
+
+    h4{
+        margin-top: 25px;
+        color: #000;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+    input {
+        background: $sc-footer-fields-background-color;
+        border: 1px solid black;
+        color: $sc-footer-fields-text-color;
+    }
+
+    button.newsletter-subscription-form-button-subscribe {
+        @extend .button-medium;
+        background: black;
+        color: $sc-footer-buttons-text-color;
+        border: 1px solid black;
+        &:hover{
+            background: #5a5959;
+            border: 1px solid #5a5959;
+        }
+    }
+}
+
+.footer-content{
+    @extend .container;
+    @extend .row;
+    margin: auto;
+    text-align: center;
+    padding-bottom:60px;
+    @media (min-width: $screen-md-min) {
+        text-align: left;
+    }
+}
+
+.footer-content-col4 {
+    @extend .col-md-4;
+}
+
+.footer-content-col2 {
+    @extend .col-md-2;
+}
+
+//awalabs
+.container-footer{
+    @extend .col-xs-6;
+    @extend .col-sm-3;
+    @media (max-width: $screen-xs) {
+        width: 100%;
+    }
+}
+.footer-link-list{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    li{
+        line-height: 25px;
+    }
+}
+footer a{
+    font-size: 14px;
+}
+.footer-bottom-cms{
+    @extend .col-xs-12;
+    @extend .col-sm-5;
+    &.footer-logo{
+        @extend .col-sm-4;
+    }
+    &.footer-social-links{
+        @extend .col-sm-3;
+    }
+}
+ul.social{
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+.footer-content-copyright{
+    small{
+        font-size: 14px;
+    }
+}
+.social-item{
+    display: inline-block;
+    margin-right: 5px;
+    a{
+        i{
+            font-size: 22px;
+        }
+    }
+}
+.footer-bottom-content{
+    margin-top:10px;
+    .row{
+        @media (min-width: $screen-sm) {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+.newsletter-subscription-form-label{
+    text-transform: uppercase;
+    /* color: $sc-color-secondary; */
+    color: black;
+}
+.contivio-chat-container{
+    -webkit-box-shadow: 0 5px 15px -5px #333;
+    box-shadow: 0 5px 15px -5px #333;
+    -webkit-transition: all 500ms;
+    -o-transition: all 500ms;
+    transition: all 500ms;
+    transform: translateX(-50%);
+    z-index: 999999999;
+    position: fixed;
+    bottom: -540px;
+    width: 320px;
+    left: 50%;
+    height: 580px;
+    padding: 0px;
+    margin: 0px;
+    background-color: transparent;
+    @media (min-width: $screen-sm) {
+        transform: none;
+        width: 440px;
+        right: 15px;
+        left: auto;
+    }
+    &.chat-visible{
+        bottom: -15px;
+    }
+}
+.contivio-chat-container .ChatTop{
+    height: auto;
+    width: 100%;
+    background-color:#AD986E;
+    border-radius: 5px 5px 0 0;
+    margin-right: 10px;
+    font-size: 14px;
+    padding: 10px 15px;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    span{
+        color: white;
+    }
+}
+.contivio-chat-container .ChatContents{
+    padding: 10px;
+    height: 530px;
+    border-top-right-radius: 10px;
+    background: #fff;
+}
+.contivio-chat-container .ChatTop>a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.contivio-chat-container .ChatTop > a.minimize-chat{
+    right: 45px;
+}
+.contivio-chat-container .ChatTop > a.close-chat{
+    right: 15px;
+}
+.contivio-chat-container span.chatBtn{
+    max-width: 17px;
+    max-height: 17px;
+    padding-top: 3px;
+    padding-right: 10px;
+    display: inline;
+    color:white;
+}

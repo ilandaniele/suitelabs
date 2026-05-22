@@ -1,0 +1,34 @@
+{
+    "name": "NewsletterDoNotEmail",
+    "fantasyName": "Newsletter Do Not Email",
+    "vendor": "SuiteLabs",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Removes the native email duplicate validation since it conflicts with the do not email field (DNM) at the customer record.",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/Main/SuiteScript/DoNotEmail.Main.js",
+        "files": [
+            "Modules/Main/SuiteScript/DoNotEmail.Main.js",
+            "Modules/Main/SuiteScript/DoNotEmail.Account.Model.js",
+            "Modules/Main/SuiteScript/DoNotEmail.Newsletter.Model.js"
+        ]
+    },
+    "local_folder": "Workspace\\NewsletterDoNotEmail"
+}

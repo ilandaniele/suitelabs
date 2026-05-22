@@ -1,0 +1,192 @@
+.executive-team-wrapper {
+    margin-bottom: $sc-margin-lv8 + $sc-margin-lv6;
+    @media (max-width: $screen-sm-max) {
+        padding: $sc-padding-lv3 - 1  $sc-padding-lv1 + 2 0px;
+    }
+    @media (max-width: $screen-xs-max) {
+        margin-bottom: $sc-margin-lv3 - 1;
+    }
+    .container {
+        max-width: 100%;
+        @media (min-width: $ipad-max-width) {
+            max-width: 1170px;
+        }
+        @media (min-width: $executive-page-lg-min-width) {
+            max-width: 1270px;
+        }
+    }
+    .breadcrumb-container {
+        background: $pa-breadcrumb-background;
+        padding: $sc-padding-lv1 - 2 0px;
+        margin-bottom: $sc-margin-lv8 + $sc-margin-lv2;
+        .global-views-breadcrumb-item,
+        .global-views-breadcrumb-item-active {
+            font-size: 1.04rem;
+        }
+        .global-views-breadcrumb-item-active {
+            font-weight: $sc-font-weight-bold;
+        }
+    }
+}
+.executive-team-card {
+    padding: 0px $sc-padding-lv1 + 2 $sc-padding-lv3 - 1;
+    width: 100%;
+    float: left;
+    @media (min-width: $screen-sm-min) {
+        width: 50%;
+    }
+    @media (min-width: $screen-md-min) {
+        width: 33.33%;
+    }
+    @media (min-width: $executive-page-lg-min-width) {
+        width: 25%;
+    }
+}
+.executive-team-card-box {
+    border: 1px solid $pa-executive-card-border-color;
+    padding: $sc-padding-lv3 - 1 $sc-padding-lv5 0px;
+    &:hover {
+        .executive-team-card-top img {
+            opacity: 0.8;
+        }
+        .executive-teammember-name {
+            color: $pa-executive-card-arrow-color;
+        }
+    }
+}
+.executive-has-description {
+    .executive-team-card-box {
+        cursor: pointer; 
+    }
+    .executive-teammember-name {
+        background-image: url(getThemeAssetsPath("img/executive-card-arrow.svg"));
+    }
+}
+.executive-team-card-top,
+.executive-team-card-top img,
+.executive-team-card-bottom,
+.executive-teammember-name,
+.executive-teammember-designation,
+.executive-teammember-email,
+.executive-team-card-box {
+    width: 100%;
+    float: left;
+}
+.executive-teammember-name {
+    text-transform: uppercase;
+    font-weight: $sc-font-weight-bold;
+    letter-spacing: 0.5px;
+    font-size: 1.08rem;
+    padding: $sc-padding-lv2 0px $sc-padding-lv2 - 2;
+    background-image: none;
+	background-repeat:no-repeat;
+	background-position: right center;
+}
+.executive-teammember-designation {
+    font-size: 0.95rem;
+    color: $custom-darkgrey-color;
+    min-height: 40px;
+    line-height: 1.3rem;
+    @media (max-width: $screen-sm-max) {
+        min-height: auto;
+    }
+}
+.executive-teammember-email {
+    padding: $sc-padding-lv1 + 2 0px $sc-padding-lv2;
+    min-height: 41px;
+    max-height: 41px;
+    a {
+        font-size: $sc-small-font-size;
+        &:hover,
+        &:focus,
+        &:active {
+            color: $pa-title-link-hover-color;
+        }
+        span {
+            text-decoration: underline;
+            display: inline-block;
+            padding-left: $sc-padding-lv1 + 2;
+        }
+        i {
+            font-size: $sc-base-font-size + 1;
+        }
+    }
+}
+.executive-modal-close {
+    background-image: url(getThemeAssetsPath("img/executive-modal-close-icon.svg"));
+	background-repeat:no-repeat;
+    background-position: center;
+    background-color: transparent;
+    position: absolute;
+    background-size: 14px;
+    right: 0px;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    @media (min-width: $executive-page-xs-min-width) and (max-width: $screen-xs-max) {
+        right: 11px;
+    }
+}
+.executive-modal-holder {
+    @media (max-width: $screen-xs-max) {
+        padding: 0px !important;
+        margin-right: - ($sc-margin-lv2 + 1);
+        margin-left: - ($sc-margin-lv1 - 4);
+        background: $pa-black;
+        margin-top: -1px;
+    }
+    .modal-dialog {
+        max-width: 500px;
+        @media (max-width: $screen-xs-max) {
+            max-width: none;
+            margin: 0px;
+        }
+    }
+}
+.executive-modal-content {
+    position: relative;
+    border-radius: 0px;
+    .modal-body {
+        padding: 0px;
+    }
+}
+.modal-body-upper {
+    img {
+        width: 100%;
+        float: left;
+    }
+}
+.modal-body-lower {
+    width: 100%;
+    float: left;
+    background: $pa-black;
+    color: $pa-white;
+    padding: 0px $sc-padding-lv5 $sc-padding-lv5;
+    position: relative;
+    font-size: 1rem;
+    &:before {
+        content:'';
+        position: absolute;
+        width: 100%;
+        height: 120px;
+        background-color: transparent;
+        background: linear-gradient(to top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+        top: -118px;
+        left: 0px;
+        right: 0px;
+    }
+    .modal-body-lower-executive-name {
+        color: $pa-accent;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        letter-spacing: 0.4px;
+        position: relative;
+        margin-top: - ($sc-margin-lv4 + 2);
+        margin-bottom: $sc-margin-lv1;
+    }
+    .modal-body-lower-executive-designation {
+        margin-bottom: $sc-margin-lv2;
+        font-size: 1.09rem;
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "name": "RelatedCategories",
+    "fantasyName": "Related Categories",
+    "vendor": "NSeComm",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "version": "1.0.0",
+    "description": "This extension provides a list of related products of a specific product",
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/nsecomm_relatedcategories_main.tpl"
+                ]
+            }
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_relatedcategories-main.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_relatedcategories-main.scss"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/NSeComm.RelatedCategories.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.RelatedCategories.Main.js",
+                    "Modules/Main/JavaScript/NSeComm.RelatedCategories.Main.View.js"
+                ]
+            }
+        }
+    }
+}

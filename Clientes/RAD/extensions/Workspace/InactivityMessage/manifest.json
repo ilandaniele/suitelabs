@@ -1,0 +1,92 @@
+{
+	"name": "InactivityMessage",
+	"fantasyName": "Inactivity Message",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "Inactivity Message. SuiteLabs v2.1.0, removed unneeded modules.",
+	"assets": {
+		"services": {
+			"files": [
+				"services/InactivityMessage.Service.ss"
+			]
+		}
+	},
+	"templates": {
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/InactivityMessage/Templates/session_message.tpl"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/InactivityMessage/Templates/session_message.tpl"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/InactivityMessage/Templates/session_message.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/InactivityMessage/Sass/_session_message.scss",
+			"myaccount": "Modules/InactivityMessage/Sass/_session_message.scss",
+			"checkout": "Modules/InactivityMessage/Sass/_session_message.scss"
+		},
+		"files": [
+			"Modules/InactivityMessage/Sass/_session_message.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/InactivityMessage/JavaScript/AwaLabs.Inactivity.Message.js",
+			"myaccount": "Modules/InactivityMessage/JavaScript/AwaLabs.Inactivity.Message.js",
+			"checkout": "Modules/InactivityMessage/JavaScript/AwaLabs.Inactivity.Message.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/InactivityMessage/JavaScript/AwaLabs.Inactivity.Message.js",
+					"Modules/InactivityMessage/JavaScript/Session.Message.js",
+					"Modules/InactivityMessage/JavaScript/InactivityMessage.Model.js",
+					"Modules/InactivityMessage/JavaScript/InactivityMessage.ProfileModel.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/InactivityMessage/JavaScript/AwaLabs.Inactivity.Message.js",
+					"Modules/InactivityMessage/JavaScript/Session.Message.js",
+					"Modules/InactivityMessage/JavaScript/InactivityMessage.Model.js",
+					"Modules/InactivityMessage/JavaScript/InactivityMessage.ProfileModel.js"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/InactivityMessage/JavaScript/AwaLabs.Inactivity.Message.js",
+					"Modules/InactivityMessage/JavaScript/Session.Message.js",
+					"Modules/InactivityMessage/JavaScript/InactivityMessage.Model.js",
+					"Modules/InactivityMessage/JavaScript/InactivityMessage.ProfileModel.js"
+				]
+			}
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/InactivityMessage/SuiteScript/AwaLabs.Inactivity.Message.js",
+		"files": [
+			"Modules/InactivityMessage/SuiteScript/AwaLabs.Inactivity.Message.js",
+			"Modules/InactivityMessage/SuiteScript/InactivityMessage.ServiceController.js"
+		]
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/InactivityMessage@2.1.0",
+	"activation_id": "11",
+	"extension_id": "16911"
+}

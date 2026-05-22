@@ -1,0 +1,224 @@
+.product-list-control-button-email-backinstock{
+	@extend .button-tertiary;
+	@extend .button-large;
+	margin-top: $sc-margin-lv3;
+	font-weight: $sc-font-weight-semibold;
+	text-align:center;
+	cursor:pointer;
+	border-radius: 50vh;
+	outline: none;
+	border: 0 none;
+	background: $custom-email-me-instock-button-background-color;
+	// background: linear-gradient(to bottom, #3b78d2 0%, #04255a 100%);
+	padding: 20px 9px;
+	color:#fff;
+	font-size: $sc-base-font-size;
+	width: 100%;
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		margin-top: 0px;
+	}
+	&:focus{
+		color: #fff;
+	}
+	.icon-envelope{
+		font-size: inherit;
+		vertical-align: baseline;
+	}
+}
+
+#emailModal .modal-dialog{
+	@media (min-width: 1024px){
+		width: 600px;
+	}
+}
+
+.product-list-control-button-email-backinstock:hover {
+	background: $custom-email-me-instock-button-background-color-hover;
+}
+
+.email-send-btn{
+	width: 50%;
+	@extend .button-tertiary;
+	@extend .button-small;
+	margin-top: $sc-margin-lv3;
+	font-weight: $sc-font-weight-semibold;
+	text-align:center;
+	cursor:pointer;
+	border-radius: 0px;
+	border: 1px solid #183e79;
+	background: linear-gradient(to bottom, #3b78d2 0%, #04255a 100%); 
+	padding: 20px 9px;
+	color:$pa-white;
+	font-size: $sc-base-font-size;
+	padding: 12.5px 20px;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    font-weight: 400;
+	margin: 0px;
+	&:focus,
+	&:active {
+		color:$pa-white;
+	}
+	&:hover {
+		background-color: $pa-send-email-button-hover-color;
+	}
+}	
+
+.email-input{
+	@media (min-width: 768px){
+		width: 75%;
+	}
+}
+
+.receive-offers{
+	line-height: $pdp-base-line-height;
+    margin-bottom: $sc-margin-lv4 - 2;
+	margin-top: $sc-margin-lv4;
+	#bis-mailing-list-check {
+		margin-bottom: 0px;
+	}
+}
+
+#emailModalLabel{
+	text-transform: uppercase;
+	font-size: $pdp-review-section-title;
+	font-weight: $sc-font-weight-bold;
+	@media (max-width: $screen-xs-max) {
+		font-size: $sc-base-font-size;
+	}
+}
+.col-sm-6:last-child {
+	.global-views-modal-content-header-close {
+		color: $pa-black;
+		font-size: $product-title;
+		line-height: $product-title-line-height;
+	}
+}
+#emailModal {
+	.modal-header {
+		@media (max-width: $screen-xs-max) {
+		.row .col-sm-6{
+				&:first-child  {
+					float: left;
+					width: calc(100% - 48px);
+				}
+				&:last-child {
+					width: auto;
+				}
+			}
+		}
+	}
+}
+@media (max-width: $screen-xs) {
+	#emailModal {
+		.col-sm-6:first-child {
+			float: left;
+			width: 75%;
+		}
+
+		.col-sm-6:last-child {
+			float: right;
+			height: 20px;
+			width: 25%;
+		}
+	}
+}
+.email-form-quick-view{
+    float: left;
+    padding-left: 15px;
+    width: 100%;
+
+    label{
+        font-size: 16px;
+    }
+    #in-modal-email{
+        width: 75%;
+        display: inline-block;
+    }
+}
+
+/* new changes starts from here */
+.email-when-instock-landing-container{
+	margin: 30px auto;
+
+	@media (max-width: $screen-xs) {
+		margin: 10px auto;
+	}
+
+	.email-when-instock-controls{
+		max-width: 600px;;
+		margin: 0 auto;
+	}
+	
+	h3{
+		text-align: center;
+		font-size: 2rem;
+		margin: 0 auto 30px auto;
+		letter-spacing: 0px;
+		color: #343434;
+		text-transform: capitalize;
+	}
+}
+
+.email-when-instock-form{
+	.email-when-instock-label.label-email{
+		font-size: 1.15rem;
+		color: #343434;
+		letter-spacing: 0;
+		font-weight: 600;
+	}
+	.recieve-offers{
+		font-size: 0.85rem;
+		input{
+			margin: auto;
+    		vertical-align: middle;
+		}
+	}
+	.email-when-instock-submit{
+		@extend .product-list-control-button-email-backinstock;
+		max-width: 322px;
+	}
+}
+
+.text-center{
+	text-align: center;
+}
+
+.email-when-instock-confirmation{
+	&.success,
+	&.fail{
+		.confirmation-title{
+			margin-bottom: 15px;;
+			margin-top: 15px;
+		}
+		.message{
+			line-height: 24px;
+			margin-bottom: 25px;
+		}
+		.icon-success,
+		.icon-error{
+			width: 70px;
+			height: 70px;;
+		}
+		.facet-item-view-more-button{
+			margin: 0 auto;
+			width: auto;
+			max-width: 300px;
+			@media (max-width: $screen-xs) {
+				margin: 15px auto;
+			}
+		}
+	}
+
+	&.success{
+		.confirmation-title{
+			color: #309100;
+		}
+	}
+
+	&.fail{
+		.confirmation-title{
+			color: #FF2D2D;
+		}
+	}
+}

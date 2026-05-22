@@ -1,0 +1,136 @@
+.header-logo-nav-wrapper {
+    @media(min-width: $screen-md-min){
+        .header-logo-desktop-wrapper {
+            flex: 0 0 110px;
+        }
+        .header-logo-image {
+            width: auto;
+            max-width: 110px;
+        }
+ 
+        .header-right-menu-also {
+            display: flex;
+            margin-left: 0;
+            justify-content: end;
+            align-items: flex-end;
+        }
+    }
+}
+.header-nav-desktop-wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.header-menu-secondary-nav {
+    margin: 0 235px 0 $sc-margin-lv5;
+    .header-menu-level1 {
+        li {
+            .header-menu-level1-anchor {
+                font-size: 11px;
+                margin-right: 0;
+                @media(min-width: 1032px){
+                    font-size: 12px;
+                }
+                @media(min-width: $screen-lg-min){
+                    margin-right: 5px !important;
+                    margin-left: 10px;
+                    font-size: 13px;
+                }
+                @media(min-width: 1440px){
+                    margin-right: 15px !important;
+                    font-size: 15px;
+                }
+            }
+            position: initial;
+            .header-menu-level-container {
+                width: 100%;
+                left: 0;
+                > li {
+                    padding: 5px 35px 20px 35px;
+                    margin-right: 0 !important;
+                    background-color: #f3f3f3;
+                    border: 1px solid #333333;
+                    padding-top: 20px !important;
+                    overflow: hidden;
+                    .header-menu-level2 {
+                        display: grid;
+                        grid-template-columns: repeat(5, 1fr);
+                        width: 78%;
+                        float: left;
+                        border-right: 1px solid #404040;
+                        min-height: 192px;
+                        > li {
+                            line-height: 17px;
+                        }
+                        .header-menu-level2-anchor {
+                            position: relative;
+                            display: inline-block;
+                            background-color: transparent;
+                            font-size: $sc-font-size-s;
+                            font-weight: $sc-font-weight-semibold;
+                            text-transform: uppercase;
+                            padding-left: 0;
+                            padding-top: 0;
+                            padding-bottom: 0;
+                            background: url('https://www.iwawine.com/Images/designcenter/top-nav-arrow-8.jpg') no-repeat right 1px;
+                            display: inline;
+                            &:hover {
+                                color: #981b21;
+                                background: url('https://www.iwawine.com/Images/designcenter/top-nav-arrow-8-over.jpg') no-repeat right 1px;
+                                display: inline;
+                            }
+                        }
+                        
+                        .categories-menu-arrow {
+                            width: 130px;
+                            &::after {
+                                display: none;
+                            }
+                            @media(min-width: 1440px){
+                                width: auto;
+                            }
+                        }
+                    }
+                    .categories-thummnail {
+                        font-weight: $sc-font-weight-light;
+                        font-size: $sc-font-size-s;
+                        width: 20%;
+                        float: right;
+                        a {
+                            color: #981b21;
+                        }
+                        p, a:hover {
+                            color: #66625A;
+                            font-size: $sc-font-size-s;
+                        }
+                    }
+                    .header-menu-level3 {
+                        background: none;
+                        box-shadow: none;
+                        opacity: 1;
+                        position: initial;
+                        padding-bottom: $sc-padding-lv2;
+                        .header-menu-level3-anchor {
+                            min-width: 150px;
+                            background: none;
+                            text-transform: capitalize;
+                            color: #3f1022;
+                            font-size: $sc-font-size-xs;
+                            font-weight: $sc-font-weight-light;
+                            line-height: 15px;
+                            padding: 4px $sc-padding-lv4 2px 0;
+                            &:hover {
+                                color: #981b21;
+                                font-weight: $sc-font-weight-semibold;
+                            }
+                        }
+                    }
+                }
+                @media (min-width: $screen-md-min) {
+                        width: 98.3%;
+                        left: 12px;
+                }
+            }
+        }
+    }
+}

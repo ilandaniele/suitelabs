@@ -1,0 +1,41 @@
+{
+    "name": "CustomFieldsPlacement",
+    "fantasyName": "Modify Custom Fields Placement in Checkout",
+    "vendor": "ACS",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Modify Custom Fields Placement in Checkout",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "checkout": "Modules/CustomFieldsPlacement/JavaScript/ACS.CustomFieldsPlacement.js"
+        },
+        "application": {
+            "checkout": {
+                "files": [
+                    "Modules/CustomFieldsPlacement/JavaScript/ACS.CustomFieldsPlacement.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\CustomFieldsPlacement",
+    "suitescript2": {
+        "files": []
+    }
+}

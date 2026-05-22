@@ -1,0 +1,67 @@
+{
+	"name": "FooterCopyright",
+	"fantasyName": "Footer Copyright",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "Changed the copyright year for the current year. SuiteLabs v2.1.0, removed deprecated function parameter and unneeded sass file.",
+	"configuration": {
+		"files": [
+			"Modules/FooterCopyright/Configuration/FooterCopyright.json"
+		]
+	},
+	"templates": {
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/FooterCopyright/Templates/footer_copyright.tpl"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/FooterCopyright/Templates/footer_copyright.tpl"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/FooterCopyright/Templates/footer_copyright.tpl"
+				]
+			}
+		}
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/FooterCopyright/JavaScript/AwaLabs.FooterCopyright.js",
+			"myaccount": "Modules/FooterCopyright/JavaScript/AwaLabs.FooterCopyright.js",
+			"checkout": "Modules/FooterCopyright/JavaScript/AwaLabs.FooterCopyright.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/FooterCopyright/JavaScript/AwaLabs.FooterCopyright.js",
+					"Modules/FooterCopyright/JavaScript/FooterCopyright.View.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/FooterCopyright/JavaScript/AwaLabs.FooterCopyright.js",
+					"Modules/FooterCopyright/JavaScript/FooterCopyright.View.js"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/FooterCopyright/JavaScript/AwaLabs.FooterCopyright.js",
+					"Modules/FooterCopyright/JavaScript/FooterCopyright.View.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/FooterCopyright@2.1.0",
+	"activation_id": "11",
+	"extension_id": "16907"
+}

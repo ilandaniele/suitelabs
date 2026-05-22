@@ -1,0 +1,7 @@
+
+tillID = MC.GetProperty(“Till.ID”);
+using comment=NetSuite.Retail.POS.Business.Comment("trx"):
+                        comment.ReasonCode = "TIID"
+                        comment.CommentText = tillID
+                        comment.Hide=true
+                        comment.Run()

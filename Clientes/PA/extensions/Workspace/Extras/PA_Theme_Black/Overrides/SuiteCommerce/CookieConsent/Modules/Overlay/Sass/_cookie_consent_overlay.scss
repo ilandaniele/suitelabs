@@ -1,0 +1,121 @@
+@import '../../ContainerView/Sass/cookie_consent_overlay_layout';
+
+.cookie-consent {
+  display:flex;
+  position:fixed;
+  bottom:0;
+  z-index:99999;
+  background:#f9fafb;
+  padding:10px;
+  flex-direction:row;
+  border-top:1px solid #e2e0e0;
+  width:100%;
+  justify-content:space-evenly;
+  align-items:center;
+  gap:20px;
+  @media screen and (max-width: 430px) {
+    align-items:flex-start;
+    gap:10px;
+    justify-content: space-evenly;
+  }
+}
+.cookie-text {
+ font-size:13px;
+ margin-bottom:0;
+}
+.cookie-text a {
+ text-decoration:underline;
+}
+button.cookie-accept {
+   background: #fff;
+   color: #2d6ed1;
+   font-weight:400;
+   border-radius:50vh;
+   font-size:13px;
+   text-align:center;
+   min-width:132px;
+   max-height: 50px;
+   border:1px solid #2d6ed1;
+   text-wrap:nowrap;
+   cursor: pointer;
+}
+button.cookie-accept:hover {
+  background:#2d6ed1;
+  color:#fff;
+}
+
+
+
+.cookieconsent-overlay {
+
+  &-banner {
+    &-top {
+      @extend .banner;
+      top: 0;
+      background:#f9fafb;
+      z-index: 100000;
+      padding: 5px !important;
+      min-height: 5vh;
+    }
+
+    &-bottom {
+      @extend .banner;
+      bottom: 0;
+      background:#f9fafb;
+      padding: 5px !important;
+      min-height: 5vh;
+      z-index: 100000;
+    }
+
+    &-hide {
+      display: none;
+    }
+
+    &-open{
+      transform: none;
+      height: 100%;
+    }
+
+    &-container {
+      @extend .container;
+      height: 100%;
+      display: flex;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      align-items: center;
+      &-info {
+        max-height: 80%;
+        overflow: hidden;
+        width: 80%;
+
+        &-heading {
+          color: #15607B;
+          margin: 0 0 $sc-margin-lv3 0;
+        }
+
+        &-text {
+          color: #15607B;
+        }
+      }
+
+      &-actions {
+        align-self: center;
+        max-height: 20%;
+        @media(min-width: $screen-sm-min) {
+          display: flex;
+          justify-content: center;  
+        }
+
+        button {
+          @extend .button-tertiary;
+          @extend .button-medium;
+          
+
+          @media(min-width: $screen-sm-min) {
+            margin: 0 $sc-margin-lv2 0 10px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "geoIpLocation",
+        "title": "Geo Ip Location",
+        "description": "Geo Ip Location",
+        "group": "extensions"
+    },
+    "properties": {
+        "geoIPLocationUserId": {
+            "group": "extensions",
+            "subtab": "geoIpLocation",
+            "type": "string",
+            "title": "User Id",
+            "description": "User Id",
+            "default": "117810"
+        },
+        "geoIPLocationLicenseKey": {
+            "group": "extensions",
+            "subtab": "geoIpLocation",
+            "type": "string",
+            "title": "License Key",
+            "description": "License Key",
+            "default": "hWISWmRmVqU0"
+        },
+        "geoIPLocationServiceURL": {
+            "group": "extensions",
+            "subtab": "geoIpLocation",
+            "type": "string",
+            "title": "Service URL",
+            "description": "License Key",
+            "default": "https://geoip.maxmind.com/geoip/v2.1/country/"
+        },
+        "geoIPLocationRedirectUrlRelative": {
+            "group": "extensions",
+            "subtab": "geoIpLocation",
+            "type": "string",
+            "title": "Redirect URL Relative",
+            "description": "Redirect URL Relative",
+            "default": "/store/assets/401_error.html"
+        }
+    }
+}

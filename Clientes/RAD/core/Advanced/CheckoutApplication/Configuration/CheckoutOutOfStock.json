@@ -1,0 +1,10 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "checkoutRemainingItemQuantity",
+        "group": "checkoutApp",
+        "title": "Quantity Stock Message",
+        "docRef": "article_0304044915",
+        "description": "Checkout configuration related to stock quantity message."
+    }
+}

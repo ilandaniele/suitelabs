@@ -1,0 +1,32 @@
+{
+    "name": "PermissionsLevelsFix",
+    "fantasyName": "PermissionsLevelsFix",
+    "vendor": "ACS",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Product Review and Product List Fix",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/PermissionsLevelsFix/SuiteScript/PermissionsLevelsFix.js",
+        "files": [
+            "Modules/PermissionsLevelsFix/SuiteScript/PermissionsLevelsFix.js"
+        ]
+    },
+    "local_folder": "Workspace\\PermissionsLevelsFix"
+}

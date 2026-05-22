@@ -1,0 +1,14 @@
+FROM ubuntu:22.04
+
+ARG SCA_VERSION
+WORKDIR /sca
+
+# Instalar unzip y clean
+RUN apt-get update && apt-get install -y unzip && apt-get clean
+
+# Copia y descomprime el zip correspondiente
+COPY sca-${SCA_VERSION}.zip .
+
+RUN yes | unzip -o "sca-${SCA_VERSION}.zip" && rm "sca-${SCA_VERSION}.zip"
+
+# Etiquetá la imagen como sca-base:<versión>

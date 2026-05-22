@@ -1,0 +1,77 @@
+{
+    "name": "FreeShipCompute",
+    "fantasyName": "Free Shipping Computation",
+    "vendor": "PSeComm",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Copmutes the customers cart contents if it sums for a free shipping.",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/FSCModule/Configuration/fsc_module.json"
+        ]
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/FSCModule/Sass/_fscmodule.scss",
+            "checkout": "Modules/FSCModule/Sass/_fscmodule.scss"
+        },
+        "files": [
+            "Modules/FSCModule/Sass/_fscmodule.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/FSCModule/Templates/psecomm_freeshipcompute_fscmodule.tpl"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/FSCModule/Templates/psecomm_freeshipcompute_fscmodule.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/FSCModule/JavaScript/FSCModule.js",
+            "checkout": "Modules/FSCModule/JavaScript/FSCModule.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/FSCModule/JavaScript/FSCModule.View.js",
+                    "Modules/FSCModule/JavaScript/FSCModule.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/FSCModule/JavaScript/FSCModule.View.js",
+                    "Modules/FSCModule/JavaScript/FSCModule.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\FreeShipCompute",
+    "suitescript2": {
+        "files": []
+    }
+}

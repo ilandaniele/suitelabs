@@ -1,0 +1,29 @@
+{{#if showPurposeOfRequestField}}
+	{{#if showModuleTitle}}
+		<h2 class="order-wizard-title"> 
+			{{title}} <span class="case-new-form-required">*</span>
+		</h2>
+	{{/if}}
+	<div class="requestquote-wizard-module-comments">
+		<div class="requestquote-wizard-module-comments-box requestquote-wizard-module-payment-method-box">
+			{{#if showTitle}}
+				<h3 class="requestquote-wizard-module-comments-title">
+					{{title}}
+				</h3>
+			{{/if}}
+
+			{{#if isReadOnly}}
+				<div class="requestquote-wizard-module-comments-box-message requestquote-wizard-purpose-of-request requestquote-wizard-half-box-read-field">
+					<p>{{selectedPurposeOfRequest}}</p>
+				</div>
+			{{else}}
+				<div data-type="alert-placeholder-module"></div>
+				<select name="select-purpose-of-request" class="list-header-view-accordion-body-select requestquote-wizard-half-box-write-field" data-action="select-purpose-of-request">
+					{{#each purposeOfRequests}}
+						<option value="{{purposeOfRequestId}}" {{#if selected}} selected {{/if}}>{{purposeOfRequestValue}}</option>
+					{{/each}}
+				</select>
+			{{/if}}
+		</div>
+	</div>
+{{/if}}

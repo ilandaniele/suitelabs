@@ -1,0 +1,234 @@
+div[data-view="Trending.Recently.Searches"]{
+	position: relative;
+    width: 100% !important;
+	.trending-searches{
+		position: absolute;		
+		background: #fff;
+		z-index: 3;
+
+		@media (min-width: $screen-md-min) {
+			left: 0px;
+			right: 52px;
+			top: 2px;
+			display: flex;
+			box-shadow: 0px 6px 11px -5px rgba(0, 0, 0, 0.24);
+			border-bottom-right-radius: 6px;
+			border-bottom-left-radius: 6px;
+			border-left: 1px solid #dadada;
+			border-bottom: 1px solid #dadada;
+			border-right: 1px solid #dadada;
+		}
+
+		@media (max-width: $screen-md-max) {
+			left: 0;
+			right: 0;
+		}
+
+		.trending-catgories{
+			flex: 1 1 auto;
+			background: #f8f8f8;
+            border-radius: 6px;
+			// @media (min-width: $screen-md-min) {
+			// 	max-width: 25%;
+			// }
+	   	}
+	   .trending-products{
+			flex: 1 1 50%;
+	   }
+	   .recently-search{
+			flex: 1 1 auto;
+			
+			@media (max-width: $screen-md-max) {
+				box-shadow: 0 5px 5px -2px #e6e6e6;
+			}
+			
+			@media (min-width: $screen-md-min) {
+				border-left: 1px solid #E8E8E8;
+				//max-width: 25%;
+			}
+
+			@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+				box-shadow: 0 5px 5px -2px #e6e6e6;
+			}
+	   }
+
+	   .trending-catgories,
+	   .trending-products{
+			@media (max-width: $screen-md-max) {
+				border-bottom: 1px solid #E6E6E6;
+			}
+	   }
+	}
+}
+.top-trending-products{
+	font-size: .93rem;
+	padding: 10px;
+	text-align: left;
+
+	@media (min-width: $screen-md-min) {
+		padding: 0;;
+	}
+	
+	.trending-product{
+		display: flex;
+		align-items: center;		
+		padding: 5px;
+
+		&:hover{
+			background: #f8f8f8;
+
+			.trending-product-link{
+				color: #242424;
+			}
+		}
+
+		.trending-product-wrapper{
+			flex: 0 0 114px;
+
+			@media (max-width: $screen-md-max) {
+				flex: 0 0 85px;
+			}
+
+			.trending-product-link{
+				display: block;
+				padding: 5px;
+				
+				@media (max-width: $screen-md-max) {
+					padding: 10px;
+				}
+
+				img{
+					display: table-cell;
+				}
+			}
+		}
+		.trending-product-info{
+			text-align: left;
+
+			.item-name{
+				margin-bottom: 5px;
+				display: block;
+				font-size: .93rem;
+			}
+
+			.item-name,
+			.trending-product-link{
+				font-size: .93rem;
+			}
+
+			.item-sku{
+				font-size: 12px;
+				letter-spacing: 0.1px;
+				color: #232323;
+				text-transform: uppercase;
+
+				@media (max-width: $screen-md-max) {
+					font-size: 11px;
+				}
+			}
+
+			.item-rating-wrapper{
+				background: url(getExtensionAssetsPath("img/star-rating-sprite.png")) repeat-x;
+				font-size: 0;
+				height: 17px;
+				line-height: 0;
+				overflow: hidden;
+				text-indent: -999em;
+				width: 85px;
+				background-size: 17px;
+
+				.item-rating{
+					background: url(getExtensionAssetsPath("img/star-rating-sprite.png")) repeat-x;
+					background-position: 0 100%;
+					float: left;
+					height: 17px;
+					display: block;
+					background-size: 17px;
+				}
+			}
+
+			.item-manufacturer{
+				color: #858785;
+				font-size: 13px;
+				line-height: 20px;
+			}
+		}
+	}
+
+	.label-top-trending-products{
+		@media (min-width: $screen-md-min) {
+			padding: 10px 10px 10px 10px;
+		}
+	}
+
+	& > ul{
+		& > li:not(:last-child){
+			.trending-product{				
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+
+
+.top-trending-categories{
+	font-size: .93rem;
+	padding: 10px;
+	text-align: left;
+
+	@media (min-width: $screen-md-min) {
+		padding: 0;;
+	}
+
+	.label-top-trending-categories{
+		@media (min-width: $screen-md-min) {
+			padding: 10px 10px 10px 10px;
+		}
+	}
+
+	.trending-category{
+		background: url(getExtensionAssetsPath("img/trending-search-icon.svg"));
+		background-repeat: no-repeat, no-repeat;
+		background-position: left center;
+		background-size: 14px 11px;
+		text-align: left;
+		padding-left: 17px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+
+		@media (min-width: $screen-md-min) {
+			margin-left: 10px;
+		}
+		
+		.trending-category-link{
+			font-size: .93rem;
+			text-align: left;
+		}
+	}
+
+	ul{
+		& > li{
+			&:hover{
+				background: #393a39;
+
+				a{
+					color: #FFD072;
+				}
+			}
+		}
+	}
+}
+
+
+.close-trending-searches{
+	background: url(getExtensionAssetsPath("img/icon-material-close.png"));
+	background-repeat: no-repeat, no-repeat;
+	background-position: left center;
+	background-size: 16px 16px;
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 4;
+}

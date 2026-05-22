@@ -1,0 +1,23 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "multipleAddToCart",
+        "title": "Multiple Add To Cart Function",
+        "description": "Allows multiple adding to cart",
+        "group": "extensions"
+    },
+    "properties": {
+        "multipleAddToCart.commerceCategories": {
+            "group": "extensions",
+            "subtab": "multipleAddToCart",
+            "type": "array",
+            "title": "List of Commerce Categories using Multiple Add function",
+            "description": "List of Commerce Categories using Multiple Add function",
+            "items": {
+                "type": "string",
+                "title": "Commerce Category",
+                "description": "Select Commerce Category for this column."
+            }
+        }
+    }
+}

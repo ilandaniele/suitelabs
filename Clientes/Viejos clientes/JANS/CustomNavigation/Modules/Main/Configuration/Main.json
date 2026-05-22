@@ -1,0 +1,173 @@
+{
+    "type": "object",
+    "subtab": {
+      "id":"customNavigation",
+      "title":"Custom Navigation",
+      "description":"Custom Navigation Extension configuration",
+      "group":"extensions"
+    },
+    "properties": {
+        "customNavigation.config": {
+            "group": "extensions",
+            "subtab": "customNavigation",
+            "type": "string",
+            "title": "Custom Navigation",
+            "description": "Custom Navigation top menu bar",
+            "default": "Default config example"
+        },
+        "customNavigation.firstLevelLinks": {
+            "group": "extensions",
+            "subtab": "customNavigation",
+            "type": "array",
+            "title": "1st Level Links",
+            "description": "First level links for top menu bar",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "firstLevelId": {
+                        "type": "string",
+                        "title": "ID"
+                    },
+                    "text": {
+                        "type": "string",
+                        "title": "TEXT"
+                    },
+                    "description": {
+                      "type": "string",
+                      "title": "DESCRIPTION"
+                    },
+                    "url": {
+                        "type": "string",
+                        "title": "URL"
+                    },
+                    "target": {
+                        "type": "string",
+                        "title": "TARGET"
+                    },
+                    "textColor": {
+                        "type": "string",
+                        "title": "TEXT COLOR"
+                    },
+                    "textColorMobile": {
+                        "type": "string",
+                        "title": "TEXT COLOR (MOBILE)"
+                    },
+                    "hoverColor": {
+                        "type": "string",
+                        "title": "HOVER COLOR"
+                    }
+                }
+            }
+        },
+        "customNavigation.secondLevelLinks": {
+            "group": "extensions",
+            "subtab": "customNavigation",
+            "type": "array",
+            "title": "2nd Level Links",
+            "description": "Second level links for top menu bar",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "title": "TYPE",
+                        "enum": ["Icon","Title1","Title2","LinkNoImage","LinkAndImage"]
+
+                    },
+                    "secondLevelId": {
+                        "type": "string",
+                        "title": "ID"
+                    },
+                    "parentId": {
+                        "type": "string",
+                        "title": "PARENT ID"
+                    },
+                    "text": {
+                        "type": "string",
+                        "title": "TEXT"
+                    },
+                    "description": {
+                      "type": "string",
+                      "title": "DESCRIPTION"
+                    },
+                    "url": {
+                        "type": "string",
+                        "title": "URL"
+                    },
+                    "target": {
+                        "type": "string",
+                        "title": "TARGET"
+                    },
+                    "imageUrl": {
+                        "type": "string",
+                        "title": "IMAGE URL"
+                    },
+                    "ImageUrlMobile": {
+                        "type": "string",
+                        "title": "IMAGE URL (MOBILE)"
+                    },
+                    "alt":{
+                        "type": "string",
+                        "title": "IMAGE ALT"
+                    },
+                    "textColor": {
+                        "type": "string",
+                        "title": "TEXT COLOR"
+                    },
+                    "textColorMobile": {
+                        "type": "string",
+                        "title": "TEXT COLOR (MOBILE)"
+                    },
+                    "hoverColor": {
+                        "type": "string",
+                        "title": "HOVER COLOR"
+                    }
+                }
+            }
+        },
+        "customNavigation.thirdLevelLinks": {
+            "group": "extensions",
+            "subtab": "customNavigation",
+            "type": "array",
+            "title": "3rd Level Links",
+            "description": "Third level links for top menu bar",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "parentId": {
+                        "type": "string",
+                        "title": "PARENT ID"
+                    },
+                    "text": {
+                        "type": "string",
+                        "title": "TEXT"
+                    },
+                    "description": {
+                      "type": "string",
+                      "title": "DESCRIPTION"
+                    },
+                    "url": {
+                        "type": "string",
+                        "title": "URL"
+                    },
+                    "target": {
+                        "type": "string",
+                        "title": "TARGET"
+                    },
+                    "textColor": {
+                        "type": "string",
+                        "title": "TEXT COLOR"
+                    },
+                    "textColorMobile": {
+                        "type": "string",
+                        "title": "TEXT COLOR (MOBILE)"
+                    },
+                    "hoverColor": {
+                        "type": "string",
+                        "title": "HOVER COLOR"
+                    }
+                }
+            }
+        }
+    }
+}

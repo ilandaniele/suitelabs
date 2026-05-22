@@ -1,0 +1,56 @@
+{
+    "name": "BackbonePluginInstaller",
+    "fantasyName": "BackbonePluginInstaller",
+    "vendor": "SSD",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Adds the ability to extend core logic with Plugins",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/BackbonePluginInstaller/JavaScript/Backbone.PluginInstaller.js",
+            "myaccount": "Modules/BackbonePluginInstaller/JavaScript/Backbone.PluginInstaller.js",
+            "checkout": "Modules/BackbonePluginInstaller/JavaScript/Backbone.PluginInstaller.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/BackbonePluginInstaller/JavaScript/Backbone.PluginInstaller.js",
+                    "Modules/BackbonePluginInstaller/JavaScript/BackbonePluginInstaller.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/BackbonePluginInstaller/JavaScript/Backbone.PluginInstaller.js",
+                    "Modules/BackbonePluginInstaller/JavaScript/BackbonePluginInstaller.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/BackbonePluginInstaller/JavaScript/Backbone.PluginInstaller.js",
+                    "Modules/BackbonePluginInstaller/JavaScript/BackbonePluginInstaller.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\BackbonePluginInstaller",
+    "suitescript2": {
+        "files": []
+    }
+}

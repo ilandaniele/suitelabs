@@ -1,0 +1,57 @@
+.error-management-page-not-found {
+	@extend .container;
+}
+[data-view="PageNotFound.Items.TopSelling"] {
+	.img-loader {
+		display: none !important;
+	}
+}
+.error-management-page-not-found {
+	margin-top: $sc-margin-lv4;
+    margin-bottom: $sc-margin-lv6;
+}
+.error-management-page-not-found-content {
+	margin-top: $sc-margin-lv1;
+	@media (max-width: $screen-sm-max){
+		margin-bottom: $sc-margin-lv2;
+	}
+}
+.page-not-found-top-selling-section {
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+		.item-relations-related-carousel-prev {
+			left: -20px;;
+		}
+		.item-relations-related-carousel-next {
+			right: -20px;
+		}
+	}
+	@media (max-width: $screen-xs-max){
+		.item-relations-related-carousel-prev {
+			padding-left: 10px;;
+		}
+		.item-relations-related-carousel-next {
+			padding-right: 10px;
+		}
+	}
+}
+.error-management-page-not-found-main-banner-link{
+	display: block;
+	text-align: center;
+	height: 50px;
+	margin: $sc-margin-lv2 0;
+
+	&[href=""]{
+		cursor: auto;
+	}
+
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
+		height: 100px;
+	}
+	@media (min-width: $screen-md-min){
+		height: 150px;
+		margin-bottom: 0;
+	}
+	.error-management-page-not-found-main-banner-img{
+		max-height: 100%;
+	}
+}

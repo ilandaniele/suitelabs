@@ -1,0 +1,52 @@
+{
+	"name": "SchemaOrg",
+	"fantasyName": "SchemaOrg",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "Schema.Org Structure for SCA Sites, replace original implementation. SuiteLabs v2.1.0 refers to the SCA upgrade to 23.2.",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/SchemaOrg/Configuration/SchemaOrg.json"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/SchemaOrg/JavaScript/AwaLabs.SchemaOrg.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/SchemaOrg/JavaScript/AwaLabs.SchemaOrg.js",
+					"Modules/SchemaOrg/JavaScript/SchemaModules/SchemaOrg.Breadcrumb.js",
+					"Modules/SchemaOrg/JavaScript/SchemaModules/SchemaOrg.Organization.js",
+					"Modules/SchemaOrg/JavaScript/SchemaModules/SchemaOrg.Product.js",
+					"Modules/SchemaOrg/JavaScript/SchemaModules/SchemaOrg.ProductList.js",
+					"Modules/SchemaOrg/JavaScript/SchemaModules/SchemaOrg.BaseModule.js",
+					"Modules/SchemaOrg/JavaScript/SchemaModules/SchemaOrg.RelatedItems.js",
+					"Modules/SchemaOrg/JavaScript/SchemaModules/SchemaOrg.CorrelatedItems.js",
+					"Modules/SchemaOrg/JavaScript/SchemaModules/SchemaOrg.ItemRelations.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/SchemaOrg@2.1.0",
+	"activation_id": "11",
+	"extension_id": "17004"
+}

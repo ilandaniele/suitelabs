@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": { 
+        "Main.config": {
+            "group": "extensions",
+            "subtab": "Main_subtab",
+            "type": "string",
+            "title": "Main_Title",
+            "description": "Config description example",
+            "default": "Default config example"
+        }
+    }
+}

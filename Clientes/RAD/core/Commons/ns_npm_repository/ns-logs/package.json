@@ -1,0 +1,10 @@
+{
+    "name": "ns-logs",
+    "version": "1.0.0",
+    "description": "NS logs",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest --config ns-logs.jest.config.js ns-logsTest.js"
+    },
+    "author": ""
+}

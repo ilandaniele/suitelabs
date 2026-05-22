@@ -1,0 +1,27 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "cartToQuote",
+        "title": "CartTo Quote",
+        "description": "CartTo Quote Configuration",
+        "group": "extensions"
+    },
+    "properties": {
+        "marketWizardConfirmationMessage": {
+            "group": "extensions",
+            "subtab": "CartToQuote",
+            "type": "string",
+            "title": "Item added to market wizard confirmation message",
+            "description": "Item added to market wizard confirmation message",
+            "default": "Good! You added the item to the Market Wizard. If you want to add it back to your cart, see below in <b>\"Market Wizard\"</b>"
+        },
+        "marketWizardTopMessage": {
+            "group": "extensions",
+            "subtab": "CartToQuote",
+            "type": "string",
+            "title": "Wizard To pMessage",
+            "description": "Wizard Top Message",
+            "default": "<strong>Welcome to the Market Wizard!<br>This RAD tool is available to use at market to help scan, create or edit orders, as well as, submit as quote.</strong>"
+        }
+    }
+}

@@ -1,0 +1,52 @@
+{
+	"name": "Foursixty",
+	"fantasyName": "Foursixty",
+	"vendor": "SuiteLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "1.0.0",
+	"description": "This extension integrates Foursixty third party to render shoppable galleries embedded through the SMT",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/Main/Configuration/Foursixty.json"
+		]
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/Main/Sass/_four_sixty.scss"
+		},
+		"files": [
+			"Modules/Main/Sass/_four_sixty.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/Main/JavaScript/SuiteLabs.Foursixty.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Main/JavaScript/SuiteLabs.Foursixty.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/SuiteLabs/Foursixty@1.0.0",
+	"activation_id": "11",
+	"extension_id": "13901"
+}

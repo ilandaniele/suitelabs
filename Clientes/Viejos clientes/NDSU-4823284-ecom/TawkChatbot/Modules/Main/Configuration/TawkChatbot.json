@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "tawkChatbot",
+        "group": "extensions",
+        "title": "Tawk Live Chatbot Integration"
+    },
+    "properties": {
+        "tawkChatbot.url": {
+            "group": "extensions",
+            "subtab": "tawkChatbot",
+            "type": "string",
+            "nsType": "textarea",
+            "title": "Tawk Live Chatbot Integration URL",
+            "description": "Display chat application in the webstore. Initially works on Tawk chatbot application.",
+            "default": ""
+        }
+    }
+}

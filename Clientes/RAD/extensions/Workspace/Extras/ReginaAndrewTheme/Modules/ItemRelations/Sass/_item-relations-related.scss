@@ -1,0 +1,90 @@
+.item-relations-related {
+	position: relative;
+	.bx-wrapper{
+		max-width: 100% !important;
+		.bx-viewport{
+			height: auto !important;
+		}
+	}
+}
+
+.item-relations-related .bx-controls-direction {
+    text-align: right;
+	margin-bottom: $sc-margin-lv3;
+}
+.item-relations-related h3 {
+    margin-bottom: $sc-margin-lv8;
+	text-align: center;
+}
+
+.item-relations-related .global-views-star-rating {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+
+
+
+.item-relations-related-carousel-next{
+	@extend .button-secondary;
+	@extend .button-small;
+	margin-left:$sc-margin-lv2;
+	cursor:pointer;
+	cursor:hand;
+	position:absolute;
+	right:-30px;
+	top:50%;
+	@media (max-width: $screen-sm) {
+		right:-5px;
+	}
+}
+
+.item-relations-related-carousel-prev{
+	@extend .button-secondary;
+	@extend .button-small;
+	cursor:pointer;
+	cursor:hand;
+	position:absolute;
+	left:-30px;
+	top:50%;
+	@media (max-width: $screen-sm) {
+		left:-5px;
+	}
+}
+.item-relations-related-carousel-next.disabled,
+.item-relations-related-carousel-prev.disabled {
+	display: none;
+}
+.control-text{
+	display:none;
+}
+//awalabs
+.item-relations-related h3 {
+	margin-bottom: 15px;
+}
+
+.item-recsys-widget-container .item-relations-related-row {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+.product-details-full-content-related-items .item-relations-related ul.item-relations-row{
+	@media (min-width: $screen-md) {
+		transform: none !important;
+		display: block !important;
+		width: 100% !important;
+		text-align: center !important;
+		.item-relations-cell{
+			width: 100% !important;
+			float: none !important;
+			display: inline-block;
+			margin: 0;
+			padding: 0 8px;
+			margin-bottom: 15px;
+		}
+	}
+	.item-relations-related-item-thumbnail img{
+		@media (min-width: $screen-md) {
+			max-height: 220px;
+		}
+	}
+}

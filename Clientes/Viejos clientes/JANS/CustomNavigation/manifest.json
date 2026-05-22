@@ -1,0 +1,96 @@
+{
+    "name": "CustomNavigation",
+    "fantasyName": "Custom Navigation",
+    "vendor": "NSeComm",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "This extension adds dynamic interaction with the top menu bar on JANS site",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/Main.json"
+        ]
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_customnavigation-main.scss",
+            "myaccount": "Modules/Main/Sass/_customnavigation-main.scss",
+            "checkout": "Modules/Main/Sass/_customnavigation-main.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_customnavigation-main.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/nsecomm_customnavigation_main.tpl",
+                    "Modules/Main/Templates/nsecomm_customnavigation_mobile.tpl"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Main/Templates/nsecomm_customnavigation_main.tpl",
+                    "Modules/Main/Templates/nsecomm_customnavigation_mobile.tpl"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/Templates/nsecomm_customnavigation_main.tpl",
+                    "Modules/Main/Templates/nsecomm_customnavigation_mobile.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/NSeComm.CustomNavigation.Main.js",
+            "myaccount": "Modules/Main/JavaScript/NSeComm.CustomNavigation.Main.js",
+            "checkout": "Modules/Main/JavaScript/NSeComm.CustomNavigation.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.CustomNavigation.Main.js",
+                    "Modules/Main/JavaScript/NSeComm.CustomNavigation.Main.View.js",
+                    "Modules/Main/JavaScript/CustomNavigation.jQuery.sidebarMenu.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.CustomNavigation.Main.js",
+                    "Modules/Main/JavaScript/NSeComm.CustomNavigation.Main.View.js",
+                    "Modules/Main/JavaScript/CustomNavigation.jQuery.sidebarMenu.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.CustomNavigation.Main.js",
+                    "Modules/Main/JavaScript/NSeComm.CustomNavigation.Main.View.js",
+                    "Modules/Main/JavaScript/CustomNavigation.jQuery.sidebarMenu.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\CustomNavigation",
+    "suitescript2": {
+        "files": []
+    }
+}

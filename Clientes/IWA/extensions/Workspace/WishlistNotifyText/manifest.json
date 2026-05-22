@@ -1,0 +1,36 @@
+{
+    "name": "WishlistNotifyText",
+    "fantasyName": "Wishlist Notify Text",
+    "vendor": "SuiteLabs",
+    "version": "1.0.1",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Adds a &#39;notify me&#39; text to the wishlist button.",
+    "skins": [],
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/WishlistNotifyText/Templates/wishlist_notify_text_product_list_control.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/WishlistNotifyText/JavaScript/WishlistNotifyText.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/WishlistNotifyText/JavaScript/WishlistNotifyText.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\WishlistNotifyText"
+}

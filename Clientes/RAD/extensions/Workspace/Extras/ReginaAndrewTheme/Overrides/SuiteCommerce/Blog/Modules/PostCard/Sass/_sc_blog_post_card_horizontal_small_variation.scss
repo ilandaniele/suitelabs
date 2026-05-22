@@ -1,0 +1,11 @@
+.small-card-variation-for-desktop {
+  .sc-blog-post-card-horizontal {
+    @media (min-width: $screen-md-min) {
+      &-wrapper {
+        &-thumbnail, &-dummy-thumbnail {
+          height: 250px;
+        }
+      }
+    }
+  }
+}

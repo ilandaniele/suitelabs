@@ -1,0 +1,178 @@
+.store-locator-details {
+	@extend .store-locator-main;
+
+	@media (max-width: $screen-sm-min) {
+		padding: 0px;
+	}
+}
+
+.store-locator-details-title {
+	@extend .store-locator-main-title;
+	margin-top: 25px;
+	@media (max-width: $screen-sm-min) {
+		display: none;
+	}
+}
+
+.store-locator-details-layout-left {
+	@extend .col-md-4;
+}
+
+.store-locator-details-layout-right {
+	@extend .col-md-8;
+	margin:0;
+	padding:0;
+	@media (max-width: $screen-md) {
+		padding: 0 15px;
+	}
+}
+.store-locator-details-layout{
+	@extend .row;
+}
+
+.store-locator-details-store-info {
+	h3.store-title{
+		padding: 10px 0;
+	}
+	.store-address-section,
+	.store-phone-section,
+	.store-opening-section,
+	.store-directions-section{
+		padding: 10px 0;
+		line-height: 1.5;
+
+	}
+	.store-address-section{
+		line-height: 2;
+
+	}
+	.store-directions-section{
+		.buttons-container{
+			@extend .clearfix;
+			margin-top: 5px;
+			button{
+				padding: 10px 15px;
+				font-size: 14px;
+				background: none;
+				float:left;
+				i{
+					pointer-events: none;
+					&.driving-icon{
+						@extend .fa;
+						@extend %fa-car !optional;
+					}
+					&.walking-icon{
+						@extend .fa;
+						@extend %fa-child !optional;
+					}
+					&.bicycling-icon{
+						@extend .fa;
+						@extend %fa-bicycle !optional;
+					}
+					&.transit-icon{
+						@extend .fa;
+						@extend %fa-bus !optional;
+					}
+				}
+				&:hover{
+					background: $sc-color-secondary;
+					i{ color: white }
+				}
+				&.active{
+					background: $sc-color-secondary;
+					i{ color: white }
+				}
+			}
+		}
+
+		form{
+			margin-top: 20px;
+			label{
+				font-weight: 300;
+			}
+			.control-group{
+				margin-top: 20px;
+			}
+			input{
+				max-width:168px;
+				min-width:80px;
+			}
+			.getRoute{
+				margin-right: 5px;
+			}
+		}
+	}
+	.store-bottom-links{
+		padding:10px 0;
+		button , a{
+			@extend .button-secondary;
+			@extend .button-small;
+			margin-bottom:10px;
+		}
+	}
+}
+
+.store-locator-details-main-nav-back {
+	background: $sc-color-theme-background;
+	padding: $sc-padding-lv3;
+	text-align:left;
+	margin-left: $sc-margin-lv4 *  -1;
+	margin-right: $sc-margin-lv4 * -1;
+	margin-bottom: $sc-margin-lv4;
+
+	@media (min-width: $screen-sm-min) {
+		margin-left: 0px;
+	    margin-right: 0px;
+    }
+}
+
+.store-locator-details-main-nav-back:after {
+	font-family: FontAwesome;
+    content:"\f053";
+    float: left;
+    margin-right: $sc-margin-lv2;
+    color: $sc-color-link;
+}
+
+.store-locator-details-get-directions-link {
+	display:none;
+	@media (min-width: $screen-sm-min) {
+		display:block;
+		margin-top:$sc-margin-lv2;
+	}
+}
+
+.store-locator-details-get-directions-button {
+	@extend .button-primary;
+	@extend .button-medium;
+	@extend .button-generic;
+}
+
+.store-locator-details-get-directions-button-container {
+	display:block;
+	position:relative;
+	bottom: 75px;
+	padding: $sc-padding-lv3;
+	z-index:99999;
+	@media (min-width: $screen-sm-min) {
+		display:none;
+	}
+}
+
+.storelocator-header{
+	text-align: center;
+	padding: 50px 0 30px 0;
+}
+.store-locator-list-all-main{
+	h3{
+		margin-top: 25px;
+		@media (max-width: $screen-md) {
+			margin-top:0;
+		}
+	}
+}
+.store-locator-details{
+	@media (max-width: $screen-sm) {
+		padding: 0 25px;
+	}
+}

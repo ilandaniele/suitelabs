@@ -1,0 +1,46 @@
+{
+	"name": "WasPrice",
+	"fantasyName": "WasPrice",
+	"vendor": "SuiteLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "1.0.0",
+	"description": "This extension detects if an item had a previous price (WasPrice) lower than the current to highlight the discount for the user on PLP, PDP and QuickView pages",
+	"templates": {
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/WasPrice/Templates/was_price_view.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/WasPrice/Sass/_wasprice.scss"
+		},
+		"files": [
+			"Modules/WasPrice/Sass/_wasprice.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/WasPrice/JavaScript/SuiteLabs.WasPrice.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/WasPrice/JavaScript/WasPrice.View.js",
+					"Modules/WasPrice/JavaScript/SuiteLabs.WasPrice.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/SuiteLabs/WasPrice@1.0.0",
+	"activation_id": "11",
+	"extension_id": "13101"
+}

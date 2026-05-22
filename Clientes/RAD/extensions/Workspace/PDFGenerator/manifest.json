@@ -1,0 +1,57 @@
+{
+	"name": "PDFGenerator",
+	"fantasyName": "PDF Generator",
+	"vendor": "SuiteLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "1.0.1",
+	"description": "This extension allows users to download a PDF with the specs of an item from the PDP",
+	"assets": {
+		"services": {
+			"files": []
+		}
+	},
+	"templates": {
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Main/Templates/pdf_generator.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/Main/Sass/_pdf_generator.scss"
+		},
+		"files": [
+			"Modules/Main/Sass/_pdf_generator.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/Main/JavaScript/SuiteLabs.PDFGenerator.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Main/JavaScript/SuiteLabs.PDFGenerator.js",
+					"Modules/Main/JavaScript/PDFGenerator.View.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": [
+			"Modules/Main/SuiteScript2/PDFGenerator.Service.ss",
+			"Modules/Main/SuiteScript2/PDFGenerator.Model.js"
+		]
+	},
+	"path": "SuiteScripts/Deploy_Extensions/SuiteLabs/PDFGenerator@1.0.1",
+	"activation_id": "11",
+	"extension_id": "13702"
+}

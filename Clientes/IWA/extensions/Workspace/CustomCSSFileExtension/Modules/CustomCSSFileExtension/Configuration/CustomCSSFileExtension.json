@@ -1,0 +1,19 @@
+{
+    "type": "object",
+    "subtab": {
+		"id": "customCssFile"
+	,	"title": "Custom CSS File"
+	,	"description": "Custom CSS File Extension Configuration"
+	,   "group": "extensions"
+	},
+    "properties": { 
+        "customCssFile.stylesheetUrl": {
+            "group": "extensions",
+            "subtab": "customCssFile",
+            "type": "string",
+            "title": "Custom CSS File Url",
+            "description": "Url of the custom CSS File for applying additional styles to SCA website",
+            "default": "http://dev.cellarpro.iwa.snapshotdesign.com/css/cellarpro-dev.css"
+        }
+    }
+}

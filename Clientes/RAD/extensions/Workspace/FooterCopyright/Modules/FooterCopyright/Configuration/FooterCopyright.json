@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "subtab": {
+    "id": "footer",
+    "title": "Footer",
+    "description": "Footer related settings",
+    "docRef": "",
+    "group": "layout"
+  },
+  "properties": {
+    "footer.copyrightText": {
+      "group": "layout",
+      "subtab": "footer",
+      "type": "string",
+      "title": "Copyright Footer Text",
+      "description": "Enter the footer text, use [YEAR] to show the current year",
+      "default": "© Regina Andrew, [YEAR]"
+    }
+  }
+}

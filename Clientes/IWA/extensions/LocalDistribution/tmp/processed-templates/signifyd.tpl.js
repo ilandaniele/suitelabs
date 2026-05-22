@@ -1,0 +1,20 @@
+define('signifyd.tpl', ['Handlebars','Handlebars.CompilerNameLookup'], function (Handlebars, compilerNameLookup){ var t = {"1":function(container,depth0,helpers,partials,data) {
+    var helper;
+
+  return "<script>\r\n    var head = document.getElementsByTagName('head')[0],\r\n        script = document.createElement('script');\r\n    script.src = 'https://cdn-scripts.signifyd.com/api/script-tag.js';\r\n    script.id = 'sig-api';\r\n    script.type = 'text/javascript';\r\n    script.setAttribute('data-order-session-id','"
+    + container.escapeExpression(((helper = (helper = compilerNameLookup(helpers,"sessionId") || (depth0 != null ? compilerNameLookup(depth0,"sessionId") : depth0)) != null ? helper : container.hooks.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"sessionId","hash":{},"data":data,"loc":{"start":{"line":8,"column":49},"end":{"line":8,"column":62}}}) : helper)))
+    + "');\r\n    head.appendChild(script);\r\n</script>\r\n";
+},"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=container.hooks.helperMissing, alias3=container.escapeExpression;
+
+  return ((stack1 = compilerNameLookup(helpers,"if").call(alias1,(depth0 != null ? compilerNameLookup(depth0,"showScript") : depth0),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data,"loc":{"start":{"line":1,"column":0},"end":{"line":11,"column":7}}})) != null ? stack1 : "")
+    + "<!--\r\n  Available helpers:\r\n  "
+    + alias3((compilerNameLookup(helpers,"getExtensionAssetsPath")||(depth0 && compilerNameLookup(depth0,"getExtensionAssetsPath"))||alias2).call(alias1,"img/image.jpg",{"name":"getExtensionAssetsPath","hash":{},"data":data,"loc":{"start":{"line":14,"column":2},"end":{"line":14,"column":45}}}))
+    + " - reference assets in your extension\r\n\r\n  "
+    + alias3((compilerNameLookup(helpers,"getExtensionAssetsPathWithDefault")||(depth0 && compilerNameLookup(depth0,"getExtensionAssetsPathWithDefault"))||alias2).call(alias1,(depth0 != null ? compilerNameLookup(depth0,"context_var") : depth0),"img/image.jpg",{"name":"getExtensionAssetsPathWithDefault","hash":{},"data":data,"loc":{"start":{"line":16,"column":2},"end":{"line":16,"column":68}}}))
+    + " - use context_var value i.e. configuration variable. If it does not exist, fallback to an asset from the extension assets folder\r\n\r\n  "
+    + alias3((compilerNameLookup(helpers,"getThemeAssetsPath")||(depth0 && compilerNameLookup(depth0,"getThemeAssetsPath"))||alias2).call(alias1,(depth0 != null ? compilerNameLookup(depth0,"context_var") : depth0),"img/image.jpg",{"name":"getThemeAssetsPath","hash":{},"data":data,"loc":{"start":{"line":18,"column":2},"end":{"line":18,"column":53}}}))
+    + " - reference assets in the active theme\r\n\r\n  "
+    + alias3((compilerNameLookup(helpers,"getThemeAssetsPathWithDefault")||(depth0 && compilerNameLookup(depth0,"getThemeAssetsPathWithDefault"))||alias2).call(alias1,(depth0 != null ? compilerNameLookup(depth0,"context_var") : depth0),"img/theme-image.jpg",{"name":"getThemeAssetsPathWithDefault","hash":{},"data":data,"loc":{"start":{"line":20,"column":2},"end":{"line":20,"column":70}}}))
+    + " - use context_var value i.e. configuration variable. If it does not exist, fallback to an asset from the theme assets folder\r\n-->\r\n";
+},"useData":true}; var main = t.main; t.main = function(){ arguments[1] = arguments[1] || {}; var ctx = arguments[1]; ctx._extension_path = 'http://localhost:7777/tmp/extensions/Folio3/Signifyd/1.0.1/'; ctx._theme_path = 'http://localhost:7777/tmp/extensions/SC/Posh/3.5.2/'; return main.apply(this, arguments); }; var template = Handlebars.template(t); template.Name = 'signifyd'; return template;});

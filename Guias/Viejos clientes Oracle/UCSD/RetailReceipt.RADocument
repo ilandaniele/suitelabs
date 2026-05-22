@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<RADocument Name="Receipt" Source="Transaction (ID_TRN is #TransactionID#) &lt; *RetailTransaction (ID_TRN is #TransactionID#) &lt; [Customer &lt; Phone, Address, Identification], RetailTransactionTax, [SaleReturnLineItem &lt; [RetailPriceModifier &lt; ReasonCode], Worker, [Item &lt; StockItem &lt; RealSize, RealColor, Style]], CommentLineItem, TransactionDiscount, RetailTransactionSummary, RetailTransactionChange, RetailTransactionTender, GiftCertificateLineItem, Signature, PaymentOnAccount, Worker">
+  <Comment>This is a RADocument for Receipts.</Comment>
+  <Sections>
+    <Include Path="Documents\ReceiptTop.RADocument" Default="false"/>
+    <Include Path="Documents\CustomerPrompts.RADocument" Default="false"/>
+    <Include Path="Documents\ReceiptBottoms.RADocument" Default="false"/>
+    <Section Name="Merchandise Return Form Title" Default="false" Tags="Merchandise Return" UseDocumentSource="true" SourcePath="./Transaction/RetailTransactions/RetailTransaction/RetailTransactionSummaries">
+      <Conditions>
+        <Condition>ItemReturnTotal isnt null</Condition>
+        <Condition>ItemReturnTotal:Decimal != 0</Condition>
+      </Conditions>
+      <Lines>
+        <Line>*** Merchandise Return Form***</Line>        
+      </Lines>
+    </Section>
+    <Section Name="Merchandise Return Top" Link="Logo Top" Default="false" Tags="Merchandise Return"/>
+    <Section Name="Merchandise Return Address" Link="Address" Default="false" Tags="Merchandise Return"/>
+    <Section Name="Merchandise Return Phone" Link="Phone" Default="false" Tags="Merchandise Return"/>
+    <Section Name="Merchandise Return Header" Link="Header" Default="false" Tags="Merchandise Return"/>
+    <Section Name="Merchandise Return Items" Link="Items" Default="false" Tags="Merchandise Return">
+      <Conditions>
+        <Condition>ActionCode is SR</Condition>
+        <Conditions Operation="Or">
+          <Condition>Voided is null</Condition>
+          <Condition>Voided:int is 0</Condition>
+        </Conditions>
+      </Conditions>
+    </Section>
+    <Section Name="Merchandise Return Customer Info" Link="Customer Info" Default="false" Tags="Merchandise Return"/>
+    <Section Name="Merchandise Return Customer Address" Default="false" Tags="Merchandise Return" UseDocumentSource="true" SourcePath="./Transaction/RetailTransactions/RetailTransaction/Customers/Customer/Addresses">
+      <Conditions>
+        <Condition>AddressLine1 isnt null</Condition>
+      </Conditions>
+      <Lines>
+        <Line>{@./AddressLine1}</Line>
+        <Line>
+          <Conditions>
+            <Condition>AddressLine2 isnt null</Condition>
+          </Conditions>
+          <Format>{@./AddressLine2}</Format>
+        </Line>
+        <Line>{@./City}, {@./State} {@./PostalCode}</Line>
+      </Lines>
+    </Section>
+    <Section Name="Phone Header" Default="false" Tags="Merchandise Return" LineBreaks="pre">
+      <Lines>
+        <Line>Phone:</Line>
+      </Lines>
+    </Section>
+    <Section Name="Phone Prompt" Default="false" Tags="Merchandise Return" LineBreaks="post" UseDocumentSource="true">
+      <Conditions>
+        <Condition>RetailTransactions/RetailTransaction/Customers/Customer/Phones/Phone/Number is null</Condition>
+      </Conditions>
+      <Lines>
+        <Line></Line>
+        <Line>______________________________</Line>
+      </Lines>
+    </Section>
+    <Section Name="Phone Info" Default="false" Tags="Merchandise Return" LineBreaks="post" UseDocumentSource="true" SourcePath="./Transaction/RetailTransactions/RetailTransaction/Customers/Customer/Phones">
+      <Conditions>
+        <Condition>Number isnt null</Condition>
+      </Conditions>
+      <Lines>
+        <Line>({@./AreaCode}){@./Number}</Line>
+      </Lines>
+    </Section>
+    <!--<Section Name="Merchandise Return Driver's License" Link="Customer Driver's License" Default="false" Tags="Merchandise Return" UseDocumentSource="true">
+      <Conditions>
+        <Condition>RetailTransactions/RetailTransaction/Customers/Customer/Identifications/Identification/IDText is null</Condition>
+      </Conditions>
+    </Section>
+    <Section Name="Merchandise Return ID Info" Default="false" Tags="Merchandise Return" UseDocumentSource="true" SourcePath="./Transaction/RetailTransactions/RetailTransaction/Customers/Customer/Identifications" LineBreaks="both">
+      <Lines>
+        <Line>Customer ID:</Line>
+        <Line>Type #               Expr</Line>
+        <Line>{@./Type,-4} {@./IDText,-14}  {@./Expiration as DateTime,-20:MM/dd/yyyy}</Line>
+      </Lines>
+    </Section>-->
+    <Section Name="Merchandise Return Cusomter Signature" Link="Customer Signature" Default="false" Tags="Merchandise Return" UseDocumentSource="true">
+      <Conditions Operation="Or">
+        <Condition>RetailTransactions/RetailTransaction/Signatures/Signature/Signature is null</Condition>
+        <Condition>RetailTransactions/RetailTransaction/Signatures/Signature/Signature !startswith ????????</Condition>
+      </Conditions>
+    </Section>
+    <Section Name="Payout Signature On File" Tags="Merchandise Return" UseDocumentSource="true" LineBreaks="both" Default="false">
+      <Conditions>
+        <Condition>RetailTransactions/RetailTransaction/Signatures/Signature/Signature startswith ????????</Condition>
+      </Conditions>
+      <Lines>
+        <Line>Signature on file</Line>
+      </Lines>
+    </Section>
+    <Section Name="Merchandise Return Merchant Copy" Link="Merchant Copy" Default="false" Tags="Merchandise Return"/>
+    <Section Name="Merchandise Return Cut" Link="Cut" Default="false" Tags="Merchandise Return"/>
+    <Section Name="Receipt Top" Link="Logo Top" Default="true" Tags="Retail,Gift Receipt"/>
+    <Section Name="Receipt Top Message" Link="Top Message" Default="true" Tags="Retail,Gift Receipt"/>
+    <Section Name="Receipt Legal Name" Link="LegalName" Default="true" Tags="Retail,Gift Receipt"/>
+	<Section Name="Receipt Address" Link="Address" Default="true" Tags="Retail,Gift Receipt"/>
+    <Section Name="Receipt Phone" Link="Phone" Default="true" Tags="Retail,Gift Receipt"/>
+    <Section Name="Website" Tags="Retail,Gift Receipt">
+      <Lines>
+        <Line>#CENTER#ucsandiegobookstore.com#FONT_NORMAL#</Line>
+      </Lines>
+    </Section>
+    <Section Name="Header" UseDocumentSource="true" Tags="Retail,Gift Receipt">
+      <Comment>This section describes information about the transaction:
+      Store {Store ID} WS {Workstation ID} Opr {Operator ID}
+      MM/dd/yyyy {Transaction End Time} #{Transaction Number}
+      [TRANSACTION {CANCELED|VOIDED|SUSPENDED} | TRAINING MODE]
+      </Comment>
+      <Conditions>
+        <Condition>TransactionType is RETAIL</Condition>
+      </Conditions>
+      <Lines>
+        <Line>#FONT_NORMAL#Store {@./BusinessUnitID} WS {@./WorkstationID} Opr {@./OperatorID}</Line>
+        <Line>{@./BusinessDay as DateTime,-10:M/dd/yyyy} {@./EndTime as DateTime,-13:hh:mm:ss tt} #{@./TransactionNumber}</Line>
+        <Line>
+          <Conditions>
+            <Condition>Canceled isnt null</Condition>
+            <Condition>Canceled:int is 1</Condition>
+          </Conditions>
+          <Format>#REVERSE_VIDEO#TRANSACTION CANCELED                    #FONT_NORMAL#</Format>
+        </Line>
+        <Line>
+          <Conditions>
+            <Condition>Voided isnt null</Condition>
+            <Condition>Voided:int is 1</Condition>
+          </Conditions>
+          <Format>#REVERSE_VIDEO#TRANSACTION VOIDED                      #FONT_NORMAL#</Format>
+        </Line>
+        <Line>
+          <Conditions>
+            <Condition>Training isnt null</Condition>
+            <Condition>Training:int is 1</Condition>
+          </Conditions>
+          <Format>#REVERSE_VIDEO#TRAINING MODE                           #FONT_NORMAL#</Format>
+        </Line>
+        <Line>
+          <Conditions>
+            <Condition>Suspended isnt null</Condition>
+            <Condition>Suspended:int is 1</Condition>
+          </Conditions>
+          <Format>#REVERSE_VIDEO#TRANSACTION SUSPENDED                   #FONT_NORMAL#</Format>
+        </Line>
+         <Section Name="displayPONum" Message="displayPONum"/>
+      </Lines>
+    </Section>
+    <Section Name="Transaction Reprinted" Default="false" LineBreaks="pre" Tags="Reprint">
+      <Lines>
+        <Line>
+#REVERSE_VIDEO#*** Transaction Reprinted On Request ***#FONT_NORMAL#
+</Line>
+      </Lines>
+    </Section>
+    <Section Name="Associates" Tags="Retail" UseDocumentSource="true" SourcePath="./Transaction/RetailTransactions/RetailTransaction/Workers">
+      <Lines>
+        <!--Line>Sales Person: {@./FirstName} {@./LastName}</Line-->
+        <Line>Sales Associate: {@./$ID} {@./FirstName}</Line>
+      </Lines>
+    </Section>
+    <Section Name="Gift Receipt" Default="false" UseDocumentSource="true" LineBreaks="pre" Tags="Gift Receipt">
+      <Lines>
+        <Line>#CENTER#**** A gift for you ****#FONT_NORMAL#</Line>
+      	<Line>
+		      <Conditions>
+			      <Condition>./RetailTransactions/RetailTransaction/Customers/Customer/Name isnt null</Condition>
+		      </Conditions>
+		      <Format>From {@./RetailTransactions/RetailTransaction/Customers/Customer/Name}</Format>
+	      </Line>
+	      <Line>#GiftMessage#</Line>
+      </Lines>
+    </Section>
+    <Section Name="Customer Info" UseDocumentSource="true" LineBreaks="pre" SourcePath="./Transaction/RetailTransactions" Tags="Retail">
+      <Conditions>
+        <Condition>./Customers/Customer/@ID isnt null</Condition>
+      </Conditions>
+      <Comment>This section is for customer information:
+      Customer ID:{Customer ID}
+      John Doe
+      </Comment>
+      <Lines>
+        <Line>{@./Customers/Customer/Name}</Line>
+		    <Line>{@./Customers/Customer/$ID}</Line>
+        <Line Condition="CustomerAccountCardID isnt null">Card {@./CustomerAccountCardID}</Line>
+		    <Line>_______________________________________</Line>
+      </Lines>
+    </Section>
+    <Section Name="Items" UseDocumentSource="true" SourcePath="./Transaction/RetailTransactions/RetailTransaction/SaleReturnLineItems" LineBreaks="both" Tags="Retail">
+      <Comment>This section is reserved for Items that appear on a Retail transaction:
+      ActionCode Description [0.00 PrintReceiptCode TaxExempt]
+      [# @ 0.00]
+      [DiscountDescription 0.00]
+      [Marked Down From 0.00]
+      </Comment>
+      <Conditions Operation="Or">
+        <Condition>Voided is null</Condition>
+        <Condition>Voided:int is 0</Condition>
+      </Conditions>
+      <Lines>
+        <!--<Line Condition="ActionCodeText != null">#FONT_NORMAL#{@./ActionCodeText}:</Line>-->
+        <Line>
+          <Conditions>
+            <Condition>Description !contains &lt;Hide&gt;</Condition>
+            <Conditions Operation="And">
+              <Condition>DiscountType != CP</Condition>
+              <Condition>DiscountType != CY</Condition>
+              <Condition>DiscountType != TC</Condition>
+              <Condition>ActionCode != RS</Condition>
+              <Condition>ActionCode != SR</Condition>
+            </Conditions>
+          </Conditions>
+ <Format>#FONT_NORMAL#{@./Description,-27} {@./ExtendedAmount as Decimal,11:0.00} {@./PrintReceiptCode} {@./TaxExempt}</Format>
+        </Line>
+        <Line>
+          <Conditions>
+            <Condition>Description !contains &lt;Hide&gt;</Condition>
+            <Condition>ActionCode = SR</Condition>
+          </Conditions>
+          <Format>#FONT_NORMAL#{@./Description,-27} {@./ExtendedAmount as Decimal,11:-0.00} {@./PrintReceiptCode} {@./TaxExempt}</Format>
+        </Line>
+        <Line>{@./Items/Item/StockItems/StockItem/Style}/{@./Items/Item/StockItems/StockItem/RealSizes/RealSize/ActualSizeType}/{@./Items/Item/StockItems/StockItem/RealColors/RealColor/ColorName}</Line>
+        <Section Name="Discounts" SourcePath="./RetailPriceModifiers" Tags="Retail">
+          <Conditions>
+            <Condition>../../ActionCode != SR</Condition>
+          </Conditions>
+          <Lines>
+            <Line Condition="PromotionReceipt isnt null">{@./PromotionReceipt,-26:0}</Line>
+            <Line>
+              <Conditions Operator="And">
+                <Condition>CalculationMethod is PR</Condition>
+                <Condition>PromotionReceipt is null</Condition>
+                <Condition>ReasonCodes/ReasonCode/ReasonCode is null</Condition>
+              </Conditions>
+              <Format>Discount{@./Percentage as Decimal,3:0}%</Format>
+            </Line>            
+            <Line>
+              <Conditions Operation="And">
+                <Condition>CalculationMethod is NP</Condition>
+                <Condition>PromotionReceipt is null</Condition>
+                <Condition>ReasonCodes/ReasonCode/ReasonCode is null</Condition>
+              </Conditions>
+              <Format>Discounted to {@./NewPrice as Decimal,-7:$0.00}</Format>
+            </Line>
+            <Line>
+              <Conditions Operation="And">
+                <Condition>CalculationMethod is AR</Condition>
+                <Condition>PromotionReceipt is null</Condition>
+                <Condition>ReasonCodes/ReasonCode/ReasonCode is null</Condition>
+              </Conditions>
+              <Format>Discounted {@./ExtendedDiscount as Decimal,28:-0.00} {@../../PrintReceiptCode}</Format>
+            </Line>
+			<Line>
+              <Conditions Operation="And">
+                <Condition>CalculationMethod is TA</Condition>
+                <Condition>PromotionReceipt is null</Condition>
+                <Condition>ReasonCodes/ReasonCode/ReasonCode is null</Condition>
+              </Conditions>
+              <Format>Transaction Discount {@./ExtendedDiscount as Decimal,18:-0.00} {@../../PrintReceiptCode}</Format>
+            </Line>
+			<Line>
+              <Conditions Operation="And">
+                <Condition>CalculationMethod is TP</Condition>
+                <Condition>PromotionReceipt is null</Condition>
+                <Condition>ReasonCodes/ReasonCode/ReasonCode is null</Condition>
+              </Conditions>
+              <Format>Transaction Discount{@./Percentage as Decimal,3:0}%</Format>
+            </Line>
+            <Line>
+              <Conditions Operation="And">
+                <Condition>CalculationMethod is PR</Condition>
+                <Condition>PromotionReceipt is null</Condition>
+                <Condition>ReasonCodes/ReasonCode/ReasonCode isnt null</Condition>
+              </Conditions>
+              <Format>{@./ReasonCodes/ReasonCode/Name,-25}{@./Percentage as Decimal,3:0}%</Format>
+            </Line>
+            <Line>
+              <Conditions Operation="And">
+                <Condition>CalculationMethod is NP</Condition>
+                <Condition>PromotionReceipt is null</Condition>
+                <Condition>ReasonCodes/ReasonCode/ReasonCode isnt null</Condition>
+              </Conditions>
+              <Format>{@./ReasonCodes/ReasonCode/Name,-21} ${@./NewPrice as Decimal,-7:0.00}</Format>
+            </Line>
+            <Line>
+              <Conditions Operation="And">
+                <Condition>CalculationMethod is AR</Condition>
+                <Condition>PromotionReceipt is null</Condition>
+                <Condition>ReasonCodes/ReasonCode/ReasonCode isnt null</Condition>
+              </Conditions>
+              <Format>{@./ReasonCodes/ReasonCode/Name,-25}</Format>
+            </Line>
+			<Line>
+              <Conditions Operation="And">
+                <Condition>CalculationMethod is TA</Condition>
+                <Condition>PromotionReceipt is null</Condition>
+                <Condition>ReasonCodes/ReasonCode/ReasonCode isnt null</Condition>
+              </Conditions>
+              <Format>TD:{@./ReasonCodes/ReasonCode/Name,-23}</Format>
+            </Line>
+			<Line>
+              <Conditions Operation="And">
+                <Condition>CalculationMethod is TP</Condition>
+                <Condition>PromotionReceipt is null</Condition>
+                <Condition>ReasonCodes/ReasonCode/ReasonCode isnt null</Condition>
+              </Conditions>
+              <Format>TD:{@./ReasonCodes/ReasonCode/Name,-23}{@./Percentage as Decimal,3:0}%</Format>
+            </Line>
+          </Lines>
+        </Section>
+        <Section Name="ReturnDiscounts" SourcePath="./RetailPriceModifiers" Tags="Retail">
+          <Conditions>
+            <Condition>../../ActionCode = SR</Condition>
+          </Conditions>
+          <Lines>
+            <Line Condition="PromotionReceipt isnt Null">{@./PromotionReceipt,-27:0}</Line>
+            <Line>
+              <Conditions Operator="And">
+                <Condition>CalculationMethod is PR</Condition>
+                <Condition>PromotionReceipt is Null</Condition>
+              </Conditions>
+              <Format>Discount{@./Percentage as Decimal,3:0}%</Format>
+            </Line>
+            <Line Condition="CalculationMethod is NP">
+              <Conditions Operation="And">
+                <Conditions Operation="Or">
+                  <Condition>CalculationMethod is NP</Condition>
+                  <Condition>CalculationMethod is AR</Condition>
+                </Conditions>
+                <Condition>PromotionReceipt is Null</Condition>
+              </Conditions>
+              <Format>Discounted to {@./NewPrice as Decimal,-7:$0.00}</Format>
+            </Line>
+          </Lines>
+        </Section>
+        <Line>
+          <Conditions>
+            <Condition>./RetailPriceModifiers/RetailPriceModifier/ExtendedDiscount isnt null</Condition>
+          </Conditions>
+          <Format>Orig. {@./RegularPrice as Decimal,-10:C} Your Price {@./ActualPrice as Decimal,-10:C}</Format>
+        </Line>
+        <Line>
+          <Conditions>
+            <Condition>Description !contains &lt;Hide&gt;</Condition>
+            <Conditions Operation="Or">
+              <Condition>DiscountType = CP</Condition>
+              <Condition>DiscountType = CY</Condition>
+              <Condition>DiscountType = TC</Condition>
+              <Condition>ActionCode = RS</Condition>
+            </Conditions>
+          </Conditions>
+          <Format>#FONT_NORMAL#{@./Description,-27}</Format>
+        </Line>
+        <Line>
+          <Conditions>
+            <Condition>Quantity:Decimal != 1.00</Condition>
+            <Condition>Quantity:Decimal != -1.00</Condition>
+            <Condition>Description !contains &lt;Hide&gt;</Condition>
+          </Conditions>
+          <Format>{@./Quantity as Decimal,0:0} @ {@./ActualPrice as Decimal,8:0.00}</Format>
+        </Line>
+        <Line>
+          <Conditions>
+            <Condition>ActionCode != RS</Condition>
+            <Condition>DiscountDescription != null</Condition>
+          </Conditions>
+          <Format>{@./DiscountDescription}{@./DiscountAmount as Decimal,11:0.00}</Format>
+        </Line>
+        <!--<Line Condition="PreviousPrice != null">Marked Down From {@./PreviousPrice as Decimal,8:0.00}</Line>-->
+        <Section Name="LineItemAssociate" SourcePath="./Workers" Tags="Retail">
+          <Lines>
+            <!--Line>Sales Person: {@./FirstName} {@./LastName}</Line-->
+            <Line>Sales Person: {@./$ID}</Line>
+          </Lines>
+        </Section>
+        <Section Name="Retrieve custom Campus Bookstore info" Message="ReceiptMessageHandler"/>
+      </Lines>
+    </Section>
+    <!--<Section Name="Comments" UseDocumentSource="true" SourcePath="./Transaction/RetailTransactions/RetailTransaction/CommentLineItems" Tags="Retail" LineBreaks="Post">
+      <Lines>
+        <Line>
+          <Conditions>
+          </Conditions>
+          <Format>Comment: {@./Text}</Format>
+        </Line>
+      </Lines>
+    </Section>-->
+    <Section Name="Payment On Account" UseDocumentSource="true" SourcePath="./Transaction/RetailTransactions/RetailTransaction/PaymentOnAccounts" Tags="Retail" LineBreaks="Post">
+      <Lines>
+        <Line>Payment On Account {@./Payment as Decimal,20:0.00}</Line>
+        <Line>Invoice {@./CustomerInvoiceID}</Line>
+        <Line>Account {@./CustomerAccountID}</Line>
+        <Line>Balance {@./Balance as Decimal,-8:0.00}</Line>
+      </Lines>
+    </Section>
+    <Section Name="Gift Items" UseDocumentSource="true" SourcePath="./Transaction/RetailTransactions/RetailTransaction/SaleReturnLineItems" LineBreaks="both" Tags="Gift Receipt">
+      <Comment>
+        This section is reserved for Items that appear on a gift receipt:
+        Description
+            [Qty #]
+      </Comment>
+      <Conditions Operation="Or">
+        <Condition>Voided is null</Condition>
+        <Condition>Voided:int is 0</Condition>
+      </Conditions>
+      <Lines>
+        <Line>
+          <Conditions>
+            <Condition>Description !contains &lt;Hide&gt;</Condition>
+            <Conditions Operation="And">
+              <Condition>DiscountType != CP</Condition>
+              <Condition>DiscountType != CY</Condition>
+              <Condition>DiscountType != TC</Condition>
+              <Condition>ActionCode != RS</Condition>
+            </Conditions>
+          </Conditions>
+          <Format>#FONT_NORMAL#{@./Description,-39}</Format>
+        </Line>
+        <Line>{@./ItemID}</Line>
+        <Line>
+          <Conditions>
+            <Condition>EncryptedPrice isnt null</Condition>
+          </Conditions>
+          <Format>{@./EncryptedPrice}</Format>
+        </Line>
+        <Line>
+          <Conditions>
+            <Condition>Quantity:Decimal != 1.00</Condition>
+            <Condition>Quantity:Decimal != -1.00</Condition>
+            <Condition>Description !contains &lt;Hide&gt;</Condition>
+          </Conditions>
+          <Format>    Qty {@./Quantity as Decimal,0:0}</Format>
+        </Line>
+        <Line></Line>
+      </Lines>
+    </Section>
+    <Section Name="Gift Certificates" UseDocumentSource="true" SourcePath="./Transaction/RetailTransactions/RetailTransaction/GiftCertificateLineItems" LineBreaks="both" Tags="Retail">
+      <Lines>
+        <Line>{@./TypeDescription,-27}{@./AmountAdded as Decimal,11:0.00}</Line>
+        <Line>Issue / Add Value</Line>
+        <Line>Balance {@./Balance as Decimal,11:0.00}</Line>
+        <Line>Serial Number {@./MaskedSerialNumber}</Line>
+      </Lines>
+    </Section>
+	<Section Name="Transaction Discounts" UseDocumentSource="true" SourcePath="./Transaction/RetailTransactions/RetailTransaction/TransactionDiscounts" LineBreaks="both" Tags="Retail">
+	  <Lines>
+        <Line>
+          <Format>#FONT_NORMAL#{@./DiscountName,-27} {@./MoneyDiscount as Decimal,11:0.00}</Format>
+        </Line>
+      </Lines>
+	</Section>
+    <Section Name="Sub Total" UseDocumentSource="true" SourcePath="./Transaction/RetailTransactions/RetailTransaction/RetailTransactionSummaries" Tags="Retail">
+      <Lines>
+        <Line Condition="SubTotal:Decimal != 0">Sub Total {@./SubTotal As Decimal,29:#TOTAL_FORMAT#}</Line>
+      </Lines>
+    </Section>
+    <Section Name="Taxes" UseDocumentSource="true" SourcePath="./Transaction/RetailTransactions/RetailTransaction/RetailTransactionTaxes" Tags="Retail">
+      <Lines>
+        <Line>{@./TaxDescription,-27} {@./TaxAmount as Decimal,11:0.00}</Line>
+      </Lines>
+    </Section>
+    <Section Name="Transaction Discount" UseDocumentSource="true" SourcePath="./Transaction/RetailTransactions/RetailTransaction/RetailTransactionSummaries" Tags="Retail">
+      <Lines>
+        <Line Condition="TransactionDiscount:Decimal != 0">Transaction Discounts {@./TransactionDiscount as Decimal,5:#TOTAL_FORMAT#}</Line>
+      </Lines>
+    </Section>
+    <Section Name="Total" LineBreaks="post" UseDocumentSource="true" SourcePath="./Transaction/RetailTransactions/RetailTransaction/RetailTransactionSummaries" Tags="Retail">
+      <Lines>
+        <Line Condition="Total:Decimal != 0">Total{@./Total As Decimal,34:#TOTAL_FORMAT#}</Line>
+      </Lines>
+    </Section>
+    <Section Name="Tender" UseDocumentSource="true" SourcePath="./Transaction/RetailTransactions/RetailTransaction/RetailTransactionTenders" Tags="Retail">
+      <Lines>
+        <Section Name="displaySegments" Message="displaySegments"/>
+        <Section Name="displayPONum" Message="displayPONum"/>
+      </Lines>
+      <Conditions>
+        <Conditions Operation="Or">
+          <Condition>TenderAmount:Decimal != 0</Condition>
+          <Condition>TenderType startswith LC</Condition>
+		  <Condition>TenderType startswith CCEM</Condition>
+        </Conditions>
+        <Condition>TenderDescription !contains &lt;Hide&gt;</Condition>
+      </Conditions>
+      <Lines>
+        <Line>
+          <Conditions>
+            <Condition>HostTextHeader isnt null</Condition>
+			<Condition>TenderType startswith CC</Condition>
+			<Condition>TenderType doesntstartwith CCEM</Condition>
+            <Conditions Operation="Or">
+              <Condition>TenderType startswith CC</Condition>
+              <Condition>TenderType startswith DC</Condition>
+              <Condition>TenderType startswith LC</Condition>
+              <Condition>TenderType startswith SC</Condition>
+            </Conditions>
+          </Conditions>
+          <Format>{@./HostTextHeader,-26}{@./TenderAmount as Decimal,13:0.00}</Format>
+        </Line>
+        <Line>
+          <Conditions>
+            <Condition>HostTextHeader isnt null</Condition>
+            <Condition>HostTextBody isnt null</Condition>
+			<Condition>HostTextAuthInfo is null</Condition>
+            <Conditions Operation="Or">
+              <Condition>TenderType startswith CC</Condition>
+              <Condition>TenderType startswith DC</Condition>
+              <Condition>TenderType startswith LC</Condition>
+              <Condition>TenderType startswith SC</Condition>
+            </Conditions>
+          </Conditions>
+          <Format>{@./HostTextBody}</Format>
+        </Line>
+		<Line>
+          <Conditions>
+            <Condition>HostTextHeader isnt null</Condition>
+            <Condition>HostTextAuthInfo isnt null</Condition>
+            <Conditions Operation="Or">
+              <Condition>TenderType startswith CC</Condition>
+              <Condition>TenderType startswith DC</Condition>
+              <Condition>TenderType startswith LC</Condition>
+              <Condition>TenderType startswith SC</Condition>
+            </Conditions>
+          </Conditions>
+          <Format>{@./HostTextAuthInfo}</Format>
+        </Line>
+        <Line>
+          <Conditions>
+            <Condition>HostTextHeader isnt null</Condition>
+            <Conditions Operation="Or">
+              <Condition>TenderType startswith CC</Condition>
+              <Condition>TenderType startswith DC</Condition>
+              <Condition>TenderType startswith LC</Condition>
+            </Conditions>
+          </Conditions>
+          <Format>{@./CardAccountID}</Format>
+        </Line>
+        <Line Condition="HostTextHeader is null">{@./TenderDescription,-28}{@./TenderAmount As Decimal,11:0.00}</Line>
+        <Line>
+          <Conditions>
+            <Condition>HostTextHeader is null</Condition>
+            <Condition>TenderType startswith GC</Condition>
+          </Conditions>
+          <Format>Serial Number {@./MaskedGiftCertificateSerialNumber}</Format>
+        </Line>
+        <Line>
+          <Conditions>
+            <Condition>HostTextHeader is null</Condition>
+            <Condition>TenderType startswith GC</Condition>
+          </Conditions>
+          <Format>Balance {@./Balance,11:0.00}</Format>
+        </Line>
+      </Lines>
+    </Section>
+    <!--<Section Name="TenderTotal" UseDocumentSource="true" SourcePath="./Transaction/RetailTransactions/RetailTransaction/RetailTransactionSummaries" LineBreaks="post" Tags="Retail">
+      <Lines>
+        <Line Condition="TenderTotal:Decimal != 0">Total Tendered{@./TenderTotal As Decimal,25:#TOTAL_FORMAT#}</Line>
+      </Lines>
+    </Section>-->
+    <Section Name="Change" UseDocumentSource="true" SourcePath="./Transaction/RetailTransactions/RetailTransaction/RetailTransactionChanges" Tags="Retail">
+      <Lines>
+        <Line>#FONT_BIG#Change {@./ChangeDescription,6}{@./ChangeAmount as Decimal,7:0.00}#FONT_NORMAL#</Line>
+        <Line Condition="CheckNumber isnt null"> Check #{./CheckNumber}</Line>
+      </Lines>
+    </Section>
+    <!--<Section Name="Totals" UseDocumentSource="true" SourcePath="./Transaction/RetailTransactions/RetailTransaction/RetailTransactionSummaries" Tags="Retail">
+      <Lines>
+        <Line>
+          <Conditions>
+            <Condition>ChangeTotal isnt null</Condition>
+            <Condition>ChangeTotal:Decimal != 0</Condition>
+          </Conditions>
+          <Format>#BOLD#Total Change{@./ChangeTotal,27:$#,0.00;-$#,0.00}#FONT_NORMAL#</Format>
+        </Line>        
+        <Line>
+          <Conditions>
+            <Condition>ItemReturnTotal isnt null</Condition>
+            <Condition>ItemReturnTotal:Decimal != 0</Condition>
+          </Conditions>
+          <Format>#FONT_BIG#Returns count: {@./ItemReturnTotal as Decimal,5:0}#FONT_NORMAL#</Format>
+        </Line>
+      </Lines>
+    </Section>-->
+	
+    <Section Name="Bottom" LineBreaks="pre" Tags="Retail">
+      <Lines>
+        <Line>#CENTER#Thank you!#FONT_NORMAL#</Line>
+      </Lines>
+    </Section>
+    <Section Name="Transaction Barcode" Tags="Retail,Gift Receipt">
+      <Lines>
+        <Line>#CENTER#{BARCODE:Code128|#TransactionID#}</Line>
+      </Lines>
+    </Section>
+	<Section Name="Retail Customer Copy" UseDocumentSource="true" LineBreaks="both" SourcePath="./Transaction/RetailTransactions/RetailTransaction/RetailTransactionTenders" Tags="Retail">
+	  <Conditions Operation="Or">
+		<Condition>TenderType doesntstartwith CCEM</Condition>
+		<Condition>HostTextBody !contains CUSTOMER COPY</Condition>
+	  </Conditions>
+	  <Lines>
+        <Line>
+          <Format>#CENTER#* * * * Customer Copy * * * *#FONT_NORMAL#</Format>
+        </Line>
+      </Lines>
+    </Section>
+	<Section Name="Retail Cut" Link="Cut" Tags="Retail,Gift Receipt" />
+  </Sections>
+</RADocument>

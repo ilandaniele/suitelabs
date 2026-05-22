@@ -1,0 +1,19 @@
+.header-simplified-header{
+	height: $sc-main-nav-height;
+	background-color: $sc-color-theme-background-light;
+}
+
+// .PA_Theme_Yellow{
+// 	.header-simplified-header{
+// 		background-color: #fff;
+// 	}
+// }
+
+.header-simplified-header-logo{
+	text-align: center;
+
+	.header-logo-image{
+		width: auto;
+	}
+}
+

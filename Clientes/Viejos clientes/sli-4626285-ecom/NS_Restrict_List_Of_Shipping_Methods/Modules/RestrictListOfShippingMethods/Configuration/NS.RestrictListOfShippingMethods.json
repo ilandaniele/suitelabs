@@ -1,0 +1,50 @@
+{
+	"type": "object",
+    "subtab": {
+        "id": "parkdesigns",
+        "title": "Ship Methods - Config",
+        "description": "Ship Method Configurations",
+        "group": "extensions"
+    },
+	"properties": {
+        "parkdesigns.enabled": {
+            "group": "extensions",
+            "subtab": "parkdesigns",
+            "type": "boolean",
+            "title": "Enable Restricts the list of Shipping Methods",
+            "description" : "Check this box to enable the restricts the list of shipping methods.",
+            "default": true
+        },
+		"parkdesigns.b2bshipping": {
+            "group": "extensions",
+            "subtab": "parkdesigns",
+            "type": "array",
+            "title": "B2B Shipping Methods",
+            "description": "Enter your B2B Shipping Methods IDs.",
+            "items": {
+				"type": "string",
+				"title": "B2B Shipping ID"
+			},
+			"default": [
+               "8025",
+               "8029",
+               "7980"
+			]
+        },
+        "parkdesigns.b2cshipping": {
+            "group": "extensions",
+            "subtab": "parkdesigns",
+            "type": "array",
+            "title": "B2C Shipping Methods",
+            "description": "Enter your B2C Shipping Methods IDs.",
+			"items": {
+				"type": "string",
+				"title": "B2C Shipping ID"
+			},
+			"default": [
+               "8026",
+               "7652"
+			]
+		}	
+	}
+}

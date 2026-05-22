@@ -1,0 +1,15 @@
+.awa-order-status-improvements-thumbnail {
+  @extend .col-sm-5;
+  @media (min-width: $screen-sm-min){
+    padding-left: 0;
+  }
+}
+.awa-order-status-improvements-content {}
+.sc-order-status-form-group .show-help{
+  display: none;
+}
+.sc-order-status-form-group:first-of-type{
+  .show-help{
+    display: block !important;
+  }
+}

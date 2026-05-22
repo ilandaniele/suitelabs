@@ -1,0 +1,16 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "paypalOptions",
+        "group": "extensions",
+        "title": "PayPal Options"
+    },
+    "properties": {
+        "paypalOptions.sdkUrl": {
+            "group": "extensions",
+            "subtab": "paypalOptions",
+            "type": "string",
+            "title": "SDK Url"
+        }
+    }
+}

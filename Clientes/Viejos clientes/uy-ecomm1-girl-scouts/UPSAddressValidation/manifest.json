@@ -1,0 +1,93 @@
+{
+    "name": "UPSAddressValidation",
+    "fantasyName": "UPS Address Validation",
+    "vendor": "CS",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Extension to validate addresses at street level by calling UPS API",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        },
+        "internal": {
+            "files": [
+                "internal/UPS.Address.Validation.Object.Credentials.js"
+            ]
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/UpsAddressValidation.json"
+        ]
+    },
+    "sass": {
+        "entry_points": {
+            "myaccount": "Modules/Main/Sass/_upsaddressvalidation-main.scss",
+            "checkout": "Modules/Main/Sass/_upsaddressvalidation-main.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_upsaddressvalidation-main.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "myaccount": {
+                "files": [
+                    "Modules/Main/Templates/ups_address_validation_options.tpl"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/Templates/ups_address_validation_options.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "myaccount": "Modules/Main/JavaScript/CS.UPSAddressValidation.Main.MyAccount.js",
+            "checkout": "Modules/Main/JavaScript/CS.UPSAddressValidation.Main.Checkout.js"
+        },
+        "application": {
+            "myaccount": {
+                "files": [
+                    "Modules/Main/JavaScript/CS.UPSAddressValidation.Main.MyAccount.js",
+                    "Modules/Main/JavaScript/UPSAddressValidation.Options.View.js",
+                    "Modules/Address/JavaScript/UPSAddressValidation.Address.Edit.View.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/JavaScript/CS.UPSAddressValidation.Main.Checkout.js",
+                    "Modules/Main/JavaScript/UPSAddressValidation.Options.View.js",
+                    "Modules/OrderWizard.Module.Address/JavaScript/UPSAddressValidation.OrderWizard.Module.Address.js",
+                    "Modules/Address/JavaScript/UPSAddressValidation.Address.Edit.View.js"
+                ]
+            }
+        }
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/Main/SuiteScript/CS.UPSAddressValidation.Main.js",
+        "files": [
+            "Modules/Address/SuiteScript/UPSAddressValidation.Address.Model.js",
+            "Modules/Address/SuiteScript/UPSAddressValidation.Address.ServiceController.js",
+            "Modules/Main/SuiteScript/CS.UPSAddressValidation.Main.js",
+            "Modules/Main/SuiteScript/UPSAddressValidation.Address.Validation.js",
+            "Modules/Main/SuiteScript/UPSAddressValidation.Address.Validation.StreetLevel.js",
+            "Modules/Main/SuiteScript/UPSAddressValidation.Model.js"
+        ]
+    },
+    "local_folder": "Workspace/UPSAddressValidation"
+}

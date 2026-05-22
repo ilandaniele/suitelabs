@@ -1,0 +1,27 @@
+{
+    "name": "RemoveYouMayAlsoLike",
+    "fantasyName": "Remove Cart You My Also Like",
+    "vendor": "ACS",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Remove Cart You My Also Like",
+    "skins": [],
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/RemoveYouMayAlsoLike.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/RemoveYouMayAlsoLike.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\RemoveYouMayAlsoLike"
+}

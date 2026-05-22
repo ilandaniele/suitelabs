@@ -1,0 +1,31 @@
+{
+	"name": "CreditCardError",
+	"fantasyName": "Credit Card Error",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"version": "2.0.0",
+	"description": "Makes the credit card error text message configurable",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/CreditCardError/Configuration/CreditCardMessage.json"
+		]
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/CreditCardError/SuiteScript/AwaLabs.CreditCardError.js",
+		"files": [
+			"Modules/CreditCardError/SuiteScript/AwaLabs.CreditCardError.js"
+		]
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/CreditCardError@2.0.0",
+	"activation_id": "11",
+	"extension_id": "10718"
+}

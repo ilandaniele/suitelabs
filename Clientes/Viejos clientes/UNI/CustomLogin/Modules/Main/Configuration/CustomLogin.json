@@ -1,0 +1,52 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "sso",
+        "title": "SSO",
+        "description": "SSO Config",
+        "group": "extensions"
+    },
+    "properties": { 
+        "extensions.sso.enabled": {
+            "group": "extensions",
+            "subtab": "sso",
+            "type": "boolean",
+            "title": "SSO enabled",
+            "description": "Switch to enable/disable SSO function",
+            "default": true
+        },
+        "extensions.sso.url": {
+            "group": "extensions",
+            "subtab": "sso",
+            "type": "string",
+            "title": "SSO URL",
+            "description": "URL for IdP-Initiated SSO Login",
+            "default": ""
+        },
+        "extensions.sso.logintitle": {
+            "group": "extensions",
+            "subtab": "sso",
+            "type": "string",
+            "title": "SSO Login Title",
+            "description": "Title for SSO Section",
+            "default": "UNI Students"
+        },
+        "extensions.sso.loginmessage": {
+            "group": "extensions",
+            "subtab": "sso",
+            "type": "string",
+            "nsType": "textarea",
+            "title": "SSO Login Message",
+            "description": "SSO Login Message",
+            "default": "All current enrolled students can use your UNI ID to login."
+        },
+        "extensions.sso.loginbuttonlabel": {
+            "group": "extensions",
+            "subtab": "sso",
+            "type": "string",
+            "title": "SSO Login Button Label",
+            "description": "SSO login button label",
+            "default": "Sign In With Your UNI ID"
+        }
+    }
+}

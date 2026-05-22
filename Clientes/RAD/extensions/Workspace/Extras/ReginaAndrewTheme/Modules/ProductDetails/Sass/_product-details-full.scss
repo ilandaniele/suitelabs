@@ -1,0 +1,533 @@
+
+
+.product-details-full-main {
+	.product-views-price-lead {
+		@extend .large-price;
+		color: $sc-color-primary;
+	}
+	.product-views-price-old {
+		font-size: $sc-font-size-m;
+	}
+}
+
+.product-details-full-divider {
+
+	/*
+	margin: $sc-margin-lv5 0;
+	height: 1px;
+	background-color: #fff;
+	clear: both;
+	*/
+
+	display: none;
+
+	@media (min-width: $screen-md-min) {
+		display: none;
+	}
+}
+
+.product-details-full-divider-desktop {
+	display: none;
+	@extend .product-details-full-divider;
+	@media (min-width: $screen-md-min) {
+		margin-top: 20px;
+		border: none;
+		display: block;
+	}
+}
+
+.facets-facet-browse,
+.shopping-layout-breadcrumb,
+.product-details-full-main-content {
+	@extend .row;
+	@media (min-width: $screen-lg) {
+		padding:0 120px;
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+.product-details-full-content-header {
+	.global-views-star-rating-empty, .global-views-star-rating-filled {
+		font-size: 20px;
+	}
+	float:none;
+	@extend .col-md-6;
+	@media (min-width: $screen-md-min) {
+		float:right;
+	}
+}
+
+.product-details-full-rating {
+	margin-top: $sc-margin-lv1;
+	margin-bottom: $sc-margin-lv4;
+
+	.global-views-star-rating {
+		float: none;
+	}
+}
+
+.product-details-full-image-gallery-container{
+	margin-bottom: 0;
+	width:100%;
+
+	@media (min-width: $screen-md-min) {
+		margin-bottom: $sc-margin-lv8;
+	}
+
+	.product-details-3d-model {
+		text-align: center;
+		a {
+			background-position: center left;
+			background-size: 30px;
+			background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMwMHB4JyB3aWR0aD0nMzAwcHgnICBmaWxsPSIjMDAwMDAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNjQgNjQiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDY0IDY0IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48cGF0aCBkPSJNNTUuOTU0LDM1LjMzOXYxLjZjMy42NDYsMS45NzksNS42MjUsNC4zMTgsNS42MjUsNi43MDVjMCw1LjE3MS05LjM0Nyw5Ljg3Ny0yMi4yMTcsMTEuMTk0ICAgYy0wLjM4OCwwLjAzOC0wLjY3MiwwLjM4OC0wLjYzNCwwLjc3N2MwLjAzOCwwLjM2OSwwLjM0MSwwLjY0NCwwLjcwMSwwLjY0NGMwLjAyOCwwLDAuMDU3LDAsMC4wNzYtMC4wMDkgICBDNTMuMzQxLDU0LjgzOCw2Myw0OS42NTgsNjMsNDMuNjQ0QzYzLDQwLjU1Nyw2MC41MDksMzcuNjQsNTUuOTU0LDM1LjMzOXoiPjwvcGF0aD48cGF0aCBkPSJNMjkuNjQ3LDUwLjE1Yy0wLjI3Ni0wLjI3Ny0wLjcyNS0wLjI4MS0xLjAwNC0wLjAwNGMtMC4yNzgsMC4yNzctMC4yOCwwLjcyNi0wLjAwNCwxLjAwNWw0LjAxMiw0LjA0NiAgIEMxNy43NjksNTUuNDQ1LDIuNDIsNTAuNDI1LDIuNDIsNDMuNjQ0YzAtMi4zNTgsMS45MDMtNC42NSw1LjQyNi02LjU4MmMwLDAsMCwwLDAtMC4wMDljLTAuMDk1LTAuMjM3LTAuMTQyLTAuNTAyLTAuMTQyLTAuNzU4ICAgdi0wLjc3N0MzLjM2NywzNy43ODIsMSw0MC42MzMsMSw0My42NDRjMCw4LjAxNywxNS44ODksMTMuMjIyLDMxLjYxLDEyLjk3M2wtMy45NzIsNC4wMDZjLTAuMjc2LDAuMjc4LTAuMjc1LDAuNzI4LDAuMDA0LDEuMDA0ICAgYzAuMjc4LDAuMjc1LDAuNzI3LDAuMjc1LDEuMDA0LTAuMDA1bDUuMTkzLTUuMjM3YzAuMjc1LTAuMjc3LDAuMjc1LTAuNzIzLDAtMUwyOS42NDcsNTAuMTV6Ij48L3BhdGg+PHBhdGggZD0iTTE4Ljg0Myw0Ny40NjdjLTAuMDQ5LTAuMDExLTAuMTAxLTAuMDEyLTAuMTQ2LTAuMDMzYzAuMDAxLDAsMC4wMDIsMC4wMDEsMC4wMDIsMC4wMDIgICBDMTguNzQzLDQ3LjQ1NiwxOC43OTUsNDcuNDU3LDE4Ljg0Myw0Ny40Njd6Ij48L3BhdGg+PHBvbHlnb24gcG9pbnRzPSI1Mi4yNjEsMTEuMjM4IDQ0LjM1NCwyLjE2NiAxMS4zOTgsMi4xNjYgMTkuMzA2LDExLjIzOCAgIj48L3BvbHlnb24+PHBhdGggZD0iTTE4LjI3MywxMi4yMTNjLTcuNjg4LTguODIyLTYuMzY3LTcuMzA4LTcuNzI3LTguODY0VjM2LjAzbDcuNzI3LDguODY0VjEyLjIxM3oiPjwvcGF0aD48cGF0aCBkPSJNNTIuMzQ1LDQzLjgzN2wwLjc2OCwwLjg2MnYtMzIuMDRoLTcuOWMwLjEwNCwwLjEyNCwwLjE3NCwwLjI3NywwLjE3NCwwLjQ1MXYxLjkzOGMwLDAuMzkyLTAuMzE4LDAuNzEtMC43MSwwLjcxICAgYy0wLjM5MiwwLTAuNzEtMC4zMTgtMC43MS0wLjcxVjEzLjExYzAtMC4xNzQsMC4wNy0wLjMyOCwwLjE3NC0wLjQ1MUgxOS42OTR2MjMuMTEyYzAuMTI1LTAuMTExLDAuMjg2LTAuMTg0LDAuNDY2LTAuMTg0aDEuODg2ICAgYzAuMzkyLDAsMC43MSwwLjMxOCwwLjcxLDAuNzFzLTAuMzE4LDAuNzEtMC43MSwwLjcxSDIwLjE2Yy0wLjE4LDAtMC4zNDEtMC4wNzMtMC40NjYtMC4xODR2OS4yNTVoMzIuNzQ3bC0xLjE1Ni0xLjI5NiAgIGMtMC4yNjItMC4yOTMtMC4yMzYtMC43NDIsMC4wNTctMS4wMDJDNTEuNjM0LDQzLjUxOCw1Mi4wODMsNDMuNTQzLDUyLjM0NSw0My44Mzd6IE00My45NjcsMTcuOTU1YzAtMC4zOTIsMC4zMTgtMC43MSwwLjcxLTAuNzEgICBjMC4zOTIsMCwwLjcxLDAuMzE4LDAuNzEsMC43MXYxLjkzOGMwLDAuMzkyLTAuMzE4LDAuNzEtMC43MSwwLjcxYy0wLjM5MiwwLTAuNzEtMC4zMTgtMC43MS0wLjcxVjE3Ljk1NXogTTQzLjk2NywyMi44MDEgICBjMC0wLjM5MiwwLjMxOC0wLjcxLDAuNzEtMC43MWMwLjM5MiwwLDAuNzEsMC4zMTgsMC43MSwwLjcxdjEuOTM4YzAsMC4zOTItMC4zMTgsMC43MS0wLjcxLDAuNzFjLTAuMzkyLDAtMC43MS0wLjMxOC0wLjcxLTAuNzEgICBWMjIuODAxeiBNNDMuOTY3LDI3LjY0NmMwLTAuMzkyLDAuMzE4LTAuNzEsMC43MS0wLjcxYzAuMzkyLDAsMC43MSwwLjMxOCwwLjcxLDAuNzF2MS45MzhjMCwwLjM5Mi0wLjMxOCwwLjcxLTAuNzEsMC43MSAgIGMtMC4zOTIsMC0wLjcxLTAuMzE4LTAuNzEtMC43MVYyNy42NDZ6IE00My45NjcsMzIuNDkyYzAtMC4zOTIsMC4zMTgtMC43MSwwLjcxLTAuNzFjMC4zOTIsMCwwLjcxLDAuMzE4LDAuNzEsMC43MXYxLjkzOCAgIGMwLDAuMzkyLTAuMzE4LDAuNzEtMC43MSwwLjcxYy0wLjM5MiwwLTAuNzEtMC4zMTgtMC43MS0wLjcxVjMyLjQ5MnogTTI2Ljc1OSwzNy4wMDdoLTEuODg2Yy0wLjM5MiwwLTAuNzEtMC4zMTgtMC43MS0wLjcxICAgczAuMzE4LTAuNzEsMC43MS0wLjcxaDEuODg2YzAuMzkyLDAsMC43MSwwLjMxOCwwLjcxLDAuNzFTMjcuMTUxLDM3LjAwNywyNi43NTksMzcuMDA3eiBNMzEuNDczLDM3LjAwN2gtMS44ODUgICBjLTAuMzkyLDAtMC43MS0wLjMxOC0wLjcxLTAuNzFzMC4zMTgtMC43MSwwLjcxLTAuNzFoMS44ODVjMC4zOTIsMCwwLjcxLDAuMzE4LDAuNzEsMC43MVMzMS44NjUsMzcuMDA3LDMxLjQ3MywzNy4wMDd6ICAgIE0zNi4xODgsMzcuMDA3aC0xLjg4NmMtMC4zOTIsMC0wLjcxLTAuMzE4LTAuNzEtMC43MXMwLjMxOC0wLjcxLDAuNzEtMC43MWgxLjg4NmMwLjM5MiwwLDAuNzEsMC4zMTgsMC43MSwwLjcxICAgUzM2LjU4LDM3LjAwNywzNi4xODgsMzcuMDA3eiBNNDAuOTAxLDM3LjAwN2gtMS44ODZjLTAuMzkyLDAtMC43MS0wLjMxOC0wLjcxLTAuNzFzMC4zMTgtMC43MSwwLjcxLTAuNzFoMS44ODYgICBjMC4zOTIsMCwwLjcxLDAuMzE4LDAuNzEsMC43MVM0MS4yOTQsMzcuMDA3LDQwLjkwMSwzNy4wMDd6IE00Ny4xMzEsMzkuMDUxYy0wLjI5MSwwLjI2LTAuNzQyLDAuMjM1LTEuMDAzLTAuMDU4bC0xLjI4OS0xLjQ0NyAgIGMtMC4xMzctMC4xNTQtMC4xOTEtMC4zNDktMC4xNzMtMC41MzlINDMuNzNjLTAuMzkyLDAtMC43MS0wLjMxOC0wLjcxLTAuNzFzMC4zMTgtMC43MSwwLjcxLTAuNzFoMC45NDcgICBjMC4zOTIsMCwwLjcxLDAuMzE4LDAuNzEsMC43MWMwLDAuMDI1LTAuMDEyLDAuMDQ3LTAuMDE1LDAuMDcyYzAuMTk0LDAuMDAxLDAuMzg3LDAuMDc2LDAuNTI2LDAuMjMybDEuMjg5LDEuNDQ3ICAgQzQ3LjQ1LDM4LjM0MSw0Ny40MjQsMzguNzg5LDQ3LjEzMSwzOS4wNTF6IE01MC4zNTQsNDIuNjY5Yy0wLjI5MSwwLjI2LTAuNzQyLDAuMjM1LTEuMDAzLTAuMDU4bC0xLjI4OS0xLjQ0NyAgIGMtMC4yNjItMC4yOTMtMC4yMzYtMC43NDIsMC4wNTctMS4wMDNjMC4yOTEtMC4yNjEsMC43NDMtMC4yMzUsMS4wMDMsMC4wNThsMS4yODksMS40NDcgICBDNTAuNjczLDQxLjk1OSw1MC42NDcsNDIuNDA3LDUwLjM1NCw0Mi42Njl6Ij48L3BhdGg+PC9nPjwvc3ZnPg==");
+			background-repeat: no-repeat;
+			padding-left: 38px;
+			height: 30px;
+			display: inline-block;
+			font-weight: 500;
+			margin-bottom: 20px;
+			text-transform: uppercase;
+		}
+	}
+
+	@media (min-width: $screen-md) {
+		.product-details-3d-model {
+			margin-left: 15%;
+			margin-top: 2em;
+		}
+	}
+
+
+	.modal{
+		.modal-header .close{
+			background-color: #fff;
+			float: right;
+			width: 30px;
+			height: 30px;
+			display: inline-block;
+		}
+		.modal-footer{
+			text-align: left;
+		}
+	}
+}
+
+.product-details-full-gallery-prev-icon, .product-details-full-gallery-next-icon{
+	position: absolute;
+	top: 40%;
+	width: $sc-target-size-mobile;
+	height: $sc-target-size-mobile;
+	font-size: 50px;
+	color:#c5d7e0;
+	text-align: center;
+	line-height: 0.8;
+	@extend .fa;
+}
+.product-details-full-gallery-prev-icon:focus, .product-details-full-gallery-next-icon:focus {
+	outline:0;
+	-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+	box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+}
+
+.product-details-full-gallery-prev-icon{
+	left: 30px;
+	@extend %fa-angle-left;
+}
+
+.product-details-full-gallery-next-icon{
+	right:10px;
+	@extend %fa-angle-right;
+}
+
+.product-details-full-carousel-next{
+	@extend .button-tertiary;
+	@extend .button-small;
+	margin-left:$sc-margin-lv2;
+	cursor:pointer;
+	cursor:hand;
+	position:absolute;
+	right:0px;
+	top:50%;
+}
+
+.product-details-full-carousel-prev{
+	@extend .button-tertiary;
+	@extend .button-small;
+	cursor:pointer;
+	cursor:hand;
+	position:absolute;
+	left:0px;
+	top:50%;
+}
+.product-details-full-carousel-next.disabled,
+.product-details-full-carousel-prev.disabled {
+	display: none;
+}
+.control-text{
+	display:none;
+}
+
+.product-details-full-price {
+	margin-top:$sc-margin-lv2;
+}
+
+.product-details-full-price .item-views-price-lead {
+	@extend .large-price;
+}
+
+.product-details-full-sku-container {
+	margin-top: $sc-margin-lv6;
+	margin-bottom: $sc-margin-lv1;
+}
+
+.product-details-full-actions {
+	margin-bottom: $sc-margin-lv2;
+	clear: both;
+	position: relative;
+}
+
+
+.product-details-full-add-to-cart-help{
+	@extend .message-info;
+	margin-top: $sc-margin-lv3;
+}
+
+.product-details-full-add-to-cart-help-icon{
+	@extend .fa;
+	@extend %fa-info-circle;
+	margin-right: $sc-margin-lv1;
+}
+
+.product-details-full-add-to-wishlist {
+	@extend .col-sm-6;
+	position: static;
+	padding-left: $sc-padding-lv2;
+	padding-right: $sc-padding-lv2;
+}
+
+
+
+.product-details-full-social-share {
+	// @extend .message-box;
+	// @extend .message-box-info;
+	margin-bottom:$sc-margin-lv4;
+}
+
+.product-details-full-price-message {
+    @extend .message;
+ }
+
+.product-details-full-price-msg-description {
+	@extend .message-info;
+	margin-top: $sc-margin-lv2;
+    margin-bottom: $sc-margin-lv2;
+}
+
+.product-details-full-price-login-to-see-price {
+	font-weight: normal;
+}
+
+
+@media (min-width: $screen-md-min) {
+
+	.product-details-full-image-gallery-container {
+		float: left;
+	}
+}
+
+.pdp-item-more-info-content {
+	background: $sc-color-theme-background;
+
+	@media (min-width: $screen-sm-min) {
+		background: transparent;
+		overflow: auto;
+	}
+}
+
+.product-details-full-action {
+	display: none;
+
+	@media (min-width: $screen-sm-min) {
+		display: block;
+	}
+}
+.product-details-full-main-bottom-banner {
+	margin-bottom: $sc-margin-lv4;
+}
+
+.product-details-full-rating-header {
+	.global-views-star-rating-area {
+		margin-right: $sc-margin-lv1;
+	}
+	.global-views-star-rating i {
+		font-size: 20px;
+	}
+}
+
+
+.product-details-full-main-content-left {
+	@extend .col-xs-12;
+	@extend .col-md-6;
+	float:left;
+	min-height:1px;
+	padding-left: 0;
+}
+
+.product-details-full-main-content-right {
+	@extend .col-xs-12;
+	@extend .col-md-6;
+	min-height:1px;
+	float:left;
+}
+
+//awalabs
+
+h1.product-details-full-content-header-title{
+	margin-bottom: 10px;
+}
+//awalabs
+.product-details-full{
+	width: 100%;
+	padding:0 30px;
+	@media (max-width: $screen-sm) {
+		padding:0 15px;
+	}
+}
+.product-details-full-main{
+	@media (min-width: $screen-md) {
+		margin-top:15px;
+	}
+}
+.product-details-full-content-related-items{
+	@extend .col-xs-12;
+	@extend .col-md-2;
+	min-height:1px;
+	float:right;
+	clear:right;
+	@media (max-width: $screen-md) {
+		margin-top: 10px;
+	}
+}
+.product-details-full-main{
+	textarea{
+		width: 100%;
+		min-height: 50px;
+		border-color: #ccc;
+	}
+	.item-details-description{
+		margin-bottom: 15px;
+		line-height: 1.4;
+		font-size: 15px;
+	}
+	.item-details-unavailable{
+		p{
+			color: #fff;
+			background-color: #6d7771;
+			padding: 12px;
+			margin-bottom: 20px;
+			display: inline-block;
+			a {
+				color: #fff;
+				font-weight: 500;
+			}
+		}
+	}
+}
+.product-views-option-textarea-label,
+.product-details-quantity-options-title{
+	font-weight: 300;
+}
+.product-details-full-main{
+	.product-details-quantity-options-title-qv{
+		display:none;
+	}
+}
+.product-lists-single{
+	text-align: center;
+	button{
+		i.pdp-favorites-unselected-icon{
+			@extend .fa;
+			@extend %fa-heart;
+			font-size: 20px;
+			line-height: 1;
+		}
+	}
+}
+.product-details-full-actions .favorites-wrap{
+	@extend .col-xs-2;
+	.product-lists-single{
+		width: 100%;
+	}
+}
+.product-details-full-main .product-stock-childview .jewelry-warning{
+	display: none;
+}
+.product-details-full-content .foursixty{
+	margin-bottom: 25px;
+}
+.product-details-full-content .foursixty-container{
+	margin: 0 auto;
+	margin-bottom: 15px;
+	text-align: center;
+	@media (min-width: $screen-md) {
+		max-width: 1140px !important;
+	}
+	.fs-entry-container{
+		padding-top: 25% !important;
+		@media (min-width: $screen-md) {
+			width: 20% !important;
+			height: 300px !important;
+		}
+	}
+}
+.pdp-right-bottom-container{
+	display: flex;
+	flex-wrap: nowrap;
+	column-gap: 10px;
+	justify-content: center;
+	text-align: center;
+	
+	@media (min-width: $screen-sm) {
+		width: fit-content;
+	}
+
+	.pdp-action-element {
+		flex: 1 1 0;
+		color: #5a5959;
+	}
+}
+.trade-user{
+	.product-views-option-textarea{
+		display: none;
+	}
+}
+.product-options-container{
+	.product-views-option-textarea{
+		display:none;
+	}
+	&.trade-user{
+		.product-views-option-textarea{
+			display:block;
+		}
+	}
+}
+
+.pdp-custom-fields-vectary-3d-model {
+	display: inline-block;
+	margin: 0 2em;
+
+	@media (max-width: $screen-sm) {
+		margin: 0 1em;
+	}
+
+        &-container {
+		text-align: center;
+	}
+
+	&-heading {
+		font-weight: bold;
+		display: block;
+		margin: 0 auto 8px auto;
+	}
+
+	span {
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		margin: 0 4px 8px 0;
+		box-sizing: border-box;
+		display: inline-block;
+		line-height: 24px;
+		border: 0 none;
+		position: relative;
+
+		&[data-original-title='Black'] {
+			background: #212228;
+		}
+		&[data-original-title='Ebony'] {
+			background: #1b1d1c;
+		}
+		&[data-original-title='Gold'] {
+			background: #d7bb79;
+		}
+		&[data-original-title='Grey'] {
+			background: #888c91;
+		}
+		&[data-original-title='Indigo'] {
+			background: #151e2f;
+		}
+		&[data-original-title='Natural'] {
+			background: #a38c71;
+		}
+		&[data-original-title='Natural Brass'] {
+			background: #c9ab63;
+		}
+		&[data-original-title='Oil Rubbed Bronze'] {
+			background: #17130e;
+		}
+		&[data-original-title='Polished Nickel'] {
+			background: #bfbfbf;
+		}
+		&[data-original-title='Silver'] {
+			background: #cfcec5;
+		}
+		&[data-original-title='Steel'] {
+			background: #171518;
+		}
+		&[data-original-title='White'] {
+			background: #e3e3e5;
+		}
+		&[data-original-title='Brown'] {
+			background: #654726;
+		}
+		&[data-original-title='White and Polished Nickel'] {
+			background: #bfbfbf;
+		}
+		&[data-original-title='Ivory'] {
+			background: #d1c4bb;
+		}
+		&[data-original-title='Blackened Brass and Natural Brass'] {
+			background: #212228;
+		}
+		&[data-original-title='White and Natural Brass'] {
+			background: #e3e3e5;
+		}
+		&[data-original-title='Antique Gold Leaf'] {
+			background: #e0bb77;
+		}
+		&[data-original-title='Sea Salt'] {
+			background: #e3e3e5;
+		}
+		&[data-original-title='Overcast'] {
+			background: #9f9fa4;
+		}
+		&[data-original-title='Oatmeal'] {
+			background: #b5a698;
+		}
+		&[data-original-title='Ticking Driftwood'] {
+			background: #cac6c0;
+		}
+		&[data-original-title='Peacock'] {
+			background: #06518b;
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&.active:before,
+		&:hover:before {
+			height: 20px;
+			width: 20px;
+			border-radius: 50%;
+			top: 3px;
+			left: 3px;
+			content: ' ';
+			display: inline-block;
+			border: solid 2px #fff;
+			position: absolute;
+			z-index: 10;
+		}
+	}
+}

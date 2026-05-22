@@ -1,0 +1,204 @@
+
+
+//awalabs
+
+.contact-us-form .contact-us-form-general-information{
+	text-align: center;
+	margin-bottom: 50px;
+	padding: 0 15px;
+}
+
+.contact-us-form .contact-us-form-general-information h2 a{
+	text-transform: uppercase;
+	color: $sc-color-secondary;
+	font-size: 24px;
+	text-align: center;
+	margin-top: 0;
+	line-height: 32.4px;
+}
+.contact-us-form .contact-us-form-general-information h2{
+	margin-bottom: 15px;
+}
+.contact-us-form .contact-us-form-general-information p{
+	line-height: 15px;
+}
+.contact-us-form .contact-us-form-general-information p strong{
+	font-weight: 500;
+}
+.contact-us-form{
+	@media (min-width: $screen-sm) {
+		padding:0 30px;
+		margin-bottom: 50px !important;
+	}
+}
+.contact-us-form .contact-us-form-input-field-container{
+	margin-bottom: 25px;
+	input{
+		&::placeholder{
+			color: #8c8c8c !important;
+		}
+	}
+}
+.general-black-header{
+	background: black;
+	width: 100%;
+	padding: 25px 25px;
+	text-align:center;
+	margin-bottom: 25px;
+	@media (min-width: $screen-sm) {
+		padding: 35px 120px;
+	}
+}
+.cms-landing-page-row p.description{
+	color: white;
+	font-weight: 300;
+	font-size: 14px;
+	margin-top: 10px;
+}
+.cms-landing-page-row p.subtitle{
+	color: white;
+	font-weight: 300;
+	font-size: 14px;
+	text-transform: uppercase;
+	margin-top: 0;
+}
+
+.cms-landing-page-row h1.title{
+	color: white;
+	text-transform: capitalize;
+	font-weight: 400;
+	font-size: 28px;
+	letter-spacing: 1.5px;
+	font-family: $sc-font-family;
+	@media (min-width: $screen-sm) {
+		font-size: 42px;
+	}
+}
+.one-column-section,
+.two-column-section,
+.three-column-section,
+.four-column-section{
+	@extend .container;
+	text-align: center;
+	img{
+		width: 100%;
+	}
+	a{
+		margin: 10px 0;
+	}
+	.column{
+		margin-bottom: 30px;
+	}
+}
+.one-column-section-container,
+.two-column-section-container,
+.three-column-section-container,
+.four-column-section-container{
+	@extend .row;
+}
+.one-column-section .column{
+	@extend .col-md-12;
+}
+.two-column-section .column{
+	@extend .col-md-6;
+}
+.three-column-section .column{
+	@extend .col-md-4;
+}
+.four-column-section .column{
+	@extend .col-md-3;
+}
+.cms-landing-page-row .text-block{
+	@extend .container;
+	margin: 40px auto;
+}
+.cms-landing-page-row .main-link{
+	margin: 20px auto 10px;
+	display: block;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 400;
+}
+.contact-us-wrapper{
+	@extend .col-lg-5;
+	@extend .col-md-6;
+	@extend .col-sm-10;
+	@extend .col-xs-12;
+	box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+	border: 1px solid rgba(173,152,110,0.3);
+	padding: 25px 70px 50px;
+	float:none;
+	margin:0 auto;
+	margin-bottom: 80px;
+	.case-new{
+		margin: 0 !important;
+	}
+	form{
+		max-width: 300px;
+		margin:  auto;
+	}
+	h2.case-new-title{
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 22px;
+	}
+	label{
+		font-weight: 300;
+		font-size: .87rem;
+		letter-spacing: 0;
+	}
+	button{
+		padding: 20px 25px;
+		font-size: 14px;
+		font-weight: 700;
+		min-width: 180px;
+	}
+	select{
+		height: 39px;
+	}
+	input[type="text"]{
+		min-height: 39px;
+	}
+	.submit-button-container{
+		text-align: center;
+	}
+	span.case-new-form-required{
+		color: #000;
+	}
+	.case-new-required,
+	.contact-us-form-required-field-reference{
+		display: none;
+	}
+	@media (max-width: 480px) {
+		padding: 20px 0 40px;
+	}
+}
+.contactusloggedin{
+	padding: 0 15px;
+}
+.contactusloggedin-public-placeholder-path{
+	form{
+		div{
+			&:last-of-type div{
+				text-align: center;
+			}
+		}
+	}
+}
+.contact-us-wrapper form{
+	.fileupload-form-controls-container{
+		.browse-button{
+			font-size: 14px;
+			font-weight: 400;
+		}
+	}
+	#file_upload{
+		margin-bottom: 40px;
+	}
+}
+.contactusloggedin-public-placeholder-path .focused-form-view{
+	button.contact-us-form-primary-submit-button{
+		margin: 0 auto;
+		display: block;
+	}
+}

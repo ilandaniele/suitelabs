@@ -1,0 +1,16 @@
+{
+    "name": "bundler",
+    "version": "1.0.0",
+    "description": "NS bundler",
+    "scripts": {
+        "test": "jest --config bundler.jest.config.js bundlerTest.ts",
+        "postinstall": "tsc"
+    },
+    "main": "dist/index.js",
+    "author": "",
+    "dependencies": {
+        "typescript": "4.3.2",
+        "through2": "3.0.1",
+        "vinyl": "2.2.1"
+    }
+}

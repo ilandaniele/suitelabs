@@ -1,0 +1,11 @@
+define('fileupload_image_thumbnail.tpl', ['Handlebars','Handlebars.CompilerNameLookup'], function (Handlebars, compilerNameLookup){ var t = {"compiler":[8,">= 4.3.0"],"main":function(container,depth0,helpers,partials,data) {
+    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=container.hooks.helperMissing, alias3=container.escapeExpression, alias4="function";
+
+  return "<div class=\"fileupload-fileupload-remove\">\n    <div title=\""
+    + alias3((compilerNameLookup(helpers,"translate")||(depth0 && compilerNameLookup(depth0,"translate"))||alias2).call(alias1,"Remove",{"name":"translate","hash":{},"data":data,"loc":{"start":{"line":2,"column":16},"end":{"line":2,"column":38}}}))
+    + "\" data-id=\""
+    + alias3(((helper = (helper = compilerNameLookup(helpers,"fileID") || (depth0 != null ? compilerNameLookup(depth0,"fileID") : depth0)) != null ? helper : alias2),(typeof helper === alias4 ? helper.call(alias1,{"name":"fileID","hash":{},"data":data,"loc":{"start":{"line":2,"column":49},"end":{"line":2,"column":61}}}) : helper)))
+    + "\" >\n        <span>"
+    + alias3(((helper = (helper = compilerNameLookup(helpers,"name") || (depth0 != null ? compilerNameLookup(depth0,"name") : depth0)) != null ? helper : alias2),(typeof helper === alias4 ? helper.call(alias1,{"name":"name","hash":{},"data":data,"loc":{"start":{"line":3,"column":14},"end":{"line":3,"column":22}}}) : helper)))
+    + "</span><i data-action=\"fileupload-file-remove-file\" class=\"fileupload-fileupload-remove-icon\"></i>\n    </div>\n</div>\n\n";
+},"useData":true}; var main = t.main; t.main = function(){ arguments[1] = arguments[1] || {}; var ctx = arguments[1]; ctx._extension_path = 'http://localhost:7777/tmp/extensions/AwaLabs/AwaFileUpload/2.1.0/'; ctx._theme_path = 'http://localhost:7777/tmp/extensions/AwaLabs/ReginaAndrewTheme/23.2.2/'; return main.apply(this, arguments); }; var template = Handlebars.template(t); template.Name = 'fileupload_image_thumbnail'; return template;});

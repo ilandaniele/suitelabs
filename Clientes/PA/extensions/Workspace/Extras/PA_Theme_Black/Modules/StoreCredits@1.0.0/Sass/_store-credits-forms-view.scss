@@ -1,0 +1,31 @@
+.rma-form-sub-form-container {
+	.store-credits-message-success {
+		.form-group {
+			.col-form-label {
+				line-height: 20px;
+				height: 42px;
+				text-align: right;
+				background: #ddd;
+				padding: 10px 10px;
+				font-weight: 600;
+			}
+			.col-form-label-value {
+				line-height: 20px;
+				height: 42px;
+				text-align: left;
+				background: #eee;
+				padding: 10px 10px;
+			}
+			
+			@media (max-width: $screen-sm-max) {
+				.col-form-label-code{
+					height: 60px;
+				}
+				.col-form-label-value-code{
+					height: 60px;
+					padding: 19px 10px;
+				}
+			}
+		}
+	}
+}

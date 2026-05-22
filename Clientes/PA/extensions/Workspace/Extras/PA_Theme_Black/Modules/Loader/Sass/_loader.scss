@@ -1,0 +1,170 @@
+
+.cssload-container {
+	position: fixed;
+	width: 100%;
+	/*height: 45px;*/
+	text-align: center;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 1041;
+
+	&.order-processing {
+		background-color: rgba(0, 0, 0, 0.5);
+
+		.loading-icon-container {
+			background-color: #fff;
+			box-shadow: 0 6px 3px 3px rgba(0, 0, 0, 0.2);
+			margin: 0 auto;
+			padding: 1rem;
+			border-radius: 10px;
+			width: 95%;
+			max-width: 768px;
+
+			img {
+				width: 35%;
+
+				@media screen and (min-width: 601px) and (max-width: 767px) {
+					width: 45%;
+				}
+
+				@media screen and (max-width: 600px) {
+					width: 60%;
+				}
+			}
+
+			p {
+				font-size: 1.25rem;
+				font-weight: bold;
+
+				@media screen and (max-width: 400px) {
+					font-size: 0.9rem;
+				}
+			}
+
+			.cssload-speeding-wheel {
+				border-top-color: #e0e0e0;
+				border-bottom-color: #e0e0e0;
+			}
+		}
+	}
+
+	.loading-icon-container {
+		position: fixed;
+		top: 40%;
+		left: 0;
+		right: 0;
+	}
+}
+
+.cssload-speeding-wheel {
+	width: 110px;
+    height: 95px;
+	margin: 0 auto;
+	z-index: 100000;
+	background-image: url(getThemeAssetsPath("img/loading-icon-message4-animate-css.svg"));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 125px;
+    background-color: transparent;
+    /*border-radius: 50%;
+    box-shadow: 0 0 10px 0 #555;*/
+}
+/*.cssload-speeding-wheel {
+	width: 45px;
+	height: 45px;
+	margin: 0 auto;
+	z-index: 100000;
+	border: 3px solid $pa-dark-gray;
+	border-radius: 50%;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	animation: cssload-spin 1175ms infinite linear;
+	-o-animation: cssload-spin 1175ms infinite linear;
+	-ms-animation: cssload-spin 1175ms infinite linear;
+	-webkit-animation: cssload-spin 1175ms infinite linear;
+	-moz-animation: cssload-spin 1175ms infinite linear;
+}*/
+
+@keyframes cssload-spin {
+	100% {
+		transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@-o-keyframes cssload-spin {
+	100% {
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@-ms-keyframes cssload-spin {
+	100% {
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes cssload-spin {
+	100% {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@-moz-keyframes cssload-spin {
+	100% {
+		-moz-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+.cssload-container.order-processing {
+	.loading-icon-container{
+		border: 1px solid #414141;
+		
+		&::before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 50px;
+			z-index: -1;
+			background: #414141;
+			border-radius: 7px;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+		& > img{
+			margin: -7px 0 5px 0;
+		}
+		p.processing-order-message{
+			margin-top: $sc-margin-lv3;
+		}
+		@media (min-width: $screen-sm-min){
+			&::before{
+				height: 75px;
+			}
+			& > img{
+				margin: 0 0 10px 0;
+			}
+		}
+		@media (max-width: $screen-xs-max) and (orientation: landscape){
+			&::before{
+				height: 75px;
+			}
+			& > img{
+				margin: -5px 0 10px 0;
+			}
+		}
+		@media (min-width: 400px) and (max-width: $screen-xs-max) and (orientation: portrait){
+			& > img{
+				margin: -10px 0 0px 0;
+			}
+		}
+	}
+}

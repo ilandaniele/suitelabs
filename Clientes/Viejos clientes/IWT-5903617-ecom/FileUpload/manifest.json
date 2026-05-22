@@ -1,0 +1,123 @@
+{
+    "name": "FileUpload",
+    "fantasyName": "File Upload",
+    "vendor": "NSeComm",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "version": "1.0.2",
+    "description": "The extension enable upload a file from the PDP.",
+    "assets": {
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/FileUpload.json"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Cart/Templates/file_upload_cart.tpl",
+                    "Modules/PDP/Templates/file_upload_pdp.tpl"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Cart/Templates/file_upload_cart.tpl",
+                    "Modules/PDP/Templates/file_upload_pdp.tpl"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Cart/Templates/file_upload_cart.tpl",
+                    "Modules/PDP/Templates/file_upload_pdp.tpl"
+                ]
+            }
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_file-upload-main.scss",
+            "checkout": "Modules/Main/Sass/_file-upload-main.scss",
+            "myaccount": "Modules/Main/Sass/_file-upload-main.scss"
+        },
+        "files": [
+            "Modules/Cart/Sass/_file-upload-cart.scss",
+            "Modules/Cart/Sass/_file-upload-mini-cart.scss",
+            "Modules/Main/Sass/_file-upload-main.scss",
+            "Modules/PDP/Sass/_file-upload-pdp.scss"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Shopping/JavaScript/NSeComm.FileUpload.Shopping.js",
+            "checkout": "Modules/Checkout/JavaScript/NSeComm.FileUpload.Checkout.js",
+            "myaccount": "Modules/MyAccount/JavaScript/NSeComm.FileUpload.MyAccount.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Cart/JavaScript/FileUpload.Cart.View.js",
+                    "Modules/Cart/JavaScript/NSeComm.FileUpload.Cart.js",
+                    "Modules/Checkout/JavaScript/NSeComm.FileUpload.Checkout.js",
+                    "Modules/PDP/JavaScript/FileUpload.PDP.View.js",
+                    "Modules/PDP/JavaScript/NSeComm.FileUpload.PDP.js",
+                    "Modules/MyAccount/JavaScript/NSeComm.FileUpload.MyAccount.js",
+                    "Modules/Shopping/JavaScript/NSeComm.FileUpload.Shopping.js",
+                    "Modules/Common/JavaScript/NSeComm.FileUpload.Common.js",
+                    "Modules/Main/SuiteScript2/FileUpload.Model.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Cart/JavaScript/FileUpload.Cart.View.js",
+                    "Modules/Cart/JavaScript/NSeComm.FileUpload.Cart.js",
+                    "Modules/Checkout/JavaScript/NSeComm.FileUpload.Checkout.js",
+                    "Modules/PDP/JavaScript/FileUpload.PDP.View.js",
+                    "Modules/PDP/JavaScript/NSeComm.FileUpload.PDP.js",
+                    "Modules/MyAccount/JavaScript/NSeComm.FileUpload.MyAccount.js",
+                    "Modules/Shopping/JavaScript/NSeComm.FileUpload.Shopping.js",
+                    "Modules/Common/JavaScript/NSeComm.FileUpload.Common.js",
+                    "Modules/Main/SuiteScript2/FileUpload.Model.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Cart/JavaScript/FileUpload.Cart.View.js",
+                    "Modules/Cart/JavaScript/NSeComm.FileUpload.Cart.js",
+                    "Modules/Checkout/JavaScript/NSeComm.FileUpload.Checkout.js",
+                    "Modules/PDP/JavaScript/FileUpload.PDP.View.js",
+                    "Modules/PDP/JavaScript/NSeComm.FileUpload.PDP.js",
+                    "Modules/MyAccount/JavaScript/NSeComm.FileUpload.MyAccount.js",
+                    "Modules/Shopping/JavaScript/NSeComm.FileUpload.Shopping.js",
+                    "Modules/Common/JavaScript/NSeComm.FileUpload.Common.js",
+                    "Modules/Main/SuiteScript2/FileUpload.Model.js"
+                ]
+            }
+        }
+    },
+    "ssp-libraries": {
+        "entry_point": "Modules/Main/SuiteScript/NSeComm.FileUpload.Main.js",
+        "files": [
+            "Modules/Main/SuiteScript/FileUpload.LiveOrder.Model.js",
+            "Modules/Main/SuiteScript/NSeComm.FileUpload.Main.js",
+            "Modules/Main/SuiteScript/FileUpload.Model.js",
+            "Modules/MyAccount/SuiteScript/FileUpload.OrderHistory.Model.js",
+            "Modules/MyAccount/SuiteScript/FileUpload.ReorderItems.Model.js",
+            "Modules/MyAccount/SuiteScript/NSeComm.FileUpload.MyAccount.js"
+        ]
+    },
+    "suitescript2": {
+        "files": [
+            "Modules/Main/SuiteScript2/FileUpload.Service.ss",
+            "Modules/Main/SuiteScript2/FileUpload.Model.js"
+        ]
+    }
+}

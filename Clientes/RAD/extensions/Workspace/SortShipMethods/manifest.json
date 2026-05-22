@@ -1,0 +1,25 @@
+{
+	"name": "SortShipMethods",
+	"fantasyName": "Sort Shiping Methods",
+	"vendor": "ACS",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"version": "1.0.0",
+	"description": "Sort Ship methods by Price",
+	"javascript": {
+		"entry_points": {
+			"checkout": "Modules/SortShipMethods/JavaScript/SortShipMethods.js"
+		},
+		"application": {
+			"checkout": {
+				"files": [
+					"Modules/SortShipMethods/JavaScript/SortShipMethods.js",
+					"Modules/SortShipMethods/JavaScript/SortShippingMethods.FixProperty.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/ACS/SortShipMethods@1.0.0",
+	"activation_id": "11",
+	"extension_id": "5602"
+}

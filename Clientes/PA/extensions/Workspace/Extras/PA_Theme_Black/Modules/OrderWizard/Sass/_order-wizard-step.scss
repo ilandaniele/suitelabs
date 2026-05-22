@@ -1,0 +1,104 @@
+.order-wizard-step-header{
+	@extend .wizard-step-header;
+}
+
+.order-wizard-step-review-wrapper,
+.order-wizard-step-content-wrapper{
+	@extend .row;
+}
+
+.order-wizard-step-review-main,
+.order-wizard-step-content-main{
+	@extend .col-xs-12;
+	@extend .col-sm-7;
+	@extend .col-md-8;
+}
+
+.order-wizard-step-review-secondary,
+.order-wizard-step-content-secondary{
+	@extend .col-xs-12;
+	@extend .col-sm-5;
+	@extend .col-md-4;
+	float: right;
+}
+
+.order-wizard-step-content-secondary{
+	margin-bottom: $sc-margin-lv4;
+}
+
+.order-wizard-step-actions{
+	@extend .col-xs-12;
+	@extend .col-sm-7;
+	@extend .col-md-8;
+}
+
+.order-wizard-step-message{
+	@extend .wizard-step-message;
+
+	margin-bottom: $sc-margin-lv6 !important;
+}
+
+.order-wizard-step-button-container{
+	@extend .wizard-step-button-container !optional;
+}
+
+.order-wizard-step-button-continue {
+	@extend .wizard-step-button-continue;
+	margin-bottom: $sc-margin-lv2;
+}
+
+.order-wizard-step-button-back{
+	@extend .wizard-step-button-back;
+}
+
+.order-wizard-step-skip-login-register {
+		margin-left: 15px;
+}
+
+.order-wizard-restriction-message-container{
+	padding: 30px 30px 15px 30px;
+    margin-bottom: 20px;
+    background: $pa-danger;
+    border: 1px solid $pa-danger-border;
+	display: block;
+	
+	h4{
+		margin-bottom: 10px;;
+		color: $pa-danger-text;
+		font-size: $sc-font-size-xl;
+	}
+	#restriction-message-for-sales-order{
+		h5{
+			margin-bottom: 1rem;
+		}
+	}
+	.order-wizard-restriction-shipping-message-title{
+		color: $pa-danger-text;
+		text-transform: uppercase;
+		font-size: $sc-font-size-m;
+	}
+	a{
+		color: #c12d2b;
+	}
+}
+.order-wizard-restriction-message-wrapper{
+	@extend .col-md-8;
+	@extend .col-sm-12;
+	clear:both;
+	&.advanced-checkout{		
+		@media (min-width: $screen-lg-min) {
+    		clear: none;
+    	}
+		@include ipadPortrait {
+			clear: none;
+		}
+	}
+}
+
+.splitting .order-wizard-step-content-main,
+.splitting .order-wizard-step-actions,
+.splitting .order-wizard-promocodeform,
+.splitting .order-wizard-cartitems-module-ship{
+	opacity: 0.5;
+	pointer-events: none;
+}

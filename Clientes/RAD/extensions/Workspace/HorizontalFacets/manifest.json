@@ -1,0 +1,68 @@
+{
+	"name": "HorizontalFacets",
+	"fantasyName": "Horizontal Facets",
+	"vendor": "SuiteLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "1.0.0",
+	"description": "This extension provides support for the horizontal facets design on the theme",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/Main/Configuration/HorizontalFacets.json"
+		]
+	},
+	"templates": {
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Main/Templates/facets_horizontal_view.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/Main/Sass/_horizontal-facets.scss"
+		},
+		"files": [
+			"Modules/Main/Sass/_horizontal-facets.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/Main/JavaScript/SuiteLabs.HorizontalFacets.Main.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Main/JavaScript/SuiteLabs.HorizontalFacets.Main.js",
+					"Modules/Main/JavaScript/HorizontalFacets.Facets.Browse.View.js",
+					"Modules/Main/JavaScript/HorizontalFacets.Facets.Horizontal.View.js",
+					"Modules/Main/JavaScript/HorizontalFacets.Facets.FacetedNavigation.View.js",
+					"Modules/Main/JavaScript/HorizontalFacets.Facets.FacetedNavigationItem.View.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/SuiteLabs/HorizontalFacets@1.0.0",
+	"activation_id": "11",
+	"extension_id": "17401"
+}

@@ -1,0 +1,63 @@
+{
+    "name": "PacejetIntegrationWithZipcode",
+    "fantasyName": "Pacejet Integration with Zipcode",
+    "vendor": "NSeComm",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "version": "1.0.1",
+    "description": "Adds integration with PaceJet to obtain estimated delivery date of products from a given zip code",
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        }
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/pacejetintegrationwithzipcode_pacejet_rates.tpl",
+                    "Modules/Main/Templates/pacejetintegrationwithzipcode_zip_code.tpl"
+                ]
+            }
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_pacejetintegrationwithzipcode-main.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_pacejetintegrationwithzipcode-main.scss"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/NSeComm.PacejetIntegrationWithZipcode.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/Pacejet.Model.js",
+                    "Modules/Main/JavaScript/NSeComm.PacejetIntegrationWithZipcode.js",
+                    "Modules/Main/JavaScript/ZipCode.View.js",
+                    "Modules/Main/JavaScript/Pacejet.View.js",
+                    "Modules/Main/SuiteScript2/Pacejet.Model.js",
+                    "Modules/Main/SuiteScript2/moment.min.js"
+                ]
+            }
+        }
+    },
+    "suitescript2": {
+        "files": [
+            "Modules/Main/SuiteScript2/Pacejet.Service.ss",
+            "Modules/Main/SuiteScript2/Pacejet.Model.js",
+            "Modules/Main/SuiteScript2/moment.min.js"
+        ]
+    }
+}

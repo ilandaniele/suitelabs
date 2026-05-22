@@ -1,0 +1,149 @@
+#wizard-step-content-right.sticky {
+	@media (min-width: $screen-sm-min) {
+		position: fixed;
+		top: 90px; // padding from layout
+		z-index: 100;
+	}
+}
+
+.checkout-layout-header {
+	@media (min-width: $screen-sm-min) {
+		margin-bottom: $sc-margin-lv8;
+	}
+
+	& .header-simplified-header {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 100;
+	}
+}
+
+.order-wizard-cartitems-module-ship-accordion-container {
+	position: relative;
+}
+
+.order-wizard-cartitems-module-ship-edit-cart-link-container {
+	@media (min-width: $screen-sm-min) {
+		position: absolute;
+		right: 0;
+		top: 0;
+		border-bottom: 0;
+	}
+}
+
+.order-wizard-cartitems-module-ship-dropdown {
+	border-bottom: 1px solid $sc-color-theme-border;
+}
+
+.order-wizard-cartitems-module-ship-products-scroll {
+	@media (min-width: $screen-sm-min) {
+		max-height: 270px;
+	}
+}
+
+#wizard-step-content-right .order-wizard-submitbutton-module-button {
+	display: none;
+
+	@media (min-width: $screen-sm-min) {
+		display: inline-block;
+	}
+}
+
+.order-wizard-steps-step-name {
+	width: 100%;
+	display: block;
+}
+
+.order-wizard-steps-step.present,
+.order-wizard-steps-step.present .order-wizard-steps-step-name {
+	pointer-events: auto;
+}
+
+.order-wizard-step-actions {
+	@media (min-width: $screen-sm-min) {
+		margin-bottom: 50px;
+	}
+}
+
+#wizard-step-content-right.sticky-bottom {
+	@media (min-width: $screen-sm-min) {
+		z-index: 90;
+		bottom: 140px;
+		top: initial;
+	}
+}
+
+.main.checkout {
+	padding-top: 10px;
+
+	@media (min-width: $screen-md) {
+		padding-top: 70px;
+	}
+}
+
+// Select ACH
+.payment-wizard-paymentmethod-ach-module {
+	@extend .order-wizard-paymentmethod-creditcard-module;
+}
+
+.paymentinstrument-ach-selector {
+	@extend .paymentinstrument-creditcard-selector;
+}
+
+.paymentinstrument-ach-container {
+	@extend .paymentinstrument-creditcard-container;
+}
+
+.paymentinstrument-ach {
+	@extend .paymentinstrument-creditcard;
+}
+
+.paymentinstrument-ach-header {
+	@extend .paymentinstrument-creditcard-header !optional;
+}
+
+.paymentinstrument-ach-number {
+	@extend .paymentinstrument-creditcard-number;
+}
+
+.paymentinstrument-ach-header-icon {
+	@extend .paymentinstrument-creditcard-header-icon;
+}
+
+.payment-wizard-paymentmethod-ach-module-learn-more {
+	@extend .order-wizard-paymentmethod-creditcard-module-learn-more;
+}
+
+.paymentinstrument-ach-actions {
+	@extend .paymentinstrument-creditcard-actions;
+}
+
+.paymentinstrument-ach-edit-form-button-submit {
+	@extend .paymentinstrument-creditcard-edit-form-button-submit;
+}
+
+.paymentinstrument-ach-edit-form-button-cancel {
+	@extend .paymentinstrument-creditcard-edit-form-button-cancel;
+}
+
+.paymentinstrument-ach-action {
+	@extend .paymentinstrument-creditcard-action;
+}
+
+.payment-wizard-paymentmethod-ach-module-learn-more-icon {
+	@extend .order-wizard-paymentmethod-creditcard-module-learn-more-icon;
+}
+
+// Add Bank Account
+.paymentinstrument-ach-new-card {
+	@extend .address-details-new-address;
+}
+
+.paymentinstrument-ach-new-card-title {
+	@extend .address-details-new-address-title;
+}
+
+.paymentinstrument-ach-new-card-plus-icon {
+	@extend .address-details-new-address-plus-icon;
+}

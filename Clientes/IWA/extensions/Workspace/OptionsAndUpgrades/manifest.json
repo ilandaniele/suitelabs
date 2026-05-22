@@ -1,0 +1,68 @@
+{
+    "name": "OptionsAndUpgrades",
+    "fantasyName": "Options and Upgrades",
+    "vendor": "SuiteLabs",
+    "version": "1.0.2",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "&#39;Add Options &amp; Upgrades&#39; section for PDP.",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/OptionsAndUpgrades.json"
+        ]
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_optionsandupgrades-main.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_optionsandupgrades-main.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/oau_item_relations_related_item.tpl",
+                    "Modules/Main/Templates/oau_item_relations_related.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/SuiteLabs.OptionsAndUpgrades.Main.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/SuiteLabs.OptionsAndUpgrades.Main.js",
+                    "Modules/Main/JavaScript/OptionsAndUpgrades.ItemRelations.Related.View.js",
+                    "Modules/Main/JavaScript/OptionsAndUpgrades.ItemRelations.RelatedItem.View.js",
+                    "Modules/Main/JavaScript/OptionsAndUpgrades.ProductDetails.Full.View.js",
+                    "Modules/Main/JavaScript/OptionsAndUpgrades.LiveOrder.Model.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\OptionsAndUpgrades",
+    "suitescript2": {
+        "files": []
+    }
+}

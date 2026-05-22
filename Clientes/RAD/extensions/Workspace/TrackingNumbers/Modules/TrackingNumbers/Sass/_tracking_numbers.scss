@@ -1,0 +1,21 @@
+.overview-home-purchases-list td.recordviews-tracking-number  {
+  display: none;
+}
+.order-history-list-tracking-number-control {
+  margin-bottom: 15px;
+
+}
+
+.order-history-list-tracking-number-control-button[aria-expanded="true"] {
+  .order-history-list-tracking-number-control-toggle-icon {
+    transform: rotate(-180deg);
+  }
+}
+.order-history-packages-header-col, .order-history-packages-header-container-right .order-history-list-tracking-number-control-numbers-link{
+  overflow: visible !important;
+}
+
+
+
+
+

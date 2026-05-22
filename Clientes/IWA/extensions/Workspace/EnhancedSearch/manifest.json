@@ -1,0 +1,67 @@
+{
+    "name": "EnhancedSearch",
+    "fantasyName": "Type Ahead for Products and Categories",
+    "vendor": "SuiteLabs",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCS,SCA",
+    "target_version": {
+        "SCS": "",
+        "SCA": ""
+    },
+    "description": "SCA Customization which allows you to display on search bar via click or hover the trending products and categories",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/EnhancedSearch.json"
+        ]
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_type_ahead_products_and_categories.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_type_ahead_products_and_categories.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/enhanced_search.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/EnhancedSearch.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/EnhancedSearch.View.js",
+                    "Modules/Main/JavaScript/EnhancedSearch.js",
+                    "Modules/Main/JavaScript/EnhancedSearch.Model.js",
+                    "Modules/Main/SuiteScript2/EnhancedSearch.Model.js",
+                    "Modules/Main/JavaScript/EnhancedSearchOld.View.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\EnhancedSearch",
+    "suitescript2": {
+        "files": [
+            "Modules/Main/SuiteScript2/EnhancedSearch.Service.ss",
+            "Modules/Main/SuiteScript2/EnhancedSearch.Model.js"
+        ]
+    }
+}

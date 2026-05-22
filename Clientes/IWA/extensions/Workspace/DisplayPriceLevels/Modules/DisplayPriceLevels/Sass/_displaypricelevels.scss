@@ -1,0 +1,9 @@
+.product-views-price-lead-type {
+    display: none;
+}
+
+.product-details-full-main .product-views-price-lead-type {
+	@extend .middle-price;
+    font-size: $sc-font-size-xxl;
+    display: inline-block;
+}

@@ -1,0 +1,151 @@
+.myaccount-layout,
+.myaccount-standalone-layout {
+	@extend %sc-layout;
+}
+
+.myaccount-layout-container{
+	// Footer module will set a bottom padding with the size of the footer	(on Footer.View.js)
+	@extend .container;
+}
+
+.myaccount-layout-header {
+    margin-bottom:15px;
+}
+
+.myaccount-layout-row{
+	@extend .row;
+}
+
+.myaccount-layout-main,
+.myaccount-standalone-layout-main {
+	@extend .col-xs-12;
+	@extend .col-sm-9;
+
+	@media (min-width: $screen-sm-min) {
+		margin-bottom: 70px;
+	}
+	.page-not-found {
+		overflow: hidden;
+	}
+}
+
+.myaccount-layout-footer {
+	@extend %sc-footer !optional;
+}
+
+.myaccount-layout-title{
+	margin-bottom: $sc-margin-lv4;
+	display:none;
+
+	@media (min-width: $screen-sm-min) {
+		display: block;
+	}
+}
+
+.myaccount-layout-no-javascript-msg {
+	@extend .message-warning;
+	width: 100%;
+}
+
+.myaccount-layout-side-nav{
+
+	@extend .col-sm-3;
+	display: none;
+
+	@media (min-width: $screen-sm-min) {
+		display: block;
+	}
+}
+
+.force-hide-side-nav{
+
+	.myaccount-layout-side-nav{
+		display: none;
+	}
+
+	.myaccount-layout-title{
+		display: none;
+	}
+
+	.myaccount-layout-main,
+	.myaccount-standalone-layout-main{
+		@extend .col-sm-12;
+	}
+}
+
+
+//awalabs
+.myaccount-layout-container .global-views-breadcrumb{
+	padding: 0;
+}
+.myaccount-layout-main{
+	@media (min-width: $screen-md) {
+		padding-left: 30px;
+	}
+}
+#main-container{
+	transition: all 0.3s;
+	padding-top: 160px;
+	&.less-padding{
+		padding-top: 115px;
+	}
+	@media (max-width: $screen-md) {
+		padding-top: 175px;
+		&.less-padding{
+			padding-top: 80px;
+		}
+	}
+}
+.myaccount-layout-header{
+	position: fixed;
+	width: 100%;
+	height: 155px;
+	z-index: 1000;
+	background: white;
+	top: 0;
+	left: 0;
+	transition: all 0.25s;
+	border-bottom-color: #f1ede7;
+	&.sticky-header {
+		height: auto;
+		@media (min-width: $screen-md) {
+			transform: translateY(-34px);
+			height: 95px;
+		}
+		@media (max-width: $screen-md) {
+			border-bottom: 1px solid #f1ede7;
+		}
+		.header-logo {
+			max-width: 180px;
+		}
+		.header-content{
+			padding-bottom: 0;
+		}
+	}
+}
+.header-sidebar-opened{
+	.myaccount-layout-header {
+		position: initial;
+	}
+	#main-container{
+		transition: all 0s;
+		padding-top:10px;
+	}
+}
+.myaccount-layout-main .product-list-details .list-header-view-accordion-body{
+	display: none;
+}
+.myaccount-layout-main .product-list-display-full-name-anchor{
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #000000;
+}
+.myaccount-layout-main .product-list-details .product-list-display-full-rating{
+	display: none;
+}
+.myaccount-layout-main .product-list-display-full-actions{
+	@media (min-width: 768px) {
+		padding: 15px 0;
+		margin-bottom: 0;
+	}
+}

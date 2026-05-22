@@ -1,0 +1,42 @@
+{
+	"name": "CheckoutCreditCardsViews",
+	"fantasyName": "Checkout Credit Cards Views",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "SuiteLabs v2.1.0 refers to the SCA upgrade to 23.2, it also includes some refactoring",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"javascript": {
+		"entry_points": {
+			"checkout": "Modules/CheckoutCreditCardsViews/JavaScript/AwaLabs.CheckoutCreditCardsViews.js"
+		},
+		"application": {
+			"checkout": {
+				"files": [
+					"Modules/CheckoutCreditCardsViews/JavaScript/AwaLabs.CheckoutCreditCardsViews.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/CheckoutCreditCardsViews@2.1.0",
+	"activation_id": "11",
+	"extension_id": "16801"
+}

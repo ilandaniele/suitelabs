@@ -1,0 +1,45 @@
+.additional-fields-form {
+    margin-top:20px;
+}
+.additional-fields-field-container {
+    margin-top: 10px;
+}
+.additional-fields-submit-button {
+    margin-top: 20px;
+}
+.additional-fields-checkout-success-message{
+    color: green;
+    padding-top: 15px;
+}
+.additional-fields-form-description {
+    opacity: 0.5;
+}
+.additional-fields-form-title {
+    margin-bottom: 20px;
+}
+
+.additional-fields-provider-locator {
+    margin-left: 10px;
+}
+
+.additional-fields-info-container {
+    display: flex;
+    flex-direction: column;
+    .additional-fields-row {
+        display: flex;
+        flex-direction: row;
+
+        .format-input {
+            height: 25px;
+            margin-left: 10px;
+        }
+    }
+}
+
+.cursive {
+    font-style: italic;
+}
+
+.low-opacity {
+    opacity: 0.5;
+}

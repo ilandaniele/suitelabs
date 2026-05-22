@@ -1,0 +1,53 @@
+{
+    "name": "RemovePOForNonB2B",
+    "fantasyName": "Remove PO# Non B2B",
+    "vendor": "ACS",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Show or hide PO# customfield for non B2B users on checkout",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/JavaScript/RemovePOForNonB2B.js",
+            "myaccount": "Modules/JavaScript/RemovePOForNonB2B.js",
+            "checkout": "Modules/JavaScript/RemovePOForNonB2B.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/JavaScript/RemovePOForNonB2B.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/JavaScript/RemovePOForNonB2B.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/JavaScript/RemovePOForNonB2B.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\RemovePOForNonB2B",
+    "suitescript2": {
+        "files": []
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "ShippingMethodsFiltering",
+        "group": "extensions",
+        "title": "Shipping Methods Filtering",
+        "description": "Shipping Methods available to filter"
+    },
+    "properties": {
+        "extensions.ShippingMethodsFiltering.internationalAndHazmat": {
+            "group": "extensions",
+            "subtab": "shippingMethodsFiltering",
+            "type": "string",
+            "title": "International and Hazmat Shipping Methods Ids",
+            "description": "IDs of 'International and Hazmat Shipping Methods' shipping methods",
+            "default": ""
+        },
+        "extensions.ShippingMethodsFiltering.internationalAndNonHazmat": {
+            "group": "extensions",
+            "subtab": "shippingMethodsFiltering",
+            "type": "string",
+            "title": "International and NonHazmat Shipping Methods Ids",
+            "description": "IDs of 'International and NonHazmat Shipping Methods Ids' shipping methods",
+            "default": ""
+        },
+        "extensions.ShippingMethodsFiltering.nationalAndHazmat": {
+            "group": "extensions",
+            "subtab": "shippingMethodsFiltering",
+            "type": "string",
+            "title": "Domestic and Hazmat Shipping Methods Ids",
+            "description": "IDs of 'Domestic and Hazmat Shipping Methods Ids' shipping methods",
+            "default": ""
+        },
+        "extensions.ShippingMethodsFiltering.nationalAndNonHazmat": {
+            "group": "extensions",
+            "subtab": "shippingMethodsFiltering",
+            "type": "string",
+            "title": "Domestic and NonHazmat Shipping Methods Ids",
+            "description": "IDs of 'Domestic and NonHazmat Shipping Methods Ids' shipping methods",
+            "default": ""
+        }
+    }
+}

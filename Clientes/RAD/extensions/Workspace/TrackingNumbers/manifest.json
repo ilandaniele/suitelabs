@@ -1,0 +1,55 @@
+{
+	"name": "TrackingNumbers",
+	"fantasyName": "Tracking Numbers",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "1.1.0",
+	"description": "Get tranking number from item fulfillments. SuiteLabs v1.1.0 refers to the SCA upgrade to 23.2, it also includes some refactoring",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"myaccount": "Modules/TrackingNumbers/Sass/_tracking_numbers.scss"
+		},
+		"files": [
+			"Modules/TrackingNumbers/Sass/_tracking_numbers.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"myaccount": "Modules/TrackingNumbers/JavaScript/AwaLabs.TrackingNumbers.js"
+		},
+		"application": {
+			"myaccount": {
+				"files": [
+					"Modules/TrackingNumbers/JavaScript/AwaLabs.TrackingNumbers.js",
+					"Modules/TrackingNumbers/JavaScript/TrackingNumbers.OrderHistory.List.View.js"
+				]
+			}
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/TrackingNumbers/SuiteScript/AwaLabs.TrackingNumbers.js",
+		"files": [
+			"Modules/TrackingNumbers/SuiteScript/AwaLabs.TrackingNumbers.js",
+			"Modules/TrackingNumbers/SuiteScript/TrackingNumbers.OrderHistory.Model.js"
+		]
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/TrackingNumbers@1.1.0",
+	"activation_id": "11",
+	"extension_id": "16915"
+}

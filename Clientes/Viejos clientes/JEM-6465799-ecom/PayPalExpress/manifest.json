@@ -1,0 +1,64 @@
+{
+    "name": "PayPalExpress",
+    "fantasyName": "PayPal Express",
+    "vendor": "NSeComm",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Adds a PayPal button in the PDP",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/PayPal.json"
+        ]
+    },
+    "sass": {
+        "entry_points": {
+            "shopping": "Modules/Main/Sass/_paypalexpress-main.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_paypalexpress-main.scss"
+        ]
+    },
+    "templates": {
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/Templates/paypal.tpl"
+                ]
+            }
+        }
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/PayPal.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/PayPal.js",
+                    "Modules/Main/JavaScript/PayPal.View.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\PayPalExpress",
+    "suitescript2": {
+        "files": []
+    }
+}

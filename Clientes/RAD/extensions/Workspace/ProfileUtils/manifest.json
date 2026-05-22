@@ -1,0 +1,59 @@
+{
+	"name": "ProfileUtils",
+	"fantasyName": "Profile Utils",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "2.0.1",
+	"description": "Profile Utils",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/ProfileUtils/Configuration/Configuration.json"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/ProfileUtils/JavaScript/AwaLabs.ProfileUtils.js",
+			"myaccount": "Modules/ProfileUtils/JavaScript/AwaLabs.ProfileUtils.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/ProfileUtils/JavaScript/AwaLabs.ProfileUtils.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/ProfileUtils/JavaScript/AwaLabs.ProfileUtils.js"
+				]
+			}
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/ProfileUtils/SuiteScript/AwaLabs.ProfileUtils.js",
+		"files": [
+			"Modules/ProfileUtils/SuiteScript/AwaLabs.ProfileUtils.js"
+		]
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/ProfileUtils@2.0.1",
+	"activation_id": "11",
+	"extension_id": "10755"
+}

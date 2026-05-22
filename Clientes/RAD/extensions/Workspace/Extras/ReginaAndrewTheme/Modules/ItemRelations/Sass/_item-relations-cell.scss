@@ -1,0 +1,102 @@
+.item-relations-cell ,
+.recently-viewed-cell-item{
+    text-align: center;
+    padding: 0 8px;
+    > div{
+        /* border: 2px solid $sc-color-theme-border; */
+        @media (min-width: $screen-md) {
+            position: relative;
+        }
+    }
+}
+.item-relations-cell .item-info-wrap,
+.recently-viewed-cell-item .item-info-wrap{
+    @media (min-width: $screen-md) {
+        z-index: 10;
+        visibility: hidden;
+        background: rgba(255,255,255,0.9);
+        padding: 10px;
+        width: 100%;
+        float: left;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+.item-relations-cell .item-info-wrap .product-views-price-lead,
+.recently-viewed-cell-item .item-info-wrap .product-views-price-lead{
+    font-size: 16px;
+    margin-top: 10px;
+    color:black !important;
+}
+
+.item-relations-cell .item-info-wrap a.item-relations-related-item-title,
+.recently-viewed-cell-item .item-info-wrap a.item-relations-related-item-title{
+    padding: 5px 0;
+    display: block;
+    @media (min-width: 992px) {
+        height: auto;
+        /* border-top: 2px solid  black; */
+        /* border-bottom: 2px solid  black; */
+        padding: 10px 0;
+        float: left;
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        margin-right: -50%;
+        &:hover{
+            /* border-top: 2px solid  $sc-color-secondary; */
+            /* border-bottom: 2px solid  $sc-color-secondary; */
+            .product-views-price-lead{
+                color: $sc-color-secondary !important;
+            }
+        }
+    }
+}
+.item-relations-cell:hover,
+.recently-viewed-cell-item:hover{
+    .item-info-wrap{
+        visibility: visible;
+    }
+}
+.cart-detailed-footer{
+    .item-relations-related-carousel-next{
+        position: absolute;
+        right: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .item-relations-related-carousel-prev{
+        position: absolute;
+        left: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .item-relations-related h3{
+        text-align: left;
+        margin-bottom: 30px;
+    }
+    .item-relations-correlated h3{
+        text-align: left;
+        margin-bottom: 30px;
+    }
+    .bx-wrapper{
+        position: relative;
+    }
+    .item-relations-cell{
+        max-width:228px;
+        display: inline-block;
+        @media (max-width: $screen-md) {
+            width: 25%;
+        }
+        @media (max-width: $screen-sm) {
+            width: 50%;
+            margin-bottom: 15px;
+            max-width:100%;
+        }
+    }
+}

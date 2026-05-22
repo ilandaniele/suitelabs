@@ -1,0 +1,68 @@
+.global-views-rating-by-star {
+    display: inline-block;
+    width: 100%;
+    clear: both;
+    padding: 0;
+    margin-bottom: $sc-margin-lv2;
+
+    @media (min-width: $screen-sm-min) {
+        display: block;
+    }
+}
+.global-views-rating-by-star-label {
+    @extend .col-sm-2;
+    @extend .col-md-2;
+    @extend .col-xs-3;
+    padding:0;
+    color:$sc-color-copy-dark;
+
+    @media (min-width: $screen-sm-min) {
+        padding: 0 $sc-padding-lv3;
+    }
+}
+.global-views-rating-by-star-second-label {
+    @extend .col-sm-4;
+    @extend .col-md-4;
+    @extend .col-xs-4;
+    padding-right:0;
+    color:$sc-color-copy-dark;
+
+    @media (min-width: $screen-sm-min) {
+        padding: 0 $sc-padding-lv3;
+    }
+}
+.global-views-rating-by-star-percentage-area {
+    @extend .col-sm-6;
+    @extend .col-md-6;
+    @extend .col-xs-6;
+    padding:0;
+
+    @media (min-width: $screen-sm-min) {
+        padding: 0 $sc-padding-lv3;
+    }
+}
+.global-views-rating-by-star-percentage-area-progress-bar {
+    @extend .progress;
+    border-radius:0px;
+    background-color:lighten($sc-color-secondary , 30%);
+    margin-bottom: 10px;
+    @media (min-width: $screen-sm-min) {
+    margin-bottom: 15px;
+    }
+}
+.global-views-rating-by-star-percentage-area-progress-bar-filled {
+    @extend .progress-bar;
+    background-color:$sc-color-secondary;
+    box-shadow: none !important;
+}
+.global-views-rating-by-star-label-percentage {
+    color: $sc-color-secondary;
+    width: 35px;
+    display: none;
+
+    @media (min-width: $screen-sm-min) {
+        display: inline-block;
+    }
+}
+
+

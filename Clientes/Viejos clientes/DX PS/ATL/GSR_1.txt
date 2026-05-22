@@ -1,0 +1,7 @@
+/
+/products/
+/contact/
+/about/
+/get-a-quote/
+/wp-content/uploads/2021/03/am-product-catalog-2021.pdf
+/wp-content/uploads/2022/05/am-product-catalog-2022.pdf

@@ -1,0 +1,43 @@
+{
+    "type": "object",
+	"subtab": {
+        "id": "pepperjam",
+    	"title": "Pepperjam",
+    	"description": "Pepperjam Tracking",
+        "group": "integrations"
+    },
+    "properties": { 
+        "PepperJamTracking.baseUrl": {
+            "group": "integrations",
+            "subtab": "pepperjam",
+            "type": "string",
+            "title": "Base Url",
+            "description": "Base url for pixel tracking",
+            "default": "https://t.pepperjamnetwork.com/track"
+        },
+        "PepperJamTracking.integrationType": {
+            "group": "integrations",
+            "subtab": "pepperjam",
+            "type": "string",
+            "title": "Integration Type",
+            "description": "Type of integration",
+            "default": "DYNAMIC"
+        },
+        "PepperJamTracking.programId": {
+            "group": "integrations",
+            "subtab": "pepperjam",
+            "type": "string",
+            "title": "Program Id",
+            "description": "Your program ID",
+            "default": "9078"
+        },
+        "PepperJamTracking.impressionId": {
+            "group": "integrations",
+            "subtab": "pepperjam",
+            "type": "string",
+            "title": "Impression Id",
+            "description": "Impression Id used for container tag.",
+            "default": "3362104378"
+        }
+    }
+}

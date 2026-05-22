@@ -1,0 +1,52 @@
+/*
+	https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+*/ 
+
+@import "sctypeahead-header";
+@import "sctypeahead-itemsearcher";
+@import "sctypeahead-sitesearch";
+@import "../../StaticSaleCategories/Sass/noresults";
+@import "../../RecentlySearchedKeywords/Sass/recentlysearched";
+@import "../../TrendingSearch/Sass/sctypeahead-trendingsearchfeature";
+
+.flex{
+	display: flex !important;
+}
+.flex-center{
+	display: flex !important;
+	align-items: center !important;
+}
+.bordered{
+	border:1px solid #f00;
+}
+
+div[data-id="website-search-pushable"]{
+	padding:0;
+	z-index: 130002;
+
+	.sc-pusher-header{
+		margin:0 0 10px 0;
+		background: #414141;
+		height: auto;
+		border: 0 none;
+		padding: 10px 0;
+
+		.sc-pusher-header-back{
+			background: #414141;
+			color: #fff;
+			height: auto;
+			line-height: normal;
+			text-transform: uppercase;
+			font-size: 1.1rem;
+
+			&::after{
+				margin-right: 5px;
+    			margin-top: 4px;
+			}
+		}
+	}
+}
+
+.mobile-fixed-quantity-addtocart-wrap.active{
+	z-index: 130001 !important;
+}

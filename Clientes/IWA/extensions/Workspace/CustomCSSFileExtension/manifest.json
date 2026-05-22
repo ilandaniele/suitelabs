@@ -1,0 +1,58 @@
+{
+    "name": "CustomCSSFileExtension",
+    "fantasyName": "CustomCSSFileExtension",
+    "vendor": "SSD",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Adds ability to add custom css files to SCA website",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/CustomCSSFileExtension/Configuration/CustomCSSFileExtension.json"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/CustomCSSFileExtension/JavaScript/CustomCSSFileExtension.js",
+            "myaccount": "Modules/CustomCSSFileExtension/JavaScript/CustomCSSFileExtension.js",
+            "checkout": "Modules/CustomCSSFileExtension/JavaScript/CustomCSSFileExtension.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/CustomCSSFileExtension/JavaScript/CustomCSSFileExtension.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/CustomCSSFileExtension/JavaScript/CustomCSSFileExtension.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/CustomCSSFileExtension/JavaScript/CustomCSSFileExtension.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\CustomCSSFileExtension",
+    "suitescript2": {
+        "files": []
+    }
+}

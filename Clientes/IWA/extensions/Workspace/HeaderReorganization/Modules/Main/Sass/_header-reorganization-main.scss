@@ -1,0 +1,326 @@
+.myaccount-layout-header {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.header-menu-mobile-phone,
+.header-menu-mobile-track-order {
+    margin-left: 15px;
+}
+
+.header-mini-cart-menu-cart-link {
+    margin-top: 0px;
+    display: flex;
+    min-width: 32px;
+    align-items: center;
+}
+
+a.header-sidebar-user-logout {
+    padding-left: 15px;
+}
+
+.header-menu-mobile-phone-link:hover,
+.header-menu-mobile-track-order-link:hover {
+    opacity: 50%;
+
+    i {
+        color: #a22f34;
+    }
+}
+
+.header-profile-menu-pipe {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.header-menu-mobile-search, 
+.header-menu-mobile-cart {
+    margin-left: 15px;
+}
+
+.header-mini-cart-menu-cart-icon {
+    display: flex;
+    align-items: center;
+}
+
+.header-profile-menu-item-break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.header-logo-desktop-wrapper,
+.header-site-search {
+    flex: 1!important; 
+}
+
+.header-reorganization-wrapper {
+    flex: 3;
+} 
+
+.header-logo-nav-container div.header-logo-nav-wrapper {
+    width: 100%;
+    max-width: none;
+    padding: 0!important; 
+}
+
+.header-profile-menu-login {
+    display: flex;
+    font-family: 'Roboto'!important;
+    font-size: 0.9rem!important;
+    flex-direction: column;
+}
+
+.header-profile-menu-item a {
+    padding-left: 0;
+}
+
+.header-menu-mobile-phone-link {
+    margin-top: 10px;
+}
+
+.header-menu-mobile-track-order-link {
+    margin-top: 9px;
+}
+
+.header-menu-mobile-phone-link,
+.header-menu-mobile-track-order-link {
+    font-size: 23px;
+    display: inline-block;
+}
+
+.header-profile-menu-item {
+    padding-left: 15px;
+}
+
+.header-profile-menu-icon {
+    margin-right: 5px;
+}
+
+.header-menu-profile {
+    padding: 0 15px 0 10px;
+    border-right: 1px solid #eee;
+}
+
+.header-menu-cart {
+    border-left: 0!important;
+    padding-left: 0;
+    margin-left: 15px;
+}
+
+.header-main-wrapper {
+    overflow: hidden;
+}
+
+.header-main-wrapper .header-main-nav {
+    min-height: auto;
+    padding: 0;
+}
+
+.header-menu-profile .header-profile-welcome-link {
+    font-family: 'Roboto'!important;
+    font-size: 0.9rem!important;
+    height: auto!important;
+    line-height: auto;
+    font-style: normal;
+    padding: 0;
+}
+
+.header-profile-menu-login-register {
+    display: flex!important;
+    flex-direction: row;
+
+    .header-profile-login-link:after {
+        content: '';
+    }
+
+    .header-profile-login-link,
+    .header-profile-register-link {
+        font-family: 'Roboto'!important;
+        font-size: 0.9rem!important;
+        height: auto!important;
+        line-height: auto;
+        font-style: normal;
+        padding: 0;
+    }
+}
+
+.header-content {
+    flex-wrap: nowrap;
+}
+
+.header-reorganization-wrapper {
+    display: none;
+}
+
+.header-reorganization-wrapper .header-right-menu-also {
+    margin-left: 0 !important;
+}
+
+.header-main-nav {
+    margin-top: 20px;
+}
+
+.header-reorganization-wrappe .header-menu-cart {
+    margin: 0;
+}
+
+.header-profile-menu-login a.header-profile-register-link {
+    padding-left: 0!important;
+}
+
+.header-profile-message {
+    display: none;
+}
+
+.header-sidebar-links {
+   display: block; 
+}
+
+.header-profile-link-welcome:hover {
+    font-weight: bold;
+    color: #a22f34;
+}
+
+.header-profile-menu-login li {
+    display: block;
+}
+
+.header-profile-menu-myaccount-container {
+    top: 80%;
+}
+
+#banner-header-top .topgrayboxes {
+    padding: 0!important;
+}
+
+li.header-profile-menu-item-track {
+    display: none;
+}
+
+.header-profile-menu-item-track:hover {
+    font-weight: bold;
+}
+
+@media (min-width: $screen-md-min) {
+    .header-profile-menu-login-register {
+        align-items: center;
+
+        .header-profile-login-link:after {
+            content: ' ';
+        }
+    }
+
+    .header-profile-menu-login {
+        flex-direction: column;
+    }
+
+    .header-main-wrapper {
+        margin: 0 20px;
+    }
+    
+    .header-nav-desktop-wrapper {
+        padding-top: 15px;
+    }
+
+    li.header-profile-menu-item-track {
+        display: flex;
+        align-items: center;
+        line-height: 35px;
+    }
+    
+    .header-menu-mobile-track-order-link {
+        display: none;
+    }
+    .header-profile-menu-pipe {
+        display: inline;
+        margin-right: inherit;
+    }
+    .header-profile-menu-login a.header-profile-register-link {
+        padding-left: 5px!important;
+    }
+
+    .header-profile-menu-login {
+        flex-direction: row;    
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: end;
+    }
+    
+    .header-menu-cart {
+        border-left: 0!important;
+        padding-left: 0;
+        margin-left: 15px;
+    }
+
+    .header-logo-nav-container {
+        margin-top: 15px;
+        padding: 0 20px;
+
+        .header-profile-message {
+            display: block;
+            padding-right: 0;
+            line-height: 35px;
+        }
+    }
+
+    .header-reorganization-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+        align-items: center;
+        flex: 2;
+    }
+
+    .header-main-nav {
+        margin-top: 0;
+    }
+
+    .header-menu-myaccount-item-level2 {
+        text-align: left;
+    }
+
+    .site-search-content {
+        max-width: 400px;
+    }
+
+    .header-right-menu {
+        display: none;
+        height: 0;
+    }
+}
+
+@media (min-width: $screen-lg-min) {
+    .site-search-content {
+        max-width: 450px;
+    }
+
+    .header-reorganization-wrapper {
+        flex: 2;
+    }
+
+    .header-logo-nav-container div.header-logo-nav-wrapper {
+        padding: 0 !important;
+    }
+}
+
+@media (min-width: 1450px) {
+    .header-profile-menu-login-register { 
+        .header-profile-login-link,
+        .header-profile-register-link {
+            font-size: 1.1rem!important;
+        }
+    }   
+
+    .header-profile-menu-login {
+        font-size: 1.1rem!important;
+    }
+
+    .header-reorganization-wrapper {
+        flex: 1;
+    }
+
+    .site-search-content {
+        max-width: 500px;
+    }
+}

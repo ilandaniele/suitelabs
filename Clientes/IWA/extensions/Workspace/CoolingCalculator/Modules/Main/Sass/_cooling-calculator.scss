@@ -1,0 +1,95 @@
+#cooling-calc-cellar-submit {
+    button {
+        margin: 20px 0px 5px 0px !important; /* override reusable default margin */
+    }
+}
+
+.reusable-larger-italic {
+    font-style: italic;
+}
+
+.button-description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.button-container {
+    display: inline-block;
+    text-align: center;
+    margin-right: 40px;
+    
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.cooling-calc-results-title {
+    background-color: #e7e5dd;
+    font-family: "Minion Variable Concept", "Minion Pro Regular", "FontAwesome", "Adobe Gurmukhi", serif;
+    font-weight: 500;
+    font-size: 36px;
+    padding: 15px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.cooling-calc-results-header {
+    background-color: #e7e5dd;
+    padding: 15px 0;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.cooling-calc-results-row {
+    margin: 15px 0;
+}
+
+.cooling-calc-results-row a {
+    color: #981b21;
+}
+
+@media (max-width: 991px) {
+    .cooling-calc-results-header {
+        justify-content: center;
+    }
+
+    .cooling-calc-desktop-only {
+        display: none;
+    }
+
+    .thermal-load-item-link img {
+        display: block;
+        height: 130px;
+    }
+}
+
+@media (min-width: 992px) {
+    .cooling-calc-results-row,
+    .cooling-calc-results-header {
+        font-size: 1rem;
+    }
+
+    .cooling-calc-mobile-only {
+        display: none;
+    }
+
+    .cooling-calc-vertical-align {
+        display: flex;
+        align-items: center;
+        height: 130px;
+    }
+
+    .thermal-load-item-link {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+
+        img {
+            height: 130px;
+        }
+    }
+}

@@ -1,0 +1,41 @@
+.facets-item-cell-hover-image {
+    position: absolute;
+    transition: opacity 0.3s ease-in;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.facets-item-cell-has-hover-image {
+    transition: opacity 0.3s ease-out;
+    opacity: 1;
+}
+
+.facets-item-cell-grid-image-wrapper:hover .facets-item-cell-has-hover-image {
+    opacity: 0
+}
+
+.facets-item-cell-grid-hover-image {
+    @extend .facets-item-cell-grid-image;
+    @extend .facets-item-cell-hover-image;
+}
+
+.facets-item-cell-table-hover-image {
+    @extend .facets-item-cell-table-image;
+    @extend .facets-item-cell-hover-image;
+}
+
+.facets-item-cell-list-hover-image {
+    @extend .facets-item-cell-list-image;
+    @extend .facets-item-cell-hover-image;
+}
+
+.facets-item-cell-grid-image-wrapper:hover .facets-item-cell-hover-image {
+    opacity: 1;
+}
+
+.facets-item-cell-grid-image-wrapper,
+.facets-item-cell-table-image-wrapper,
+.facets-item-cell-list-image-wrapper {
+     background-color: white;
+}

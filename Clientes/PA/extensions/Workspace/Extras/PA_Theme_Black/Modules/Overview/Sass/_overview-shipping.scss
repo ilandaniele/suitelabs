@@ -1,0 +1,57 @@
+.overview-shipping-header {
+  display: inline-block;
+}
+.overview-shipping-header h4 {
+  margin: $sc-margin-lv2 0;
+  font-size: $sc-font-size-m;
+  @media (min-width: $screen-sm-min){
+    font-size: $sc-font-size-xl;
+  }
+}
+.overview-shipping-card {
+  @extend .info-card;
+  width: 100%;
+  border-color: $sc-color-theme-background;
+  @media (max-width: $screen-xs-max) {
+    padding: $sc-padding-lv5;
+  }
+}
+// .PA_Theme_Yellow{
+//   .overview-shipping-card{
+//     border-color: #000;;
+//   }  
+// }
+.overview-shipping-card .address-details {
+  border: 0;
+
+  .address-details-container {
+    padding: 0;
+  }
+}
+.overview-shipping-card-content {
+	@media (min-width: $screen-sm-min) {
+		min-height: 180px;
+    overflow: auto;
+	}
+}
+.overview-shipping-card-button-edit {
+  @extend .button-link;
+  margin-top: $sc-margin-lv3;
+  padding: $sc-padding-lv2 $sc-padding-lv3;
+  font-size: $sc-font-size-s;
+  margin-left: initial;
+  border: 1px solid $sc-color-theme-500;
+  color: $sc-color-primary;
+  font-size: $sc-font-size-xs;
+  line-height: 1;
+
+  &:hover{
+    background-color: $sc-color-theme-500;
+    color: white;
+  }
+}
+
+.overview-shipping-card-button-edit-container {
+  display: block;
+  text-align: left;
+}

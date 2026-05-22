@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "subtab": {
+    "id": "schemaOrg",
+    "group": "catalog",
+    "title": "Schema Data",
+    "description": "Schema Structure"
+  },
+  "properties": {
+    "schemaOrg.siteLogo": {
+      "type": "string",
+      "group": "catalog",
+      "subtab": "schemaOrg",
+      "title": "Site Logo",
+      "description": "Enter site logo url to show on schema data."
+    },
+    "schemaOrg.siteName": {
+      "type": "string",
+      "group": "catalog",
+      "subtab": "schemaOrg",
+      "title": "Site Name",
+      "description": "Enter site name to show on schema data."
+    },
+    "schemaOrg.siteDescription": {
+      "type": "string",
+      "group": "catalog",
+      "nsType": "textarea",
+      "subtab": "schemaOrg",
+      "title": "Site Description",
+      "description": "Enter site description to show on schema data."
+    }
+
+  }
+}

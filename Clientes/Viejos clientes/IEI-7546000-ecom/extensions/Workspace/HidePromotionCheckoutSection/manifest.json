@@ -1,0 +1,36 @@
+{
+    "name": "HidePromotionCheckoutSection",
+    "fantasyName": "Hide Promotion Checkout Section",
+    "vendor": "NSeComm",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "version": "1.0.0",
+    "description": "Hides promotion section while on checkout view",
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "sass": {
+        "entry_points": {
+            "checkout": "Modules/Main/Sass/_hidepromotioncheckoutsection-main.scss",
+            "shopping": "Modules/Main/Sass/_hidepromotioncheckoutsection-main.scss"
+        },
+        "files": [
+            "Modules/Main/Sass/_hidepromotioncheckoutsection-main.scss"
+        ]
+    },
+    "suitescript2": {
+        "files": []
+    }
+}

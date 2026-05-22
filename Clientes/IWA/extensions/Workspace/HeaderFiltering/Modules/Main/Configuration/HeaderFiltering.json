@@ -1,0 +1,24 @@
+{
+    "type": "object",
+
+    "subtab": {
+        "id": "xTouchpoint",
+        "title": "X-SC-Touchpoint",
+        "description": "X-SC-Touchpoint",
+        "group": "advancedSettings"
+    },
+
+    "properties": {
+        "xTouchpoint.blacklist": {
+            "group": "advancedSettings",
+            "subtab": "xTouchpoint",
+            "type": "array",
+            "title": "Domains where the X-SC-Touchpoint is not added",
+            "description": "Set the list of domains where the X-SC-Touchpoint header is not added",
+            "items": {
+                "type": "string",
+                "title": "Domain"
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "enhancedPDP",
+        "group": "extensions",
+        "title": "Enhanced PDP",
+        "description": "Enhanced behavior for Product Detail Pages"
+    },
+    "properties": {
+        "enhancedPDP.videoIdField": {
+            "group": "extensions",
+            "subtab": "enhancedPDP",
+            "type": "string",
+            "title": "Image Gallery - Video Item Field",
+            "description": "Internal id of the Item field where the associated YouTube video id is stored.",
+            "default": "custitem_yt_video_id"
+        },
+        "enhancedPDP.videoPosition": {
+            "group": "extensions",
+            "subtab": "enhancedPDP",
+            "type": "string",
+            "title": "Image Gallery - Video Position",
+            "description": "Index in the gallery where the video thumbnail will be inserted.",
+            "enum": ["first", "second", "last"],
+            "default": "first"
+        },
+        "enhancedPDP.closeMode": {
+            "group": "extensions",
+            "subtab": "enhancedPDP",
+            "type": "string",
+            "title": "Image Gallery - Popup Closing Mode",
+            "description": "Defines the closing mode for the full view image popup.",
+            "enum": ["Close on cross", "Close on click"],
+            "default": "Close on cross"
+        }
+    },
+    "modifications": [{
+        "target": "$.properties[ItemOptions.optionsConfiguration].items.properties",
+        "action": "add",
+        "value": {
+            "maxLength": {
+                "type": "string",
+                "title": "Max Length"
+            }
+        }
+    }]
+}

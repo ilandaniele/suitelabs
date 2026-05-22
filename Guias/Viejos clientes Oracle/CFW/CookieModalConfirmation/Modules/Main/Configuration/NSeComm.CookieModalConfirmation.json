@@ -1,0 +1,95 @@
+{
+    "type": "object",
+    "group": {
+        "id": "porthosVentures",
+		"title": "Porthos Ventures",
+		"description": "Porthos Ventures - Extensions"
+    },
+    "subtab": {
+        "id": "cookieModalConfirmationBanner",
+        "title": "Cookie Modal Confirmation Banner",
+        "description": "Cookie Modal Banner",
+        "group": "porthosVentures"
+    },
+    "properties": {
+        "cookieModalConfirmationBanner.enable": {
+            "group": "porthosVentures",
+            "subtab": "cookieModalConfirmationBanner",
+            "type": "boolean",
+            "title": "Enable Cookie Modal Banner",
+            "description": "Check this box to enable the cookie modal banner",
+            "default": true
+        },
+        "cookieModalConfirmationBanner.logoURL": {
+            "group": "porthosVentures",
+            "subtab": "cookieModalConfirmationBanner",
+            "type": "string",
+            "title": "Logo URL",
+            "description": "Enter the URL location of the logo image file that is displayed at cookie modal",
+            "default": "img/porthos-logo-popup.jpg"
+        },
+        "cookieModalConfirmationBanner.cookieLifetime": {
+            "group": "porthosVentures",
+            "subtab": "cookieModalConfirmationBanner",
+            "type": "integer",
+            "title": "Cookie Expiry in Days",
+            "description": "Enter the maximum number of days to display cookie modal banner.",
+            "default": 7,
+            "mandatory": true
+        },
+        "cookieModalConfirmationBanner.alertMessage": {
+            "group": "porthosVentures",
+            "subtab": "cookieModalConfirmationBanner",
+            "type": "string",
+            "title": "Alert Message",
+            "description": "Enter the alert message to display cookie modal banner.",
+            "default": "You need to be 18 years of age and older",
+            "mandatory": true
+        },
+        "cookieModalConfirmationBanner.monthFormat": {
+            "group": "porthosVentures",
+            "subtab": "cookieModalConfirmationBanner",
+            "title": "Month Format",
+            "description": "Choose an option to specify which format do you want to display for the Month field.",
+            "enum": ["short", "long"],
+            "default": "long"
+        },
+        "cookieModalConfirmationBanner.startYear": {
+            "group": "porthosVentures",
+            "subtab": "cookieModalConfirmationBanner",
+            "type": "string",
+            "title": "Start of the Year",
+            "description": "Enter the year on when the form starts.",
+            "default": "1911",
+            "mandatory": true
+        },
+        "cookieModalConfirmationBanner.endYear": {
+            "group": "porthosVentures",
+            "subtab": "cookieModalConfirmationBanner",
+            "type": "string",
+            "title": "End of the Year",
+            "description": "Enter the year on when the form ends.",
+            "default": "2010",
+            "mandatory": true
+        },
+        "cookieModalConfirmationBanner.welcome": {
+            "group": "porthosVentures",
+            "subtab": "cookieModalConfirmationBanner",
+            "type": "string",
+            "title": "Welcome Heading",
+            "description": "Enter the welcome heading to display cookie modal banner.",
+            "default": "Welcome",
+            "mandatory": true
+        },
+        "cookieModalConfirmationBanner.description": {
+            "group": "porthosVentures",
+            "subtab": "cookieModalConfirmationBanner",
+            "type": "string",
+            "nsType": "textarea",
+            "title": "Description",
+            "description": "Accept HTML tags.",
+            "default": "<p>You must be 18 years old to use this site.</p> <p>Please enter your date of birth</p>",
+            "mandatory": true
+        }
+    }
+}

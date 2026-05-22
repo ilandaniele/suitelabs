@@ -1,0 +1,48 @@
+{
+	"name": "FacetsSettings",
+	"fantasyName": "Facets Settings",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "SuiteLabs v2.1.0 merged extension with Facets Extra Configuration and EmptyCategories extensions",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/FacetsSettings/Configuration/FacetsSettings.json"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/FacetsSettings/JavaScript/AwaLabs.FacetsSettings.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/FacetsSettings/JavaScript/AwaLabs.FacetsSettings.js",
+					"Modules/FacetsSettings/JavaScript/FacetsSettings.Facets.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/FacetsSettings@2.1.0",
+	"activation_id": "11",
+	"extension_id": "16905"
+}

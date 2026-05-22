@@ -1,0 +1,29 @@
+.facets-items-collection-view-row {
+	@extend .row;
+	
+	@media (min-width: $screen-sm-min) {
+		padding-bottom:$sc-padding-lv3;
+	}
+	.item-gift-certificate-message {
+		@media (min-width: $screen-lg-min) {
+			&.hide {
+				display: block !important;
+				opacity: 0;
+				max-width: 100%;
+				overflow: hidden;
+			}
+		}
+	}
+	.facets-item-cell-list-left {
+		.hasBonusBucks {
+			.itembadges-container {
+				@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+					top: 20px !important;
+				}
+				@media (max-width: $screen-xs-max) {
+					top: 8px !important;
+				}
+			}
+		}
+	}
+}

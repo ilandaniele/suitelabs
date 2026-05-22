@@ -1,0 +1,42 @@
+{
+    "name": "TawkChatbot",
+    "fantasyName": "Tawk Live Chatbot",
+    "vendor": "NSeComm",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "version": "1.0.0",
+    "description": "Adds a live chatbot from tawk to make users interact",
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/Main.json"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "shopping": "Modules/Main/JavaScript/TawkChatbot.js",
+            "myaccount": "Modules/Main/JavaScript/TawkChatbot.js",
+            "checkout": "Modules/Main/JavaScript/TawkChatbot.js"
+        },
+        "application": {
+            "shopping": {
+                "files": [
+                    "Modules/Main/JavaScript/TawkChatbot.js"
+                ]
+            },
+            "myaccount": {
+                "files": [
+                    "Modules/Main/JavaScript/TawkChatbot.js"
+                ]
+            },
+            "checkout": {
+                "files": [
+                    "Modules/Main/JavaScript/TawkChatbot.js"
+                ]
+            }
+        }
+    }
+}

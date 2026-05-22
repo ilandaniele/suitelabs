@@ -1,0 +1,11 @@
+{
+    "type": "object"
+,	"subtab": {
+        "id": "checkoutExperience"
+    ,	"group": "checkoutApp"
+    ,	"title": "Checkout Experience"
+    ,	"docRef": "section_0319041636"
+    ,	"description": "Checkout experience configuration."
+    ,   "showIfNoneWebsiteScope": ["SUITE_COMMERCE_MY_ACCOUNT"]
+    }
+}

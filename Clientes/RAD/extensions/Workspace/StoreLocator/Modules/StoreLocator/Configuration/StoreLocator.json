@@ -1,0 +1,13 @@
+{
+    "type": "object",
+    "properties": {
+        "storeLocator.limit": {
+            "group": "storeLocator",
+            "subtab": "storeLocatorGeneral",
+            "type": "number",
+            "title": "Limit Stores",
+            "description": "Enter the amount of results you would want to show in the store locator results",
+            "default": 5
+        }
+    }
+}

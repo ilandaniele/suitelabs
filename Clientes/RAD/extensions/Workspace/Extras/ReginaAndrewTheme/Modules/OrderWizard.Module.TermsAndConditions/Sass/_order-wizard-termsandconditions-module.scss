@@ -1,0 +1,33 @@
+.order-wizard-termsandconditions-module-top-summary {
+	display:none;
+	margin-bottom: $sc-margin-lv4;
+	@media (min-width: $screen-sm-min) {
+		display: block;
+	}
+}
+.order-wizard-termsandconditions-module-top,
+.order-wizard-termsandconditions-module-bottom{
+	@media (min-width: $screen-sm-min) {
+		display: none;
+	}
+}
+
+.order-wizard-termsandconditions-module-bottom{
+	margin-top: $sc-margin-lv4;
+}
+
+.order-wizard-termsandconditions-module-default{
+	display: none;
+	@media (min-width: $screen-sm-min) {
+		display: block;
+		float:right;
+	}
+}
+label.order-wizard-termsandconditions-module-label{
+	margin-bottom: 0;
+	font-weight:300;
+	a{
+		text-decoration: underline;
+	}
+}
+

@@ -1,0 +1,51 @@
+{
+	"name": "LayoutClass",
+	"fantasyName": "Class for landings",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "2.0.0",
+	"description": "Add a different class in landings",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/LayoutClass/JavaScript/AwaLabs.LayoutClass.js",
+			"myaccount": "Modules/LayoutClass/JavaScript/AwaLabs.LayoutClass.js",
+			"checkout": "Modules/LayoutClass/JavaScript/AwaLabs.LayoutClass.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/LayoutClass/JavaScript/AwaLabs.LayoutClass.js"
+				]
+			},
+			"myaccount": {
+				"files": [
+					"Modules/LayoutClass/JavaScript/AwaLabs.LayoutClass.js"
+				]
+			},
+			"checkout": {
+				"files": [
+					"Modules/LayoutClass/JavaScript/AwaLabs.LayoutClass.js"
+				]
+			}
+		}
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/LayoutClass@2.0.0",
+	"activation_id": "11",
+	"extension_id": "10742"
+}

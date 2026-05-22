@@ -1,0 +1,21 @@
+{
+    "type": "SCA",
+    "version": "24.1.30",
+    "application": [
+        "shopping",
+        "myaccount",
+        "checkout"
+    ],
+    "extensible_resources": [
+        "skins",
+        "javascript",
+        "ssp-libraries",
+        "sass",
+        "templates",
+        "services",
+        "configuration",
+        "assets",
+        "suitescript2",
+        "translations"
+    ]
+}

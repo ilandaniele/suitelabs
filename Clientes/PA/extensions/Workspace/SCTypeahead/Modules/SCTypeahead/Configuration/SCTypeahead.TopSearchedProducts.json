@@ -1,0 +1,26 @@
+{
+	"type": "object",
+    "subtab": {
+        "id": "topsearchedproducts",
+        "title": "Top-Searched Products",
+        "description": "Top-Searched Products",
+        "group": "sctypeahead"
+    }
+,	"properties": {
+        "sctypeahead.topsearchedproducts.maxProductsToBeShown":{
+            "type": "integer",
+            "default": 3,
+            "title": "Maximum Products allowed to be shown on desktop",
+            "subtab": "topsearchedproducts",
+            "group": "sctypeahead"
+        },
+
+        "sctypeahead.topsearchedproducts.maxProductsToBeShownMobile":{
+            "type": "integer",
+            "default": 12,
+            "title": "Maximum Products allowed to be shown on mobile",
+            "subtab": "topsearchedproducts",
+            "group": "sctypeahead"
+        }
+	}
+}

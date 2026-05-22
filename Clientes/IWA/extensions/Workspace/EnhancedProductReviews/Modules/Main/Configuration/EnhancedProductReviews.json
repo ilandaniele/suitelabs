@@ -1,0 +1,44 @@
+{
+    "type": "object",
+    "subtab": {
+        "id": "enhancedProductReviews",
+        "title": "Enhanced Product Reviews",
+        "description": "This section allows to configure the behavior of the enhanced product reviews section",
+        "group": "extensions"
+    },
+    "properties": {
+        "enhancedProductReviews.container": {
+            "group": "extensions",
+            "subtab": "enhancedProductReviews",
+            "type": "string",
+            "title": "Product Reviews Container",
+            "description": "Placeholder id used to append the product reviews section",
+            "default": "[data-cms-area='item_info']"
+        },
+        "enhancedProductReviews.containerPosition": {
+            "group": "extensions",
+            "subtab": "enhancedProductReviews",
+            "type": "string",
+            "title": "Product Reviews Container Position",
+            "description": "Position of the product reviews section regarding the container",
+            "enum": ["before", "after", "last"],
+            "default": "before"
+        },
+        "enhancedProductReviews.displayEmptyStars": {
+            "group": "extensions",
+            "subtab": "enhancedProductReviews",
+            "type": "boolean",
+            "title": "Display Empty Stars",
+            "description": "Display or Hide the stars section when there are no ratings",
+            "default": true
+        },
+        "enhancedProductReviews.newReviewLabel": {
+            "group": "extensions",
+            "subtab": "enhancedProductReviews",
+            "type": "string",
+            "title": "PDP - New Review Label",
+            "description": "Label/Text used on the product details page when there is no review",
+            "default": "Be the first to write a review"
+        }
+    }
+}

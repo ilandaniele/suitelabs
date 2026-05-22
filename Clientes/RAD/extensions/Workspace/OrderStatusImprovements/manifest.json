@@ -1,0 +1,65 @@
+{
+	"name": "OrderStatusImprovements",
+	"fantasyName": "Order Status Improvements",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "2.0.0",
+	"description": "Improvements for extension SC Order Status 1.0.2",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": [
+				"services/OrderStatusImprovements.Service.ss"
+			]
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/OrderStatusImprovements/Configuration/OrderStatusImprovements.json"
+		]
+	},
+	"sass": {
+		"entry_points": {
+			"shopping": "Modules/OrderStatusImprovements/Sass/_order-status-improvements.scss"
+		},
+		"files": [
+			"Modules/OrderStatusImprovements/Sass/_order-status-improvements.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/OrderStatusImprovements/JavaScript/AwaLabs.OrderStatusImprovements.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/OrderStatusImprovements/JavaScript/AwaLabs.OrderStatusImprovements.js"
+				]
+			}
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/OrderStatusImprovements/SuiteScript/AwaLabs.OrderStatusImprovements.js",
+		"files": [
+			"Modules/OrderStatusImprovements/SuiteScript/AwaLabs.OrderStatusImprovements.js",
+			"Modules/OrderStatusImprovements/SuiteScript/OrderStatusImprovements.Model.js",
+			"Modules/OrderStatusImprovements/SuiteScript/OrderStatusImprovements.ServiceController.js"
+		]
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/OrderStatusImprovements@2.0.0",
+	"activation_id": "11",
+	"extension_id": "10744"
+}

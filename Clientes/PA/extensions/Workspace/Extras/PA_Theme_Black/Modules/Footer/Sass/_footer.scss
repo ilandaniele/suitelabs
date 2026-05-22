@@ -1,0 +1,336 @@
+footer {
+    background: #1E1E1E;
+	background: transparent linear-gradient(0deg, #1E1E1E 0%, #242424 100%) 0% 0% no-repeat padding-box;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1E1E1E', endColorstr='#242424', GradientType=0);
+    border-top: 1px solid $sc-footer-border-color;
+    color: $sc-footer-text-color;
+    position: relative;
+}
+
+
+
+@media screen and (max-width:$screen-xs-max) {
+    .footer-content {
+        padding: 0;
+    }
+}
+@media (min-width: $screen-md-min){
+    .footer-content {
+        padding-top:30px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .footer-content {
+        padding: 30px;;
+    }
+    .footer-content .row .col-sm-6 {
+        width: 100%;
+    }
+}
+
+#footer-email-sign-up-button {
+	a{
+		@extend .button-primary;
+		color: $pa-white;
+		background: $pa-accent-dark;
+    }
+}
+
+.footer-row {
+	margin: 0;
+}
+.footer-business-logo{
+    & > div{
+        vertical-align: middle;
+    }
+}
+#copyright-footer{
+    &:after{
+        @extend .clearfix;
+    }
+}
+.footer-content-copyright {
+    color: $pa-white;
+
+    a {
+		color: $pa-white;
+	}
+}
+.faq-fixed-tab{
+    position: fixed;
+    z-index: 1000;
+    bottom: 120px;
+    background: #aa0000;
+    right: -15px;
+    padding: 4px 15px 3px 15px;
+    font-size: 15px;
+    line-height: 28px;
+    border-radius: 0px 0px 17px 17px;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    @media (max-width: $screen-xs-max) {
+        display: none;;
+    }
+    @include ipadPortrait {
+        display: none;;
+    }
+    @include iphoneLandscape {
+        display: none;;
+    }
+}
+.faq-fixed-tab:hover{
+    background:#8e0000;
+}
+.faq-fixed-tab > div > a{
+    color:#ffffff;
+}
+
+.shopping-layout-footer,
+.myaccount-layout-footer,
+.checkout-layout-footer{
+    .footer-content{
+        @extend .container;
+        @media (max-width: $screen-xs-max){
+            padding: 0;
+        }
+    }
+    .content-banner{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        @media (max-width: $screen-md-max){
+            flex-flow: row wrap;
+        }
+        @media (max-width: $screen-md-max){
+            justify-content: center;
+        }
+    }
+    .copyright-column{
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
+        flex: 1 0 41.667%;
+        @media (max-width: $screen-md-max){
+            order: 2;
+            flex: auto;
+        }
+    }
+    .third-party-logos-column{
+        flex: 1 0 50%;
+        @media (max-width: $screen-md-max){
+            flex: auto;
+        }
+    }
+}
+.footer-primary-section{
+    @extend .col-xs-12;
+    @media (max-width: $screen-xs-max){
+        padding: 0;
+        margin-bottom: $sc-margin-lv3;
+    }
+    @media (min-width: $screen-sm-min){
+        display: flex;
+        float: none;
+    }
+    @media (min-width: $screen-sm-min) and (max-width: $screen-md-max){
+        flex-flow: row wrap;
+    }
+
+    #navigation-footer{
+        @media (min-width: $screen-sm-min) and (max-width: $screen-md-max){
+            width: 100%;
+        }
+    }
+    #navigation-footer,
+    .be-ix-link-block,
+    .footer-email-signup-column{
+        @media (min-width: $screen-sm-min){
+            margin-bottom: $sc-margin-lv3;
+        }
+    }
+    .be-ix-link-block{
+        @extend .col-lg-3;
+        @extend .col-sm-6;
+        @extend .col-xs-12;
+        margin-bottom: $sc-margin-lv3;
+        @media (max-width: $screen-xs-max){
+            padding: 0;
+            margin-bottom: 0;
+        }
+
+        .be-related-link-container{
+            display: block;
+            margin: 0;
+            @media (max-width: $screen-xs-max){
+                text-align: left;
+            }
+
+            .be-label{
+                display: block;
+                text-transform: uppercase;
+                color: $pa-accent;
+                font-weight: $sc-font-weight-bold;
+                margin: 0;
+                @media (max-width: $screen-xs-max){
+                    background-color: #363636;
+                    padding: 8px 20px;
+                    border-top: 1px solid #1F1F1F;
+                    border-bottom: none;
+                    font-size: 18px;
+                }
+            }
+            .be-related-link{
+                color: $pa-light-gray;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+            ul.be-list{
+                &:not([data-toggle="collapse"]){
+                    display: block;
+                }
+                @media (max-width: $screen-xs-max){
+                    padding: 0 20px;
+                    &.collapse.in{
+                        display: block;
+                    }
+                    &.collapse{
+                        display: none;
+                    }
+                }
+                li.be-list-item{
+                    display: block;
+                    margin: $sc-margin-lv2 0 0 0;
+                    padding: 0;
+                    @media (max-width: $screen-xs-max){
+                        &:last-child{
+                            margin-bottom: $sc-margin-lv2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.be-label,
+.email-signup-label{
+    .icon-chevron-down,
+    .icon-chevron-up{
+        display: none;
+        color: $pa-accent;
+        float: right;
+    }
+    &:not(.collapsed) .icon-chevron-down{
+        display: block;
+    }
+    &.collapsed .icon-chevron-up{
+        display: block;
+    }
+}
+.footer-email-signup-column{
+    @extend .col-lg-4;
+    @extend .col-sm-6;
+    @extend .col-xs-12;
+    @media (max-width: $screen-xs-max){
+        padding: 0;
+    }
+    .email-signup-label{
+        background-color: #363636;
+        color: $pa-accent;
+        padding: 8px $sc-padding-lv4;
+        font-weight: $sc-font-weight-bold;
+        text-transform: uppercase;
+        border-top: 1px solid #1F1F1F;
+        font-size: 18px;
+        @media (min-width: $screen-sm-min){
+            display: none;
+        }
+    }
+    #footer-email-signup-panel{
+        @media (max-width: $screen-xs-max){
+            padding: 0 $sc-padding-lv4;
+        }
+    }
+
+    .RR_Reviews_Widget_Wrapper_Container{
+        clear: both;
+    }
+    .social-footer{
+        margin-bottom: $sc-margin-lv4;
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-md-max){
+        .footer-email-signup-cms-area{
+            width: auto;
+            margin: 0;
+        }
+        .footer-social-icon-cms-area{
+            margin: 0 0 20px 0;
+            text-align: left;
+            float: none;
+        }
+        .RR_Reviews_Widget_Wrapper_Container{
+            width: auto;
+            float: none;
+            margin: 0;
+            
+            #RR_Reviews_Widget_Wrapper_Content{
+                margin: 0 10px;
+            }
+        }
+    }
+}
+.footer-content .header-gsa-cag-code-wrapper {
+    font-size: 13px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    display: block;
+    @media (max-width: $screen-md-max) {
+        margin-bottom: 7px;
+    }
+    @media (max-width: $screen-sm-max) {
+        margin-bottom: 7px;
+        margin-top: 9px;
+    }
+    @media (max-width: $screen-xs-max) {
+        margin-bottom: 8px;
+        margin-top: 0px;
+    }
+    .header-cage-code, .header-gsa-contract-code {
+        font-size: 13px;
+        float: left;
+        @media (max-width: $screen-sm-max) {
+            font-size: 15px;
+        }
+        @media (max-width: $screen-xs-max) {
+            float: none;
+            text-align: center;
+        }
+    }
+    .header-cage-code {
+        @media (max-width: $screen-xs-max) {
+            margin-bottom: 6px;
+        }
+    }
+}
+.header-gsa-cag-code-box {
+    @media (max-width: $screen-md-max) {
+        overflow: hidden;
+        max-width: 120px;
+        margin: auto;
+    }
+    @media (max-width: $screen-sm-max) {
+        max-width: 135px;
+    }
+}
+.header-gsa-cag-code-divider {
+    float: left;
+    padding: 0px 5px;
+    @media (max-width: $screen-xs-max) {
+        display: none;
+    }
+}

@@ -1,0 +1,79 @@
+{
+	"name": "DeliveryInstructions",
+	"fantasyName": "Delivery Instructions",
+	"vendor": "AwaLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": ">=23.2.0",
+		"SCS": ">=23.2.0"
+	},
+	"version": "2.1.0",
+	"description": "Delivery Instructions. SuiteLabs v2.1.0 refers to the SCA upgrade to 23.2",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		},
+		"services": {
+			"files": []
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/DeliveryInstructions/Configuration/DeliveryInstructions.json"
+		]
+	},
+	"templates": {
+		"application": {
+			"checkout": {
+				"files": [
+					"Modules/DeliveryInstructions/Templates/orderwizard_delivery_instructions.tpl"
+				]
+			}
+		}
+	},
+	"sass": {
+		"entry_points": {
+			"checkout": "Modules/DeliveryInstructions/Sass/_deliveryinstructions.scss",
+			"shopping": "Modules/DeliveryInstructions/Sass/_deliveryinstructions.shopping.scss"
+		},
+		"files": [
+			"Modules/DeliveryInstructions/Sass/_deliveryinstructions.scss",
+			"Modules/DeliveryInstructions/Sass/_deliveryinstructions.shopping.scss",
+			"Modules/DeliveryInstructions/Sass/_orderwizard_delivery_instructions.scss"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"checkout": "Modules/DeliveryInstructions/JavaScript/AwaLabs.DeliveryInstructions.Checkout.EntryPoint.js",
+			"shopping": "Modules/DeliveryInstructions/JavaScript/AwaLabs.DeliveryInstructions.Shopping.EntryPoint.js"
+		},
+		"application": {
+			"checkout": {
+				"files": [
+					"Modules/DeliveryInstructions/JavaScript/AwaLabs.DeliveryInstructions.Checkout.EntryPoint.js",
+					"Modules/DeliveryInstructions/JavaScript/OrderWizard.Module.DeliveryInstructions.js"
+				]
+			},
+			"shopping": {
+				"files": [
+					"Modules/DeliveryInstructions/JavaScript/AwaLabs.DeliveryInstructions.Shopping.EntryPoint.js"
+				]
+			}
+		}
+	},
+	"ssp-libraries": {
+		"entry_point": "Modules/DeliveryInstructions/SuiteScript/AwaLabs.DeliveryInstructions.EntryPoint.js",
+		"files": [
+			"Modules/DeliveryInstructions/SuiteScript/AwaLabs.DeliveryInstructions.EntryPoint.js",
+			"Modules/DeliveryInstructions/SuiteScript/DeliveryInstructions.Adapter.js",
+			"Modules/DeliveryInstructions/SuiteScript/DeliveryInstructions.Hooks.js"
+		]
+	},
+	"path": "SuiteScripts/Deploy_Extensions/AwaLabs/DeliveryInstructions@2.1.0",
+	"activation_id": "11",
+	"extension_id": "16904"
+}

@@ -1,0 +1,53 @@
+{
+    "name": "ZipCodeShippingPrices",
+    "fantasyName": "Zip Code Shipping Prices",
+    "vendor": "NSeComm",
+    "version": "1.0.0",
+    "type": "extension",
+    "target": "SCA,SCS",
+    "target_version": {
+        "SCA": "",
+        "SCS": ""
+    },
+    "description": "Extension that will set specific shipping price for orca delivery method depending on the zip code given",
+    "skins": [],
+    "assets": {
+        "img": {
+            "files": []
+        },
+        "fonts": {
+            "files": []
+        },
+        "services": {
+            "files": []
+        }
+    },
+    "configuration": {
+        "files": [
+            "Modules/Main/Configuration/ZipCodeShippingPrices.json"
+        ]
+    },
+    "javascript": {
+        "entry_points": {
+            "checkout": "Modules/Main/JavaScript/NSeComm.ZipCodeShippingPrices.js"
+        },
+        "application": {
+            "checkout": {
+                "files": [
+                    "Modules/Main/JavaScript/NSeComm.ZipCodeShippingPrices.js",
+                    "Modules/Main/JavaScript/ZipCodeShippingPrices.Model.js",
+                    "Modules/Main/SuiteScript2/ZipCodeShippingPrices.Model.js",
+                    "Modules/Main/SuiteScript2/ZipCodeShippingPricesModule.js"
+                ]
+            }
+        }
+    },
+    "local_folder": "Workspace\\ZipCodeShippingPrices",
+    "suitescript2": {
+        "files": [
+            "Modules/Main/SuiteScript2/ZipCodeShippingPrices.Service.ss",
+            "Modules/Main/SuiteScript2/ZipCodeShippingPrices.Model.js",
+            "Modules/Main/SuiteScript2/ZipCodeShippingPricesModule.js"
+        ]
+    }
+}

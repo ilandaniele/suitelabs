@@ -1,0 +1,35 @@
+{
+    "type": "object",
+	"subtab": {
+		"id": "signifyd"
+	,	"title": "Signifyd"
+	,	"description": "Signifyd Tracking Configuration"
+	,   "group": "extensions"
+	},
+	"properties": {
+		"signifyd.enableSignifyd": {
+			"group": "extensions"
+		,	"subtab": "signifyd"
+		,	"type": "boolean"
+		,	"title": "Enable Signifyd Conversion Tracking"
+		,	"description": "Enable Signifyd Integration"
+		,	"default": false
+		},
+		"signifyd.apiKey": {
+			"group": "extensions"
+		,	"subtab": "signifyd"
+		,	"type": "string"
+		,	"title": "API Key"
+		,	"description": "Enter the API Key for the associated Signifyd account"
+		,	"default": "e6VE4S1fMTMx4iCTJlPycDd2w2rNHun4"
+		},
+		"signifyd.apiUrl": {
+			"group": "extensions"
+		,	"subtab": "signifyd"
+		,	"type": "string"
+		,	"title": "API Url"
+		,	"description": "Enter the API url for the associated Signifyd integration"
+		,	"default": "https://api.signifyd.com/v2/cases"
+		}
+	}
+}

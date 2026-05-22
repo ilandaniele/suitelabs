@@ -1,0 +1,15 @@
+@import "_common-cartavailabilitybisdate.scss";
+
+.order-history-packages-accordion-body {
+  .order-history-packages-accordion-container {
+    .order-history-packages-items-table {
+      .transaction-line-views-cell-actionable-table-middle {
+        .product-line-sku-container {
+          .cart-item-summary-item-list-actionable-amount {
+            display: none !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+    "type": "object",
+    "subtab": {
+      "id": "fscmodule",
+      "title": "Jeske Extensions",
+      "description": "Jeske Hardware extensions.",
+      "group": "extensions"
+    },
+    "properties": {
+      "extensions.fscmodule.FSCCustomNoteFree": {
+        "group": "extensions",
+        "subtab": "fscmodule",
+        "type": "string",
+        "nsType": "text",
+        "title": "Free Shipping Message",
+        "mandatory": false,
+        "description": "Enter the message for the free shipping message.",
+        "default": "You qualify for free shipping!"
+      },
+      "extensions.fscmodule.FSCCustomNote1": {
+        "group": "extensions",
+        "subtab": "fscmodule",
+        "type": "string",
+        "nsType": "text",
+        "title": "Needed Amount Note 1",
+        "mandatory": false,
+        "description": "Enter the message before the needed amount.",
+        "default": "You only need " 
+      },
+      "extensions.fscmodule.FSCCustomNote2": {
+        "group": "extensions",
+        "subtab": "fscmodule",
+        "type": "string",
+        "nsType": "text",
+        "title": "Needed Amount Note 2",
+        "mandatory": false,
+        "description": "Enter the message after the needed amount.",
+        "default": " to qualify for free shipping!"
+      }
+    }
+  }

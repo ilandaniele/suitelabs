@@ -1,0 +1,439 @@
+.deal-ribbon-wrapper {
+    display: none;
+    position: relative; 
+    
+    @media (min-width: $screen-sm-min) {
+        min-width: 50%;   
+    }
+
+    @media (max-width: $screen-xs-max) {
+        overflow: hidden;
+    }
+    &.active {
+        
+        .deal-counter-box {
+            display: block;
+            background: #ce0d2c;
+            @media (min-width: 921px) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                clip-path: polygon(2% 0%, 100% 0, 98% 100%, 0% 100%);
+                padding: 5px 15px;
+            }
+            @media (max-width: $screen-xs-max) {
+                padding: 10px 5px;
+            }
+            @media only screen and (orientation: landscape) {
+                display: block;
+            }
+        } 
+        .banner{
+            display: none;
+        }
+        .deal-shipping-box{
+            display: none;
+        }
+    }
+    &.active-banner{
+        .banner{
+            display: block !important;
+        }
+        .deal-shipping-box{
+            display: none;
+        }
+    }
+}
+.hide-deal-ribbon {
+    display: none !important;
+}
+.deal-counter-box {
+    display: none;
+    margin: auto;
+    text-align: center;
+    padding: 5px 0;
+    @media (max-width: $screen-md-max) {
+        padding: 3px 0;
+    }
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        padding: 12px 25px 5px;
+    }
+    @media (max-width: $screen-xs-max) {
+        padding: 3px 30px 5px 4px;
+        overflow: hidden;
+    }
+}
+.deal-sale-name-label,
+.deal-header-clock,
+.deal-click-here-box {
+    display: inline-flex;
+    overflow: hidden;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.deal-header-clock {
+    @media (max-width: $screen-md-max) {
+        clear: both;
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+    }
+    @media (max-width: $screen-sm-max) {
+       float: none;
+       width: auto;
+       margin-top: 3px;
+    }
+}
+#deal-mobile-divider {
+    display: none;
+    @media (max-width: $screen-sm-max) {
+        display: block;
+    }
+    @media (max-width: $screen-xs-max) {
+        display: none;
+    }
+    @media (max-width: $screen-xs-mid) {
+        display: block;
+    }
+}
+.deal-click-here-box  {
+    display: none;
+    @media (max-width: $screen-xs-max) {
+        float: none;
+        padding-right: 5px;
+    }
+    &.active {
+        display: inline-block;
+    }
+    a {
+        color: #ffffff;
+        font-size: 20px;
+        line-height: 30px;
+        text-transform: uppercase;
+        font-weight: 900;
+        text-decoration: none;
+        letter-spacing: 0.9px;
+        @media (max-width: $screen-sm-max) {
+            font-size: 26px;
+        }
+        @media (min-width: $screen-xs-medium) and (max-width: $screen-xs-max) {
+            font-size: 15px;
+            line-height: 18px;
+            font-weight: 400;
+            letter-spacing: 0px;
+        }
+        @media (max-width: $screen-xs-small) {
+            font-size: 13px;
+            line-height: 18px;
+            font-weight: 400;
+            letter-spacing: 0px;
+        }
+    }
+}
+.deal-sale-name-label {
+    margin-right: 9px;
+    @media (max-width: $screen-xs-max) {
+        float: none;
+        margin: 0px;
+        min-width: auto;
+    }
+    p {
+        float: left;
+        margin: 0px;
+        line-height: 20px;
+        @media (max-width: $screen-xs-max) {
+            line-height: 18px;
+        }
+        &:first-child {
+            padding: 0px 30px;
+            position: relative;
+            @media (max-width: $screen-xs-max) {
+                padding: 0px;    
+            }
+            a {
+                text-transform: uppercase;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 30px;
+                text-decoration: none !important;
+                @media (max-width: $screen-sm-max) {
+                    font-size: 26px;
+                }
+                @media (min-width: $screen-xs-medium) and (max-width: $screen-xs-max)  {
+                    line-height: 18px;
+                    font-size: 15px;
+                    letter-spacing: 0px;
+                }
+                @media (max-width: $screen-xs-small) {
+                    line-height: 18px;
+                    font-size: 13px;
+                    letter-spacing: 0px;
+                }
+                font {
+                    font-size: 30px !important;
+                    @media (max-width: $screen-sm-max) {
+                        font-size: 26px !important;
+                    }
+                    @media (min-width: $screen-xs-medium) and (max-width: $screen-xs-max) {
+                        font-size: 15px !important;
+                    }
+                    @media (max-width: $screen-xs-small) {
+                        font-size: 13px !important;
+                    }
+                }
+            }
+            &:after,
+            &:before {
+                content: '';
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                border-radius: 5px;
+                background-color: #fff;
+                top: 50%;
+                right: 10px;
+                margin-top: -5px;
+                @media (max-width: $screen-xs-max) {
+                    content: none;
+                }
+            }
+            &:before  {
+                right: auto;
+                left: 10px;
+            }
+        }
+        &:last-child {
+            color: #fff;
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: 0.9px;
+            text-transform: uppercase;
+            font-weight: 900;
+            margin-left: 0px;
+            @media (max-width: $screen-sm-max) {
+                display: none;
+            }
+            @media (max-width: $screen-xs-max) {
+                display: none;
+                font-size: 15px;
+                line-height: 21px;
+            }
+        }
+    }
+}
+.deal-show-in-tab-only {
+    display: none;
+    @media (max-width: $screen-sm-max) {
+        display: inline-block;
+        vertical-align: middle;
+        p {
+            color: #fff;
+            font-size: 26px;
+            line-height: 30px;
+            letter-spacing: 0.9px;
+            text-transform: uppercase;
+            font-weight: 900;
+            margin-left: 0px;
+            margin-bottom: 0px;
+        }
+    }
+    @media (max-width: $screen-xs-max) {
+        clear: both;
+        float: left;
+    }
+    @media (max-width: $screen-xs-max) {
+        float: none;
+        p {
+            line-height: 18px;
+            margin-right: 0px;
+            margin-top: 3px;
+        }
+    }
+    @media (min-width: $screen-xs-medium) and (max-width: $screen-xs-max) {
+        p {
+            font-size: 15px;
+        }
+    }
+    @media (max-width: $screen-xs-small) {
+        p {
+            font-size: 13px;
+        }
+    }
+}
+.deal-ribbon-close-button  {
+    cursor: pointer;
+    span {
+        position: absolute;
+        top: 50%;
+        right: 25px;
+        padding: 0;
+        color: #E0E0E0;
+        cursor: pointer;
+        height: 26px;
+        width: 26px;
+        background: #fff;
+        line-height: 27px;
+        text-align: center;
+        border-radius: 50%;
+        margin-top: -13px;
+        cursor: pointer;
+        @media (max-width: $screen-md-max) {
+            top: 25px;
+        }
+        @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+            top: 27px;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 2px;
+            background-color: $custom-deal-cross-button-color;
+            transform: rotate(45deg);
+            top: 12px;
+            right: 6px;
+            border-radius: 2px;
+            @media (max-width: $screen-xs-max) {
+                width: 14px;
+                top: 10px;
+                right: 4px;
+            }
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 2px;
+            background-color: $custom-deal-cross-button-color;
+            transform: rotate(-45deg);
+            top: 12px;
+            left: 6px;
+            border-radius: 2px;
+            @media (max-width: $screen-xs-max) {
+                width: 14px;
+                top: 10px;
+                left: 4px;
+            }
+        }
+        @media (max-width: $screen-xs-max) {
+            padding: 0;
+            top: 5px;
+            right: 8px;
+            margin: 0px;
+            width: 22px;
+            height: 22px;
+            margin-left:5px;
+        }
+        i {
+            font-family: FontAwesome;
+            font-style: normal;
+            font-size: 20px;
+            line-height: 20px;
+            display: none;
+            @media (max-width: $screen-xs-max) {
+                font-size: 18px;
+                line-height: 18px;
+            }
+            &:after {
+                content: "\f057";
+            }
+        }
+    }
+} 
+.deal-shipping-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    background: #ce0d2c;
+    padding: 5px 0;
+
+    @media (min-width: 921px) {
+        clip-path: polygon(2% 0%, 100% 0, 98% 100%, 0% 100%);
+    }
+    
+    a {
+        font-size: 12px;
+        font-weight: 400;
+        color: #fff;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        @media (max-width: $screen-md-max) {
+            font-size: 17px;
+        }
+        @media (max-width: $screen-sm-max) {
+            line-height: 24px;
+        }
+        @media (max-width: $screen-xs-max) {
+            //line-height: 20px;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            text-align: center;
+            padding: 4px 0px;
+        }
+    }
+    span {
+        font-size: 15px;
+        font-weight: 700;
+        color: #fff;
+        line-height: 20px;
+        display: inline-block;
+        p{
+            margin: 0;
+        }
+    }
+}
+
+.dod-ribbon-container{
+    border-top: 0 none;
+
+    @media (min-width: 921px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .additional-links-wrapper{
+        display: flex;
+        flex: 1;
+        max-width: 375px;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        gap: 15px;
+        
+        @media (max-width: $screen-sm-max) {
+            display: none;
+        }
+
+        &.start{
+            justify-content: flex-start;
+        }
+
+        &.end{
+            justify-content: flex-end;
+        }
+
+        a{
+            color: #393a39;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 12px;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }}}
+.banner {
+    display: none;
+    span{
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    }
+}

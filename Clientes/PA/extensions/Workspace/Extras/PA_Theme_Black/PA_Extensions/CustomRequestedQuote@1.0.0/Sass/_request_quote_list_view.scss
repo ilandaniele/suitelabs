@@ -1,0 +1,19 @@
+.RequestedQuotesListView {
+    .order-history-list-header {
+        border-bottom: 1px solid #606060;
+    }
+    [data-view="ListHeader"] {
+        display: none;
+    }
+    .recordviews-row {
+        td:first-child {
+            padding-top: 15px;
+        }
+        td:last-child {
+            padding-bottom: 15px;
+        }
+    }
+}
+.requested-quotes-instruction-message {
+    margin: 10px 0px 0px;
+}

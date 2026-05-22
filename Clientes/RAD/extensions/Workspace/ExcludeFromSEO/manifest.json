@@ -1,0 +1,45 @@
+{
+	"name": "ExcludeFromSEO",
+	"fantasyName": "Exclude From SEO",
+	"vendor": "SuiteLabs",
+	"type": "extension",
+	"target": "SCA,SCS",
+	"target_version": {
+		"SCA": "",
+		"SCS": ""
+	},
+	"version": "1.0.0",
+	"description": "Excludes non trackable shopping elements from SEO engine.",
+	"assets": {
+		"img": {
+			"files": []
+		},
+		"fonts": {
+			"files": []
+		}
+	},
+	"configuration": {
+		"files": [
+			"Modules/Main/Configuration/ExcludeFromSEO.json"
+		]
+	},
+	"javascript": {
+		"entry_points": {
+			"shopping": "Modules/Main/JavaScript/SuiteLabs.ExcludeFromSEO.Main.js"
+		},
+		"application": {
+			"shopping": {
+				"files": [
+					"Modules/Main/JavaScript/SuiteLabs.ExcludeFromSEO.Main.js",
+					"Modules/Main/JavaScript/SuiteLabs.ExcludeFromSEO.Facets.Browse.View.js"
+				]
+			}
+		}
+	},
+	"suitescript2": {
+		"files": []
+	},
+	"path": "SuiteScripts/Deploy_Extensions/SuiteLabs/ExcludeFromSEO@1.0.0",
+	"activation_id": "11",
+	"extension_id": "13401"
+}
